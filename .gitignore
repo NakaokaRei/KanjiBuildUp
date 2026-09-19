@@ -1,0 +1,29 @@
+# macOS
+.DS_Store
+._*
+
+# Xcode local settings and build products
+xcuserdata/
+*.xcuserstate
+DerivedData/
+build/
+*.xcarchive
+*.ipa
+*.dSYM
+*.dSYM.zip
+
+# Swift Package Manager generated files
+.build/
+.swiftpm/
+
+# Local test results and verification captures
+*.xcresult/
+*.log
+/output/verification/
+
+# Local secrets and signing material
+.env
+.env.*
+!.env.example
+*.p12
+*.mobileprovision
