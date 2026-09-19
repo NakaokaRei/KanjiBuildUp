@@ -7,6 +7,7 @@ struct PrimaryButton: View {
     var body: some View {
         Button(action: action) {
             Text(title).font(.headline).frame(maxWidth: .infinity).padding(.vertical, 8)
+                .foregroundStyle(.white)
         }
         .buttonStyle(.borderedProminent)
         .controlSize(.large)
