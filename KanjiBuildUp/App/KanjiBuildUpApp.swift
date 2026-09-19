@@ -1,9 +1,9 @@
 import SwiftUI
 
-@main struct MyApp: App {
+@main struct KanjiBuildUpApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            StudyListView()
         }
     }
 }

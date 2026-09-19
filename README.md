@@ -39,12 +39,33 @@
 
 データはアプリ内のApplication Support/KanjiBuildUp/items.jsonに保存します。書き込みに失敗した場合は変更を確定せずエラーを表示します。読み込みに失敗したファイルは上書きしません。外部サーバーやアカウントは使いません。
 
+## ソース構成
+
+```text
+KanjiBuildUp/
+├── App/                 アプリのエントリーポイント
+├── Models/              問題・習熟度・学習セッション・エラー
+├── Services/            CSVのデコードと解析
+├── Stores/              学習データの状態管理と永続化
+├── Features/
+│   ├── Library/         一覧・絞り込み・画面遷移
+│   ├── Study/           出題・答え・習熟度変更
+│   ├── Import/          CSV選択とプレビュー
+│   └── ManualEntry/     手入力フォーム
+├── UI/
+│   ├── Theme/           共通色と習熟度の表示色
+│   └── Components/      共通ボタンと習熟度バッジ
+└── Assets.xcassets/     アセット
+```
+
+画面固有のUIは各Feature内、複数画面で使う部品はUI/Componentsに置きます。Models・Services・StoresはSwiftUIに依存しません。保存処理はLearningStore、CSV形式の変更はKanjiCSVに集約しています。Xcodeのフォルダー参照で配下のSwiftファイルを自動的にターゲットへ追加します。
+
 ## 検証
 
 データ処理テスト:
 
 ```sh
-xcrun swiftc KanjiBuildUp/LearningData.swift Tests/LearningTests.swift -o /tmp/kanji-tests
+xcrun swiftc KanjiBuildUp/Models/*.swift KanjiBuildUp/Services/*.swift KanjiBuildUp/Stores/*.swift Tests/LearningTests.swift -o /tmp/kanji-tests
 /tmp/kanji-tests
 ```
 
