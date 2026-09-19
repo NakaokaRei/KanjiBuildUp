@@ -40,6 +40,21 @@ final class LearningStore {
         updated[index].mastery = mastery
         return commit(updated)
     }
+    @discardableResult func update(_ item: StudyItem) -> Bool {
+        guard let index = items.firstIndex(where: { $0.id == item.id }) else {
+            errorMessage = "この問題は削除されているため、更新できません。"
+            return false
+        }
+        var updated = items
+        updated[index] = item
+        return commit(updated)
+    }
+
+    @discardableResult func delete(_ id: UUID) -> Bool {
+        guard items.contains(where: { $0.id == id }) else { return false }
+        return commit(items.filter { $0.id != id })
+    }
+
     private func commit(_ updated: [StudyItem]) -> Bool {
         guard canSave else {
             errorMessage = "保存データを読み込めていないため、変更できません。アプリを再起動して確認してください。"

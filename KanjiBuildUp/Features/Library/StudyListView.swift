@@ -13,20 +13,6 @@ struct StudyListView: View {
     var body: some View {
         NavigationStack {
             VStack(spacing: 0) {
-                HStack {
-                    Text("漢字一覧").font(.largeTitle.bold())
-                    Spacer()
-                    Menu {
-                        Button { showManualEntry = true } label: {
-                            Label("手入力で追加", systemImage: "square.and.pencil")
-                        }.accessibilityIdentifier("manualEntry")
-                        Button { showImport = true } label: {
-                            Label("CSV取り込み", systemImage: "doc.text")
-                        }.accessibilityIdentifier("importCSV")
-                    } label: {
-                        Label("追加", systemImage: "plus").font(.headline).padding(.vertical, 10)
-                    }.accessibilityIdentifier("addItem")
-                }.padding(.bottom, 24)
                 if let notice {
                     HStack {
                         Text(notice).font(.subheadline)
@@ -89,7 +75,21 @@ struct StudyListView: View {
                 }.padding(.top, 14)
             }.padding(20).frame(maxWidth: 640).frame(maxWidth: .infinity)
                 .background(Palette.background.ignoresSafeArea())
-                .toolbar(.hidden)
+                .navigationTitle("漢字一覧")
+                .toolbar {
+                    ToolbarItem(placement: .primaryAction) {
+                        Menu {
+                            Button { showManualEntry = true } label: {
+                                Label("手入力で追加", systemImage: "square.and.pencil")
+                            }.accessibilityIdentifier("manualEntry")
+                            Button { showImport = true } label: {
+                                Label("CSV取り込み", systemImage: "doc.text")
+                            }.accessibilityIdentifier("importCSV")
+                        } label: {
+                            Label("追加", systemImage: "plus").font(.headline).padding(.vertical, 10)
+                        }.accessibilityIdentifier("addItem")
+                    }
+                }
                 .navigationDestination(item: $session) { initial in
                     StudyView(store: store, session: initial)
                 }

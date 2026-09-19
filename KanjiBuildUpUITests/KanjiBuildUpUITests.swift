@@ -96,6 +96,48 @@ final class KanjiBuildUpUITests: XCTestCase {
         XCTAssertTrue(app.buttons["すべて、1件"].waitForExistence(timeout: 5))
     }
 
+    @MainActor func testSwipeBackEditingNotesAndDeletion() throws {
+        continueAfterFailure = false
+        let app = XCUIApplication()
+        app.launchEnvironment["KANJI_TEST_STORE"] = UUID().uuidString
+        app.launchEnvironment["KANJI_TEST_CSV"] = "カテゴリー,問題,答え,意味\n訓読み,桜,さくら,春の木"
+        app.launch()
+        app.buttons["addItem"].tap(); app.buttons["importCSV"].tap()
+        app.buttons["1件を取り込む"].tap()
+        XCTAssertTrue(app.buttons["startStudy"].waitForExistence(timeout: 5))
+        app.buttons["startStudy"].tap()
+        XCTAssertTrue(app.buttons["revealAnswer"].waitForExistence(timeout: 5))
+        let start = app.coordinate(withNormalizedOffset: CGVector(dx: 0.01, dy: 0.5))
+        let end = app.coordinate(withNormalizedOffset: CGVector(dx: 0.85, dy: 0.5))
+        start.press(forDuration: 0.1, thenDragTo: end)
+        XCTAssertTrue(app.buttons["startStudy"].waitForExistence(timeout: 5))
+        app.buttons["startStudy"].tap()
+        app.buttons["editNotes"].tap()
+        let form = app.collectionViews.firstMatch
+        form.swipeUp()
+        let notes = app.descendants(matching: .any)["itemNotes"].firstMatch
+        XCTAssertTrue(notes.waitForExistence(timeout: 5))
+        notes.tap(); notes.typeText("春の復習")
+        app.buttons["saveItem"].tap()
+        app.buttons["revealAnswer"].tap()
+        app.swipeUp()
+        XCTAssertTrue(app.staticTexts["studyNotes"].waitForExistence(timeout: 5))
+        app.buttons["itemActions"].tap(); app.buttons["editItem"].tap()
+        app.buttons["categorySuggestion-音読み"].tap()
+        app.buttons["saveItem"].tap()
+        app.terminate(); app.launch()
+        app.buttons.containing(.staticText, identifier: "桜").firstMatch.tap()
+        XCTAssertTrue(app.staticTexts["音読み"].waitForExistence(timeout: 5))
+        app.swipeUp()
+        XCTAssertTrue(app.staticTexts["studyNotes"].exists)
+        app.buttons["itemActions"].tap(); app.buttons["deleteItem"].tap()
+        app.buttons["削除する"].tap()
+        XCTAssertTrue(app.buttons["startStudy"].waitForExistence(timeout: 5))
+        XCTAssertFalse(app.buttons["startStudy"].isEnabled)
+        app.terminate(); app.launch()
+        XCTAssertFalse(app.buttons["startStudy"].isEnabled)
+    }
+
     @MainActor private func capture(_ name: String, _ app: XCUIApplication) {
         let directory = URL.documentsDirectory.appendingPathComponent("Screenshots")
         try? FileManager.default.createDirectory(at: directory, withIntermediateDirectories: true)

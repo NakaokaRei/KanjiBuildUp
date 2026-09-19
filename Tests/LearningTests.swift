@@ -37,6 +37,36 @@ import Foundation
         session.advance(); precondition(session.complete)
         let review = StudySession(items: [parsed[0]], review: true)
         precondition(review.revealed && review.isReview)
+        // Migration from records without a notes key.
+        let encoded = try JSONEncoder().encode(parsed)
+        var legacy = try JSONSerialization.jsonObject(with: encoded) as! [[String: Any]]
+        for index in legacy.indices { legacy[index].removeValue(forKey: "notes") }
+        let migrated = try JSONDecoder().decode([StudyItem].self, from: JSONSerialization.data(withJSONObject: legacy))
+        precondition(migrated.allSatisfy { $0.notes.isEmpty })
+        var edited = reloaded.items[0]
+        edited.category = "訓読み"; edited.question = "梅"; edited.answer = "うめ"
+        edited.meaning = "春の花"; edited.notes = "覚え方\n補足"
+        precondition(reloaded.update(edited))
+        let editedStore = LearningStore(fileURL: url)
+        precondition(editedStore.item(edited.id) == edited)
+        precondition(editedStore.delete(edited.id))
+        precondition(LearningStore(fileURL: url).item(edited.id) == nil)
+        precondition(!editedStore.update(edited))
+        let invalidURL = directory.appendingPathComponent("not-a-directory")
+        try Data("block".utf8).write(to: invalidURL)
+        let failedStore = LearningStore(fileURL: invalidURL.appendingPathComponent("items.json"))
+        precondition(!failedStore.add(parsed) && failedStore.items.isEmpty)
+        let failureURL = directory.appendingPathComponent("failure.json")
+        let writeFailureStore = LearningStore(fileURL: failureURL)
+        precondition(writeFailureStore.add([edited]))
+        try FileManager.default.removeItem(at: failureURL)
+        try FileManager.default.createDirectory(at: failureURL, withIntermediateDirectories: false)
+        var unsaved = edited
+        unsaved.notes = "保存されない変更"
+        precondition(!writeFailureStore.update(unsaved))
+        precondition(writeFailureStore.item(edited.id) == edited)
+        precondition(!writeFailureStore.delete(edited.id))
+        precondition(writeFailureStore.item(edited.id) == edited)
         try Data("corrupt".utf8).write(to: url)
         let corrupt = LearningStore(fileURL: url)
         precondition(corrupt.errorMessage != nil && !corrupt.add(parsed))

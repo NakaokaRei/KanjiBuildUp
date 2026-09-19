@@ -3,12 +3,13 @@ import SwiftUI
 struct StudyView: View {
     let store: LearningStore
     @State var session: StudySession
+    @State private var editingItem: StudyItem?
+    @State private var confirmDelete = false
+    @State private var errorMessage: String?
     @Environment(\.dismiss) private var dismiss
     private var item: StudyItem? { session.currentID.flatMap(store.item) }
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
-            Button { dismiss() } label: { Label("一覧に戻る", systemImage: "chevron.left") }
-                .font(.body.weight(.medium)).padding(.bottom, 24)
             if session.complete {
                 Spacer()
                 VStack(spacing: 18) {
@@ -46,6 +47,14 @@ struct StudyView: View {
                                 Text(item.meaning.isEmpty ? "意味は登録されていません。" : item.meaning)
                                     .font(.body).lineSpacing(6).textSelection(.enabled)
                             }
+                            if !item.notes.isEmpty {
+                                Divider()
+                                VStack(alignment: .leading, spacing: 12) {
+                                    Text("備考").font(.subheadline)
+                                    Text(item.notes).textSelection(.enabled)
+                                        .accessibilityIdentifier("studyNotes")
+                                }
+                            }
                         } else {
                             Text(item.category == "読み" ? "この漢字の読みは？" : "答えを考えてみましょう")
                                 .font(.title3.bold()).frame(maxWidth: .infinity).padding(.top, 30)
@@ -55,6 +64,9 @@ struct StudyView: View {
                         }
                     }.frame(maxWidth: .infinity, alignment: .leading).padding(.vertical, 26)
                 }.id("\(session.index)-\(session.revealed)")
+                Button(item.notes.isEmpty ? "備考を追加" : "備考を編集") { editingItem = item }
+                    .buttonStyle(.bordered).accessibilityIdentifier("editNotes")
+                    .padding(.top, 8)
                 if session.revealed {
                     VStack(alignment: .leading, spacing: 10) {
                         Text("覚え具合を選ぶ").font(.subheadline)
@@ -72,7 +84,37 @@ struct StudyView: View {
                 }
             }
         }.padding(24).frame(maxWidth: 640).frame(maxWidth: .infinity)
-            .background(Palette.background.ignoresSafeArea()).toolbar(.hidden)
+            .background(Palette.background.ignoresSafeArea())
+            .navigationTitle(session.complete ? "学習完了" : session.revealed ? "答え" : "問題")
+            #if os(iOS)
+            .navigationBarTitleDisplayMode(.inline)
+            #endif
+            .toolbar {
+                if let item, !session.complete {
+                    ToolbarItem(placement: .primaryAction) {
+                        Menu {
+                            Button("編集", systemImage: "pencil") { editingItem = item }
+                                .accessibilityIdentifier("editItem")
+                            Button("削除", systemImage: "trash", role: .destructive) { confirmDelete = true }
+                                .accessibilityIdentifier("deleteItem")
+                        } label: { Image(systemName: "ellipsis.circle") }
+                        .accessibilityLabel("問題の操作").accessibilityIdentifier("itemActions")
+                    }
+                }
+            }
+            .sheet(item: $editingItem) { value in
+                StudyItemEditor(store: store, item: value) { }
+            }
+            .confirmationDialog("この漢字を削除しますか？", isPresented: $confirmDelete, titleVisibility: .visible) {
+                Button("削除する", role: .destructive) {
+                    guard let item else { return }
+                    if store.delete(item.id) { dismiss() }
+                    else { errorMessage = store.errorMessage; store.errorMessage = nil }
+                }
+            } message: { Text("削除すると元に戻せません。削除後は一覧に戻ります。") }
+            .alert("削除できませんでした", isPresented: Binding(get: { errorMessage != nil }, set: { if !$0 { errorMessage = nil } })) {
+                Button("閉じる", role: .cancel) { errorMessage = nil }
+            } message: { Text(errorMessage ?? "") }
     }
     @ViewBuilder private func masteryButtons(_ item: StudyItem) -> some View {
         ForEach(Mastery.allCases) { value in

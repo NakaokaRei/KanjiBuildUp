@@ -6,9 +6,11 @@ struct PrimaryButton: View {
     let action: () -> Void
     var body: some View {
         Button(action: action) {
-            Text(title).font(.headline).frame(maxWidth: .infinity).padding(.vertical, 18)
-                .foregroundStyle(.white)
-                .background(enabled ? Palette.green : Palette.secondary.opacity(0.45), in: RoundedRectangle(cornerRadius: 10))
-        }.buttonStyle(.plain).disabled(!enabled)
+            Text(title).font(.headline).frame(maxWidth: .infinity).padding(.vertical, 8)
+        }
+        .buttonStyle(.borderedProminent)
+        .controlSize(.large)
+        .tint(Palette.green)
+        .disabled(!enabled)
     }
 }
