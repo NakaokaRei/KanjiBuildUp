@@ -47,8 +47,14 @@ struct StudyView: View {
                                 Text(item.meaning.isEmpty ? "意味は登録されていません。" : item.meaning)
                                     .font(.body).lineSpacing(6).textSelection(.enabled)
                             }
-                            Divider()
-                            AnswerNotesView(store: store, item: item).id(item.id)
+                            if !item.notes.isEmpty {
+                                Divider()
+                                VStack(alignment: .leading, spacing: 12) {
+                                    Text("メモ").font(.subheadline)
+                                    Text(item.notes).textSelection(.enabled)
+                                        .accessibilityIdentifier("studyNotes")
+                                }
+                            }
                         } else {
                             Text(item.category == "読み" ? "この漢字の読みは？" : "答えを考えてみましょう")
                                 .font(.title3.bold()).frame(maxWidth: .infinity).padding(.top, 30)
