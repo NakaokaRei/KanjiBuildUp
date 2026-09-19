@@ -99,7 +99,7 @@ struct ContentView: View {
                     } description: {
                         Text("手入力やCSV取り込みで、\n自分だけの漢字帳をつくりましょう。")
                     } actions: {
-                        Button("手入力で追加") { showManualEntry = true }.buttonStyle(.borderedProminent)
+                        Button("手入力で追加") { showManualEntry = true }.buttonStyle(.bordered)
                         Button("CSVを取り込む") { showImport = true }.buttonStyle(.bordered)
                     }
                     Spacer()
