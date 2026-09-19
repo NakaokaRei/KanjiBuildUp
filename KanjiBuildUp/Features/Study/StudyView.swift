@@ -47,14 +47,8 @@ struct StudyView: View {
                                 Text(item.meaning.isEmpty ? "意味は登録されていません。" : item.meaning)
                                     .font(.body).lineSpacing(6).textSelection(.enabled)
                             }
-                            if !item.notes.isEmpty {
-                                Divider()
-                                VStack(alignment: .leading, spacing: 12) {
-                                    Text("備考").font(.subheadline)
-                                    Text(item.notes).textSelection(.enabled)
-                                        .accessibilityIdentifier("studyNotes")
-                                }
-                            }
+                            Divider()
+                            AnswerNotesView(store: store, item: item).id(item.id)
                         } else {
                             Text(item.category == "読み" ? "この漢字の読みは？" : "答えを考えてみましょう")
                                 .font(.title3.bold()).frame(maxWidth: .infinity).padding(.top, 30)
@@ -64,9 +58,6 @@ struct StudyView: View {
                         }
                     }.frame(maxWidth: .infinity, alignment: .leading).padding(.vertical, 26)
                 }.id("\(session.index)-\(session.revealed)")
-                Button(item.notes.isEmpty ? "備考を追加" : "備考を編集") { editingItem = item }
-                    .buttonStyle(.bordered).accessibilityIdentifier("editNotes")
-                    .padding(.top, 8)
                 if session.revealed {
                     VStack(alignment: .leading, spacing: 10) {
                         Text("覚え具合を選ぶ").font(.subheadline)

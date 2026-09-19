@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct StudyItemEditor: View {
-    private enum Field: Hashable { case category, question, answer, meaning, notes }
+    private enum Field: Hashable { case category, question, answer, meaning }
     let store: LearningStore
     let original: StudyItem?
     let onSave: () -> Void
@@ -10,7 +10,6 @@ struct StudyItemEditor: View {
     @State private var question = ""
     @State private var answer = ""
     @State private var meaning = ""
-    @State private var notes = ""
     @State private var mastery: Mastery = .starting
     @State private var errorMessage: String?
     @State private var confirmDiscard = false
@@ -24,7 +23,6 @@ struct StudyItemEditor: View {
         _question = State(initialValue: item?.question ?? "")
         _answer = State(initialValue: item?.answer ?? "")
         _meaning = State(initialValue: item?.meaning ?? "")
-        _notes = State(initialValue: item?.notes ?? "")
         _mastery = State(initialValue: item?.mastery ?? .starting)
     }
 
@@ -37,7 +35,7 @@ struct StudyItemEditor: View {
     private var hasChanges: Bool {
         category != (original?.category ?? "") || question != (original?.question ?? "") ||
         answer != (original?.answer ?? "") || meaning != (original?.meaning ?? "") ||
-        notes != (original?.notes ?? "") || mastery != (original?.mastery ?? .starting)
+        mastery != (original?.mastery ?? .starting)
     }
 
     var body: some View {
@@ -70,11 +68,6 @@ struct StudyItemEditor: View {
                     TextField("例：春に花を咲かせる木。", text: $meaning, axis: .vertical)
                         .focused($focusedField, equals: .meaning)
                         .lineLimit(3...8).accessibilityLabel("意味").accessibilityIdentifier("manualMeaning")
-                }
-                Section("備考（任意）") {
-                    TextField("覚え方や補足を入力", text: $notes, axis: .vertical)
-                        .focused($focusedField, equals: .notes)
-                        .lineLimit(3...8).accessibilityIdentifier("itemNotes")
                 }
                 if original != nil {
                     Section("覚え具合") {
@@ -112,7 +105,6 @@ struct StudyItemEditor: View {
                         item.question = trimmed(question)
                         item.answer = trimmed(answer)
                         item.meaning = trimmed(meaning)
-                        item.notes = trimmed(notes)
                         item.mastery = mastery
                         let saved = original == nil ? store.add([item]) : store.update(item)
                         if saved { onSave(); dismiss() }
