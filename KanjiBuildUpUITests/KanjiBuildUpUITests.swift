@@ -75,7 +75,7 @@ final class KanjiBuildUpUITests: XCTestCase {
         XCTAssertFalse(app.buttons["saveManualEntry"].isEnabled)
         app.buttons["入力を完了"].tap()
         app.swipeDown()
-        app.buttons["categorySuggestion-読み"].tap()
+        app.buttons["categorySuggestion-訓読み"].tap()
         XCTAssertTrue(app.buttons["saveManualEntry"].isEnabled)
         capture("manual-entry", app)
         app.buttons["saveManualEntry"].tap()

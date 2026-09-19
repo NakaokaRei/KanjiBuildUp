@@ -382,7 +382,8 @@ private struct ManualEntryView: View {
     @FocusState private var focusedField: Field?
 
     private var categories: [String] {
-        ["読み", "四字熟語", "ことわざ"] + store.categories.filter { !["読み", "四字熟語", "ことわざ"].contains($0) }
+        let defaults = ["当て字", "書き", "音読み", "訓読み", "ことわざ", "四字熟語"]
+        return defaults + store.categories.filter { !defaults.contains($0) }
     }
     private func trimmed(_ value: String) -> String { value.trimmingCharacters(in: .whitespacesAndNewlines) }
     private var canAdd: Bool { [category, question, answer].allSatisfy { !trimmed($0).isEmpty } }
@@ -392,15 +393,13 @@ private struct ManualEntryView: View {
         NavigationStack {
             Form {
                 Section {
-                    TextField("例：読み", text: $category).focused($focusedField, equals: .category)
+                    TextField("例：訓読み", text: $category).focused($focusedField, equals: .category)
                         .accessibilityLabel("カテゴリー").accessibilityIdentifier("manualCategory")
-                    ScrollView(.horizontal, showsIndicators: false) {
-                        HStack {
-                            ForEach(categories, id: \.self) { value in
-                                Button(value) { category = value }
-                                    .buttonStyle(.bordered)
-                                    .accessibilityIdentifier("categorySuggestion-\(value)")
-                            }
+                    LazyVGrid(columns: [GridItem(.adaptive(minimum: 90))], alignment: .leading) {
+                        ForEach(categories, id: \.self) { value in
+                            Button(value) { category = value }
+                                .buttonStyle(.bordered)
+                                .accessibilityIdentifier("categorySuggestion-\(value)")
                         }
                     }
                 } header: { Text("カテゴリー（必須）") }
