@@ -67,10 +67,7 @@ struct StudyView: View {
                 if session.revealed {
                     VStack(alignment: .leading, spacing: 10) {
                         Text("覚え具合を選ぶ").font(.subheadline)
-                        ViewThatFits(in: .horizontal) {
-                            HStack(spacing: 8) { masteryButtons(item) }
-                            VStack(spacing: 8) { masteryButtons(item) }
-                        }
+                        VStack(spacing: 8) { masteryButtons(item) }
                     }.padding(.top, 16).padding(.bottom, 20)
                     PrimaryButton(title: session.isReview ? "一覧に戻る" : session.index + 1 == session.itemIDs.count ? "学習を終える" : "次の問題") {
                         if session.isReview { dismiss() } else { session.advance() }
@@ -81,7 +78,7 @@ struct StudyView: View {
                 }
             }
         }.padding(24).frame(maxWidth: 640).frame(maxWidth: .infinity)
-            .background(Palette.background.ignoresSafeArea())
+            .background(Palette.pageGradient.ignoresSafeArea())
             .navigationTitle(session.complete ? "学習完了" : session.revealed ? "答え" : "問題")
             #if os(iOS)
             .navigationBarTitleDisplayMode(.inline)
@@ -119,10 +116,13 @@ struct StudyView: View {
                 store.setMastery(value, for: item.id)
             } label: {
                 Label(value.title, systemImage: item.mastery == value ? "checkmark.circle.fill" : "circle")
-                    .font(.subheadline).fixedSize()
+                    .font(.body.weight(.medium))
+                    .frame(maxWidth: .infinity, minHeight: 32, alignment: .leading)
+                    .foregroundStyle(item.mastery == value ? .white : Palette.ink)
             }
-            .buttonStyle(.bordered)
-            .tint(value.tint)
+            .appGlassButton(prominent: item.mastery == value)
+            .buttonBorderShape(.roundedRectangle(radius: 16))
+            .tint(Palette.green)
             .accessibilityLabel(value.title)
             .accessibilityAddTraits(item.mastery == value ? .isSelected : [])
         }

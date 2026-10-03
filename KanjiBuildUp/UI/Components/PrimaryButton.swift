@@ -9,7 +9,7 @@ struct PrimaryButton: View {
             Text(title).font(.headline).frame(maxWidth: .infinity).padding(.vertical, 8)
                 .foregroundStyle(.white)
         }
-        .buttonStyle(.borderedProminent)
+        .appGlassButton(prominent: true)
         .controlSize(.large)
         .tint(Palette.green)
         .disabled(!enabled)

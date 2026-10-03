@@ -20,10 +20,20 @@ final class KanjiBuildUpUITests: XCTestCase {
         app.buttons["取り込み通知を閉じる"].tap()
         XCTAssertFalse(app.staticTexts["5件を取り込みました。"].exists)
         capture("list", app)
+        app.collectionViews.firstMatch.swipeUp()
+        XCTAssertTrue(app.buttons["startStudy"].isHittable)
+        XCTAssertTrue(app.buttons.containing(.staticText, identifier: "七転び八起き").firstMatch.isHittable)
+        capture("list-scrolled", app)
+        app.collectionViews.firstMatch.swipeDown()
         app.buttons.containing(.staticText, identifier: "桜").firstMatch.tap()
         XCTAssertTrue(app.staticTexts["さくら"].waitForExistence(timeout: 5))
         XCTAssertFalse(app.buttons["revealAnswer"].exists)
         capture("answer", app)
+        let masteryFrames = ["がんばるぞ", "あとすこし", "かんぺき"].map { app.buttons[$0].frame }
+        for frame in masteryFrames.dropFirst() {
+            XCTAssertEqual(frame.width, masteryFrames[0].width, accuracy: 1)
+            XCTAssertEqual(frame.minX, masteryFrames[0].minX, accuracy: 1)
+        }
         app.buttons["かんぺき"].tap()
         app.buttons["一覧に戻る"].firstMatch.tap()
         XCTAssertTrue(app.buttons["かんぺき、1件"].waitForExistence(timeout: 5))

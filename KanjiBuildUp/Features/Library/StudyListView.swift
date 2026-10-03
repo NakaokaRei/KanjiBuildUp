@@ -56,18 +56,22 @@ struct StudyListView: View {
                                 MasteryBadge(mastery: item.mastery)
                             }.frame(maxWidth: .infinity, minHeight: 66).padding(.vertical, 4).contentShape(Rectangle())
                         }.accessibilityHint("答えと意味を確認します")
+                        .listRowBackground(Color.clear)
                     }.listStyle(.plain).scrollContentBackground(.hidden)
-                    Text("項目をタップして答えを確認。").font(.footnote).foregroundStyle(Palette.secondary)
-                        .frame(maxWidth: .infinity, alignment: .leading).padding(.top, 8)
+                        .listRowSpacing(4)
                 }
-                VStack(spacing: 10) {
+            }.padding(.horizontal, 20).frame(maxWidth: 640).frame(maxWidth: .infinity)
+                .background(Palette.pageGradient.ignoresSafeArea())
+                .safeAreaInset(edge: .bottom, spacing: 0) {
                     PrimaryButton(title: "問題をはじめる", enabled: !filtered.isEmpty) {
                         session = StudySession(items: filtered)
-                    }.accessibilityIdentifier("startStudy")
-                    Text("選択した範囲からランダムに出題。").font(.caption).foregroundStyle(Palette.secondary)
-                }.padding(.top, 14)
-            }.padding(20).frame(maxWidth: 640).frame(maxWidth: .infinity)
-                .background(Palette.background.ignoresSafeArea())
+                    }
+                    .accessibilityIdentifier("startStudy")
+                    .padding(.horizontal, 24).padding(.vertical, 12)
+                    .frame(maxWidth: 640)
+                    .frame(maxWidth: .infinity)
+                    .background(Palette.bottomFade.ignoresSafeArea(edges: .bottom))
+                }
                 .navigationTitle("漢字一覧")
                 .toolbar {
                     ToolbarItem(placement: .primaryAction) {
@@ -109,9 +113,8 @@ struct StudyListView: View {
     }
 
     private var masteryFilters: some View {
-        ViewThatFits(in: .horizontal) {
-            HStack(spacing: 8) { filterButtons }
-            ScrollView(.horizontal, showsIndicators: false) { HStack(spacing: 8) { filterButtons } }
+        LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())], spacing: 10) {
+            filterButtons
         }
     }
     @ViewBuilder private var filterButtons: some View {
@@ -122,13 +125,22 @@ struct StudyListView: View {
         let selected = mastery == value
         let count = store.filtered(category: category, mastery: value).count
         return Button { mastery = value } label: {
-            VStack(spacing: 4) {
-                Text(title).font(.subheadline).fixedSize()
-                Text("\(count)").font(.headline).monospacedDigit()
-            }.frame(maxWidth: .infinity)
+            HStack(spacing: 8) {
+                VStack(alignment: .leading, spacing: 6) {
+                    Text(title).font(.subheadline.weight(.semibold))
+                    Text(count, format: .number).font(.title2.bold()).monospacedDigit()
+                }
+                Spacer(minLength: 0)
+                Image(systemName: selected ? "checkmark.circle.fill" : "circle")
+                    .font(.body)
+            }
+            .foregroundStyle(selected ? .white : Palette.ink)
+            .frame(maxWidth: .infinity, minHeight: 58, alignment: .leading)
+            .padding(.vertical, 4)
         }
-        .buttonStyle(.bordered)
-        .tint(selected ? Palette.green : .secondary)
+        .appGlassButton(prominent: selected)
+        .buttonBorderShape(.roundedRectangle(radius: 18))
+        .tint(Palette.green)
         .accessibilityLabel(Text(verbatim: "\(title)、\(count)件"))
         .accessibilityAddTraits(selected ? .isSelected : [])
     }
