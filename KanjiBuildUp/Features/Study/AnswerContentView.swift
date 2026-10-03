@@ -3,7 +3,7 @@ import SwiftUI
 /// Keep the answer compact so definitions and notes get most of the available space.
 struct AnswerContentView: View {
     let item: StudyItem
-    @ScaledMetric(relativeTo: .largeTitle) private var answerSize = 42
+    @ScaledMetric(relativeTo: .largeTitle) private var answerSize = 48
     @ScaledMetric(relativeTo: .body) private var bodySize = 18
 
     var body: some View {
