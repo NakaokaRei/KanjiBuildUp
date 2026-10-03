@@ -1,6 +1,7 @@
 import SwiftUI
 
 struct StudyListView: View {
+    @Environment(\.dynamicTypeSize) private var dynamicTypeSize
     @State private var store = LearningStore()
     @State private var category: String?
     @State private var mastery: Mastery?
@@ -28,7 +29,7 @@ struct StudyListView: View {
                 }
                 .pickerStyle(.menu).accessibilityIdentifier("categoryFilter")
                 .padding(.bottom, 12)
-                masteryFilters.padding(.bottom, 14)
+                masteryFilters.padding(.bottom, 4)
                 if store.items.isEmpty {
                     Spacer()
                     ContentUnavailableView {
@@ -59,6 +60,14 @@ struct StudyListView: View {
                         .listRowBackground(Color.clear)
                     }.listStyle(.plain).scrollContentBackground(.hidden)
                         .listRowSpacing(4)
+                        .contentMargins(.top, 16, for: .scrollContent)
+                        .mask {
+                            VStack(spacing: 0) {
+                                LinearGradient(colors: [.clear, .black], startPoint: .top, endPoint: .bottom)
+                                    .frame(height: 24)
+                                Rectangle().fill(.black)
+                            }
+                        }
                 }
             }.padding(.horizontal, 20).frame(maxWidth: 640).frame(maxWidth: .infinity)
                 .background(Palette.pageGradient.ignoresSafeArea())
@@ -113,8 +122,14 @@ struct StudyListView: View {
     }
 
     private var masteryFilters: some View {
-        LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())], spacing: 10) {
-            filterButtons
+        Group {
+            if dynamicTypeSize.isAccessibilitySize {
+                ScrollView(.horizontal, showsIndicators: false) {
+                    HStack(spacing: 6) { filterButtons }
+                }
+            } else {
+                HStack(spacing: 6) { filterButtons }
+            }
         }
     }
     @ViewBuilder private var filterButtons: some View {
@@ -125,19 +140,17 @@ struct StudyListView: View {
         let selected = mastery == value
         let count = store.filtered(category: category, mastery: value).count
         return Button { mastery = value } label: {
-            HStack(spacing: 8) {
-                VStack(alignment: .leading, spacing: 6) {
-                    Text(title).font(.subheadline.weight(.semibold))
-                    Text(count, format: .number).font(.title2.bold()).monospacedDigit()
-                }
-                Spacer(minLength: 0)
-                Image(systemName: selected ? "checkmark.circle.fill" : "circle")
-                    .font(.body)
+            VStack(spacing: 5) {
+                Text(title).font(.system(size: 13, weight: .semibold))
+                    .lineLimit(1).minimumScaleFactor(0.8)
+                Text(count, format: .number).font(.system(size: 20, weight: .bold))
+                    .monospacedDigit().lineLimit(1).minimumScaleFactor(0.8)
             }
             .foregroundStyle(selected ? .white : Palette.ink)
-            .frame(maxWidth: .infinity, minHeight: 58, alignment: .leading)
-            .padding(.vertical, 4)
+            .frame(minWidth: dynamicTypeSize.isAccessibilitySize ? 140 : nil,
+                   maxWidth: .infinity, minHeight: 54)
         }
+        .controlSize(.small)
         .appGlassButton(prominent: selected)
         .buttonBorderShape(.roundedRectangle(radius: 18))
         .tint(Palette.green)
