@@ -1,9 +1,10 @@
 import SwiftUI
 
-/// Keep the answer compact so definitions and notes get most of the available space.
+/// Give the answer a central focus while keeping definitions and notes below it.
 struct AnswerContentView: View {
     let item: StudyItem
-    @ScaledMetric(relativeTo: .largeTitle) private var answerSize = 48
+    let availableHeight: CGFloat
+    @ScaledMetric(relativeTo: .largeTitle) private var answerSize = 56
     @ScaledMetric(relativeTo: .body) private var bodySize = 18
 
     var body: some View {
@@ -13,11 +14,14 @@ struct AnswerContentView: View {
                 Text(item.question).font(.title2.weight(.semibold))
                     .foregroundStyle(Palette.secondary).textSelection(.enabled)
             }
-            VStack(alignment: .leading, spacing: 4) {
+            VStack(spacing: 8) {
                 Text("答え").font(.caption).foregroundStyle(Palette.secondary)
                 Text(item.answer).font(.system(size: answerSize, weight: .bold))
+                    .multilineTextAlignment(.center)
                     .fixedSize(horizontal: false, vertical: true).textSelection(.enabled)
+                    .accessibilityIdentifier("studyAnswer")
             }
+            .frame(maxWidth: .infinity, minHeight: max(140, availableHeight * 0.5))
             Divider()
             VStack(alignment: .leading, spacing: 6) {
                 Text("意味").font(.subheadline.weight(.semibold))
