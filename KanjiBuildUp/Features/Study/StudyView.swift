@@ -25,36 +25,12 @@ struct StudyView: View {
                     Text(item.category).font(.headline)
                     Spacer()
                     if !session.isReview { Text("\(session.index + 1) / \(session.itemIDs.count)").monospacedDigit() }
-                }.padding(.bottom, 16)
+                }.padding(.bottom, 10)
                 Divider()
                 ScrollView {
-                    VStack(alignment: .leading, spacing: 22) {
+                    VStack(alignment: .leading, spacing: session.revealed ? 12 : 22) {
                         if session.revealed {
-                            VStack(alignment: .leading, spacing: 10) {
-                                Text("問題").font(.subheadline).foregroundStyle(Palette.secondary)
-                                Text(item.question).font(.system(size: 32, weight: .bold)).foregroundStyle(Palette.secondary)
-                                    .textSelection(.enabled)
-                            }
-                            Divider()
-                            VStack(alignment: .leading, spacing: 16) {
-                                Text("答え").font(.subheadline)
-                                Text(item.answer).font(.system(size: item.answer.count <= 5 ? 80 : 34, weight: .bold))
-                                    .fixedSize(horizontal: false, vertical: true).textSelection(.enabled)
-                            }.padding(.vertical, 6)
-                            Divider()
-                            VStack(alignment: .leading, spacing: 12) {
-                                Text("意味").font(.subheadline)
-                                Text(item.meaning.isEmpty ? "意味は登録されていません。" : item.meaning)
-                                    .font(.body).lineSpacing(6).textSelection(.enabled)
-                            }
-                            if !item.notes.isEmpty {
-                                Divider()
-                                VStack(alignment: .leading, spacing: 12) {
-                                    Text("メモ").font(.subheadline)
-                                    Text(item.notes).textSelection(.enabled)
-                                        .accessibilityIdentifier("studyNotes")
-                                }
-                            }
+                            AnswerContentView(item: item)
                         } else {
                             Text(["読み", "音読み", "訓読み", "当て字"].contains(item.category) ? "この漢字の読みは？" : "答えを考えてみましょう")
                                 .font(.title3.bold()).frame(maxWidth: .infinity).padding(.top, 30)
@@ -62,13 +38,13 @@ struct StudyView: View {
                                 .multilineTextAlignment(.center).frame(maxWidth: .infinity, minHeight: 240)
                                 .padding(.vertical, 16).accessibilityIdentifier("questionText")
                         }
-                    }.frame(maxWidth: .infinity, alignment: .leading).padding(.vertical, 26)
+                    }.frame(maxWidth: .infinity, alignment: .leading).padding(.vertical, session.revealed ? 12 : 26)
                 }.id("\(session.index)-\(session.revealed)")
                 if session.revealed {
-                    VStack(alignment: .leading, spacing: 10) {
+                    VStack(alignment: .leading, spacing: 6) {
                         Text("覚え具合を選ぶ").font(.subheadline)
-                        VStack(spacing: 8) { masteryButtons(item) }
-                    }.padding(.top, 16).padding(.bottom, 20)
+                        HStack(spacing: 8) { masteryButtons(item) }
+                    }.padding(.top, 8).padding(.bottom, 12)
                     PrimaryButton(title: session.isReview ? "一覧に戻る" : session.index + 1 == session.itemIDs.count ? "学習を終える" : "次の問題") {
                         if session.isReview { dismiss() } else { session.advance() }
                     }
@@ -77,7 +53,7 @@ struct StudyView: View {
                     PrimaryButton(title: "答えを見る") { session.revealed = true }.accessibilityIdentifier("revealAnswer")
                 }
             }
-        }.padding(24).frame(maxWidth: 640).frame(maxWidth: .infinity)
+        }.padding(.horizontal, 20).padding(.vertical, 12).frame(maxWidth: 640).frame(maxWidth: .infinity)
             .background(Palette.pageGradient.ignoresSafeArea())
             .navigationTitle(session.complete ? "学習完了" : session.revealed ? "答え" : "問題")
             #if os(iOS)
@@ -115,14 +91,18 @@ struct StudyView: View {
             Button {
                 store.setMastery(value, for: item.id)
             } label: {
-                Label(value.title, systemImage: item.mastery == value ? "checkmark.circle.fill" : "circle")
-                    .font(.body.weight(.medium))
-                    .frame(maxWidth: .infinity, minHeight: 32, alignment: .leading)
-                    .foregroundStyle(item.mastery == value ? .white : Palette.ink)
+                VStack(spacing: 4) {
+                    Image(systemName: item.mastery == value ? "checkmark.circle.fill" : "circle")
+                        .font(.body)
+                    Text(value.title).font(.subheadline.weight(.semibold))
+                        .lineLimit(1).minimumScaleFactor(0.75)
+                }
+                .frame(maxWidth: .infinity, minHeight: 46)
+                .foregroundStyle(item.mastery == value ? .white : value.tint)
             }
             .appGlassButton(prominent: item.mastery == value)
             .buttonBorderShape(.roundedRectangle(radius: 16))
-            .tint(Palette.green)
+            .tint(value.tint)
             .accessibilityLabel(value.title)
             .accessibilityAddTraits(item.mastery == value ? .isSelected : [])
         }

@@ -146,14 +146,14 @@ struct StudyListView: View {
                 Text(count, format: .number).font(.system(size: 20, weight: .bold))
                     .monospacedDigit().lineLimit(1).minimumScaleFactor(0.8)
             }
-            .foregroundStyle(selected ? .white : Palette.ink)
+            .foregroundStyle(selected ? .white : value?.tint ?? Palette.green)
             .frame(minWidth: dynamicTypeSize.isAccessibilitySize ? 140 : nil,
                    maxWidth: .infinity, minHeight: 54)
         }
         .controlSize(.small)
         .appGlassButton(prominent: selected)
         .buttonBorderShape(.roundedRectangle(radius: 18))
-        .tint(Palette.green)
+        .tint(value?.tint ?? Palette.green)
         .accessibilityLabel(Text(verbatim: "\(title)、\(count)件"))
         .accessibilityAddTraits(selected ? .isSelected : [])
     }

@@ -32,8 +32,12 @@ final class KanjiBuildUpUITests: XCTestCase {
         let masteryFrames = ["がんばるぞ", "あとすこし", "かんぺき"].map { app.buttons[$0].frame }
         for frame in masteryFrames.dropFirst() {
             XCTAssertEqual(frame.width, masteryFrames[0].width, accuracy: 1)
-            XCTAssertEqual(frame.minX, masteryFrames[0].minX, accuracy: 1)
+            XCTAssertEqual(frame.minY, masteryFrames[0].minY, accuracy: 1)
         }
+        XCTAssertLessThan(masteryFrames[0].maxX, masteryFrames[1].minX)
+        XCTAssertLessThan(masteryFrames[1].maxX, masteryFrames[2].minX)
+        XCTAssertTrue(app.staticTexts["studyMeaning"].isHittable)
+        XCTAssertLessThan(app.staticTexts["studyMeaning"].frame.maxY, masteryFrames[0].minY)
         app.buttons["かんぺき"].tap()
         app.buttons["一覧に戻る"].firstMatch.tap()
         XCTAssertTrue(app.buttons["かんぺき、1件"].waitForExistence(timeout: 5))
