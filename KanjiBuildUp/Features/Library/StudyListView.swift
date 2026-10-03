@@ -22,13 +22,12 @@ struct StudyListView: View {
                     }.foregroundStyle(Palette.green).padding(12)
                         .background(Palette.softGreen, in: RoundedRectangle(cornerRadius: 10)).padding(.bottom, 12)
                 }
-                Menu {
-                    Button("すべてのカテゴリー") { category = nil }
-                    ForEach(store.categories, id: \.self) { value in Button(value) { category = value } }
-                } label: {
-                    HStack { Text(category ?? "すべてのカテゴリー"); Spacer(); Image(systemName: "chevron.down") }
-                        .padding(14).overlay(RoundedRectangle(cornerRadius: 8).stroke(.gray.opacity(0.3)))
-                }.foregroundStyle(Palette.ink).padding(.bottom, 16)
+                Picker("カテゴリー", selection: $category) {
+                    Text("すべてのカテゴリー").tag(String?.none)
+                    ForEach(store.categories, id: \.self) { value in Text(value).tag(Optional(value)) }
+                }
+                .pickerStyle(.menu).accessibilityIdentifier("categoryFilter")
+                .padding(.bottom, 12)
                 masteryFilters.padding(.bottom, 14)
                 if store.items.isEmpty {
                     Spacer()
@@ -46,24 +45,18 @@ struct StudyListView: View {
                     ContentUnavailableView("該当する問題はありません", systemImage: "line.3.horizontal.decrease", description: Text("カテゴリーや覚え具合を変更してください。"))
                     Spacer()
                 } else {
-                    ScrollView {
-                        LazyVStack(spacing: 0) {
-                            ForEach(filtered) { item in
-                                Button { session = StudySession(items: [item], review: true) } label: {
-                                    HStack(spacing: 12) {
-                                        VStack(alignment: .leading, spacing: 5) {
-                                            Text(item.question).font(.title3.bold()).multilineTextAlignment(.leading)
-                                            Text(item.category).font(.caption).foregroundStyle(Palette.secondary)
-                                        }
-                                        Spacer(minLength: 4)
-                                        MasteryBadge(mastery: item.mastery)
-                                        Image(systemName: "chevron.right").font(.caption.weight(.semibold))
-                                    }.frame(maxWidth: .infinity, minHeight: 66).padding(.vertical, 4).contentShape(Rectangle())
-                                }.buttonStyle(.plain).accessibilityHint("答えと意味を確認します")
-                                Divider()
-                            }
-                        }
-                    }
+                    List(filtered) { item in
+                        NavigationLink(value: StudySession(items: [item], review: true)) {
+                            HStack(spacing: 12) {
+                                VStack(alignment: .leading, spacing: 5) {
+                                    Text(item.question).font(.title3.bold()).multilineTextAlignment(.leading)
+                                    Text(item.category).font(.caption).foregroundStyle(Palette.secondary)
+                                }
+                                Spacer(minLength: 4)
+                                MasteryBadge(mastery: item.mastery)
+                            }.frame(maxWidth: .infinity, minHeight: 66).padding(.vertical, 4).contentShape(Rectangle())
+                        }.accessibilityHint("答えと意味を確認します")
+                    }.listStyle(.plain).scrollContentBackground(.hidden)
                     Text("項目をタップして答えを確認。").font(.footnote).foregroundStyle(Palette.secondary)
                         .frame(maxWidth: .infinity, alignment: .leading).padding(.top, 8)
                 }
@@ -89,6 +82,9 @@ struct StudyListView: View {
                             Label("追加", systemImage: "plus").font(.headline).padding(.vertical, 10)
                         }.accessibilityIdentifier("addItem")
                     }
+                }
+                .navigationDestination(for: StudySession.self) { value in
+                    StudyView(store: store, session: value)
                 }
                 .navigationDestination(item: $session) { initial in
                     StudyView(store: store, session: initial)
@@ -126,14 +122,15 @@ struct StudyListView: View {
         let selected = mastery == value
         let count = store.filtered(category: category, mastery: value).count
         return Button { mastery = value } label: {
-            VStack(spacing: 6) {
-                Text(title).font(.system(size: 13, weight: .semibold)).fixedSize()
+            VStack(spacing: 4) {
+                Text(title).font(.subheadline).fixedSize()
                 Text("\(count)").font(.headline).monospacedDigit()
-            }.frame(maxWidth: .infinity).padding(.horizontal, 8).padding(.vertical, 12)
-                .foregroundStyle(selected ? .white : value?.tint ?? Palette.ink)
-                .background(selected ? Palette.green : value?.background ?? Palette.softGreen, in: RoundedRectangle(cornerRadius: 10))
-        }.buttonStyle(.plain).accessibilityLabel("\(title)、\(count)件")
-            .accessibilityAddTraits(selected ? .isSelected : [])
+            }.frame(maxWidth: .infinity)
+        }
+        .buttonStyle(.bordered)
+        .tint(selected ? Palette.green : .secondary)
+        .accessibilityLabel(Text(verbatim: "\(title)、\(count)件"))
+        .accessibilityAddTraits(selected ? .isSelected : [])
     }
 }
 

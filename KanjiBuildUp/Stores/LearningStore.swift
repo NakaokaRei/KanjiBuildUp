@@ -7,10 +7,13 @@ final class LearningStore {
     var errorMessage: String?
     private let fileURL: URL
     private var canSave = true
+    private var appliedDefaults: Set<String> = []
 
-    init(fileURL: URL? = nil) {
+    init(fileURL: URL? = nil, defaults: DefaultStudyData? = nil) {
         var testURL: URL?
+        var testDefaults = false
         #if DEBUG
+        testDefaults = ProcessInfo.processInfo.environment["KANJI_TEST_DEFAULTS"] == "1"
         // UI tests use their own store, so relaunch tests never touch the user's data.
         if let name = ProcessInfo.processInfo.environment["KANJI_TEST_STORE"] {
             testURL = URL.applicationSupportDirectory.appendingPathComponent("UITests").appendingPathComponent(name + ".json")
@@ -20,7 +23,25 @@ final class LearningStore {
             .appendingPathComponent("KanjiBuildUp", isDirectory: true).appendingPathComponent("items.json")
         do {
             if FileManager.default.fileExists(atPath: self.fileURL.path) {
-                items = try JSONDecoder().decode([StudyItem].self, from: Data(contentsOf: self.fileURL))
+                let data = try Data(contentsOf: self.fileURL)
+                let decoder = JSONDecoder()
+                if let legacy = try? decoder.decode([StudyItem].self, from: data) {
+                    items = legacy
+                } else {
+                    let saved = try decoder.decode(SavedLearningData.self, from: data)
+                    items = saved.items
+                    appliedDefaults = saved.appliedDefaults
+                }
+            }
+            // Explicit stores and UI-test stores stay isolated from bundled defaults.
+            let initialData = try defaults ?? ((fileURL == nil && (testURL == nil || testDefaults)) ? DefaultStudyData.load() : nil)
+            if let initialData, !appliedDefaults.contains(initialData.version) {
+                let existingIDs = Set(items.map(\.id))
+                let existingContent = Set(items.map { [$0.category, $0.question, $0.answer] })
+                let additions = initialData.items.filter {
+                    !existingIDs.contains($0.id) && !existingContent.contains([$0.category, $0.question, $0.answer])
+                }
+                _ = commit(items + additions, versions: appliedDefaults.union([initialData.version]))
             }
         } catch {
             canSave = false
@@ -55,14 +76,17 @@ final class LearningStore {
         return commit(items.filter { $0.id != id })
     }
 
-    private func commit(_ updated: [StudyItem]) -> Bool {
+    private func commit(_ updated: [StudyItem], versions: Set<String>? = nil) -> Bool {
         guard canSave else {
             errorMessage = "保存データを読み込めていないため、変更できません。アプリを再起動して確認してください。"
             return false
         }
         do {
             try FileManager.default.createDirectory(at: fileURL.deletingLastPathComponent(), withIntermediateDirectories: true)
-            try JSONEncoder().encode(updated).write(to: fileURL, options: .atomic)
+            let nextVersions = versions ?? appliedDefaults
+            let saved = SavedLearningData(items: updated, appliedDefaults: nextVersions)
+            try JSONEncoder().encode(saved).write(to: fileURL, options: .atomic)
+            appliedDefaults = nextVersions
             items = updated
             return true
         } catch {

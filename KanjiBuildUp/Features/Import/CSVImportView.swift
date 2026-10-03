@@ -12,23 +12,12 @@ struct CSVImportView: View {
     var body: some View {
         NavigationStack {
             VStack(alignment: .leading, spacing: 0) {
-                HStack {
-                    Text("CSV取り込み").font(.largeTitle.bold())
-                    Spacer()
-                    Button("閉じる") { dismiss() }.font(.subheadline)
-                }.padding(.bottom, 24)
                 ScrollView {
                     VStack(alignment: .leading, spacing: 24) {
                         Text("CSVから学習する漢字を追加します。")
                         previewTable
-                        Button { showPicker = true } label: {
-                            HStack(spacing: 14) {
-                                Image(systemName: "doc.text").font(.title)
-                                Text("CSVファイルを選ぶ").font(.headline)
-                                Spacer()
-                                Image(systemName: "chevron.right")
-                            }.padding(18).background(Palette.softGreen, in: RoundedRectangle(cornerRadius: 10))
-                        }.buttonStyle(.plain)
+                        Button("CSVファイルを選ぶ", systemImage: "doc.text") { showPicker = true }
+                            .buttonStyle(.bordered)
                         if !entries.isEmpty {
                             VStack(alignment: .leading, spacing: 10) {
                                 Text("選択されたファイル").font(.subheadline)
@@ -50,7 +39,13 @@ struct CSVImportView: View {
                     else { errorMessage = store.errorMessage; store.errorMessage = nil }
                 }.padding(.top, 20)
             }.padding(24).frame(maxWidth: 640).frame(maxWidth: .infinity)
-                .background(Palette.background.ignoresSafeArea()).toolbar(.hidden)
+                .background(Palette.background.ignoresSafeArea())
+                .navigationTitle("CSV取り込み")
+                .toolbar {
+                    ToolbarItem(placement: .cancellationAction) {
+                        Button("閉じる") { dismiss() }
+                    }
+                }
         }.tint(Palette.green).foregroundStyle(Palette.ink).preferredColorScheme(.light)
             .onAppear {
                 #if DEBUG

@@ -56,7 +56,7 @@ struct StudyView: View {
                                 }
                             }
                         } else {
-                            Text(item.category == "読み" ? "この漢字の読みは？" : "答えを考えてみましょう")
+                            Text(["読み", "音読み", "訓読み", "当て字"].contains(item.category) ? "この漢字の読みは？" : "答えを考えてみましょう")
                                 .font(.title3.bold()).frame(maxWidth: .infinity).padding(.top, 30)
                             Text(item.question).font(.system(size: item.question.count <= 2 ? 144 : 44, weight: .bold))
                                 .multilineTextAlignment(.center).frame(maxWidth: .infinity, minHeight: 240)
@@ -115,15 +115,16 @@ struct StudyView: View {
     }
     @ViewBuilder private func masteryButtons(_ item: StudyItem) -> some View {
         ForEach(Mastery.allCases) { value in
-            let selected = item.mastery == value
-            Button { store.setMastery(value, for: item.id) } label: {
-                VStack(spacing: 8) {
-                    Image(systemName: selected ? "checkmark.circle.fill" : "circle").font(.title2)
-                    Text(value.title).font(.system(size: 14, weight: .semibold)).fixedSize()
-                }.frame(maxWidth: .infinity).padding(.horizontal, 8).padding(.vertical, 12)
-                    .foregroundStyle(value.tint).background(value.background, in: RoundedRectangle(cornerRadius: 10))
-                    .overlay(RoundedRectangle(cornerRadius: 10).stroke(selected ? value.tint : .clear, lineWidth: 1))
-            }.buttonStyle(.plain).accessibilityLabel(value.title).accessibilityAddTraits(selected ? .isSelected : [])
+            Button {
+                store.setMastery(value, for: item.id)
+            } label: {
+                Label(value.title, systemImage: item.mastery == value ? "checkmark.circle.fill" : "circle")
+                    .font(.subheadline).fixedSize()
+            }
+            .buttonStyle(.bordered)
+            .tint(value.tint)
+            .accessibilityLabel(value.title)
+            .accessibilityAddTraits(item.mastery == value ? .isSelected : [])
         }
     }
 }
