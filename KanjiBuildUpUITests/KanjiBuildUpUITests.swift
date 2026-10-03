@@ -28,6 +28,7 @@ final class KanjiBuildUpUITests: XCTestCase {
         app.buttons.containing(.staticText, identifier: "桜").firstMatch.tap()
         XCTAssertTrue(app.staticTexts["さくら"].waitForExistence(timeout: 5))
         XCTAssertFalse(app.buttons["revealAnswer"].exists)
+        XCTAssertFalse(app.buttons["previousQuestion"].exists)
         capture("answer", app)
         let masteryFrames = ["がんばるぞ", "あとすこし", "かんぺき"].map { app.buttons[$0].frame }
         for frame in masteryFrames.dropFirst() {
@@ -64,9 +65,28 @@ final class KanjiBuildUpUITests: XCTestCase {
         XCTAssertTrue(app.buttons["すべて、2件"].waitForExistence(timeout: 5))
         app.buttons["startStudy"].tap()
         XCTAssertTrue(app.staticTexts["1 / 2"].waitForExistence(timeout: 5))
+        let firstQuestion = app.staticTexts["questionText"].label
+        XCTAssertFalse(app.buttons["previousQuestion"].isEnabled)
         app.buttons["revealAnswer"].tap()
+        app.buttons["かんぺき"].tap()
         app.buttons["次の問題"].tap()
         XCTAssertTrue(app.staticTexts["2 / 2"].waitForExistence(timeout: 5))
+        let secondQuestion = app.staticTexts["questionText"].label
+        XCTAssertNotEqual(firstQuestion, secondQuestion)
+        app.buttons["previousQuestion"].tap()
+        XCTAssertTrue(app.staticTexts["1 / 2"].waitForExistence(timeout: 5))
+        XCTAssertEqual(app.staticTexts["questionText"].label, firstQuestion)
+        XCTAssertFalse(app.buttons["previousQuestion"].isEnabled)
+        app.buttons["revealAnswer"].tap()
+        XCTAssertTrue(app.buttons["かんぺき"].isSelected)
+        app.buttons["次の問題"].tap()
+        XCTAssertTrue(app.staticTexts["2 / 2"].waitForExistence(timeout: 5))
+        XCTAssertEqual(app.staticTexts["questionText"].label, secondQuestion)
+        app.buttons["revealAnswer"].tap()
+        capture("answer-with-previous", app)
+        app.buttons["previousQuestion"].tap()
+        XCTAssertTrue(app.staticTexts["1 / 2"].waitForExistence(timeout: 5))
+        XCTAssertEqual(app.staticTexts["questionText"].label, firstQuestion)
         XCTAssertTrue(app.buttons["revealAnswer"].exists)
     }
 

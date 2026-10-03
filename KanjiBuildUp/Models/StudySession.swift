@@ -13,6 +13,12 @@ struct StudySession: Identifiable, Hashable {
         revealed = review
     }
     var currentID: UUID? { itemIDs.indices.contains(index) ? itemIDs[index] : nil }
+    var canGoBack: Bool { !isReview && !complete && index > 0 }
+    mutating func goBack() {
+        guard canGoBack else { return }
+        index -= 1
+        revealed = false
+    }
     mutating func advance() {
         if index + 1 < itemIDs.count { index += 1; revealed = false }
         else { complete = true }

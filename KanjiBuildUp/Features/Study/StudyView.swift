@@ -24,7 +24,15 @@ struct StudyView: View {
                 HStack {
                     Text(item.category).font(.headline)
                     Spacer()
-                    if !session.isReview { Text("\(session.index + 1) / \(session.itemIDs.count)").monospacedDigit() }
+                    if !session.isReview {
+                        Button("前の問題", systemImage: "arrow.left") { session.goBack() }
+                            .font(.subheadline)
+                            .appGlassButton()
+                            .tint(Palette.green)
+                            .disabled(!session.canGoBack)
+                            .accessibilityIdentifier("previousQuestion")
+                        Text("\(session.index + 1) / \(session.itemIDs.count)").monospacedDigit()
+                    }
                 }.padding(.bottom, 10)
                 Divider()
                 ScrollView {

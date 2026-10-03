@@ -31,11 +31,26 @@ import Foundation
         let originalSession = session
         precondition(Set(session.itemIDs) == Set(parsed.map(\.id)))
         precondition(!session.revealed && !session.isReview)
+        precondition(!session.canGoBack)
+        session.goBack()
+        precondition(session == originalSession)
         session.revealed = true; session.advance()
         precondition(session != originalSession)
         precondition(session.index == 1 && !session.revealed)
+        let secondID = session.currentID
+        precondition(session.canGoBack)
+        session.revealed = true
+        session.goBack()
+        precondition(session.currentID == originalSession.currentID && !session.revealed)
+        precondition(session.itemIDs == originalSession.itemIDs && !session.canGoBack)
+        session.advance()
+        precondition(session.currentID == secondID)
         session.advance(); precondition(session.complete)
-        let review = StudySession(items: [parsed[0]], review: true)
+        let completedSession = session
+        session.goBack()
+        precondition(session == completedSession)
+        var review = StudySession(items: [parsed[0]], review: true)
+        review.goBack()
         precondition(review.revealed && review.isReview)
         // Migration from records without a notes key.
         let encoded = try JSONEncoder().encode(parsed)
