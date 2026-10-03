@@ -100,9 +100,9 @@ struct StudyView: View {
                 .frame(maxWidth: .infinity, minHeight: 46)
                 .foregroundStyle(item.mastery == value ? .white : value.tint)
             }
-            .appGlassButton(prominent: item.mastery == value)
+            .appGlassButton(prominent: true)
             .buttonBorderShape(.roundedRectangle(radius: 16))
-            .tint(value.tint)
+            .tint(item.mastery == value ? value.tint : value.background)
             .accessibilityLabel(value.title)
             .accessibilityAddTraits(item.mastery == value ? .isSelected : [])
         }
