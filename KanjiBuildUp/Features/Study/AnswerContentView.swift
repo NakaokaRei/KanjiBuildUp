@@ -9,11 +9,6 @@ struct AnswerContentView: View {
 
     var body: some View {
         VStack(alignment: .leading, spacing: 12) {
-            VStack(alignment: .leading, spacing: 4) {
-                Text("問題").font(.caption).foregroundStyle(Palette.secondary)
-                Text(item.question).font(.title2.weight(.semibold))
-                    .foregroundStyle(Palette.secondary).textSelection(.enabled)
-            }
             VStack(spacing: 8) {
                 Text("答え").font(.caption).foregroundStyle(Palette.secondary)
                 Text(item.answer).font(.system(size: answerSize, weight: .bold))

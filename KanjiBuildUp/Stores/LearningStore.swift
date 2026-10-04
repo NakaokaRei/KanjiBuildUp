@@ -1,11 +1,13 @@
 import Foundation
 import Observation
+import WidgetKit
 
 @MainActor @Observable
 final class LearningStore {
     private(set) var items: [StudyItem] = []
     var errorMessage: String?
     private let fileURL: URL
+    private let publishesWidget: Bool
     private var canSave = true
     private var appliedDefaults: Set<String> = []
 
@@ -19,6 +21,7 @@ final class LearningStore {
             testURL = URL.applicationSupportDirectory.appendingPathComponent("UITests").appendingPathComponent(name + ".json")
         }
         #endif
+        self.publishesWidget = fileURL == nil && testURL == nil
         self.fileURL = fileURL ?? testURL ?? URL.applicationSupportDirectory
             .appendingPathComponent("KanjiBuildUp", isDirectory: true).appendingPathComponent("items.json")
         do {
@@ -50,6 +53,7 @@ final class LearningStore {
                 }
                 if !commit(items + additions, versions: appliedDefaults.union([initialData.version])) { break }
             }
+            publishWidget()
         } catch {
             canSave = false
             errorMessage = "保存したデータを読み込めませんでした。データの上書きを防ぐため、保存を停止しています。\n\(error.localizedDescription)"
@@ -83,6 +87,15 @@ final class LearningStore {
         return commit(items.filter { $0.id != id })
     }
 
+    private func publishWidget() {
+        guard publishesWidget else { return }
+        let progress = WidgetProgress(
+            starting: items.filter { $0.mastery == .starting }.count,
+            learning: items.filter { $0.mastery == .learning }.count,
+            mastered: items.filter { $0.mastery == .mastered }.count)
+        if progress.write() { WidgetCenter.shared.reloadTimelines(ofKind: WidgetProgress.kind) }
+    }
+
     private func commit(_ updated: [StudyItem], versions: Set<String>? = nil) -> Bool {
         guard canSave else {
             errorMessage = "保存データを読み込めていないため、変更できません。アプリを再起動して確認してください。"
@@ -95,6 +108,7 @@ final class LearningStore {
             try JSONEncoder().encode(saved).write(to: fileURL, options: .atomic)
             appliedDefaults = nextVersions
             items = updated
+            publishWidget()
             return true
         } catch {
             errorMessage = "保存できませんでした。変更は反映されていません。\n\(error.localizedDescription)"

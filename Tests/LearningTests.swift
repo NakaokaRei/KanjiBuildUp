@@ -2,6 +2,18 @@ import Foundation
 
 @main struct LearningTests {
     @MainActor static func main() throws {
+        let widgetSuite = "widget-tests-" + UUID().uuidString
+        let widgetDefaults = UserDefaults(suiteName: widgetSuite)!
+        defer { widgetDefaults.removePersistentDomain(forName: widgetSuite) }
+        precondition(WidgetProgress.read(from: widgetDefaults) == nil)
+        precondition(WidgetProgress.example.total == 8000)
+        precondition(WidgetProgress.example.write(to: widgetDefaults))
+        precondition(WidgetProgress.read(from: widgetDefaults) == .example)
+        precondition(!WidgetProgress.example.write(to: widgetDefaults))
+        precondition(WidgetProgress.empty.write(to: widgetDefaults))
+        precondition(WidgetProgress.read(from: widgetDefaults)?.total == 0)
+        widgetDefaults.set(Data("invalid".utf8), forKey: WidgetProgress.key)
+        precondition(WidgetProgress.read(from: widgetDefaults) == nil)
         let simple = "カテゴリー,問題,答え,意味\n読み,桜,さくら,春の木\n読み,椿,つばき,"
         let parsed = try KanjiCSV.parse(simple)
         precondition(parsed.count == 2 && parsed.allSatisfy { $0.mastery == .starting })
@@ -28,6 +40,8 @@ import Foundation
         precondition(reloaded.filtered(category: "読み", mastery: .mastered).count == 1)
         precondition(reloaded.filtered(category: "ことわざ", mastery: nil).isEmpty)
         var session = StudySession(items: parsed)
+        let firstCompanion = session.companionName
+        precondition(StudySession.companionNames.contains(firstCompanion))
         let originalSession = session
         precondition(Set(session.itemIDs) == Set(parsed.map(\.id)))
         precondition(!session.revealed && !session.isReview)
@@ -37,14 +51,18 @@ import Foundation
         session.revealed = true; session.advance()
         precondition(session != originalSession)
         precondition(session.index == 1 && !session.revealed)
+        precondition(session.companionName != firstCompanion)
+        let secondCompanion = session.companionName
         let secondID = session.currentID
         precondition(session.canGoBack)
         session.revealed = true
         session.goBack()
+        precondition(session.companionName == firstCompanion)
         precondition(session.currentID == originalSession.currentID && !session.revealed)
         precondition(session.itemIDs == originalSession.itemIDs && !session.canGoBack)
         session.advance()
         precondition(session.currentID == secondID)
+        precondition(session.companionName == secondCompanion)
         session.advance(); precondition(session.complete)
         let completedSession = session
         session.goBack()

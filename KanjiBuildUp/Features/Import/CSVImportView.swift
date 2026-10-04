@@ -5,6 +5,7 @@ struct CSVImportView: View {
     let store: LearningStore
     let onImport: (Int) -> Void
     @Environment(\.dismiss) private var dismiss
+    @State private var footerHeight: CGFloat = 96
     @State private var showPicker = false
     @State private var entries: [StudyItem] = []
     @State private var fileName = ""
@@ -34,12 +35,16 @@ struct CSVImportView: View {
                             .font(.footnote).foregroundStyle(Palette.secondary).lineSpacing(4)
                     }
                 }
-                PrimaryButton(title: entries.isEmpty ? "ファイルを選択してください" : "\(entries.count)件を取り込む", enabled: !entries.isEmpty) {
-                    if store.add(entries) { onImport(entries.count); dismiss() }
-                    else { errorMessage = store.errorMessage; store.errorMessage = nil }
-                }.padding(.top, 20)
+                .contentMargins(.bottom, footerHeight + 24)
+                .ignoresSafeArea(.container, edges: .bottom)
             }.padding(24).frame(maxWidth: 640).frame(maxWidth: .infinity)
                 .background(Palette.background.ignoresSafeArea())
+                .floatingFooter(height: $footerHeight) {
+                    PrimaryButton(title: entries.isEmpty ? "ファイルを選択してください" : "\(entries.count)件を取り込む", enabled: !entries.isEmpty) {
+                        if store.add(entries) { onImport(entries.count); dismiss() }
+                        else { errorMessage = store.errorMessage; store.errorMessage = nil }
+                    }
+                }
                 .navigationTitle("CSV取り込み")
                 .toolbar {
                     ToolbarItem(placement: .cancellationAction) {

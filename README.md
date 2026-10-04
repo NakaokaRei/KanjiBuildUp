@@ -1,6 +1,6 @@
 # KanjiBuildUp
 
-手入力やCSVで自分の問題を追加できるSwiftUIの漢字学習アプリです。選定モックアップ `output/mockups/04-notebook-gothic-white.png` を基準に、白に近い背景、緑のアクセント、システムのゴシック体を使用しています。
+手入力やCSVで自分の問題を追加できるSwiftUIの漢字学習アプリです。選定モックアップ `output/mockups/05-companion-sage.png` を基準に、淡いセージグリーンのヘッダー、白に近い本文、システムのゴシック体を使用しています。
 
 ## 起動
 
@@ -110,7 +110,7 @@ KanjiBuildUp/
 データ処理テスト:
 
 ```sh
-xcrun swiftc KanjiBuildUp/Models/*.swift KanjiBuildUp/Services/*.swift KanjiBuildUp/Stores/*.swift Tests/LearningTests.swift -o /tmp/kanji-tests
+xcrun swiftc Shared/*.swift KanjiBuildUp/Models/*.swift KanjiBuildUp/Services/*.swift KanjiBuildUp/Stores/*.swift Tests/LearningTests.swift -o /tmp/kanji-tests
 /tmp/kanji-tests
 ```
 
@@ -121,3 +121,28 @@ xcodebuild -project KanjiBuildUp.xcodeproj -scheme KanjiBuildUp -destination 'pl
 ```
 
 UIテストはDEBUG限定の環境変数で独立した保存先とCSVプレビューを用意し、取り込み確定・学習・保存を確認します。OSのファイル選択画面自体はこのfixtureテストの対象外です。
+
+## キャラクターとヘッダー
+
+NavigationStackと標準NavigationBarを維持し、背景色を共通のセージグリーンに接続しています。iOS 26以降の丸いガラスボタンはOS標準の描画です。以前のOSでは標準の外観に従います。戻るスワイプと編集メニューを保持しています。
+
+一覧・答えはアシカ、問題はペンギン・カエル・蝶・ヒトデ・アシカからランダムに表示します。各問題への割り当ては学習セッション中固定され、前の問題に戻っても維持されます。隣接する問題は同じキャラを避けます。問題・答えのキャラは72 ptで描画し、レイアウト上の高さは56 ptに固定（一覧はタイトル横の120 pt）して、拡大文字サイズでは装飾を非表示にして本文を優先します。
+
+素材はGohobiStickersの原画を参照して組み込みImageGenで背景透過し、このプロジェクトのAssets.xcassetsへ保存しています。コアラのアイコンは承認された「本を読むコアラ」を元に作成した1024pxの不透明画像です。実装用素材とプロンプトの概要は `output/companion-assets.md` を参照してください。
+
+一覧ヘッダーは左にtitle2サイズの「漢字一覧」、右に72 ptのアシカ、下にカテゴリーを配置します。通常サイズではヘッダー本体を100 ptに収め、共通の波形は高さ16 pt・横1周期です。追加ボタンと画面遷移は標準NavigationBarを維持します。
+
+固定フッターは問題・答え・学習完了・一覧・CSV取り込みで `floatingFooter` を共用。本文へ重ね、上端64 ptで透明から半透明の白へフェードし、背景を下部Safe Areaまで連続させています。実測した操作領域の高さ＋24 ptをスクロール余白に確保し、長い説明文も最後まで読めます。答えのヒトデは44 ptです。
+
+一覧ヘッダーはiOS 18 / macOS 15 / visionOS 2以降でスクロール量に連動して縮小します。先頭80 ptのスクロールでアシカ120→52 pt、タイトル28→22 pt（標準文字サイズ）、ヘッダー行112→56 ptへ連続的に変化し、先頭で復元。カテゴリー・習熟度フィルターは固定表示し、切り替え時もListを作り直さず、現在の位置とヘッダーの大きさを維持します（件数が減る場合は表示可能な範囲に補正）。旧OSでは従来の固定ヘッダーです。
+
+
+## ホーム画面Widget
+
+「漢字の件数」を小・中サイズで追加。全カテゴリーの「すべて／がんばるぞ／あとすこし／かんぺき」の件数を表示します。アシカ・ヒトデ、セージグリーンの背景、各習熟度の色をアプリと揃えています。初回はアプリを一度開いてください。未共有時はサンプル値ではなく「—」、空の漢字帳は0件を表示します。
+
+本体とKanjiProgressWidgetExtensionでApp Group `group.com.reinakaoka.KanjiBuildUp` を共有。既存の学習JSONは移動せず、読み込み成功時と保存成功時に件数だけを共有UserDefaultsへ書き込み、変更があればWidgetKitへ更新を依頼します。実際の表示更新時刻はOSに従い、補助的に1時間後のタイムライン再取得も設定。テスト用ストアはWidgetへ公開しません。素材は表示時にサムネイル化して小Widgetの画像容量制限へ対応。
+
+両ターゲットのApp Groups entitlementと埋め込み設定を追加済み。WidgetはiOS 17 / macOS 14以降対応。ホーム画面の編集→ウィジェットを追加→漢字の件数で追加できます。
+
+Widget内の「漢字のあゆみ」見出しのみ省略。元の配置（小サイズ2×2／中サイズ4列）と上のアシカ・下のヒトデと応援文を維持し、中サイズは項目名12 pt・件数25 pt、小サイズは項目名11 pt・件数22 ptを基準に幅へ調整しています。

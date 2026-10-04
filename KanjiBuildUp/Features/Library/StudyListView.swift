@@ -9,6 +9,8 @@ struct StudyListView: View {
     @State private var showManualEntry = false
     @State private var session: StudySession?
     @State private var notice: String?
+    @State private var headerCollapse: CGFloat = 0
+    @ScaledMetric(relativeTo: .title) private var headerTitleSize = 28
     @State private var studyActionHeight: CGFloat = 96
     private var filtered: [StudyItem] { store.filtered(category: category, mastery: mastery) }
 
@@ -24,12 +26,33 @@ struct StudyListView: View {
                     }.foregroundStyle(Palette.green).padding(12)
                         .background(Palette.softGreen, in: RoundedRectangle(cornerRadius: 10)).padding(.bottom, 12)
                 }
-                Picker("カテゴリー", selection: $category) {
-                    Text("すべてのカテゴリー").tag(String?.none)
-                    ForEach(store.categories, id: \.self) { value in Text(value).tag(Optional(value)) }
+                VStack(spacing: 0) {
+                    HStack(spacing: 12) {
+                        Text("漢字一覧").font(.system(size: headerTitleSize - 6 * headerCollapse, weight: .bold))
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                        if !dynamicTypeSize.isAccessibilitySize {
+                            CompanionImage(name: "CompanionSeaLion", size: 120 - 68 * headerCollapse)
+                                .offset(y: 4 * (1 - headerCollapse))
+                                .frame(width: 128 - 68 * headerCollapse, height: 112 - 60 * headerCollapse)
+                        }
+                    }
+                    .frame(minHeight: 56)
+                    .background {
+                        HeaderWave().fill(Palette.header)
+                            .padding(.horizontal, -20)
+                            .overlay(alignment: .top) {
+                                Palette.header.frame(height: 150)
+                                    .padding(.horizontal, -20).offset(y: -150)
+                            }
+                            .allowsHitTesting(false)
+                    }
+                    Picker("カテゴリー", selection: $category) {
+                        Text("すべてのカテゴリー").tag(String?.none)
+                        ForEach(store.categories, id: \.self) { value in Text(value).tag(Optional(value)) }
+                    }
+                    .pickerStyle(.menu).accessibilityIdentifier("categoryFilter")
+                    .frame(maxWidth: .infinity, minHeight: 44)
                 }
-                .pickerStyle(.menu).accessibilityIdentifier("categoryFilter")
-                .padding(.bottom, 12)
                 masteryFilters.padding(.bottom, 4)
                 if store.items.isEmpty {
                     Spacer()
@@ -41,10 +64,6 @@ struct StudyListView: View {
                         Button("手入力で追加") { showManualEntry = true }.buttonStyle(.bordered)
                         Button("CSVを取り込む") { showImport = true }.buttonStyle(.bordered)
                     }
-                    Spacer()
-                } else if filtered.isEmpty {
-                    Spacer()
-                    ContentUnavailableView("該当する問題はありません", systemImage: "line.3.horizontal.decrease", description: Text("カテゴリーや覚え具合を変更してください。"))
                     Spacer()
                 } else {
                     List(filtered) { item in
@@ -60,42 +79,37 @@ struct StudyListView: View {
                         }.accessibilityHint("答えと意味を確認します")
                         .listRowBackground(Color.clear)
                     }.listStyle(.plain).scrollContentBackground(.hidden)
+                        .modifier(LibraryScrollHeaderModifier(collapse: $headerCollapse))
+                        .overlay {
+                            if filtered.isEmpty {
+                                ContentUnavailableView("該当する問題はありません", systemImage: "line.3.horizontal.decrease", description: Text("カテゴリーや覚え具合を変更してください。"))
+                            }
+                        }
                         .listRowSpacing(4)
-                        .contentMargins(.top, 16, for: .scrollContent)
-                        .contentMargins(.bottom, studyActionHeight + 24, for: .scrollContent)
+                        .contentMargins(.top, 4, for: .scrollContent)
+                        .contentMargins(.bottom, studyActionHeight + 24)
                         .mask {
                             VStack(spacing: 0) {
                                 LinearGradient(colors: [.clear, .black], startPoint: .top, endPoint: .bottom)
-                                    .frame(height: 24)
+                                    .frame(height: 8)
                                 Rectangle().fill(.black)
                             }
                         }
                 }
             }.padding(.horizontal, 20).frame(maxWidth: 640).frame(maxWidth: .infinity)
                 .background(Palette.pageGradient.ignoresSafeArea())
-                .overlay(alignment: .bottom) {
+                .floatingFooter(height: $studyActionHeight) {
                     PrimaryButton(title: "問題をはじめる", enabled: !filtered.isEmpty) {
                         session = StudySession(items: filtered)
                     }
                     .accessibilityIdentifier("startStudy")
                     .shadow(color: Palette.green.opacity(0.18), radius: 16, x: 0, y: 6)
-                    .padding(.horizontal, 24).padding(.vertical, 12)
-                    .frame(maxWidth: 640)
-                    .frame(maxWidth: .infinity)
-                    .background {
-                        GeometryReader { geometry in
-                            Color.clear.preference(key: StudyActionHeightKey.self, value: geometry.size.height)
-                        }
-                    }
-                    .background {
-                        Palette.bottomFade
-                            .padding(.top, -72)
-                            .ignoresSafeArea(edges: .bottom)
-                            .allowsHitTesting(false)
-                    }
                 }
-                .onPreferenceChange(StudyActionHeightKey.self) { studyActionHeight = $0 }
-                .navigationTitle("漢字一覧")
+                .navigationTitle("")
+                #if os(iOS)
+                .navigationBarTitleDisplayMode(.inline)
+                #endif
+                .companionNavigationBar()
                 .toolbar {
                     ToolbarItem(placement: .primaryAction) {
                         Menu {
@@ -173,10 +187,28 @@ struct StudyListView: View {
     }
 }
 
-private struct StudyActionHeightKey: PreferenceKey {
-    static let defaultValue: CGFloat = 96
-    static func reduce(value: inout CGFloat, nextValue: () -> CGFloat) {
-        value = nextValue()
+private struct LibraryScrollHeaderModifier: ViewModifier {
+    @Binding var collapse: CGFloat
+    @State private var userIsScrolling = false
+
+    @ViewBuilder func body(content: Content) -> some View {
+        if #available(iOS 18, macOS 15, visionOS 2, *) {
+            content.onScrollGeometryChange(for: CGFloat.self) { geometry in
+                min(1, max(0, (geometry.contentOffset.y + geometry.contentInsets.top) / 80))
+            } action: { _, progress in
+                if userIsScrolling { collapse = progress }
+            }
+            .onScrollPhaseChange { _, phase, context in
+                let wasScrolling = userIsScrolling
+                userIsScrolling = phase == .interacting || phase == .decelerating
+                if userIsScrolling || wasScrolling {
+                    collapse = min(1, max(0, (context.geometry.contentOffset.y + context.geometry.contentInsets.top) / 80))
+                }
+            }
+        } else {
+            // Earlier systems retain the expanded header and native List scrolling.
+            content
+        }
     }
 }
 

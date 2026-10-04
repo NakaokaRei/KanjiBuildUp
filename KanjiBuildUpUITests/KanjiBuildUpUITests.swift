@@ -235,6 +235,95 @@ final class KanjiBuildUpUITests: XCTestCase {
         XCTAssertTrue(app.buttons["かんぺき、959件"].exists)
     }
 
+    @MainActor func testCompanionLayout() throws {
+        let app = XCUIApplication()
+        app.launchEnvironment["KANJI_TEST_STORE"] = UUID().uuidString
+        app.launchEnvironment["KANJI_TEST_CSV"] = "カテゴリー,問題,答え,意味\n当て字,亜典,あてね,出典不明。"
+        app.launch()
+        XCTAssertTrue(app.buttons["addItem"].waitForExistence(timeout: 10))
+        app.buttons["addItem"].tap()
+        app.buttons["importCSV"].tap()
+        app.buttons["1件を取り込む"].tap()
+        XCTAssertTrue(app.staticTexts["1件を取り込みました。"].waitForExistence(timeout: 5))
+        app.buttons["取り込み通知を閉じる"].tap()
+        capture("cute-list", app)
+        app.buttons["startStudy"].tap()
+        XCTAssertTrue(app.staticTexts["questionText"].waitForExistence(timeout: 5))
+        XCTAssertTrue(app.staticTexts["questionText"].isHittable)
+        XCTAssertLessThan(app.staticTexts["questionText"].frame.maxY, app.buttons["revealAnswer"].frame.minY)
+        capture("cute-question", app)
+        app.buttons["revealAnswer"].tap()
+        XCTAssertTrue(app.staticTexts["studyAnswer"].waitForExistence(timeout: 5))
+        XCTAssertTrue(app.staticTexts["studyMeaning"].isHittable)
+        XCTAssertLessThan(app.staticTexts["studyAnswer"].frame.maxY, app.buttons["かんぺき"].frame.minY)
+        capture("cute-answer", app)
+    }
+
+    @MainActor func testCollapsingLibraryHeader() throws {
+        let app = XCUIApplication()
+        app.launchEnvironment["KANJI_TEST_STORE"] = UUID().uuidString
+        app.launchEnvironment["KANJI_TEST_CSV"] = "カテゴリー,問題,答え,意味\n" + (1...30).map {
+            "読み,問題\($0),こたえ,意味"
+        }.joined(separator: "\n")
+        app.launch()
+        XCTAssertTrue(app.buttons["addItem"].waitForExistence(timeout: 10))
+        app.buttons["addItem"].tap()
+        app.buttons["importCSV"].tap()
+        app.buttons["30件を取り込む"].tap()
+        app.buttons["取り込み通知を閉じる"].tap()
+        let filter = app.buttons["categoryFilter"]
+        let expandedY = filter.frame.minY
+        capture("header-expanded", app)
+        let list = app.collectionViews.firstMatch
+        list.swipeUp()
+        XCTAssertLessThan(filter.frame.minY, expandedY - 40)
+        XCTAssertTrue(filter.isHittable)
+        XCTAssertTrue(app.buttons["startStudy"].isHittable)
+        capture("header-collapsed", app)
+        let collapsedY = filter.frame.minY
+        let visibleQuestion = app.staticTexts.matching(NSPredicate(format: "label BEGINSWITH %@", "問題")).allElementsBoundByIndex.first { $0.isHittable && $0.label != "問題をはじめる" }!
+        let visibleLabel = visibleQuestion.label
+        let visibleY = visibleQuestion.frame.minY
+        app.buttons["がんばるぞ、30件"].tap()
+        XCTAssertEqual(filter.frame.minY, collapsedY, accuracy: 2)
+        XCTAssertEqual(app.staticTexts[visibleLabel].frame.minY, visibleY, accuracy: 2)
+        app.buttons["すべて、30件"].tap()
+        XCTAssertEqual(filter.frame.minY, collapsedY, accuracy: 2)
+        XCTAssertEqual(app.staticTexts[visibleLabel].frame.minY, visibleY, accuracy: 2)
+        capture("filter-position-preserved", app)
+        app.buttons["あとすこし、0件"].tap()
+        XCTAssertEqual(filter.frame.minY, collapsedY, accuracy: 2)
+        XCTAssertTrue(app.staticTexts["該当する問題はありません"].exists)
+        app.buttons["すべて、30件"].tap()
+        XCTAssertEqual(filter.frame.minY, collapsedY, accuracy: 2)
+
+        for _ in 0..<3 { list.swipeDown() }
+        XCTAssertEqual(filter.frame.minY, expandedY, accuracy: 2)
+        capture("header-restored", app)
+    }
+
+    @MainActor func testLongAnswerFloatingFooter() throws {
+        let app = XCUIApplication()
+        app.launchEnvironment["KANJI_TEST_STORE"] = UUID().uuidString
+        let meaning = String(repeating: "小さな虫が木に入り、幹や枝を食べることがあります。", count: 14)
+        app.launchEnvironment["KANJI_TEST_CSV"] = "カテゴリー,問題,答え,意味\n読み,虫,むし,\(meaning)ここが説明の最後です。"
+        app.launch()
+        XCTAssertTrue(app.buttons["addItem"].waitForExistence(timeout: 10))
+        app.buttons["addItem"].tap()
+        app.buttons["importCSV"].tap()
+        XCTAssertTrue(app.buttons["1件を取り込む"].waitForExistence(timeout: 5))
+        app.buttons["1件を取り込む"].tap()
+        app.buttons["startStudy"].tap()
+        app.buttons["revealAnswer"].tap()
+        XCTAssertTrue(app.staticTexts["studyMeaning"].waitForExistence(timeout: 5))
+        capture("footer-long-answer", app)
+        let scroll = app.scrollViews.firstMatch
+        for _ in 0..<4 { scroll.swipeUp() }
+        XCTAssertTrue(app.buttons["かんぺき"].isHittable)
+        XCTAssertLessThan(app.staticTexts["studyMeaning"].frame.maxY, app.buttons["かんぺき"].frame.minY)
+        capture("footer-long-answer-end", app)
+    }
+
     @MainActor private func capture(_ name: String, _ app: XCUIApplication) {
         let directory = URL.documentsDirectory.appendingPathComponent("Screenshots")
         try? FileManager.default.createDirectory(at: directory, withIntermediateDirectories: true)
