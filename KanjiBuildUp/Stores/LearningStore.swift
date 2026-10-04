@@ -9,7 +9,7 @@ final class LearningStore {
     private var canSave = true
     private var appliedDefaults: Set<String> = []
 
-    init(fileURL: URL? = nil, defaults: DefaultStudyData? = nil) {
+    init(fileURL: URL? = nil, defaults: DefaultStudyData? = nil, additionalDefaults: [DefaultStudyData] = []) {
         var testURL: URL?
         var testDefaults = false
         #if DEBUG
@@ -34,14 +34,21 @@ final class LearningStore {
                 }
             }
             // Explicit stores and UI-test stores stay isolated from bundled defaults.
-            let initialData = try defaults ?? ((fileURL == nil && (testURL == nil || testDefaults)) ? DefaultStudyData.load() : nil)
-            if let initialData, !appliedDefaults.contains(initialData.version) {
+            let initialDataSets: [DefaultStudyData]
+            if let defaults {
+                initialDataSets = [defaults] + additionalDefaults
+            } else if fileURL == nil && (testURL == nil || testDefaults) {
+                initialDataSets = try DefaultStudyData.loadAll() + additionalDefaults
+            } else {
+                initialDataSets = additionalDefaults
+            }
+            for initialData in initialDataSets where !appliedDefaults.contains(initialData.version) {
                 let existingIDs = Set(items.map(\.id))
                 let existingContent = Set(items.map { [$0.category, $0.question, $0.answer] })
                 let additions = initialData.items.filter {
                     !existingIDs.contains($0.id) && !existingContent.contains([$0.category, $0.question, $0.answer])
                 }
-                _ = commit(items + additions, versions: appliedDefaults.union([initialData.version]))
+                if !commit(items + additions, versions: appliedDefaults.union([initialData.version])) { break }
             }
         } catch {
             canSave = false
