@@ -43,7 +43,7 @@ struct StudyView: View {
                             } else {
                                 Text(["読み", "音読み", "訓読み", "当て字"].contains(item.category) ? "この漢字の読みは？" : "答えを考えてみましょう")
                                     .font(.title3.bold()).frame(maxWidth: .infinity).padding(.top, 30)
-                                Text(item.question).font(.system(size: item.question.count <= 2 ? 144 : 44, weight: .bold))
+                                Text(item.question).font(.system(size: 44, weight: .bold))
                                     .multilineTextAlignment(.center).frame(maxWidth: .infinity, minHeight: 240)
                                     .padding(.vertical, 16).accessibilityIdentifier("questionText")
                             }
