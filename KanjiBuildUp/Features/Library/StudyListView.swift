@@ -9,6 +9,7 @@ struct StudyListView: View {
     @State private var showManualEntry = false
     @State private var session: StudySession?
     @State private var notice: String?
+    @State private var studyActionHeight: CGFloat = 96
     private var filtered: [StudyItem] { store.filtered(category: category, mastery: mastery) }
 
     var body: some View {
@@ -61,6 +62,7 @@ struct StudyListView: View {
                     }.listStyle(.plain).scrollContentBackground(.hidden)
                         .listRowSpacing(4)
                         .contentMargins(.top, 16, for: .scrollContent)
+                        .contentMargins(.bottom, studyActionHeight + 24, for: .scrollContent)
                         .mask {
                             VStack(spacing: 0) {
                                 LinearGradient(colors: [.clear, .black], startPoint: .top, endPoint: .bottom)
@@ -71,16 +73,28 @@ struct StudyListView: View {
                 }
             }.padding(.horizontal, 20).frame(maxWidth: 640).frame(maxWidth: .infinity)
                 .background(Palette.pageGradient.ignoresSafeArea())
-                .safeAreaInset(edge: .bottom, spacing: 0) {
+                .overlay(alignment: .bottom) {
                     PrimaryButton(title: "問題をはじめる", enabled: !filtered.isEmpty) {
                         session = StudySession(items: filtered)
                     }
                     .accessibilityIdentifier("startStudy")
+                    .shadow(color: Palette.green.opacity(0.18), radius: 16, x: 0, y: 6)
                     .padding(.horizontal, 24).padding(.vertical, 12)
                     .frame(maxWidth: 640)
                     .frame(maxWidth: .infinity)
-                    .background(Palette.bottomFade.ignoresSafeArea(edges: .bottom))
+                    .background {
+                        GeometryReader { geometry in
+                            Color.clear.preference(key: StudyActionHeightKey.self, value: geometry.size.height)
+                        }
+                    }
+                    .background {
+                        Palette.bottomFade
+                            .padding(.top, -72)
+                            .ignoresSafeArea(edges: .bottom)
+                            .allowsHitTesting(false)
+                    }
                 }
+                .onPreferenceChange(StudyActionHeightKey.self) { studyActionHeight = $0 }
                 .navigationTitle("漢字一覧")
                 .toolbar {
                     ToolbarItem(placement: .primaryAction) {
@@ -156,6 +170,13 @@ struct StudyListView: View {
         .tint(value?.tint ?? Palette.green)
         .accessibilityLabel(Text(verbatim: "\(title)、\(count)件"))
         .accessibilityAddTraits(selected ? .isSelected : [])
+    }
+}
+
+private struct StudyActionHeightKey: PreferenceKey {
+    static let defaultValue: CGFloat = 96
+    static func reduce(value: inout CGFloat, nextValue: () -> CGFloat) {
+        value = nextValue()
     }
 }
 

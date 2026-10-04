@@ -15,8 +15,9 @@ enum Palette {
     static var bottomFade: LinearGradient {
         LinearGradient(stops: [
             .init(color: background.opacity(0), location: 0),
-            .init(color: background.opacity(0.85), location: 0.45),
-            .init(color: background, location: 1)
+            .init(color: Color.white.opacity(0.25), location: 0.25),
+            .init(color: Color.white.opacity(0.82), location: 0.6),
+            .init(color: Color.white.opacity(0.98), location: 1)
         ], startPoint: .top, endPoint: .bottom)
     }
 }
