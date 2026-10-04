@@ -5,7 +5,7 @@ struct DefaultStudyData: Codable {
     let items: [StudyItem]
 
     static func loadAll() throws -> [DefaultStudyData] {
-        try ["DefaultStudyData", "YojiKakiStudyData", "KojikotoStudyData"].map { try load(resource: $0) }
+        try ["DefaultStudyData", "YojiKakiStudyData", "KojikotoStudyData", "OnyomiStudyData"].map { try load(resource: $0) }
     }
 
     static func load(resource: String = "DefaultStudyData") throws -> DefaultStudyData {
