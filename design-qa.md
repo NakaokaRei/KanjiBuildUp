@@ -100,3 +100,35 @@ Xcode Widget Previewで小・中の4桁カンマ付き件数が欠けずに収�
 ## Widgetカードの余白調整
 
 文字の左右に小4／中5 ptの内側余白を追加し、上下も小4→6／中8→10 ptへ拡大。元の配置を維持し、件数は使用可能な幅へ自動調整。小・中のWidget Previewで4桁件数・ラベルが枠内に収まり、余白が確保されることを確認（output/verification/widget-padding/）。
+
+## 一覧の浮遊操作と右端収納
+
+追加Menuを右上NavigationBarから開始ボタンの右上へ移動。一覧NavigationBarを非表示にし、タイトル・アシカを約56 pt上へ移動。問題・答え側はcompanionNavigationBarで明示的に再表示して戻る操作を維持。
+
+Apple公式のTabBarMinimizeBehavior、toolbarMinimizationBehavior、glassEffectIDを調査。タブバー縮小はTabView用、汎用toolbarMinimizationBehaviorはローカルSDKでiOS 27以降のため、iOS 26の今回の独立アクションにはGlassEffectContainer＋glassEffect＋glassEffectIDを使用。下スクロールで開始ボタンを右端156 ptへ収納し、上スクロールで展開。ラベルは「はじめる」を残して用途が分かるようにした。追加は52 pt、開始は56 ptの高さでタップ可能。Reduce Motionとアクセシビリティ文字サイズへ配慮。
+
+参照: https://developer.apple.com/documentation/swiftui/view/glasseffectid(_:in:) 、https://developer.apple.com/documentation/swiftui/view/toolbarminimizationbehavior(_:for:) 。
+
+実画面: output/verification/floating-actions/header-expanded.png、header-collapsed.png。iPhone 17 Pro / iOS 26.5で上部余白削減、ガラス越しの本文、追加ボタンと開始ボタンの右端整列、文字の可読性を確認。testCollapsingLibraryHeaderで縮小幅・展開復元・追加位置・フィルター保持、testImportStudyAndPersistenceで追加・取り込み・画面遷移・保存を検証。2テスト成功（/tmp/kanji-floating-actions-v2.xcresult）。final result: passed。
+
+## 開始ボタンのラベルを簡潔化
+
+ユーザー指示で展開時を「▶ はじめる」、収納時を「▶」だけの56×56 ptへ変更。アクセシビリティラベル「問題をはじめる」を維持。output/verification/play-icon/の展開・収納スクリーンショットで配置確認、testCollapsingLibraryHeaderとビルド成功（/tmp/kanji-play-icon.xcresult）。
+
+## 開始ボタンのアニメーション調整
+
+条件付きTextの挿入・削除をやめ、展開ラベルと収納時の再生アイコンを分離。ラベルは80 msで消してから320 msで右端へ収納し、展開時は形が戻ってからラベルを表示する。親VStack全体へのアニメーションを削除し、ガラスの幅とラベルの透明度を個別に制御。Reduce Motionでは遅延も省略。
+
+シミュレーター録画でガラスと文字の重なりを確認し、ラベルをglassEffectの内側へ修正。展開・収納・フィルター保持のUIテスト成功（/tmp/kanji-action-motion-v3.xcresult）。最終タイミング調整後のXcodeビルド成功。
+
+## 収納時も開始ラベルを維持
+
+再フィードバックにより、収納時も「▶ はじめる」を残す156 pt基準のカプセルへ変更（文字サイズに追従）。ラベルを単一のLabelに統一し、透明度の切り替え・遅延・重ね合わせを削除。右端を固定した幅の変化だけを320 msでアニメーションする。シミュレーター録画で収納・展開時のラベル表示を確認。ビルドとtestCollapsingLibraryHeader成功（/tmp/kanji-stable-label.xcresult）。
+
+## 追加ボタンの透過
+
+＋のガラスをMenu全体からラベルへ移し、borderlessButton＋plainスタイルで背景の重なりを避ける。追加ボタンは色付きregular glassからclear glassへ変更し、旧OSはultraThinMaterialへフォールバック。開始ボタンは従来の色付きガラスを維持。シミュレーター画像で背景の透過を確認し、追加メニュー操作を含むtestCollapsingLibraryHeaderと実機向けビルドが成功（/tmp/kanji-clear-add.xcresult）。
+
+## 追加・開始ボタンの背景を統一
+
+ユーザー指定により＋にも開始ボタンと同じ淡い緑のregular Liquid Glassを適用。Menuのラベルに効果を適用する構成は維持し、両ボタンが同じlibraryGlassを共有するように統一。Xcodeビルド成功。

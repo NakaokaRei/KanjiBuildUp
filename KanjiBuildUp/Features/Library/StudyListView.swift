@@ -1,6 +1,9 @@
 import SwiftUI
 
 struct StudyListView: View {
+    @Environment(\.accessibilityReduceMotion) private var reduceMotion
+    @Namespace private var actionsNamespace
+    @State private var actionsCollapsed = false
     @Environment(\.dynamicTypeSize) private var dynamicTypeSize
     @State private var store = LearningStore()
     @State private var category: String?
@@ -11,6 +14,7 @@ struct StudyListView: View {
     @State private var notice: String?
     @State private var headerCollapse: CGFloat = 0
     @ScaledMetric(relativeTo: .title) private var headerTitleSize = 28
+    @ScaledMetric(relativeTo: .headline) private var compactActionWidth = 156
     @State private var studyActionHeight: CGFloat = 96
     private var filtered: [StudyItem] { store.filtered(category: category, mastery: mastery) }
 
@@ -79,7 +83,7 @@ struct StudyListView: View {
                         }.accessibilityHint("答えと意味を確認します")
                         .listRowBackground(Color.clear)
                     }.listStyle(.plain).scrollContentBackground(.hidden)
-                        .modifier(LibraryScrollHeaderModifier(collapse: $headerCollapse))
+                        .modifier(LibraryScrollHeaderModifier(collapse: $headerCollapse, actionsCollapsed: $actionsCollapsed))
                         .overlay {
                             if filtered.isEmpty {
                                 ContentUnavailableView("該当する問題はありません", systemImage: "line.3.horizontal.decrease", description: Text("カテゴリーや覚え具合を変更してください。"))
@@ -98,32 +102,13 @@ struct StudyListView: View {
                 }
             }.padding(.horizontal, 20).frame(maxWidth: 640).frame(maxWidth: .infinity)
                 .background(Palette.pageGradient.ignoresSafeArea())
-                .floatingFooter(height: $studyActionHeight) {
-                    PrimaryButton(title: "問題をはじめる", enabled: !filtered.isEmpty) {
-                        session = StudySession(items: filtered)
-                    }
-                    .accessibilityIdentifier("startStudy")
-                    .shadow(color: Palette.green.opacity(0.18), radius: 16, x: 0, y: 6)
+                .floatingFooter(height: $studyActionHeight, softensContent: false) {
+                    libraryActions
                 }
                 .navigationTitle("")
                 #if os(iOS)
-                .navigationBarTitleDisplayMode(.inline)
+                .toolbar(.hidden, for: .navigationBar)
                 #endif
-                .companionNavigationBar()
-                .toolbar {
-                    ToolbarItem(placement: .primaryAction) {
-                        Menu {
-                            Button { showManualEntry = true } label: {
-                                Label("手入力で追加", systemImage: "square.and.pencil")
-                            }.accessibilityIdentifier("manualEntry")
-                            Button { showImport = true } label: {
-                                Label("CSV取り込み", systemImage: "doc.text")
-                            }.accessibilityIdentifier("importCSV")
-                        } label: {
-                            Label("追加", systemImage: "plus").font(.headline).padding(.vertical, 10)
-                        }.accessibilityIdentifier("addItem")
-                    }
-                }
                 .navigationDestination(for: StudySession.self) { value in
                     StudyView(store: store, session: value)
                 }
@@ -147,6 +132,63 @@ struct StudyListView: View {
         .alert("データを保存できません", isPresented: Binding(get: { store.errorMessage != nil }, set: { if !$0 { store.errorMessage = nil } })) {
             Button("閉じる", role: .cancel) { store.errorMessage = nil }
         } message: { Text(store.errorMessage ?? "") }
+    }
+
+    @ViewBuilder private var libraryActions: some View {
+        #if os(iOS) || os(macOS)
+        if #available(iOS 26, macOS 26, *) {
+            GlassEffectContainer(spacing: 8) { libraryActionButtons }
+        } else {
+            libraryActionButtons
+        }
+        #else
+        libraryActionButtons
+        #endif
+    }
+
+    private var libraryActionButtons: some View {
+        let compact = actionsCollapsed && !dynamicTypeSize.isAccessibilitySize
+        return VStack(alignment: .trailing, spacing: 12) {
+            Menu {
+                Button { showManualEntry = true } label: {
+                    Label("手入力で追加", systemImage: "square.and.pencil")
+                }.accessibilityIdentifier("manualEntry")
+                Button { showImport = true } label: {
+                    Label("CSV取り込み", systemImage: "doc.text")
+                }.accessibilityIdentifier("importCSV")
+            } label: {
+                Image(systemName: "plus").font(.system(size: 24, weight: .medium))
+                    .frame(width: 52, height: 52)
+                    .libraryGlass(in: Circle(), id: "add", namespace: actionsNamespace)
+            }
+            .menuStyle(.borderlessButton)
+            .buttonStyle(.plain)
+            .accessibilityLabel("追加").accessibilityIdentifier("addItem")
+
+            GeometryReader { geometry in
+                Button {
+                    session = StudySession(items: filtered)
+                } label: {
+                    Label("はじめる", systemImage: "play.fill")
+                        .font(.headline)
+                        .fixedSize()
+                        .frame(maxWidth: .infinity, minHeight: 56)
+                        .contentShape(Capsule())
+                }
+                .buttonStyle(.plain)
+                .frame(width: compact ? min(compactActionWidth, geometry.size.width) : geometry.size.width)
+                .libraryGlass(in: Capsule(), id: "start", namespace: actionsNamespace)
+                .frame(maxWidth: .infinity, alignment: .trailing)
+                .animation(reduceMotion ? nil : .smooth(duration: 0.32), value: compact)
+                .disabled(filtered.isEmpty)
+                .opacity(filtered.isEmpty ? 0.5 : 1)
+                .accessibilityLabel("問題をはじめる")
+                .accessibilityIdentifier("startStudy")
+            }
+            .frame(height: 56)
+        }
+        .foregroundStyle(Palette.green)
+        .frame(maxWidth: .infinity, alignment: .trailing)
     }
 
     private var masteryFilters: some View {
@@ -189,14 +231,19 @@ struct StudyListView: View {
 
 private struct LibraryScrollHeaderModifier: ViewModifier {
     @Binding var collapse: CGFloat
+    @Binding var actionsCollapsed: Bool
     @State private var userIsScrolling = false
 
     @ViewBuilder func body(content: Content) -> some View {
         if #available(iOS 18, macOS 15, visionOS 2, *) {
             content.onScrollGeometryChange(for: CGFloat.self) { geometry in
-                min(1, max(0, (geometry.contentOffset.y + geometry.contentInsets.top) / 80))
-            } action: { _, progress in
-                if userIsScrolling { collapse = progress }
+                geometry.contentOffset.y + geometry.contentInsets.top
+            } action: { oldOffset, offset in
+                if userIsScrolling {
+                    collapse = min(1, max(0, offset / 80))
+                    if offset <= 8 || offset < oldOffset - 3 { actionsCollapsed = false }
+                    else if offset > 60 && offset > oldOffset + 2 { actionsCollapsed = true }
+                }
             }
             .onScrollPhaseChange { _, phase, context in
                 let wasScrolling = userIsScrolling
@@ -213,3 +260,23 @@ private struct LibraryScrollHeaderModifier: ViewModifier {
 }
 
 #Preview { StudyListView() }
+
+private extension View {
+    @ViewBuilder func libraryGlass<S: Shape>(in shape: S, id: String, namespace: Namespace.ID) -> some View {
+        #if os(iOS) || os(macOS)
+        if #available(iOS 26, macOS 26, *) {
+            self.glassEffect(
+                .regular.tint(Palette.green.opacity(0.16)).interactive(),
+                in: shape
+            )
+                .glassEffectID(id, in: namespace)
+        } else {
+            self.background(.regularMaterial, in: shape)
+                .overlay(shape.stroke(Palette.green.opacity(0.2), lineWidth: 1))
+        }
+        #else
+        self.background(.regularMaterial, in: shape)
+            .overlay(shape.stroke(Palette.green.opacity(0.2), lineWidth: 1))
+        #endif
+    }
+}

@@ -3,6 +3,7 @@ import SwiftUI
 /// Draws over scrollable content; only the controls intercept touches.
 private struct FloatingFooterModifier<Footer: View>: ViewModifier {
     @Binding var height: CGFloat
+    let softensContent: Bool
     let footer: Footer
 
     func body(content: Content) -> some View {
@@ -16,13 +17,15 @@ private struct FloatingFooterModifier<Footer: View>: ViewModifier {
                     }
                 }
                 .background {
-                    VStack(spacing: 0) {
-                        Palette.bottomFade.frame(height: 64)
-                        Color.white.opacity(0.97)
-                    }
+                    if softensContent {
+                        VStack(spacing: 0) {
+                            Palette.bottomFade.frame(height: 64)
+                            Color.white.opacity(0.97)
+                        }
                         .padding(.top, -64)
                         .ignoresSafeArea(edges: .bottom)
                         .allowsHitTesting(false)
+                    }
                 }
         }
         .onPreferenceChange(FooterHeightKey.self) { height = $0 }
@@ -37,7 +40,7 @@ private struct FooterHeightKey: PreferenceKey {
 }
 
 extension View {
-    func floatingFooter<Footer: View>(height: Binding<CGFloat>, @ViewBuilder content: () -> Footer) -> some View {
-        modifier(FloatingFooterModifier(height: height, footer: content()))
+    func floatingFooter<Footer: View>(height: Binding<CGFloat>, softensContent: Bool = true, @ViewBuilder content: () -> Footer) -> some View {
+        modifier(FloatingFooterModifier(height: height, softensContent: softensContent, footer: content()))
     }
 }

@@ -273,12 +273,17 @@ final class KanjiBuildUpUITests: XCTestCase {
         app.buttons["取り込み通知を閉じる"].tap()
         let filter = app.buttons["categoryFilter"]
         let expandedY = filter.frame.minY
+        let expandedStartWidth = app.buttons["startStudy"].frame.width
+        XCTAssertLessThan(app.buttons["addItem"].frame.maxY, app.buttons["startStudy"].frame.minY)
+        XCTAssertGreaterThan(app.buttons["addItem"].frame.minY, filter.frame.maxY)
         capture("header-expanded", app)
         let list = app.collectionViews.firstMatch
         list.swipeUp()
         XCTAssertLessThan(filter.frame.minY, expandedY - 40)
         XCTAssertTrue(filter.isHittable)
         XCTAssertTrue(app.buttons["startStudy"].isHittable)
+        XCTAssertLessThan(app.buttons["startStudy"].frame.width, expandedStartWidth - 80)
+        XCTAssertEqual(app.buttons["startStudy"].frame.maxX, app.buttons["addItem"].frame.maxX, accuracy: 2)
         capture("header-collapsed", app)
         let collapsedY = filter.frame.minY
         let visibleQuestion = app.staticTexts.matching(NSPredicate(format: "label BEGINSWITH %@", "問題")).allElementsBoundByIndex.first { $0.isHittable && $0.label != "問題をはじめる" }!
@@ -299,6 +304,7 @@ final class KanjiBuildUpUITests: XCTestCase {
 
         for _ in 0..<3 { list.swipeDown() }
         XCTAssertEqual(filter.frame.minY, expandedY, accuracy: 2)
+        XCTAssertEqual(app.buttons["startStudy"].frame.width, expandedStartWidth, accuracy: 2)
         capture("header-restored", app)
     }
 

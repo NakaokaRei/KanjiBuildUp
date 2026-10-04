@@ -72,7 +72,8 @@ struct CompanionHeader<Content: View>: View {
 extension View {
   @ViewBuilder func companionNavigationBar() -> some View {
     #if os(iOS)
-      self.toolbarBackground(Palette.header, for: .navigationBar)
+      self.toolbar(.visible, for: .navigationBar)
+        .toolbarBackground(Palette.header, for: .navigationBar)
         .toolbarBackground(.visible, for: .navigationBar)
         .toolbarColorScheme(.light, for: .navigationBar)
     #else
