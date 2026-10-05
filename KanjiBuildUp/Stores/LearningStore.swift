@@ -46,6 +46,19 @@ final class LearningStore {
                 initialDataSets = additionalDefaults
             }
             for initialData in initialDataSets where !appliedDefaults.contains(initialData.version) {
+                if let previousVersion = initialData.replacesVersion, appliedDefaults.contains(previousVersion) {
+                    let previous = Dictionary(uniqueKeysWithValues: (initialData.previousItems ?? []).map { ($0.id, $0) })
+                    let corrected = Dictionary(uniqueKeysWithValues: initialData.items.map { ($0.id, $0) })
+                    let updated = items.map { item in
+                        guard let old = previous[item.id], let new = corrected[item.id] else { return item }
+                        var result = item
+                        if item.mastery == old.mastery { result.mastery = new.mastery }
+                        if item.meaning == old.meaning { result.meaning = new.meaning }
+                        return result
+                    }
+                    if !commit(updated, versions: appliedDefaults.union([initialData.version])) { break }
+                    continue
+                }
                 let existingIDs = Set(items.map(\.id))
                 let existingContent = Set(items.map { [$0.category, $0.question, $0.answer] })
                 let additions = initialData.items.filter {
