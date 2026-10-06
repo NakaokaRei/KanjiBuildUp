@@ -55,9 +55,10 @@ struct HeaderWave: Shape {
 }
 
 struct CompanionHeader<Content: View>: View {
+  var bottomPadding: CGFloat = 36
   @ViewBuilder var content: Content
   var body: some View {
-    content.padding(.bottom, 36)
+    content.padding(.bottom, bottomPadding)
       .background {
         HeaderWave().fill(Palette.header)
           .padding(.horizontal, -20)

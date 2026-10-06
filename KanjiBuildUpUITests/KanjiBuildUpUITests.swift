@@ -323,11 +323,130 @@ final class KanjiBuildUpUITests: XCTestCase {
         app.buttons["revealAnswer"].tap()
         XCTAssertTrue(app.staticTexts["studyMeaning"].waitForExistence(timeout: 5))
         capture("footer-long-answer", app)
+        let headerQuestion = app.staticTexts["answerQuestion"]
+        XCTAssertTrue(headerQuestion.exists)
+        let initialQuestionFrame = headerQuestion.frame
         let scroll = app.scrollViews.firstMatch
         for _ in 0..<4 { scroll.swipeUp() }
         XCTAssertTrue(app.buttons["かんぺき"].isHittable)
         XCTAssertLessThan(app.staticTexts["studyMeaning"].frame.maxY, app.buttons["かんぺき"].frame.minY)
         capture("footer-long-answer-end", app)
+        XCTAssertEqual(headerQuestion.frame.width, initialQuestionFrame.width, accuracy: 2)
+        XCTAssertEqual(headerQuestion.frame.midY, initialQuestionFrame.midY, accuracy: 2)
+        for _ in 0..<5 { scroll.swipeDown() }
+        XCTAssertEqual(headerQuestion.frame.width, initialQuestionFrame.width, accuracy: 2)
+        capture("answer-question-restored", app)
+        let dragStart = headerQuestion.coordinate(withNormalizedOffset: CGVector(dx: 0.5, dy: 0.5))
+        dragStart.press(forDuration: 0.1, thenDragTo: dragStart.withOffset(CGVector(dx: 0, dy: 160)))
+        XCTAssertGreaterThan(headerQuestion.frame.width, initialQuestionFrame.width * 1.3)
+        XCTAssertGreaterThan(headerQuestion.frame.midY, initialQuestionFrame.midY)
+        capture("answer-header-expanded", app)
+        let expandedWidth = headerQuestion.frame.width
+        // Start below the expanded wave; the full scroll view extends behind it.
+        let bodyStart = app.coordinate(withNormalizedOffset: CGVector(dx: 0.5, dy: 0.7))
+        bodyStart.press(forDuration: 0.1, thenDragTo: bodyStart.withOffset(CGVector(dx: 0, dy: -180)))
+        XCTAssertEqual(headerQuestion.frame.width, expandedWidth, accuracy: 2)
+        capture("answer-text-behind-wave", app)
+        let collapseStart = headerQuestion.coordinate(withNormalizedOffset: CGVector(dx: 0.5, dy: 0.5))
+        collapseStart.press(forDuration: 0.1, thenDragTo: collapseStart.withOffset(CGVector(dx: 0, dy: -160)))
+        XCTAssertEqual(headerQuestion.frame.width, initialQuestionFrame.width, accuracy: 2)
+        capture("answer-header-collapsed", app)
+    }
+
+    @MainActor func testLongQuestionHeaderExpansion() throws {
+        let app = XCUIApplication()
+        app.launchEnvironment["KANJI_TEST_STORE"] = UUID().uuidString
+        let question = "【一坏】の濁れる酒を飲むべくあるらし"
+        app.launchEnvironment["KANJI_TEST_CSV"] = "カテゴリー,問題,答え,意味\n訓読み,\(question),ひとつき,食器。酒を入れる器。"
+        app.launch()
+        XCTAssertTrue(app.buttons["addItem"].waitForExistence(timeout: 10))
+        app.buttons["addItem"].tap()
+        app.buttons["importCSV"].tap()
+        app.buttons["1件を取り込む"].tap()
+        app.buttons["取り込み通知を閉じる"].tap()
+        app.buttons.containing(.staticText, identifier: question).firstMatch.tap()
+        let text = app.staticTexts["answerQuestion"]
+        XCTAssertTrue(text.waitForExistence(timeout: 5))
+        let originalFrame = text.frame
+        let originalAnswerY = app.staticTexts["studyAnswer"].frame.minY
+        capture("long-header-before", app)
+        let start = text.coordinate(withNormalizedOffset: CGVector(dx: 0.5, dy: 0.5))
+        start.press(forDuration: 0.1, thenDragTo: start.withOffset(CGVector(dx: 0, dy: 64)))
+        XCTAssertGreaterThan(text.frame.height, originalFrame.height * 1.3)
+        XCTAssertEqual(text.label, question)
+        XCTAssertLessThan(app.staticTexts["studyAnswer"].frame.minY - originalAnswerY, 100)
+        XCTAssertTrue(app.staticTexts["studyAnswer"].isHittable)
+        capture("long-header-after", app)
+        let expandedFrame = text.frame
+        let secondStart = text.coordinate(withNormalizedOffset: CGVector(dx: 0.5, dy: 0.5))
+        secondStart.press(forDuration: 0.1, thenDragTo: secondStart.withOffset(CGVector(dx: 0, dy: 160)))
+        XCTAssertEqual(text.frame.height, expandedFrame.height, accuracy: 2)
+        let up = text.coordinate(withNormalizedOffset: CGVector(dx: 0.5, dy: 0.5))
+        up.press(forDuration: 0.1, thenDragTo: up.withOffset(CGVector(dx: 0, dy: -64)))
+        XCTAssertEqual(text.frame.height, originalFrame.height, accuracy: 2)
+    }
+
+    @MainActor func testQuestionTypography() throws {
+        let app = XCUIApplication()
+        let longQuestion = "逝く者は斯くの如きか、昼夜を【舎】かず"
+        for largeText in [false, true] {
+            app.launchEnvironment["KANJI_TEST_STORE"] = UUID().uuidString
+            app.launchEnvironment["KANJI_TEST_CSV"] = "カテゴリー,問題,答え,意味\n音読み,炊爨,すいさん,飯を炊く\n訓読み,\(longQuestion),お,意味"
+            app.launchArguments = largeText
+                ? ["-UIPreferredContentSizeCategoryName", "UICTContentSizeCategoryAccessibilityM"] : []
+            app.launch()
+            XCTAssertTrue(app.buttons["addItem"].waitForExistence(timeout: 10))
+            app.buttons["addItem"].tap()
+            app.buttons["importCSV"].tap()
+            app.buttons["2件を取り込む"].tap()
+            app.buttons["取り込み通知を閉じる"].tap()
+            XCTAssertTrue(app.staticTexts["炊爨"].exists)
+            XCTAssertTrue(app.staticTexts[longQuestion].exists)
+            capture(largeText ? "list-large-type" : "list-question-sizes", app)
+            app.buttons.containing(.staticText, identifier: "炊爨").firstMatch.tap()
+            XCTAssertTrue(app.staticTexts["answerQuestion"].exists)
+            XCTAssertTrue(app.staticTexts["studyAnswer"].exists)
+            capture(largeText ? "answer-large-type" : "answer-short-question", app)
+            app.terminate()
+        }
+    }
+
+    @MainActor func testQuestionSearch() throws {
+        let app = XCUIApplication()
+        app.launchEnvironment["KANJI_TEST_STORE"] = UUID().uuidString
+        app.launchEnvironment["KANJI_TEST_CSV"] = "カテゴリー,問題,答え,意味\n音読み,炊爨,すいさん,飯を炊く\n訓読み,炊く,たく,食事\n音読み,桜,さくら,炊爨は検索対象外"
+        app.launch()
+        XCTAssertTrue(app.buttons["addItem"].waitForExistence(timeout: 10))
+        app.buttons["addItem"].tap()
+        app.buttons["importCSV"].tap()
+        app.buttons["3件を取り込む"].tap()
+        app.buttons["取り込み通知を閉じる"].tap()
+        let search = app.textFields["questionSearch"]
+        search.tap()
+        search.typeText("炊\n")
+        XCTAssertTrue(app.buttons["すべて、2件"].exists)
+        app.buttons["categoryFilter"].tap()
+        app.buttons["音読み"].firstMatch.tap()
+        XCTAssertTrue(app.buttons["すべて、1件"].exists)
+        app.buttons["あとすこし、0件"].tap()
+        XCTAssertFalse(app.buttons["startStudy"].isEnabled)
+        XCTAssertTrue(app.staticTexts["該当する問題はありません"].exists)
+        app.buttons["すべて、1件"].tap()
+        app.buttons["startStudy"].tap()
+        XCTAssertEqual(app.staticTexts["questionText"].label, "炊爨")
+        app.buttons["revealAnswer"].tap()
+        app.buttons["学習を終える"].tap()
+        app.buttons["一覧に戻る"].tap()
+        XCTAssertEqual(search.value as? String, "炊")
+        app.buttons["clearQuestionSearch"].tap()
+        XCTAssertTrue(app.buttons["すべて、2件"].exists)
+        search.tap()
+        search.typeText("すいさん\n")
+        XCTAssertFalse(app.buttons["startStudy"].isEnabled)
+        app.terminate()
+        app.launch()
+        XCTAssertFalse(app.buttons["clearQuestionSearch"].exists)
+        XCTAssertTrue(app.buttons["すべて、3件"].exists)
     }
 
     @MainActor private func capture(_ name: String, _ app: XCUIApplication) {

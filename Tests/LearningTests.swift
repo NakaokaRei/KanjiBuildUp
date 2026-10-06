@@ -39,6 +39,21 @@ import Foundation
         precondition(reloaded.item(parsed[0].id)?.mastery == .mastered)
         precondition(reloaded.filtered(category: "読み", mastery: .mastered).count == 1)
         precondition(reloaded.filtered(category: "ことわざ", mastery: nil).isEmpty)
+        precondition(reloaded.filtered(category: nil, mastery: nil, search: " 桜\n").map(\.id) == [parsed[0].id])
+        precondition(reloaded.filtered(category: nil, mastery: nil, search: "  ").count == 2)
+        precondition(reloaded.filtered(category: "読み", mastery: .mastered, search: "桜").count == 1)
+        precondition(reloaded.filtered(category: "読み", mastery: .starting, search: "桜").isEmpty)
+        precondition(reloaded.filtered(category: "ことわざ", mastery: nil, search: "桜").isEmpty)
+        for query in ["さくら", "春の木", "読み", "存在しない"] {
+            precondition(reloaded.filtered(category: nil, mastery: nil, search: query).isEmpty)
+        }
+        let searchURL = directory.appendingPathComponent("search.json")
+        let searchStore = LearningStore(fileURL: searchURL)
+        var searchItem = StudyItem(category: "音読み", question: "炊爨", answer: "すいさん", meaning: "飯を炊く")
+        searchItem.notes = "検索対象外のメモ"
+        precondition(searchStore.add([searchItem]))
+        precondition(searchStore.filtered(category: nil, mastery: nil, search: "爨").count == 1)
+        precondition(searchStore.filtered(category: nil, mastery: nil, search: "検索対象外").isEmpty)
         var session = StudySession(items: parsed)
         let firstCompanion = session.companionName
         precondition(StudySession.companionNames.contains(firstCompanion))

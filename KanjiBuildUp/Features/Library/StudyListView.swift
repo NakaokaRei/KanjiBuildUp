@@ -6,6 +6,8 @@ struct StudyListView: View {
     @State private var actionsCollapsed = false
     @Environment(\.dynamicTypeSize) private var dynamicTypeSize
     @State private var store = LearningStore()
+    @State private var search = ""
+    @FocusState private var searchFocused: Bool
     @State private var category: String?
     @State private var mastery: Mastery?
     @State private var showImport = false
@@ -16,7 +18,7 @@ struct StudyListView: View {
     @ScaledMetric(relativeTo: .title) private var headerTitleSize = 28
     @ScaledMetric(relativeTo: .headline) private var compactActionWidth = 156
     @State private var studyActionHeight: CGFloat = 96
-    private var filtered: [StudyItem] { store.filtered(category: category, mastery: mastery) }
+    private var filtered: [StudyItem] { store.filtered(category: category, mastery: mastery, search: search) }
 
     var body: some View {
         NavigationStack {
@@ -57,6 +59,7 @@ struct StudyListView: View {
                     .pickerStyle(.menu).accessibilityIdentifier("categoryFilter")
                     .frame(maxWidth: .infinity, minHeight: 44)
                 }
+                searchField.padding(.bottom, 8)
                 masteryFilters.padding(.bottom, 4)
                 if store.items.isEmpty {
                     Spacer()
@@ -74,7 +77,7 @@ struct StudyListView: View {
                         NavigationLink(value: StudySession(items: [item], review: true)) {
                             HStack(spacing: 12) {
                                 VStack(alignment: .leading, spacing: 5) {
-                                    Text(item.question).font(.title3.bold()).multilineTextAlignment(.leading)
+                                    AdaptiveQuestionText(question: item.question, baseSize: 20, maximumSize: 24, progress: 1)
                                     Text(item.category).font(.caption).foregroundStyle(Palette.secondary)
                                 }
                                 Spacer(minLength: 4)
@@ -83,10 +86,11 @@ struct StudyListView: View {
                         }.accessibilityHint("答えと意味を確認します")
                         .listRowBackground(Color.clear)
                     }.listStyle(.plain).scrollContentBackground(.hidden)
+                        .scrollDismissesKeyboard(.interactively)
                         .modifier(LibraryScrollHeaderModifier(collapse: $headerCollapse, actionsCollapsed: $actionsCollapsed))
                         .overlay {
                             if filtered.isEmpty {
-                                ContentUnavailableView("該当する問題はありません", systemImage: "line.3.horizontal.decrease", description: Text("カテゴリーや覚え具合を変更してください。"))
+                                ContentUnavailableView("該当する問題はありません", systemImage: "line.3.horizontal.decrease", description: Text("検索語・カテゴリー・覚え具合を変更してください。"))
                             }
                         }
                         .listRowSpacing(4)
@@ -134,6 +138,27 @@ struct StudyListView: View {
         } message: { Text(store.errorMessage ?? "") }
     }
 
+    private var searchField: some View {
+        HStack(spacing: 8) {
+            Image(systemName: "magnifyingglass").foregroundStyle(Palette.secondary)
+            TextField("問題文を検索", text: $search)
+                .focused($searchFocused)
+                .submitLabel(.search)
+                .onSubmit { searchFocused = false }
+                .accessibilityIdentifier("questionSearch")
+            if !search.isEmpty {
+                Button { search = "" } label: {
+                    Image(systemName: "xmark.circle.fill").padding(6)
+                }
+                .accessibilityLabel("検索をクリア")
+                .accessibilityIdentifier("clearQuestionSearch")
+            }
+        }
+        .padding(.horizontal, 12)
+        .frame(minHeight: 44)
+        .background(.white.opacity(0.7), in: RoundedRectangle(cornerRadius: 12))
+    }
+
     @ViewBuilder private var libraryActions: some View {
         #if os(iOS) || os(macOS)
         if #available(iOS 26, macOS 26, *) {
@@ -167,6 +192,7 @@ struct StudyListView: View {
 
             GeometryReader { geometry in
                 Button {
+                    searchFocused = false
                     session = StudySession(items: filtered)
                 } label: {
                     Label("はじめる", systemImage: "play.fill")
@@ -208,7 +234,7 @@ struct StudyListView: View {
     }
     private func filterButton(_ value: Mastery?, title: String) -> some View {
         let selected = mastery == value
-        let count = store.filtered(category: category, mastery: value).count
+        let count = store.filtered(category: category, mastery: value, search: search).count
         return Button { mastery = value } label: {
             VStack(spacing: 5) {
                 Text(title).font(.system(size: 13, weight: .semibold))
