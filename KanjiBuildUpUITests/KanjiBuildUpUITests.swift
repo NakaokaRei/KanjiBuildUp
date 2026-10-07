@@ -279,7 +279,9 @@ final class KanjiBuildUpUITests: XCTestCase {
         capture("header-expanded", app)
         let list = app.collectionViews.firstMatch
         list.swipeUp()
+        // Settings remain available above the floating add button as the header compacts.
         XCTAssertLessThan(filter.frame.minY, expandedY - 40)
+        XCTAssertTrue(app.buttons["fontSettings"].isHittable)
         XCTAssertTrue(filter.isHittable)
         XCTAssertTrue(app.buttons["startStudy"].isHittable)
         XCTAssertLessThan(app.buttons["startStudy"].frame.width, expandedStartWidth - 80)
@@ -332,23 +334,11 @@ final class KanjiBuildUpUITests: XCTestCase {
         XCTAssertLessThan(app.staticTexts["studyMeaning"].frame.maxY, app.buttons["かんぺき"].frame.minY)
         capture("footer-long-answer-end", app)
         XCTAssertEqual(headerQuestion.frame.width, initialQuestionFrame.width, accuracy: 2)
-        XCTAssertEqual(headerQuestion.frame.midY, initialQuestionFrame.midY, accuracy: 2)
         for _ in 0..<5 { scroll.swipeDown() }
-        XCTAssertEqual(headerQuestion.frame.width, initialQuestionFrame.width, accuracy: 2)
-        capture("answer-question-restored", app)
-        let dragStart = headerQuestion.coordinate(withNormalizedOffset: CGVector(dx: 0.5, dy: 0.5))
-        dragStart.press(forDuration: 0.1, thenDragTo: dragStart.withOffset(CGVector(dx: 0, dy: 160)))
-        XCTAssertGreaterThan(headerQuestion.frame.width, initialQuestionFrame.width * 1.3)
-        XCTAssertGreaterThan(headerQuestion.frame.midY, initialQuestionFrame.midY)
+        XCTAssertGreaterThan(headerQuestion.frame.width, initialQuestionFrame.width * 2)
         capture("answer-header-expanded", app)
-        let expandedWidth = headerQuestion.frame.width
-        // Start below the expanded wave; the full scroll view extends behind it.
-        let bodyStart = app.coordinate(withNormalizedOffset: CGVector(dx: 0.5, dy: 0.7))
+        let bodyStart = app.coordinate(withNormalizedOffset: CGVector(dx: 0.5, dy: 0.65))
         bodyStart.press(forDuration: 0.1, thenDragTo: bodyStart.withOffset(CGVector(dx: 0, dy: -180)))
-        XCTAssertEqual(headerQuestion.frame.width, expandedWidth, accuracy: 2)
-        capture("answer-text-behind-wave", app)
-        let collapseStart = headerQuestion.coordinate(withNormalizedOffset: CGVector(dx: 0.5, dy: 0.5))
-        collapseStart.press(forDuration: 0.1, thenDragTo: collapseStart.withOffset(CGVector(dx: 0, dy: -160)))
         XCTAssertEqual(headerQuestion.frame.width, initialQuestionFrame.width, accuracy: 2)
         capture("answer-header-collapsed", app)
     }
@@ -367,23 +357,63 @@ final class KanjiBuildUpUITests: XCTestCase {
         app.buttons.containing(.staticText, identifier: question).firstMatch.tap()
         let text = app.staticTexts["answerQuestion"]
         XCTAssertTrue(text.waitForExistence(timeout: 5))
-        let originalFrame = text.frame
-        let originalAnswerY = app.staticTexts["studyAnswer"].frame.minY
-        capture("long-header-before", app)
-        let start = text.coordinate(withNormalizedOffset: CGVector(dx: 0.5, dy: 0.5))
-        start.press(forDuration: 0.1, thenDragTo: start.withOffset(CGVector(dx: 0, dy: 64)))
-        XCTAssertGreaterThan(text.frame.height, originalFrame.height * 1.3)
+        let initialFrame = text.frame
+        capture("long-header-initial", app)
+        // Pull the short answer body, including when it has no scroll overflow.
+        let pullStart = app.coordinate(withNormalizedOffset: CGVector(dx: 0.5, dy: 0.48))
+        pullStart.press(forDuration: 0.1, thenDragTo: pullStart.withOffset(CGVector(dx: 0, dy: 180)))
+        XCTAssertGreaterThan(text.frame.height, initialFrame.height * 1.3)
         XCTAssertEqual(text.label, question)
-        XCTAssertLessThan(app.staticTexts["studyAnswer"].frame.minY - originalAnswerY, 100)
         XCTAssertTrue(app.staticTexts["studyAnswer"].isHittable)
-        capture("long-header-after", app)
-        let expandedFrame = text.frame
-        let secondStart = text.coordinate(withNormalizedOffset: CGVector(dx: 0.5, dy: 0.5))
-        secondStart.press(forDuration: 0.1, thenDragTo: secondStart.withOffset(CGVector(dx: 0, dy: 160)))
-        XCTAssertEqual(text.frame.height, expandedFrame.height, accuracy: 2)
-        let up = text.coordinate(withNormalizedOffset: CGVector(dx: 0.5, dy: 0.5))
-        up.press(forDuration: 0.1, thenDragTo: up.withOffset(CGVector(dx: 0, dy: -64)))
-        XCTAssertEqual(text.frame.height, originalFrame.height, accuracy: 2)
+        capture("long-header-expanded", app)
+        let bodyStart = app.coordinate(withNormalizedOffset: CGVector(dx: 0.5, dy: 0.65))
+        bodyStart.press(forDuration: 0.1, thenDragTo: bodyStart.withOffset(CGVector(dx: 0, dy: -180)))
+        XCTAssertEqual(text.frame.height, initialFrame.height, accuracy: 2)
+        capture("long-header-collapsed", app)
+        app.buttons["一覧に戻る"].tap()
+        app.buttons.containing(.staticText, identifier: question).firstMatch.tap()
+        XCTAssertEqual(text.frame.height, initialFrame.height, accuracy: 2)
+    }
+
+    @MainActor func testFontSettingsPersistence() throws {
+        continueAfterFailure = false
+        let app = XCUIApplication()
+        app.launchEnvironment["KANJI_TEST_STORE"] = UUID().uuidString
+        app.launchEnvironment["KANJI_TEST_CSV"] = "カテゴリー,問題,答え,意味\n読み,桜,さくら,春の花。"
+        app.launch()
+        XCTAssertTrue(app.buttons["fontSettings"].waitForExistence(timeout: 10))
+        app.buttons["addItem"].tap()
+        app.buttons["importCSV"].tap()
+        app.buttons["1件を取り込む"].tap()
+        app.buttons["取り込み通知を閉じる"].tap()
+        capture("home-font-entry", app)
+        app.buttons["fontSettings"].tap()
+        app.buttons["questionFontPicker"].tap()
+        app.buttons["明朝体"].tap()
+        app.buttons["answerFontPicker"].tap()
+        app.buttons["ゴシック（細字）"].tap()
+        capture("font-settings-preview", app)
+        app.buttons["完了"].tap()
+        app.buttons["startStudy"].tap()
+        XCTAssertTrue(app.staticTexts["questionText"].exists)
+        app.buttons["revealAnswer"].tap()
+        XCTAssertTrue(app.staticTexts["studyAnswer"].exists)
+        capture("custom-font-answer", app)
+        app.buttons["itemActions"].tap()
+        app.buttons["fontSettings"].tap()
+        XCTAssertEqual(app.buttons["questionFontPicker"].value as? String, "明朝体")
+        XCTAssertEqual(app.buttons["answerFontPicker"].value as? String, "ゴシック（細字）")
+        app.terminate()
+        app.launch()
+        app.buttons["fontSettings"].tap()
+        XCTAssertEqual(app.buttons["questionFontPicker"].value as? String, "明朝体")
+        XCTAssertEqual(app.buttons["answerFontPicker"].value as? String, "ゴシック（細字）")
+        // Leave the shared simulator preferences at the default for other tests.
+        for identifier in ["questionFontPicker", "answerFontPicker"] {
+            app.buttons[identifier].tap()
+            app.buttons["ゴシック（標準）"].tap()
+        }
+        app.buttons["完了"].tap()
     }
 
     @MainActor func testQuestionTypography() throws {

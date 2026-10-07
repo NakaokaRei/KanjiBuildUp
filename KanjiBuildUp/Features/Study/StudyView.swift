@@ -2,12 +2,13 @@ import SwiftUI
 
 struct StudyView: View {
   @Environment(\.dynamicTypeSize) private var dynamicTypeSize
-  @State private var headerExpansion: CGFloat = 0
-  @State private var headerDragStart: CGFloat?
+  @State private var headerCollapse: CGFloat = 1
   @State private var headerHeight: CGFloat = 140
   @ScaledMetric(relativeTo: .title2) private var collapsedQuestionSize: CGFloat = 22
-  @ScaledMetric(relativeTo: .title2) private var expandedQuestionSize: CGFloat = 32
-  private var headerProgress: CGFloat { headerExpansion / 64 }
+  @ScaledMetric(relativeTo: .title2) private var expandedQuestionSize: CGFloat = 48
+  @AppStorage("questionFont") private var questionFont: StudyFont = .gothic
+  @State private var showFontSettings = false
+  private var headerProgress: CGFloat { session.revealed ? 1 - headerCollapse : 0 }
   let store: LearningStore
   @State var session: StudySession
   @State private var footerHeight: CGFloat = 180
@@ -38,7 +39,7 @@ struct StudyView: View {
                   AnswerContentView(item: item, availableHeight: max(0, geometry.size.height - headerHeight - footerHeight))
                 } else {
                   Text(item.question)
-                    .font(.system(size: item.question.count <= 2 ? 112 : 44, weight: .bold))
+                    .font(questionFont.font(size: item.question.count <= 2 ? 112 : 44))
                     .multilineTextAlignment(.center)
                     .frame(maxWidth: .infinity, minHeight: max(180, max(0, geometry.size.height - headerHeight - footerHeight) * 0.70))
                     .padding(.vertical, 16).accessibilityIdentifier("questionText")
@@ -49,20 +50,10 @@ struct StudyView: View {
             }
             .contentMargins(.bottom, footerHeight + 24)
             .ignoresSafeArea(.container, edges: .bottom)
+            .modifier(StudyScrollHeaderModifier(collapse: $headerCollapse, enabled: session.revealed))
             .id("\(session.index)-\(session.revealed)")
             studyHeader(item)
               .onGeometryChange(for: CGFloat.self) { $0.size.height } action: { headerHeight = $0 }
-              .contentShape(Rectangle())
-              .gesture(
-                DragGesture(minimumDistance: 8)
-                  .onChanged { value in
-                    guard session.revealed else { return }
-                    if headerDragStart == nil { headerDragStart = headerExpansion }
-                    headerExpansion = min(64, max(0, (headerDragStart ?? 0) + value.translation.height))
-                  }
-                  .onEnded { _ in headerDragStart = nil },
-                including: session.revealed ? .all : .subviews
-              )
           }
         }
 
@@ -98,8 +89,8 @@ struct StudyView: View {
         }
       }
     }
-    .onChange(of: session.currentID) { _, _ in headerExpansion = 0; headerDragStart = nil }
-    .onChange(of: session.revealed) { _, _ in headerExpansion = 0; headerDragStart = nil }
+    .onChange(of: session.currentID) { _, _ in headerCollapse = 1 }
+    .onChange(of: session.revealed) { _, _ in headerCollapse = 1 }
     .companionNavigationBar()
     .navigationTitle(session.complete ? "学習完了" : session.revealed ? "答え" : "問題")
     #if os(iOS)
@@ -109,6 +100,8 @@ struct StudyView: View {
       if let item, !session.complete {
         ToolbarItem(placement: .primaryAction) {
           Menu {
+            Button("フォント設定", systemImage: "textformat") { showFontSettings = true }
+              .accessibilityIdentifier("fontSettings")
             Button("編集", systemImage: "pencil") { editingItem = item }
               .accessibilityIdentifier("editItem")
             Button("削除", systemImage: "trash", role: .destructive) { confirmDelete = true }
@@ -122,6 +115,9 @@ struct StudyView: View {
     }
     .sheet(item: $editingItem) { value in
       StudyItemEditor(store: store, item: value) {}
+    }
+    .sheet(isPresented: $showFontSettings) {
+      StudyFontSettingsView()
     }
     .confirmationDialog("この漢字を削除しますか？", isPresented: $confirmDelete, titleVisibility: .visible) {
       Button("削除する", role: .destructive) {
@@ -179,7 +175,7 @@ struct StudyView: View {
             VStack(alignment: .leading, spacing: 4) {
               Text("問題").font(.caption).foregroundStyle(Palette.secondary)
               Text(item.question)
-                .font(.system(size: collapsedQuestionSize + (expandedQuestionSize - collapsedQuestionSize) * headerProgress, weight: .bold))
+                .font(questionFont.font(size: collapsedQuestionSize + (expandedQuestionSize - collapsedQuestionSize) * headerProgress))
                 .fixedSize(horizontal: false, vertical: true)
                 .multilineTextAlignment(.leading)
               .accessibilityIdentifier("answerQuestion")
@@ -199,7 +195,7 @@ struct StudyView: View {
           }
           if !dynamicTypeSize.isAccessibilitySize {
             CompanionImage(name: session.revealed ? "CompanionSeaLion" : session.companionName, size: 72 + 28 * headerProgress)
-              // Expand the artwork and row together as the wave is dragged downward.
+              // Resize the artwork together with the question as the user scrolls the body.
               .frame(width: session.revealed ? 100 : 72, height: 56 + 28 * headerProgress)
           }
         }.frame(minHeight: 56 + 28 * headerProgress)
@@ -226,6 +222,34 @@ struct StudyView: View {
       .tint(item.mastery == value ? value.tint : value.background)
       .accessibilityLabel(value.title)
       .accessibilityAddTraits(item.mastery == value ? .isSelected : [])
+    }
+  }
+}
+
+/// Follow the user's scroll direction and keep the selected size on release.
+/// Ignore deceleration and bounce-back so releasing a pull does not undo it.
+private struct StudyScrollHeaderModifier: ViewModifier {
+  @Binding var collapse: CGFloat
+  let enabled: Bool
+  @State private var userIsScrolling = false
+
+  @ViewBuilder func body(content: Content) -> some View {
+    if #available(iOS 18, macOS 15, visionOS 2, *) {
+      content
+        .scrollBounceBehavior(.always, axes: .vertical)
+        .onScrollGeometryChange(for: CGFloat.self) { geometry in
+          geometry.contentOffset.y + geometry.contentInsets.top
+        } action: { previousOffset, offset in
+          if enabled && userIsScrolling {
+            collapse = min(1, max(0, collapse + (offset - previousOffset) / 80))
+          }
+        }
+        .onScrollPhaseChange { _, phase in
+          userIsScrolling = phase == .interacting
+        }
+    } else {
+      // Older systems retain the original compact size.
+      content
     }
   }
 }

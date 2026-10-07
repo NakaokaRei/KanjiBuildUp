@@ -4,6 +4,7 @@ import SwiftUI
 struct AnswerContentView: View {
     let item: StudyItem
     let availableHeight: CGFloat
+    @AppStorage("answerFont") private var answerFont: StudyFont = .gothic
     @ScaledMetric(relativeTo: .largeTitle) private var answerSize = 56
     @ScaledMetric(relativeTo: .body) private var bodySize = 18
 
@@ -11,7 +12,7 @@ struct AnswerContentView: View {
         VStack(alignment: .leading, spacing: 12) {
             VStack(spacing: 8) {
                 Text("答え").font(.caption).foregroundStyle(Palette.secondary)
-                Text(item.answer).font(.system(size: answerSize, weight: .bold))
+                Text(item.answer).font(answerFont.font(size: answerSize))
                     .multilineTextAlignment(.center)
                     .fixedSize(horizontal: false, vertical: true).textSelection(.enabled)
                     .accessibilityIdentifier("studyAnswer")

@@ -5,6 +5,7 @@ import SwiftUI
 struct AdaptiveQuestionText: View {
     let question: String
     let progress: CGFloat
+    @AppStorage("questionFont") private var questionFont: StudyFont = .gothic
     @ScaledMetric private var baseSize: CGFloat
     @ScaledMetric private var maximumSize: CGFloat
 
@@ -19,18 +20,18 @@ struct AdaptiveQuestionText: View {
         ViewThatFits(in: .horizontal) {
             if !question.contains(where: \.isNewline) {
                 Text(question)
-                    .font(.system(size: maximumSize, weight: .bold))
+                    .font(questionFont.font(size: maximumSize))
                     .fixedSize()
                     .hidden()
                     .accessibilityHidden(true)
                     .overlay(alignment: .leading) {
                         Text(question)
-                            .font(.system(size: baseSize + (maximumSize - baseSize) * min(1, max(0, progress)), weight: .bold))
+                            .font(questionFont.font(size: baseSize + (maximumSize - baseSize) * min(1, max(0, progress))))
                             .fixedSize()
                     }
             }
             Text(question)
-                .font(.system(size: baseSize, weight: .bold))
+                .font(questionFont.font(size: baseSize))
                 .fixedSize(horizontal: false, vertical: true)
         }
         .frame(maxWidth: .infinity, alignment: .leading)

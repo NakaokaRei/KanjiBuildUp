@@ -12,6 +12,7 @@ struct StudyListView: View {
     @State private var mastery: Mastery?
     @State private var showImport = false
     @State private var showManualEntry = false
+    @State private var showFontSettings = false
     @State private var session: StudySession?
     @State private var notice: String?
     @State private var headerCollapse: CGFloat = 0
@@ -34,7 +35,9 @@ struct StudyListView: View {
                 }
                 VStack(spacing: 0) {
                     HStack(spacing: 12) {
-                        Text("漢字一覧").font(.system(size: headerTitleSize - 6 * headerCollapse, weight: .bold))
+                        Text("漢字一覧")
+                            .font(.system(size: headerTitleSize - 6 * headerCollapse, weight: .bold))
+                            .accessibilityAddTraits(.isHeader)
                             .frame(maxWidth: .infinity, alignment: .leading)
                         if !dynamicTypeSize.isAccessibilitySize {
                             CompanionImage(name: "CompanionSeaLion", size: 120 - 68 * headerCollapse)
@@ -133,6 +136,9 @@ struct StudyListView: View {
                 notice = "1件を追加しました。"
             }
         }
+        .sheet(isPresented: $showFontSettings) {
+            StudyFontSettingsView()
+        }
         .alert("データを保存できません", isPresented: Binding(get: { store.errorMessage != nil }, set: { if !$0 { store.errorMessage = nil } })) {
             Button("閉じる", role: .cancel) { store.errorMessage = nil }
         } message: { Text(store.errorMessage ?? "") }
@@ -174,6 +180,21 @@ struct StudyListView: View {
     private var libraryActionButtons: some View {
         let compact = actionsCollapsed && !dynamicTypeSize.isAccessibilitySize
         return VStack(alignment: .trailing, spacing: 12) {
+            Button {
+                searchFocused = false
+                showFontSettings = true
+            } label: {
+                Image(systemName: "gearshape")
+                    .font(.system(size: 24, weight: .medium))
+                    .frame(width: 52, height: 52)
+                    .contentShape(Circle())
+                    .libraryGlass(in: Circle(), id: "settings", namespace: actionsNamespace)
+            }
+            .buttonStyle(.plain)
+            .accessibilityLabel("設定")
+            .accessibilityHint("問題と答えのフォント設定を開きます")
+            .accessibilityIdentifier("fontSettings")
+
             Menu {
                 Button { showManualEntry = true } label: {
                     Label("手入力で追加", systemImage: "square.and.pencil")
