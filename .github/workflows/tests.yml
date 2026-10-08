@@ -1,0 +1,64 @@
+name: Tests
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+defaults:
+  run:
+    shell: bash
+
+# project.xcproj requires Xcode 27+. Match the project's authoring toolchain.
+env:
+  DEVELOPER_DIR: /Applications/Xcode_27.2.app/Contents/Developer
+
+jobs:
+  unit-tests:
+    name: Unit tests
+    runs-on: xcode-27
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v5
+      - name: Show toolchain
+        run: |
+          xcodebuild -version
+          xcrun swift --version
+      - name: Run unit tests
+        run: |
+          mkdir -p build/test-results
+          bash Scripts/test-unit.sh 2>&1 | tee build/test-results/unit-tests.log
+      - name: Upload unit test log
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: unit-test-results
+          path: build/test-results/
+          retention-days: 14
+
+  ui-tests:
+    name: UI tests
+    runs-on: xcode-27
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v5
+      - name: Show toolchain and simulators
+        run: |
+          xcodebuild -version
+          xcrun simctl list devices available
+      - name: Run UI tests
+        run: bash Scripts/test-ui.sh
+      - name: Upload UI test results and screenshots
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: ui-test-results
+          path: build/test-results/
+          retention-days: 14
