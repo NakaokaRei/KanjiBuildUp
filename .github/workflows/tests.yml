@@ -2,6 +2,7 @@ name: Tests
 
 on:
   push:
+    branches: [master]
   pull_request:
   workflow_dispatch:
 
@@ -16,9 +17,9 @@ defaults:
   run:
     shell: bash
 
-# project.xcproj requires Xcode 27+. Match the project's authoring toolchain.
+# project.xcproj supports Xcode 27+. Use a stable release, not a moving beta.
 env:
-  DEVELOPER_DIR: /Applications/Xcode_27.2.app/Contents/Developer
+  DEVELOPER_DIR: /Applications/Xcode_27.0.app/Contents/Developer
 
 jobs:
   unit-tests:
@@ -53,6 +54,14 @@ jobs:
         run: |
           xcodebuild -version
           xcrun simctl list devices available
+      - name: Boot iOS 27.0 simulator
+        timeout-minutes: 5
+        run: |
+          simulator_id=$(xcrun simctl list devices available --json | jq -er '
+            [.devices["com.apple.CoreSimulator.SimRuntime.iOS-27-0"][]
+             | select(.name == "iPhone 17" and .isAvailable == true)][0].udid // error("iPhone 17 / iOS 27.0 is unavailable")')
+          xcrun simctl bootstatus "$simulator_id" -b
+          echo "TEST_DESTINATION=platform=iOS Simulator,id=$simulator_id" >> "$GITHUB_ENV"
       - name: Run UI tests
         run: bash Scripts/test-ui.sh
       - name: Upload UI test results and screenshots

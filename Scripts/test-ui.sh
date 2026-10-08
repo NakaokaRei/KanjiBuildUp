@@ -15,6 +15,7 @@ xcodebuild test \
   -derivedDataPath build/DerivedData \
   -resultBundlePath "$result_dir/UITests.xcresult" \
   -parallel-testing-enabled NO \
+  -collect-test-diagnostics never \
   -testLanguage ja \
   -testRegion JP \
   CODE_SIGNING_ALLOWED=NO \
