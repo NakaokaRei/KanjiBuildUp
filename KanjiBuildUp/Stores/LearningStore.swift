@@ -74,12 +74,36 @@ final class LearningStore {
     }
 
     var categories: [String] { Array(Set(items.map(\.category))).sorted() }
+    struct SearchResults {
+        var items: [StudyItem] = []
+        var counts: [Mastery: Int] = [:]
+        var total = 0
+        var answerOnlyIDs: Set<UUID> = []
+    }
+
+    func searchResults(category: String?, mastery: Mastery?, search: String) -> SearchResults {
+        let query = search.trimmingCharacters(in: .whitespacesAndNewlines)
+        var result = SearchResults()
+        for item in items {
+            guard category == nil || item.category == category else { continue }
+            let questionMatches = query.isEmpty || item.question.contains(query)
+            guard questionMatches || item.answer.contains(query) else { continue }
+            result.total += 1
+            result.counts[item.mastery, default: 0] += 1
+            if mastery == nil || item.mastery == mastery {
+                result.items.append(item)
+                if !questionMatches { result.answerOnlyIDs.insert(item.id) }
+            }
+        }
+        return result
+    }
+
     func filtered(category: String?, mastery: Mastery?, search: String = "") -> [StudyItem] {
         let query = search.trimmingCharacters(in: .whitespacesAndNewlines)
         return items.filter {
             (category == nil || $0.category == category)
                 && (mastery == nil || $0.mastery == mastery)
-                && (query.isEmpty || $0.question.contains(query))
+                && (query.isEmpty || $0.question.contains(query) || $0.answer.contains(query))
         }
     }
     func item(_ id: UUID) -> StudyItem? { items.first { $0.id == id } }

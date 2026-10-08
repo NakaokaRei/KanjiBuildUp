@@ -44,7 +44,11 @@ import Foundation
         precondition(reloaded.filtered(category: "読み", mastery: .mastered, search: "桜").count == 1)
         precondition(reloaded.filtered(category: "読み", mastery: .starting, search: "桜").isEmpty)
         precondition(reloaded.filtered(category: "ことわざ", mastery: nil, search: "桜").isEmpty)
-        for query in ["さくら", "春の木", "読み", "存在しない"] {
+        precondition(reloaded.filtered(category: nil, mastery: nil, search: " くら\n").map(\.id) == [parsed[0].id])
+        precondition(reloaded.filtered(category: "読み", mastery: .mastered, search: "さくら").map(\.id) == [parsed[0].id])
+        precondition(reloaded.filtered(category: "読み", mastery: .starting, search: "さくら").isEmpty)
+        precondition(reloaded.filtered(category: "ことわざ", mastery: nil, search: "さくら").isEmpty)
+        for query in ["春の木", "読み", "存在しない"] {
             precondition(reloaded.filtered(category: nil, mastery: nil, search: query).isEmpty)
         }
         let searchURL = directory.appendingPathComponent("search.json")
@@ -53,7 +57,28 @@ import Foundation
         searchItem.notes = "検索対象外のメモ"
         precondition(searchStore.add([searchItem]))
         precondition(searchStore.filtered(category: nil, mastery: nil, search: "爨").count == 1)
+        precondition(searchStore.filtered(category: nil, mastery: nil, search: "すいさん").map(\.id) == [searchItem.id])
+        let fillInItem = StudyItem(category: "四字熟語", question: "拳拳____", answer: "服膺", meaning: "心に銘記する")
+        let overlappingItem = StudyItem(category: "読み", question: "さくら（桜）", answer: "さくら", meaning: "")
+        precondition(searchStore.add([fillInItem, overlappingItem]))
+        precondition(searchStore.filtered(category: nil, mastery: nil, search: "服膺").map(\.id) == [fillInItem.id])
+        precondition(searchStore.filtered(category: nil, mastery: nil, search: "さくら").map(\.id) == [overlappingItem.id])
         precondition(searchStore.filtered(category: nil, mastery: nil, search: "検索対象外").isEmpty)
+        for query in ["", "  ", "炊", "すいさん", " 服膺\n", "さくら", "検索対象外"] {
+            for selectedCategory in [nil, "音読み", "四字熟語"] as [String?] {
+                for selectedMastery in [nil, .starting, .mastered] as [Mastery?] {
+                    let result = searchStore.searchResults(category: selectedCategory, mastery: selectedMastery, search: query)
+                    precondition(result.items == searchStore.filtered(category: selectedCategory, mastery: selectedMastery, search: query))
+                    precondition(result.total == searchStore.filtered(category: selectedCategory, mastery: nil, search: query).count)
+                    for value in Mastery.allCases {
+                        precondition(result.counts[value, default: 0] == searchStore.filtered(category: selectedCategory, mastery: value, search: query).count)
+                    }
+                }
+            }
+        }
+        precondition(searchStore.searchResults(category: nil, mastery: nil, search: "すいさん").answerOnlyIDs == [searchItem.id])
+        precondition(searchStore.searchResults(category: nil, mastery: nil, search: "さくら").answerOnlyIDs.isEmpty)
+        precondition(searchStore.searchResults(category: nil, mastery: nil, search: " ").answerOnlyIDs.isEmpty)
         var session = StudySession(items: parsed)
         let firstCompanion = session.companionName
         precondition(StudySession.companionNames.contains(firstCompanion))

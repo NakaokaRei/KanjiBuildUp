@@ -441,7 +441,7 @@ final class KanjiBuildUpUITests: XCTestCase {
         }
     }
 
-    @MainActor func testQuestionSearch() throws {
+    @MainActor func testQuestionAndAnswerSearch() throws {
         let app = XCUIApplication()
         app.launchEnvironment["KANJI_TEST_STORE"] = UUID().uuidString
         app.launchEnvironment["KANJI_TEST_CSV"] = "カテゴリー,問題,答え,意味\n音読み,炊爨,すいさん,飯を炊く\n訓読み,炊く,たく,食事\n音読み,桜,さくら,炊爨は検索対象外"
@@ -455,6 +455,7 @@ final class KanjiBuildUpUITests: XCTestCase {
         search.tap()
         search.typeText("炊\n")
         XCTAssertTrue(app.buttons["すべて、2件"].exists)
+        XCTAssertFalse(app.staticTexts["答えに一致"].exists)
         app.buttons["categoryFilter"].tap()
         app.buttons["音読み"].firstMatch.tap()
         XCTAssertTrue(app.buttons["すべて、1件"].exists)
@@ -472,7 +473,15 @@ final class KanjiBuildUpUITests: XCTestCase {
         XCTAssertTrue(app.buttons["すべて、2件"].exists)
         search.tap()
         search.typeText("すいさん\n")
-        XCTAssertFalse(app.buttons["startStudy"].isEnabled)
+        XCTAssertTrue(app.buttons["すべて、1件"].exists)
+        XCTAssertTrue(app.staticTexts["答えに一致"].exists)
+        XCTAssertFalse(app.staticTexts["すいさん"].exists)
+        XCTAssertTrue(app.buttons["startStudy"].isEnabled)
+        app.buttons["startStudy"].tap()
+        XCTAssertEqual(app.staticTexts["questionText"].label, "炊爨")
+        XCTAssertFalse(app.staticTexts["すいさん"].exists)
+        app.buttons["revealAnswer"].tap()
+        XCTAssertEqual(app.staticTexts["studyAnswer"].label, "すいさん")
         app.terminate()
         app.launch()
         XCTAssertFalse(app.buttons["clearQuestionSearch"].exists)

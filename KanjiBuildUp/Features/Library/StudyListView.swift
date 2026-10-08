@@ -19,7 +19,12 @@ struct StudyListView: View {
     @ScaledMetric(relativeTo: .title) private var headerTitleSize = 28
     @ScaledMetric(relativeTo: .headline) private var compactActionWidth = 156
     @State private var studyActionHeight: CGFloat = 96
-    private var filtered: [StudyItem] { store.filtered(category: category, mastery: mastery, search: search) }
+    @State private var searchResults = LearningStore.SearchResults()
+    private var filtered: [StudyItem] { searchResults.items }
+
+    private func refreshSearchResults() {
+        searchResults = store.searchResults(category: category, mastery: mastery, search: search)
+    }
 
     var body: some View {
         NavigationStack {
@@ -82,6 +87,9 @@ struct StudyListView: View {
                                 VStack(alignment: .leading, spacing: 5) {
                                     AdaptiveQuestionText(question: item.question, baseSize: 20, maximumSize: 24, progress: 1)
                                     Text(item.category).font(.caption).foregroundStyle(Palette.secondary)
+                                    if searchResults.answerOnlyIDs.contains(item.id) {
+                                        Text("答えに一致").font(.caption).foregroundStyle(Palette.secondary)
+                                    }
                                 }
                                 Spacer(minLength: 4)
                                 MasteryBadge(mastery: item.mastery)
@@ -124,6 +132,11 @@ struct StudyListView: View {
                 }
         }
         .tint(Palette.green).foregroundStyle(Palette.ink).preferredColorScheme(.light)
+        .onAppear { refreshSearchResults() }
+        .onChange(of: search) { refreshSearchResults() }
+        .onChange(of: category) { refreshSearchResults() }
+        .onChange(of: mastery) { refreshSearchResults() }
+        .onChange(of: store.items) { refreshSearchResults() }
         .sheet(isPresented: $showImport) {
             CSVImportView(store: store) { count in
                 category = nil; mastery = nil
@@ -147,7 +160,7 @@ struct StudyListView: View {
     private var searchField: some View {
         HStack(spacing: 8) {
             Image(systemName: "magnifyingglass").foregroundStyle(Palette.secondary)
-            TextField("問題文を検索", text: $search)
+            TextField("問題文・答えを検索", text: $search)
                 .focused($searchFocused)
                 .submitLabel(.search)
                 .onSubmit { searchFocused = false }
@@ -255,7 +268,7 @@ struct StudyListView: View {
     }
     private func filterButton(_ value: Mastery?, title: String) -> some View {
         let selected = mastery == value
-        let count = store.filtered(category: category, mastery: value, search: search).count
+        let count = value.map { searchResults.counts[$0, default: 0] } ?? searchResults.total
         return Button { mastery = value } label: {
             VStack(spacing: 5) {
                 Text(title).font(.system(size: 13, weight: .semibold))
