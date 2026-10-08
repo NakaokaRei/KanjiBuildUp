@@ -111,20 +111,29 @@ KanjiBuildUp/
 
 ## 検証
 
-データ処理テスト:
+ユニットテスト（CSV・学習データ・永続化・Widget集計）:
 
 ```sh
-xcrun swiftc Shared/*.swift KanjiBuildUp/Models/*.swift KanjiBuildUp/Services/*.swift KanjiBuildUp/Stores/*.swift Tests/LearningTests.swift -o /tmp/kanji-tests
-/tmp/kanji-tests
+bash Scripts/test-unit.sh
 ```
 
 UIテストはXcodeのProduct > Test、または以下で実行します。
 
 ```sh
-xcodebuild -project KanjiBuildUp.xcodeproj -scheme KanjiBuildUp -destination 'platform=iOS Simulator,name=iPhone 17 Pro,OS=26.5' test
+bash Scripts/test-ui.sh
+# 別のシミュレーターを指定する場合:
+TEST_DESTINATION='platform=iOS Simulator,name=iPhone 17 Pro,OS=26.5' bash Scripts/test-ui.sh
 ```
 
 UIテストはDEBUG限定の環境変数で独立した保存先とCSVプレビューを用意し、取り込み確定・学習・保存を確認します。OSのファイル選択画面自体はこのfixtureテストの対象外です。
+
+### CI（GitHub Actions）
+
+`.github/workflows/tests.yml` がmasterへのpush・pull request・手動実行（Actions → Tests → Run workflow）でユニットテストとUIテストを別々のジョブとして実行します。同じブランチ／PRの古い実行は自動キャンセルします。
+
+`project.xcproj` はXcode 27以降が必要なため、[GitHubのXcode 27ランナー](https://github.com/actions/runner-images/blob/main/images/macos/xcode-27-arm64-Readme.md)と安定版Xcode 27.0を使用します。このランナーはプレビュー版です。CIのUIテストはiOS 27.0のiPhone 17に固定し、起動完了を待ってから日本語・日本地域を指定して直列実行します。PRブランチではpull requestイベントのみで実行し、pushとの二重実行を避けます。シミュレーター向けに署名を無効化しているため、証明書やSecretsの設定は不要です。
+
+CIとローカルで同じ上記スクリプトを使用します。ユニットテストは既存の`Tests/LearningTests.swift`を`swiftc -Onone`でコンパイルして実行し、`precondition`の失敗をジョブの失敗として扱います。UIテストのログとスクリーンショット添付を含む`.xcresult`は`build/test-results/`に出力します。成功・失敗にかかわらず、CIのArtifactsに`unit-test-results`と`ui-test-results`を14日間保存します。ダウンロードした`.xcresult`はXcodeで開けます。シミュレーターの詳細診断（sysdiagnose）は収集がタイムアウトすることがあるため無効化していますが、テスト結果・実行ログ・スクリーンショットは引き続き保存します。
 
 ## キャラクターとヘッダー
 

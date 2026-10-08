@@ -1,0 +1,73 @@
+name: Tests
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+defaults:
+  run:
+    shell: bash
+
+# project.xcproj supports Xcode 27+. Use a stable release, not a moving beta.
+env:
+  DEVELOPER_DIR: /Applications/Xcode_27.0.app/Contents/Developer
+
+jobs:
+  unit-tests:
+    name: Unit tests
+    runs-on: xcode-27
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v5
+      - name: Show toolchain
+        run: |
+          xcodebuild -version
+          xcrun swift --version
+      - name: Run unit tests
+        run: |
+          mkdir -p build/test-results
+          bash Scripts/test-unit.sh 2>&1 | tee build/test-results/unit-tests.log
+      - name: Upload unit test log
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: unit-test-results
+          path: build/test-results/
+          retention-days: 14
+
+  ui-tests:
+    name: UI tests
+    runs-on: xcode-27
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v5
+      - name: Show toolchain and simulators
+        run: |
+          xcodebuild -version
+          xcrun simctl list devices available
+      - name: Boot iOS 27.0 simulator
+        timeout-minutes: 5
+        run: |
+          simulator_id=$(xcrun simctl list devices available --json | jq -er '
+            [.devices["com.apple.CoreSimulator.SimRuntime.iOS-27-0"][]
+             | select(.name == "iPhone 17" and .isAvailable == true)][0].udid // error("iPhone 17 / iOS 27.0 is unavailable")')
+          xcrun simctl bootstatus "$simulator_id" -b
+          echo "TEST_DESTINATION=platform=iOS Simulator,id=$simulator_id" >> "$GITHUB_ENV"
+      - name: Run UI tests
+        run: bash Scripts/test-ui.sh
+      - name: Upload UI test results and screenshots
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: ui-test-results
+          path: build/test-results/
+          retention-days: 14
