@@ -1,6 +1,65 @@
 import XCTest
 
 final class KanjiBuildUpUITests: XCTestCase {
+    @MainActor func testOnkunPairLayout() throws {
+        continueAfterFailure = false
+        for (question, answer, expected) in [
+            ("a：窘迫\nb：窘しむ", "a：きんぱく\nb：くる", "きんぱく\nくる"),
+            ("a：諷誦\nb：諷んじる", "a：ふうじゅ\n ふうしょう\n ふじゅ\nb：そら", "ふうじゅ / ふうしょう / ふじゅ\nそら")
+        ] {
+            let app = XCUIApplication()
+            app.launchEnvironment["KANJI_TEST_STORE"] = UUID().uuidString
+            app.launchEnvironment["KANJI_TEST_CSV"] = "カテゴリー,問題,答え,意味\nonkun,\"\(question)\",\"\(answer)\",意味の説明"
+            app.launch()
+            XCTAssertTrue(app.buttons["addItem"].waitForExistence(timeout: 10))
+            app.buttons["addItem"].tap()
+            app.buttons["importCSV"].tap()
+            app.buttons["1件を取り込む"].tap()
+            app.buttons["startStudy"].tap()
+            XCTAssertTrue(app.buttons["revealAnswer"].waitForExistence(timeout: 5))
+            XCTAssertFalse(app.staticTexts.matching(NSPredicate(format: "label BEGINSWITH %@", "a：")).firstMatch.exists)
+            capture("onkun-question-\(expected.prefix(4))", app)
+            app.buttons["revealAnswer"].tap()
+            let shownAnswer = app.textViews["studyAnswer"]
+            XCTAssertTrue(shownAnswer.waitForExistence(timeout: 5))
+            XCTAssertEqual(shownAnswer.value as? String, expected)
+            if expected.contains(" / ") {
+                XCTAssertLessThan(shownAnswer.frame.height, 140)
+            }
+            XCTAssertFalse((app.textViews["answerQuestion"].value as? String ?? "").contains("a："))
+            XCTAssertLessThan(shownAnswer.frame.maxY, app.buttons["かんぺき"].frame.minY)
+            capture("onkun-answer-\(expected.prefix(4))", app)
+            app.terminate()
+        }
+    }
+
+    @MainActor func testQuestionExplanationLayout() throws {
+        continueAfterFailure = false
+        for (reading, explanation) in [
+            ("たいどう", "（一緒に連れて行くこと）"),
+            ("げんろう", "（①功労・名声があった政治家②功績をあげた年長者）")
+        ] {
+            let app = XCUIApplication()
+            app.launchEnvironment["KANJI_TEST_STORE"] = UUID().uuidString
+            app.launchEnvironment["KANJI_TEST_CSV"] = "カテゴリー,問題,答え,意味\n大見出し②,\(reading)\(explanation),答え,"
+            app.launch()
+            XCTAssertTrue(app.buttons["addItem"].waitForExistence(timeout: 10))
+            app.buttons["addItem"].tap()
+            app.buttons["importCSV"].tap()
+            app.buttons["1件を取り込む"].tap()
+            app.buttons["startStudy"].tap()
+            let main = app.staticTexts[reading]
+            let detail = app.staticTexts[explanation]
+            XCTAssertTrue(main.waitForExistence(timeout: 5))
+            XCTAssertTrue(detail.exists)
+            XCTAssertEqual(detail.label, explanation)
+            XCTAssertGreaterThan(detail.frame.minY, main.frame.maxY)
+            XCTAssertTrue(app.buttons["revealAnswer"].isHittable)
+            capture("question-explanation-\(reading)", app)
+            app.terminate()
+        }
+    }
+
     @MainActor override func setUpWithError() throws {
         XCUIDevice.shared.orientation = .portrait
     }
@@ -151,7 +210,9 @@ final class KanjiBuildUpUITests: XCTestCase {
         XCTAssertTrue(app.buttons["がんばるぞ、1件"].exists)
         app.buttons.containing(.staticText, identifier: "梅").firstMatch.tap()
         XCTAssertTrue(app.staticTexts["うめ"].waitForExistence(timeout: 5))
-        XCTAssertTrue(app.staticTexts["意味は登録されていません。"].exists)
+        let emptyMeaning = app.textViews["studyMeaning"]
+        XCTAssertTrue(emptyMeaning.waitForExistence(timeout: 5))
+        XCTAssertEqual(emptyMeaning.value as? String ?? "", "")
         app.terminate(); app.launch()
         XCTAssertTrue(app.buttons["がんばるぞ、1件"].waitForExistence(timeout: 10))
         app.buttons["addItem"].tap()
@@ -234,10 +295,10 @@ final class KanjiBuildUpUITests: XCTestCase {
         app.launchEnvironment["KANJI_TEST_STORE"] = UUID().uuidString
         app.launchEnvironment["KANJI_TEST_DEFAULTS"] = "1"
         app.launch()
-        XCTAssertTrue(app.buttons["すべて、11168件"].waitForExistence(timeout: 10))
-        XCTAssertTrue(app.buttons["がんばるぞ、5067件"].exists)
-        XCTAssertTrue(app.buttons["あとすこし、2701件"].exists)
-        XCTAssertTrue(app.buttons["かんぺき、3400件"].exists)
+        XCTAssertTrue(app.buttons["すべて、16420件"].waitForExistence(timeout: 10))
+        XCTAssertTrue(app.buttons["がんばるぞ、9131件"].exists)
+        XCTAssertTrue(app.buttons["あとすこし、3435件"].exists)
+        XCTAssertTrue(app.buttons["かんぺき、3854件"].exists)
         capture("default-library", app)
         app.buttons["categoryFilter"].tap()
         app.buttons["訓読み"].firstMatch.tap()
@@ -248,7 +309,7 @@ final class KanjiBuildUpUITests: XCTestCase {
         app.buttons["revealAnswer"].tap()
         capture("default-answer", app)
         app.terminate(); app.launch()
-        XCTAssertTrue(app.buttons["すべて、11168件"].waitForExistence(timeout: 10))
+        XCTAssertTrue(app.buttons["すべて、16420件"].waitForExistence(timeout: 10))
         app.buttons["categoryFilter"].tap()
         app.buttons["四字熟語"].firstMatch.tap()
         XCTAssertTrue(app.buttons["すべて、1605件"].waitForExistence(timeout: 5))

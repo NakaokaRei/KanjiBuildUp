@@ -85,7 +85,7 @@ struct StudyListView: View {
                         NavigationLink(value: StudySession(items: [item], review: true)) {
                             HStack(spacing: 12) {
                                 VStack(alignment: .leading, spacing: 5) {
-                                    AdaptiveQuestionText(question: item.question, baseSize: 20, maximumSize: 24, progress: 1)
+                                    AdaptiveQuestionText(question: item.displayedQuestion, baseSize: 20, maximumSize: 24, progress: 1)
                                     Text(item.category).font(.caption).foregroundStyle(Palette.secondary)
                                     if searchResults.answerOnlyIDs.contains(item.id) {
                                         Text("答えに一致").font(.caption).foregroundStyle(Palette.secondary)

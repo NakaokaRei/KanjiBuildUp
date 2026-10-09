@@ -10,16 +10,17 @@ struct StudySelectableText: View {
     var studyFont: StudyFont? = nil
     var centered = false
     var lineSpacing: CGFloat = 0
+    var paragraphSpacing: CGFloat = 0
 
     var body: some View {
         #if os(iOS)
         InlineStudyText(text: text, size: size, studyFont: studyFont,
-                        centered: centered, lineSpacing: lineSpacing)
+                        centered: centered, lineSpacing: lineSpacing, paragraphSpacing: paragraphSpacing)
         #else
         Text(text)
             .font(studyFont?.font(size: size) ?? .system(size: size))
             .multilineTextAlignment(centered ? .center : .leading)
-            .lineSpacing(lineSpacing)
+            .lineSpacing(max(lineSpacing, paragraphSpacing))
             .textSelection(.enabled)
         #endif
     }
@@ -32,6 +33,7 @@ private struct InlineStudyText: UIViewRepresentable {
     let studyFont: StudyFont?
     let centered: Bool
     let lineSpacing: CGFloat
+    let paragraphSpacing: CGFloat
 
     private var font: UIFont {
         switch studyFont {
@@ -60,6 +62,7 @@ private struct InlineStudyText: UIViewRepresentable {
         let paragraph = NSMutableParagraphStyle()
         paragraph.alignment = centered ? .center : .natural
         paragraph.lineSpacing = lineSpacing
+        paragraph.paragraphSpacing = paragraphSpacing
         let attributed = NSAttributedString(string: text, attributes: [
             .font: font, .foregroundColor: UIColor(Palette.ink), .paragraphStyle: paragraph
         ])

@@ -2,6 +2,23 @@ import Foundation
 
 @main struct LearningTests {
     @MainActor static func main() throws {
+        let onkunPair = OnkunText("a：ふうじゅ\n ふうしょう\n ふじゅ\nb：そら", category: "onkun")!
+        precondition(onkunPair.text == "ふうじゅ / ふうしょう / ふじゅ\nそら")
+        precondition(onkunPair.hasAlternatives)
+        precondition(OnkunText("a：窘迫\nb：窘しむ", category: "onkun")?.text == "窘迫\n窘しむ")
+        precondition(OnkunText("a：きんぱく\nb：くる", category: "onkun")?.hasAlternatives == false)
+        precondition(OnkunText("a：そのまま\nb：表示", category: "別カテゴリー") == nil)
+        precondition(OnkunText("編集済みの問題", category: "onkun") == nil)
+        let questionParts = QuestionTextParts("たいどう（一緒に連れて行くこと）")
+        precondition(questionParts.main == "たいどう")
+        precondition(questionParts.explanation == "（一緒に連れて行くこと）")
+        let nestedParts = QuestionTextParts("ことば\n（説明(補足)）")
+        precondition(nestedParts.main == "ことば" && nestedParts.explanation == "（説明(補足)）")
+        precondition(QuestionTextParts("ことば(説明)").explanation == "(説明)")
+        for unchanged in ["桜", "a：緇衣\nb：緇い", "（　）に入る漢字", "前（　）後", "ことば（説明"] {
+            precondition(QuestionTextParts(unchanged).main == unchanged)
+            precondition(QuestionTextParts(unchanged).explanation == nil)
+        }
         let widgetSuite = "widget-tests-" + UUID().uuidString
         let widgetDefaults = UserDefaults(suiteName: widgetSuite)!
         defer { widgetDefaults.removePersistentDomain(forName: widgetSuite) }
@@ -287,6 +304,118 @@ import Foundation
         _ = LearningStore(fileURL: untouchedURL, defaults: oldBatch)
         let meaningCorrected = LearningStore(fileURL: untouchedURL, defaults: continuation)
         precondition(meaningCorrected.item(editedMeaning.id)?.meaning == continuation.items[154].meaning)
+        let omidashiURL = URL(fileURLWithPath: "KanjiBuildUp/Resources/OmidashiStudyData.json")
+        let omidashi = try JSONDecoder().decode(DefaultStudyData.self, from: Data(contentsOf: omidashiURL))
+        precondition(omidashi.items.count == 2146)
+        precondition(Set(omidashi.items.map(\.id)).count == 2146)
+        precondition(omidashi.items.allSatisfy { $0.category == "大見出し①" && $0.meaning.isEmpty })
+        precondition(omidashi.items.filter { $0.mastery == .starting }.count == 1692)
+        precondition(omidashi.items.filter { $0.mastery == .mastered }.count == 454)
+        precondition(omidashi.items[0].mastery == .mastered)
+        precondition(omidashi.items[8].mastery == .starting)
+        precondition(omidashi.items[590].mastery == .mastered)
+        precondition(omidashi.items[591].mastery == .starting)
+        precondition(omidashi.items.dropFirst(592).allSatisfy { $0.mastery == .starting })
+        precondition(omidashi.items[8].question == "ようけつ（奥義・秘訣）")
+        for (index, item) in omidashi.items.enumerated() {
+            precondition(item.notes == "インスピさん①\(index + 1)番")
+        }
+        let headingsStoreURL = directory.appendingPathComponent("omidashi.json")
+        let beforeHeadings = LearningStore(fileURL: headingsStoreURL, defaults: defaults)
+        precondition(beforeHeadings.setMastery(.learning, for: first.id))
+        let headingsStore = LearningStore(fileURL: headingsStoreURL, defaults: defaults, additionalDefaults: [omidashi])
+        precondition(headingsStore.errorMessage == nil && headingsStore.items.count == 5120)
+        precondition(headingsStore.item(first.id)?.mastery == .learning)
+        precondition(headingsStore.items.filter { $0.category == "大見出し①" } == omidashi.items)
+        precondition(headingsStore.delete(omidashi.items[0].id))
+        var editedHeading = omidashi.items[8]
+        editedHeading.mastery = .mastered
+        editedHeading.notes = "自分のメモ"
+        precondition(headingsStore.update(editedHeading))
+        let headingsRestart = LearningStore(fileURL: headingsStoreURL, defaults: defaults, additionalDefaults: [omidashi])
+        precondition(headingsRestart.errorMessage == nil && headingsRestart.items.count == 5119)
+        precondition(headingsRestart.item(omidashi.items[0].id) == nil)
+        precondition(headingsRestart.item(editedHeading.id) == editedHeading)
+        precondition(omidashi.items[2].question == "げんこう（①天と地・宇宙②ウマの病気の名）")
+        precondition(omidashi.items[149].question == "しっか（①家②家族・家庭③夫婦④他人の妻の敬称）")
+        precondition(omidashi.items[103].question.contains("3時~5時"))
+        precondition(omidashi.items[140].question.contains("原子番号14"))
+        let oldHeadings = Dictionary(uniqueKeysWithValues: omidashi.previousItems!.map { ($0.id, $0) })
+        precondition(oldHeadings.count == 173)
+        let oldHeadingBatch = DefaultStudyData(version: omidashi.replacesVersion!, items: omidashi.items.map { oldHeadings[$0.id] ?? $0 })
+        let headingCorrectionURL = directory.appendingPathComponent("heading-correction.json")
+        let oldHeadingStore = LearningStore(fileURL: headingCorrectionURL, defaults: oldHeadingBatch)
+        precondition(oldHeadingStore.setMastery(.learning, for: omidashi.items[2].id))
+        precondition(oldHeadingStore.delete(omidashi.items[26].id))
+        var personalHeading = oldHeadingBatch.items[31]
+        personalHeading.question = "自分で編集した問題"
+        personalHeading.notes = "自分のメモ"
+        precondition(oldHeadingStore.update(personalHeading))
+        let correctedHeadings = LearningStore(fileURL: headingCorrectionURL, defaults: omidashi)
+        precondition(correctedHeadings.errorMessage == nil && correctedHeadings.items.count == 2145)
+        precondition(correctedHeadings.item(omidashi.items[2].id)?.question == omidashi.items[2].question)
+        precondition(correctedHeadings.item(omidashi.items[2].id)?.mastery == .learning)
+        precondition(correctedHeadings.item(omidashi.items[26].id) == nil)
+        precondition(correctedHeadings.item(personalHeading.id) == personalHeading)
+        let correctionReload = LearningStore(fileURL: headingCorrectionURL, defaults: omidashi)
+        precondition(correctionReload.errorMessage == nil && correctionReload.items == correctedHeadings.items)
+        let omidashi2URL = URL(fileURLWithPath: "KanjiBuildUp/Resources/Omidashi2StudyData.json")
+        let omidashi2 = try JSONDecoder().decode(DefaultStudyData.self, from: Data(contentsOf: omidashi2URL))
+        precondition(omidashi2.items.count == 2167 && Set(omidashi2.items.map(\.id)).count == 2167)
+        precondition(omidashi2.items.filter { $0.mastery == .starting }.count == 1433)
+        precondition(omidashi2.items.filter { $0.mastery == .learning }.count == 734)
+        precondition(omidashi2.items[1118].mastery == .starting)
+        precondition(omidashi2.items[1119].mastery == .learning)
+        precondition(omidashi2.items.dropFirst(1120).allSatisfy { $0.mastery == .starting })
+        precondition(omidashi2.items[0].question == "そうはつ（発電機が二つついていること）")
+        precondition(omidashi2.items[3].question == "ちんぎん（①小さい声で口ずさむこと②深く考え込むこと）")
+        precondition(omidashi2.items[928].question == "たいそう（陰暦1月）")
+        let recoveredNumbers = [882, 886, 887, 888, 889, 892, 893, 896, 904, 905, 906, 907, 908, 909, 911, 913, 914, 919, 920, 922, 926, 929, 934, 937, 938, 940, 941, 945, 949, 958, 959, 960]
+        precondition(recoveredNumbers.allSatisfy { omidashi2.items[$0 - 1].mastery == .starting })
+        for (index, item) in omidashi2.items.enumerated() {
+            precondition(item.notes == "インスピさん②\(index + 1)番")
+            precondition(item.category == "大見出し②" && item.meaning.isEmpty)
+        }
+        let headings2Store = LearningStore(fileURL: headingsStoreURL, defaults: defaults, additionalDefaults: [omidashi, omidashi2])
+        precondition(headings2Store.errorMessage == nil && headings2Store.items.count == 7286)
+        precondition(headings2Store.items.filter { $0.category == "大見出し②" } == omidashi2.items)
+        precondition(headings2Store.item(editedHeading.id) == editedHeading)
+        precondition(headings2Store.item(omidashi.items[0].id) == nil)
+        precondition(headings2Store.delete(omidashi2.items[0].id))
+        var editedHeading2 = omidashi2.items[881]
+        editedHeading2.mastery = .mastered
+        editedHeading2.notes = "自分のメモ"
+        precondition(headings2Store.update(editedHeading2))
+        let headings2Restart = LearningStore(fileURL: headingsStoreURL, defaults: defaults, additionalDefaults: [omidashi, omidashi2])
+        precondition(headings2Restart.errorMessage == nil && headings2Restart.items.count == 7285)
+        precondition(headings2Restart.item(omidashi2.items[0].id) == nil)
+        precondition(headings2Restart.item(editedHeading2.id) == editedHeading2)
+        let onkunURL = URL(fileURLWithPath: "KanjiBuildUp/Resources/OnkunStudyData.json")
+        let onkun = try JSONDecoder().decode(DefaultStudyData.self, from: Data(contentsOf: onkunURL))
+        precondition(onkun.items.count == 939 && Set(onkun.items.map(\.id)).count == 939)
+        precondition(onkun.items.allSatisfy { $0.category == "onkun" && $0.mastery == .starting })
+        precondition(onkun.items[0].question == "a：緇衣\nb：緇い")
+        precondition(onkun.items[0].answer == "a：しい\n しえ\nb：くろ")
+        precondition(onkun.items[1].question == "a：抉剔\nb：剔る")
+        precondition(onkun.items[1].answer == "a：けってき\nb：えぐ")
+        precondition(onkun.items[0].meaning.hasPrefix("1.黒色の衣服。\n 2.墨染めの僧衣。"))
+        for (index, item) in onkun.items.enumerated() {
+            precondition(item.notes == "逞筆さん\(index + 1)番")
+        }
+        let onkunStore = LearningStore(fileURL: headingsStoreURL, defaults: defaults, additionalDefaults: [omidashi, omidashi2, onkun])
+        precondition(onkunStore.errorMessage == nil && onkunStore.items.count == 8224)
+        precondition(onkunStore.items.filter { $0.category == "onkun" } == onkun.items)
+        precondition(onkunStore.item(editedHeading2.id) == editedHeading2)
+        precondition(onkunStore.item(omidashi2.items[0].id) == nil)
+        precondition(onkunStore.delete(onkun.items[0].id))
+        var editedOnkun = onkun.items[1]
+        editedOnkun.mastery = .mastered
+        editedOnkun.notes = "自分のメモ"
+        precondition(onkunStore.update(editedOnkun))
+        let onkunRestart = LearningStore(fileURL: headingsStoreURL, defaults: defaults, additionalDefaults: [omidashi, omidashi2, onkun])
+        precondition(onkunRestart.errorMessage == nil && onkunRestart.items.count == 8223)
+        precondition(onkunRestart.item(onkun.items[0].id) == nil)
+        precondition(onkunRestart.item(editedOnkun.id) == editedOnkun)
         let legacyURL = directory.appendingPathComponent("legacy.json")
         var existing = first
         existing.id = UUID(); existing.notes = "自分のメモ"; existing.mastery = .learning

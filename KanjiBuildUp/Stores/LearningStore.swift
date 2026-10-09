@@ -52,6 +52,7 @@ final class LearningStore {
                     let updated = items.map { item in
                         guard let old = previous[item.id], let new = corrected[item.id] else { return item }
                         var result = item
+                        if item.question == old.question { result.question = new.question }
                         if item.mastery == old.mastery { result.mastery = new.mastery }
                         if item.meaning == old.meaning { result.meaning = new.meaning }
                         return result

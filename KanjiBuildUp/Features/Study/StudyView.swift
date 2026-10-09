@@ -38,9 +38,7 @@ struct StudyView: View {
                 if session.revealed {
                   AnswerContentView(item: item, availableHeight: max(0, geometry.size.height - headerHeight - footerHeight))
                 } else {
-                  Text(item.question)
-                    .font(questionFont.font(size: item.question.count <= 2 ? 112 : 44))
-                    .multilineTextAlignment(.center)
+                  StudyQuestionText(question: item.question, studyFont: questionFont, category: item.category)
                     .frame(maxWidth: .infinity, minHeight: max(180, max(0, geometry.size.height - headerHeight - footerHeight) * 0.70))
                     .padding(.vertical, 16).accessibilityIdentifier("questionText")
                 }
@@ -174,9 +172,10 @@ struct StudyView: View {
           if session.revealed {
             VStack(alignment: .leading, spacing: 4) {
               Text("問題").font(.caption).foregroundStyle(Palette.secondary)
-              StudySelectableText(text: item.question,
+              StudySelectableText(text: item.displayedQuestion,
                                   size: collapsedQuestionSize + (expandedQuestionSize - collapsedQuestionSize) * headerProgress,
-                                  studyFont: questionFont)
+                                  studyFont: questionFont,
+                                  paragraphSpacing: item.category == "onkun" ? 12 : 0)
                 .fixedSize(horizontal: false, vertical: true)
                 .accessibilityIdentifier("answerQuestion")
             }.frame(maxWidth: .infinity, alignment: .leading)
