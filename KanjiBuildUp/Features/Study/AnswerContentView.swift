@@ -14,23 +14,26 @@ struct AnswerContentView: View {
                 Text("答え").font(.caption).foregroundStyle(Palette.secondary)
                 Text(item.answer).font(answerFont.font(size: answerSize))
                     .multilineTextAlignment(.center)
-                    .fixedSize(horizontal: false, vertical: true).textSelection(.enabled)
+                    .fixedSize(horizontal: false, vertical: true)
                     .accessibilityIdentifier("studyAnswer")
+                    .studyTextCopy(item.answer, title: "答え")
             }
             .frame(maxWidth: .infinity, minHeight: max(140, availableHeight * 0.5))
             Divider()
             VStack(alignment: .leading, spacing: 6) {
                 Text("意味").font(.subheadline.weight(.semibold))
                 Text(item.meaning.isEmpty ? "意味は登録されていません。" : item.meaning)
-                    .font(.system(size: bodySize)).lineSpacing(3).textSelection(.enabled)
+                    .font(.system(size: bodySize)).lineSpacing(3)
                     .accessibilityIdentifier("studyMeaning")
+                    .studyTextCopy(item.meaning.isEmpty ? "意味は登録されていません。" : item.meaning, title: "意味")
             }
             if !item.notes.isEmpty {
                 Divider()
                 VStack(alignment: .leading, spacing: 6) {
                     Text("メモ").font(.subheadline.weight(.semibold))
-                    Text(item.notes).font(.system(size: bodySize)).textSelection(.enabled)
+                    Text(item.notes).font(.system(size: bodySize))
                         .accessibilityIdentifier("studyNotes")
+                        .studyTextCopy(item.notes, title: "メモ")
                 }
             }
         }

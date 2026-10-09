@@ -1,6 +1,42 @@
 import XCTest
 
 final class KanjiBuildUpUITests: XCTestCase {
+    @MainActor func testPartialCopyFromAnswer() throws {
+        continueAfterFailure = false
+        let app = XCUIApplication()
+        app.launchEnvironment["KANJI_TEST_STORE"] = UUID().uuidString
+        app.launchEnvironment["KANJI_TEST_CSV"] = "カテゴリー,問題,答え,意味\n読み,桜,さくら,alpha beta gamma"
+        app.launch()
+        XCTAssertTrue(app.buttons["addItem"].waitForExistence(timeout: 10))
+        app.buttons["addItem"].tap()
+        app.buttons["importCSV"].tap()
+        app.buttons["1件を取り込む"].tap()
+        XCTAssertTrue(app.buttons["startStudy"].waitForExistence(timeout: 5))
+        app.buttons["startStudy"].tap()
+        app.buttons["revealAnswer"].tap()
+
+        let meaning = app.staticTexts["studyMeaning"]
+        XCTAssertTrue(meaning.waitForExistence(timeout: 5))
+        meaning.press(forDuration: 1)
+        app.buttons["一部を選択してコピー"].tap()
+        let text = app.textViews["copySelectionText"]
+        XCTAssertTrue(text.waitForExistence(timeout: 5))
+        XCTAssertEqual(text.value as? String, "alpha beta gamma")
+        let copy = app.buttons["copySelectedText"]
+        XCTAssertFalse(copy.isEnabled)
+        // Select the first word rather than the entire definition.
+        text.coordinate(withNormalizedOffset: .zero)
+            .withOffset(CGVector(dx: 20, dy: 12)).doubleTap()
+        XCTAssertTrue(copy.isEnabled)
+        XCTAssertFalse(app.keyboards.firstMatch.exists)
+        copy.tap()
+        XCTAssertTrue(app.buttons["コピーしました"].exists)
+        app.buttons["完了"].tap()
+        XCTAssertTrue(meaning.waitForExistence(timeout: 5))
+        XCTAssertEqual(meaning.label, "alpha beta gamma")
+        XCTAssertEqual(app.staticTexts["studyAnswer"].label, "さくら")
+    }
+
     @MainActor func testImportStudyAndPersistence() throws {
         continueAfterFailure = false
         let app = XCUIApplication()
