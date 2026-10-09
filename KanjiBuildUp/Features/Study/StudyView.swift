@@ -174,12 +174,11 @@ struct StudyView: View {
           if session.revealed {
             VStack(alignment: .leading, spacing: 4) {
               Text("問題").font(.caption).foregroundStyle(Palette.secondary)
-              Text(item.question)
-                .font(questionFont.font(size: collapsedQuestionSize + (expandedQuestionSize - collapsedQuestionSize) * headerProgress))
+              StudySelectableText(text: item.question,
+                                  size: collapsedQuestionSize + (expandedQuestionSize - collapsedQuestionSize) * headerProgress,
+                                  studyFont: questionFont)
                 .fixedSize(horizontal: false, vertical: true)
-                .multilineTextAlignment(.leading)
-              .accessibilityIdentifier("answerQuestion")
-              .studyTextCopy(item.question, title: "問題")
+                .accessibilityIdentifier("answerQuestion")
             }.frame(maxWidth: .infinity, alignment: .leading)
           } else {
             Text(

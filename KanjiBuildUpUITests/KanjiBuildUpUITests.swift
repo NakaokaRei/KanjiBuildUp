@@ -1,6 +1,10 @@
 import XCTest
 
 final class KanjiBuildUpUITests: XCTestCase {
+    @MainActor override func setUpWithError() throws {
+        XCUIDevice.shared.orientation = .portrait
+    }
+
     @MainActor func testPartialCopyFromAnswer() throws {
         continueAfterFailure = false
         let app = XCUIApplication()
@@ -15,26 +19,20 @@ final class KanjiBuildUpUITests: XCTestCase {
         app.buttons["startStudy"].tap()
         app.buttons["revealAnswer"].tap()
 
-        let meaning = app.staticTexts["studyMeaning"]
+        let meaning = app.textViews["studyMeaning"]
         XCTAssertTrue(meaning.waitForExistence(timeout: 5))
-        meaning.press(forDuration: 1)
-        app.buttons["一部を選択してコピー"].tap()
-        let text = app.textViews["copySelectionText"]
-        XCTAssertTrue(text.waitForExistence(timeout: 5))
-        XCTAssertEqual(text.value as? String, "alpha beta gamma")
-        let copy = app.buttons["copySelectedText"]
-        XCTAssertFalse(copy.isEnabled)
-        // Select the first word rather than the entire definition.
-        text.coordinate(withNormalizedOffset: .zero)
-            .withOffset(CGVector(dx: 20, dy: 12)).doubleTap()
-        XCTAssertTrue(copy.isEnabled)
+        XCTAssertEqual(meaning.value as? String, "alpha beta gamma")
+        // Select a single word directly on the answer page, without a sheet.
+        meaning.coordinate(withNormalizedOffset: .zero)
+            .withOffset(CGVector(dx: 20, dy: 12)).press(forDuration: 1)
+        let copy = app.descendants(matching: .any).matching(NSPredicate(format: "label IN %@", ["コピー", "Copy"])).firstMatch
+        XCTAssertTrue(copy.waitForExistence(timeout: 5), app.debugDescription)
         XCTAssertFalse(app.keyboards.firstMatch.exists)
+        XCTAssertFalse(app.textViews["copySelectionText"].exists)
+        capture("inline-text-selection", app)
         copy.tap()
-        XCTAssertTrue(app.buttons["コピーしました"].exists)
-        app.buttons["完了"].tap()
-        XCTAssertTrue(meaning.waitForExistence(timeout: 5))
-        XCTAssertEqual(meaning.label, "alpha beta gamma")
-        XCTAssertEqual(app.staticTexts["studyAnswer"].label, "さくら")
+        XCTAssertEqual(meaning.value as? String, "alpha beta gamma")
+        XCTAssertEqual(app.textViews["studyAnswer"].value as? String, "さくら")
     }
 
     @MainActor func testImportStudyAndPersistence() throws {
@@ -62,7 +60,7 @@ final class KanjiBuildUpUITests: XCTestCase {
         capture("list-scrolled", app)
         app.collectionViews.firstMatch.swipeDown()
         app.buttons.containing(.staticText, identifier: "桜").firstMatch.tap()
-        XCTAssertTrue(app.staticTexts["さくら"].waitForExistence(timeout: 5))
+        XCTAssertTrue(app.textViews["studyAnswer"].waitForExistence(timeout: 5))
         XCTAssertFalse(app.buttons["revealAnswer"].exists)
         XCTAssertFalse(app.buttons["previousQuestion"].exists)
         capture("answer", app)
@@ -73,8 +71,8 @@ final class KanjiBuildUpUITests: XCTestCase {
         }
         XCTAssertLessThan(masteryFrames[0].maxX, masteryFrames[1].minX)
         XCTAssertLessThan(masteryFrames[1].maxX, masteryFrames[2].minX)
-        XCTAssertTrue(app.staticTexts["studyMeaning"].isHittable)
-        XCTAssertLessThan(app.staticTexts["studyMeaning"].frame.maxY, masteryFrames[0].minY)
+        XCTAssertTrue(app.textViews["studyMeaning"].isHittable)
+        XCTAssertLessThan(app.textViews["studyMeaning"].frame.maxY, masteryFrames[0].minY)
         app.buttons["かんぺき"].tap()
         app.buttons["一覧に戻る"].firstMatch.tap()
         XCTAssertTrue(app.buttons["かんぺき、1件"].waitForExistence(timeout: 5))
@@ -83,10 +81,10 @@ final class KanjiBuildUpUITests: XCTestCase {
         app.buttons["かんぺき、1件"].tap()
         app.buttons["startStudy"].tap()
         XCTAssertTrue(app.buttons["revealAnswer"].waitForExistence(timeout: 5))
-        XCTAssertFalse(app.staticTexts["さくら"].exists)
+        XCTAssertFalse(app.textViews["studyAnswer"].exists)
         capture("question", app)
         app.buttons["revealAnswer"].tap()
-        XCTAssertTrue(app.staticTexts["さくら"].waitForExistence(timeout: 5))
+        XCTAssertTrue(app.textViews["studyAnswer"].waitForExistence(timeout: 5))
         app.buttons["あとすこし"].tap()
         app.buttons["学習を終える"].tap()
         capture("after-finish", app)
@@ -183,7 +181,7 @@ final class KanjiBuildUpUITests: XCTestCase {
         XCTAssertTrue(app.buttons["startStudy"].waitForExistence(timeout: 5))
         app.buttons["startStudy"].tap()
         XCTAssertFalse(app.buttons["editNotes"].exists)
-        XCTAssertFalse(app.staticTexts["studyNotes"].exists)
+        XCTAssertFalse(app.textViews["studyNotes"].exists)
         app.buttons["revealAnswer"].tap()
         app.swipeUp()
         XCTAssertFalse(app.buttons["editNotes"].exists)
@@ -195,14 +193,14 @@ final class KanjiBuildUpUITests: XCTestCase {
         app.buttons["入力を完了"].tap()
         app.buttons["saveItem"].tap()
         app.swipeUp()
-        XCTAssertTrue(app.staticTexts["studyNotes"].waitForExistence(timeout: 5))
+        XCTAssertTrue(app.textViews["studyNotes"].waitForExistence(timeout: 5))
         app.buttons["itemActions"].tap(); app.buttons["editItem"].tap()
         app.collectionViews.firstMatch.swipeUp()
         notes.tap(); notes.typeText("・追加")
         app.buttons["入力を完了"].tap()
         app.buttons["キャンセル"].tap()
         app.buttons["入力を破棄"].tap()
-        XCTAssertEqual(app.staticTexts["studyNotes"].label, "春の復習")
+        XCTAssertEqual(app.textViews["studyNotes"].value as? String, "春の復習")
         app.buttons["itemActions"].tap(); app.buttons["editItem"].tap()
         app.collectionViews.firstMatch.swipeUp()
         notes.tap(); notes.typeText("・追記")
@@ -211,7 +209,7 @@ final class KanjiBuildUpUITests: XCTestCase {
         XCTAssertEqual(updatedNotes.replacingOccurrences(of: "・追記", with: ""), "春の復習")
         app.buttons["入力を完了"].tap()
         app.buttons["saveItem"].tap()
-        XCTAssertEqual(app.staticTexts["studyNotes"].label, updatedNotes)
+        XCTAssertEqual(app.textViews["studyNotes"].value as? String, updatedNotes)
         capture("answer-memo", app)
         app.buttons["itemActions"].tap(); app.buttons["editItem"].tap()
         app.buttons["categorySuggestion-音読み"].tap()
@@ -220,8 +218,8 @@ final class KanjiBuildUpUITests: XCTestCase {
         app.buttons.containing(.staticText, identifier: "桜").firstMatch.tap()
         XCTAssertTrue(app.staticTexts["音読み"].waitForExistence(timeout: 5))
         app.swipeUp()
-        XCTAssertTrue(app.staticTexts["studyNotes"].exists)
-        XCTAssertEqual(app.staticTexts["studyNotes"].label, updatedNotes)
+        XCTAssertTrue(app.textViews["studyNotes"].exists)
+        XCTAssertEqual(app.textViews["studyNotes"].value as? String, updatedNotes)
         app.buttons["itemActions"].tap(); app.buttons["deleteItem"].tap()
         app.buttons["削除する"].tap()
         XCTAssertTrue(app.buttons["startStudy"].waitForExistence(timeout: 5))
@@ -289,9 +287,9 @@ final class KanjiBuildUpUITests: XCTestCase {
         XCTAssertLessThan(app.staticTexts["questionText"].frame.maxY, app.buttons["revealAnswer"].frame.minY)
         capture("cute-question", app)
         app.buttons["revealAnswer"].tap()
-        XCTAssertTrue(app.staticTexts["studyAnswer"].waitForExistence(timeout: 5))
-        XCTAssertTrue(app.staticTexts["studyMeaning"].isHittable)
-        XCTAssertLessThan(app.staticTexts["studyAnswer"].frame.maxY, app.buttons["かんぺき"].frame.minY)
+        XCTAssertTrue(app.textViews["studyAnswer"].waitForExistence(timeout: 5))
+        XCTAssertTrue(app.textViews["studyMeaning"].isHittable)
+        XCTAssertLessThan(app.textViews["studyAnswer"].frame.maxY, app.buttons["かんぺき"].frame.minY)
         capture("cute-answer", app)
     }
 
@@ -359,23 +357,23 @@ final class KanjiBuildUpUITests: XCTestCase {
         app.buttons["1件を取り込む"].tap()
         app.buttons["startStudy"].tap()
         app.buttons["revealAnswer"].tap()
-        XCTAssertTrue(app.staticTexts["studyMeaning"].waitForExistence(timeout: 5))
+        XCTAssertTrue(app.textViews["studyMeaning"].waitForExistence(timeout: 5))
         capture("footer-long-answer", app)
-        let headerQuestion = app.staticTexts["answerQuestion"]
+        let headerQuestion = app.textViews["answerQuestion"]
         XCTAssertTrue(headerQuestion.exists)
         let initialQuestionFrame = headerQuestion.frame
         let scroll = app.scrollViews.firstMatch
         for _ in 0..<4 { scroll.swipeUp() }
         XCTAssertTrue(app.buttons["かんぺき"].isHittable)
-        XCTAssertLessThan(app.staticTexts["studyMeaning"].frame.maxY, app.buttons["かんぺき"].frame.minY)
+        XCTAssertLessThan(app.textViews["studyMeaning"].frame.maxY, app.buttons["かんぺき"].frame.minY)
         capture("footer-long-answer-end", app)
-        XCTAssertEqual(headerQuestion.frame.width, initialQuestionFrame.width, accuracy: 2)
+        XCTAssertEqual(headerQuestion.frame.height, initialQuestionFrame.height, accuracy: 2)
         for _ in 0..<5 { scroll.swipeDown() }
-        XCTAssertGreaterThan(headerQuestion.frame.width, initialQuestionFrame.width * 2)
+        XCTAssertGreaterThan(headerQuestion.frame.height, initialQuestionFrame.height)
         capture("answer-header-expanded", app)
         let bodyStart = app.coordinate(withNormalizedOffset: CGVector(dx: 0.5, dy: 0.65))
         bodyStart.press(forDuration: 0.1, thenDragTo: bodyStart.withOffset(CGVector(dx: 0, dy: -180)))
-        XCTAssertEqual(headerQuestion.frame.width, initialQuestionFrame.width, accuracy: 2)
+        XCTAssertEqual(headerQuestion.frame.height, initialQuestionFrame.height, accuracy: 2)
         capture("answer-header-collapsed", app)
     }
 
@@ -391,7 +389,7 @@ final class KanjiBuildUpUITests: XCTestCase {
         app.buttons["1件を取り込む"].tap()
         app.buttons["取り込み通知を閉じる"].tap()
         app.buttons.containing(.staticText, identifier: question).firstMatch.tap()
-        let text = app.staticTexts["answerQuestion"]
+        let text = app.textViews["answerQuestion"]
         XCTAssertTrue(text.waitForExistence(timeout: 5))
         let initialFrame = text.frame
         capture("long-header-initial", app)
@@ -399,8 +397,8 @@ final class KanjiBuildUpUITests: XCTestCase {
         let pullStart = app.coordinate(withNormalizedOffset: CGVector(dx: 0.5, dy: 0.48))
         pullStart.press(forDuration: 0.1, thenDragTo: pullStart.withOffset(CGVector(dx: 0, dy: 180)))
         XCTAssertGreaterThan(text.frame.height, initialFrame.height * 1.3)
-        XCTAssertEqual(text.label, question)
-        XCTAssertTrue(app.staticTexts["studyAnswer"].isHittable)
+        XCTAssertEqual(text.value as? String, question)
+        XCTAssertTrue(app.textViews["studyAnswer"].isHittable)
         capture("long-header-expanded", app)
         let bodyStart = app.coordinate(withNormalizedOffset: CGVector(dx: 0.5, dy: 0.65))
         bodyStart.press(forDuration: 0.1, thenDragTo: bodyStart.withOffset(CGVector(dx: 0, dy: -180)))
@@ -433,7 +431,7 @@ final class KanjiBuildUpUITests: XCTestCase {
         app.buttons["startStudy"].tap()
         XCTAssertTrue(app.staticTexts["questionText"].exists)
         app.buttons["revealAnswer"].tap()
-        XCTAssertTrue(app.staticTexts["studyAnswer"].exists)
+        XCTAssertTrue(app.textViews["studyAnswer"].exists)
         capture("custom-font-answer", app)
         app.buttons["itemActions"].tap()
         app.buttons["fontSettings"].tap()
@@ -470,8 +468,8 @@ final class KanjiBuildUpUITests: XCTestCase {
             XCTAssertTrue(app.staticTexts[longQuestion].exists)
             capture(largeText ? "list-large-type" : "list-question-sizes", app)
             app.buttons.containing(.staticText, identifier: "炊爨").firstMatch.tap()
-            XCTAssertTrue(app.staticTexts["answerQuestion"].exists)
-            XCTAssertTrue(app.staticTexts["studyAnswer"].exists)
+            XCTAssertTrue(app.textViews["answerQuestion"].exists)
+            XCTAssertTrue(app.textViews["studyAnswer"].exists)
             capture(largeText ? "answer-large-type" : "answer-short-question", app)
             app.terminate()
         }
@@ -517,7 +515,7 @@ final class KanjiBuildUpUITests: XCTestCase {
         XCTAssertEqual(app.staticTexts["questionText"].label, "炊爨")
         XCTAssertFalse(app.staticTexts["すいさん"].exists)
         app.buttons["revealAnswer"].tap()
-        XCTAssertEqual(app.staticTexts["studyAnswer"].label, "すいさん")
+        XCTAssertEqual(app.textViews["studyAnswer"].value as? String, "すいさん")
         app.terminate()
         app.launch()
         XCTAssertFalse(app.buttons["clearQuestionSearch"].exists)
