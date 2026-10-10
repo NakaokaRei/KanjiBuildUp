@@ -98,7 +98,7 @@ struct StudyListView: View {
                         .listRowBackground(Color.clear)
                     }.listStyle(.plain).scrollContentBackground(.hidden)
                         .scrollDismissesKeyboard(.interactively)
-                        .modifier(LibraryScrollHeaderModifier(collapse: $headerCollapse, actionsCollapsed: $actionsCollapsed))
+                        .modifier(LibraryScrollHeaderModifier(collapse: $headerCollapse, actionsCollapsed: $actionsCollapsed, searchFocused: searchFocused, bottomContentMargin: studyActionHeight + 24))
                         .overlay {
                             if filtered.isEmpty {
                                 ContentUnavailableView("該当する問題はありません", systemImage: "line.3.horizontal.decrease", description: Text("検索語・カテゴリー・覚え具合を変更してください。"))
@@ -292,24 +292,44 @@ struct StudyListView: View {
 private struct LibraryScrollHeaderModifier: ViewModifier {
     @Binding var collapse: CGFloat
     @Binding var actionsCollapsed: Bool
+    let searchFocused: Bool
+    let bottomContentMargin: CGFloat
     @State private var userIsScrolling = false
+    @State private var canResizeHeader = false
 
     @ViewBuilder func body(content: Content) -> some View {
         if #available(iOS 18, macOS 15, visionOS 2, *) {
             content.onScrollGeometryChange(for: CGFloat.self) { geometry in
-                geometry.contentOffset.y + geometry.contentInsets.top
+                // Ignore rubber-banding at either end of the list.
+                let maximumOffset = max(0, geometry.contentSize.height
+                    + geometry.contentInsets.top + geometry.contentInsets.bottom
+                    - geometry.containerSize.height)
+                return min(maximumOffset, max(0, geometry.contentOffset.y + geometry.contentInsets.top))
             } action: { oldOffset, offset in
-                if userIsScrolling {
-                    collapse = min(1, max(0, offset / 80))
+                if userIsScrolling && canResizeHeader && !searchFocused {
+                    collapse = min(1, offset / 80)
                     if offset <= 8 || offset < oldOffset - 3 { actionsCollapsed = false }
                     else if offset > 60 && offset > oldOffset + 2 { actionsCollapsed = true }
                 }
             }
-            .onScrollPhaseChange { _, phase, context in
-                let wasScrolling = userIsScrolling
-                userIsScrolling = phase == .interacting || phase == .decelerating
-                if userIsScrolling || wasScrolling {
-                    collapse = min(1, max(0, (context.geometry.contentOffset.y + context.geometry.contentInsets.top) / 80))
+            .onScrollPhaseChange { previousPhase, phase, context in
+                // Decide once per gesture. Rechecking as the header shrinks would
+                // alternate between allowing and preventing collapse on short lists.
+                if phase == .tracking || (phase == .interacting && previousPhase != .tracking) {
+                    let geometry = context.geometry
+                    let remainingHeaderShrink = 60 * (1 - collapse)
+                    // Footer clearance alone must not make a short list collapsible.
+                    let overflow = geometry.contentSize.height
+                        + geometry.contentInsets.top + geometry.contentInsets.bottom
+                        - geometry.containerSize.height - bottomContentMargin
+                    canResizeHeader = !searchFocused && overflow > 80 + remainingHeaderShrink
+                }
+                // Inertia and bounce must not resize the viewport underneath the list.
+                userIsScrolling = phase == .interacting
+                if userIsScrolling && canResizeHeader && !searchFocused
+                    && context.geometry.contentOffset.y + context.geometry.contentInsets.top <= 0 {
+                    collapse = 0
+                    actionsCollapsed = false
                 }
             }
         } else {

@@ -536,6 +536,45 @@ final class KanjiBuildUpUITests: XCTestCase {
         }
     }
 
+    @MainActor func testShortKajouSearchScroll() throws {
+        continueAfterFailure = false
+        let app = XCUIApplication()
+        app.launchEnvironment["KANJI_TEST_STORE"] = UUID().uuidString
+        app.launchEnvironment["KANJI_TEST_DEFAULTS"] = "1"
+        app.launch()
+        XCTAssertTrue(app.buttons["startStudy"].waitForExistence(timeout: 10))
+        let search = app.textFields["questionSearch"]
+        let filter = app.buttons["categoryFilter"]
+        let expandedY = filter.frame.minY
+        let expandedWidth = app.buttons["startStudy"].frame.width
+        search.tap()
+        search.typeText("かじょう")
+        XCTAssertTrue(app.buttons["すべて、5件"].waitForExistence(timeout: 5))
+        let list = app.collectionViews.firstMatch
+        // Include interactive keyboard dismissal before testing both bounce directions.
+        // The list extends behind the keyboard; keep this drag inside its visible area.
+        let dragStart = list.coordinate(withNormalizedOffset: .zero)
+            .withOffset(CGVector(dx: 60, dy: 30))
+        dragStart.press(forDuration: 0.1, thenDragTo: dragStart.withOffset(CGVector(dx: 0, dy: 140)))
+        if app.keyboards.firstMatch.exists { app.keyboards.buttons["検索"].tap() }
+        XCTAssertFalse(app.keyboards.firstMatch.exists)
+        XCTAssertEqual(search.value as? String, "かじょう")
+        XCTAssertTrue(app.buttons["すべて、5件"].exists)
+        for _ in 0..<3 {
+            list.swipeUp()
+            XCTAssertEqual(filter.frame.minY, expandedY, accuracy: 2)
+            XCTAssertEqual(app.buttons["startStudy"].frame.width, expandedWidth, accuracy: 2)
+            list.swipeDown()
+            XCTAssertEqual(filter.frame.minY, expandedY, accuracy: 2)
+        }
+        XCTAssertTrue(app.staticTexts["遐壌"].exists)
+        XCTAssertTrue(app.staticTexts["囮場"].exists)
+        capture("kajou-short-search-scroll", app)
+        app.buttons["clearQuestionSearch"].tap()
+        list.swipeUp()
+        XCTAssertLessThan(filter.frame.minY, expandedY - 40)
+    }
+
     @MainActor func testQuestionAndAnswerSearch() throws {
         let app = XCUIApplication()
         app.launchEnvironment["KANJI_TEST_STORE"] = UUID().uuidString
