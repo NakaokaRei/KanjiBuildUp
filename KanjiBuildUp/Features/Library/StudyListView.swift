@@ -61,11 +61,21 @@ struct StudyListView: View {
                             }
                             .allowsHitTesting(false)
                     }
-                    if dynamicTypeSize.isAccessibilitySize {
-                        VStack(spacing: 0) { categoryPicker; favoriteFilter }
-                    } else {
-                        HStack(spacing: 8) { categoryPicker; favoriteFilter }
+                    Group {
+                        if dynamicTypeSize.isAccessibilitySize {
+                            VStack(alignment: .trailing, spacing: 8) {
+                                categoryPicker
+                                favoriteFilter
+                            }
+                        } else {
+                            HStack(spacing: 12) {
+                                categoryPicker
+                                favoriteFilter
+                            }
+                        }
                     }
+                    .padding(.top, 8)
+                    .padding(.bottom, 12)
                 }
                 searchField.padding(.bottom, 8)
                 masteryFilters.padding(.bottom, 4)
@@ -177,14 +187,17 @@ struct StudyListView: View {
     private var favoriteFilter: some View {
         Button { favoritesOnly.toggle() } label: {
             Label("お気に入り", systemImage: favoritesOnly ? "star.fill" : "star")
-                .font(.subheadline)
+                .font(.subheadline.weight(.medium))
                 .fixedSize(horizontal: true, vertical: false)
-                .padding(.vertical, 4)
+                .padding(.horizontal, 16)
+                .padding(.vertical, 10)
+                .frame(minHeight: 44)
+                .foregroundStyle(favoritesOnly ? .white : Palette.green)
+                .background(favoritesOnly ? Palette.green : .white.opacity(0.8), in: Capsule())
+                .overlay(Capsule().strokeBorder(Palette.green.opacity(0.15), lineWidth: 1))
+                .contentShape(Capsule())
         }
-        .appGlassButton(prominent: favoritesOnly)
-        .buttonBorderShape(.capsule)
-        .tint(Palette.green)
-        .frame(minHeight: 44)
+        .buttonStyle(.plain)
         .accessibilityValue(favoritesOnly ? "オン" : "オフ")
         .accessibilityAddTraits(favoritesOnly ? .isSelected : [])
         .accessibilityIdentifier("favoriteFilter")

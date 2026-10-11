@@ -160,6 +160,7 @@ struct StudyView: View {
             if !session.isReview {
               Button("前の問題", systemImage: "arrow.left") { session.goBack() }
                 .font(.subheadline)
+                .fixedSize(horizontal: true, vertical: false)
                 .appGlassButton()
                 .tint(Palette.green)
                 .disabled(!session.canGoBack)

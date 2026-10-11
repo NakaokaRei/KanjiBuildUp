@@ -1,0 +1,3164 @@
+{
+  "version": "kurako-shikyo-kunyomi-2026-10-11-v1",
+  "items": [
+    {
+      "id": "9a1cf255-d36a-5d69-bd19-36f5ae03d3d3",
+      "category": "詩経訓読み",
+      "question": "黃鳥【于】き飛びて、灌木に集まり、其鳴くこと喈喈（かいかい）たり。",
+      "answer": "ゆ",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 1番",
+      "mastery": "starting"
+    },
+    {
+      "id": "1b6be49d-77fe-5eb9-bef2-5f3bcbb265a1",
+      "category": "詩経訓読み",
+      "question": "彼の崔嵬に【陟】れば、我馬虺隤（くわいたい）す。",
+      "answer": "のぼ",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 2番",
+      "mastery": "starting"
+    },
+    {
+      "id": "d3152ed4-7ff9-5e0f-95f1-627ae665fbbe",
+      "category": "詩経訓読み",
+      "question": "我【姑】く彼の金罍を酌んで、維（ここ）に以て永く懷はざらん。",
+      "answer": "しばら",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 3番",
+      "mastery": "starting"
+    },
+    {
+      "id": "d28cbb11-be42-5ba7-b6b3-d4a53808932e",
+      "category": "詩経訓読み",
+      "question": "我僕痛みぬ、云（ここ）に何ぞ【吁】ける。",
+      "answer": "なげ",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 4番",
+      "mastery": "starting"
+    },
+    {
+      "id": "63487c0f-f787-5261-ab33-d9652b6cb9dd",
+      "category": "詩経訓読み",
+      "question": "之子【于】に歸ぎ、其室家に宜し。",
+      "answer": "ここ",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 5番",
+      "mastery": "starting"
+    },
+    {
+      "id": "6fd71428-e34b-563e-9dcd-8aa62b7e9c27",
+      "category": "詩経訓読み",
+      "question": "之子于に【歸】ぎ、其室家に宜し。",
+      "answer": "とつ",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 6番",
+      "mastery": "starting"
+    },
+    {
+      "id": "38e3f1de-88c8-505d-b94c-d5c39f0a412f",
+      "category": "詩経訓読み",
+      "question": "芣苢（ふい）を采り采り、薄（いささ）か言（ここ）に之を【襭】む。",
+      "answer": "つまばさ",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 7番",
+      "mastery": "starting"
+    },
+    {
+      "id": "abfa89ca-4207-5b42-8036-1d26f02847dd",
+      "category": "詩経訓読み",
+      "question": "之子于に歸ぎ、言（ここ）に其馬に【秣】はん。",
+      "answer": "まぐさか",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 8番",
+      "mastery": "starting"
+    },
+    {
+      "id": "7ead0cbb-aedd-52fe-8f91-0f1f2577501b",
+      "category": "詩経訓読み",
+      "question": "彼の汝の墳に【遵】ひ、其條枚を伐る。",
+      "answer": "したが",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 9番",
+      "mastery": "starting"
+    },
+    {
+      "id": "5d67461b-6f67-56c7-a5f5-2d4a246c84ea",
+      "category": "詩経訓読み",
+      "question": "既に君子を見る、我を【遐】く棄てず。",
+      "answer": "とお",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 10番",
+      "mastery": "starting"
+    },
+    {
+      "id": "dc56b38d-47c7-5ac7-9ab6-671b8956d877",
+      "category": "詩経訓読み",
+      "question": "則ち【燬】くが如しと雖も、父母孔だ邇し。",
+      "answer": "や",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 11番",
+      "mastery": "starting"
+    },
+    {
+      "id": "57698bbd-d60d-5a59-8797-c6d5940372b6",
+      "category": "詩経訓読み",
+      "question": "則ち燬くが如しと雖も、父母【孔】だ邇し。",
+      "answer": "はなは",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 12番",
+      "mastery": "starting"
+    },
+    {
+      "id": "dd8b1522-2d09-51c6-bc80-072ce5d3c60a",
+      "category": "詩経訓読み",
+      "question": "則ち燬くが如しと雖も、父母孔だ【邇】し。",
+      "answer": "ちか",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 13番",
+      "mastery": "starting"
+    },
+    {
+      "id": "47f1b56a-31ed-55ad-8139-4bd0c8999f2f",
+      "category": "詩経訓読み",
+      "question": "亦既に見、亦既に【覯】へば、我心則ち夷らぐ。",
+      "answer": "あ",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 14番",
+      "mastery": "starting"
+    },
+    {
+      "id": "c443f3c0-0340-506f-9f7e-d8544b2cc5db",
+      "category": "詩経訓読み",
+      "question": "亦既に見、亦既に覯へば、我心則ち【夷】らぐ。",
+      "answer": "たい",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 15番",
+      "mastery": "starting"
+    },
+    {
+      "id": "20d6029a-634f-5bc0-b196-8250d14f1253",
+      "category": "詩経訓読み",
+      "question": "誰か其れ之を【尸】る、齊する季女あり。",
+      "answer": "つかさど",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 16番",
+      "mastery": "starting"
+    },
+    {
+      "id": "30fda0dc-bf8a-541a-8f3f-6489c6351846",
+      "category": "詩経訓読み",
+      "question": "誰か其れ之を尸る、【齊】する季女あり。",
+      "answer": "ものいみ",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 17番",
+      "mastery": "starting"
+    },
+    {
+      "id": "086664d0-b501-5d8d-ad9f-5b95ebddf3b7",
+      "category": "詩経訓読み",
+      "question": "蔽芾（へいふつ）たる甘棠、【翦】ること勿かれ伐ること勿かれ。",
+      "answer": "き",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 18番",
+      "mastery": "starting"
+    },
+    {
+      "id": "7a605455-d18f-5efa-b2a6-126daf6bbc25",
+      "category": "詩経訓読み",
+      "question": "何ぞ斯斯を違りて、敢へて【遑】或ること莫き。",
+      "answer": "いとま",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 19番",
+      "mastery": "starting"
+    },
+    {
+      "id": "328c93c7-98c4-57ae-b34c-c7787c4ad341",
+      "category": "詩経訓読み",
+      "question": "【寔】に命同じからず。",
+      "answer": "まこと",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 20番",
+      "mastery": "starting"
+    },
+    {
+      "id": "697ddb23-d2d2-5b89-b33a-56928f4f49d2",
+      "category": "詩経訓読み",
+      "question": "我に過らざるも、其【嘯】いて歌ふ。",
+      "answer": "うそぶ",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 21番",
+      "mastery": "starting"
+    },
+    {
+      "id": "923df1ce-4d46-5310-aa65-df15782c9b94",
+      "category": "詩経訓読み",
+      "question": "【曷】ぞ肅雝（しゆくよう）ならざらんや、王姫の車。",
+      "answer": "なん",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 22番",
+      "mastery": "starting"
+    },
+    {
+      "id": "ae62d641-ccbf-5887-b2ca-e42b89d659a3",
+      "category": "詩経訓読み",
+      "question": "我心石に匪ず、【轉】ばす可からず。",
+      "answer": "まろ",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 23番",
+      "mastery": "starting"
+    },
+    {
+      "id": "b61efc18-d9d4-5c6b-bcb5-d04553e014d5",
+      "category": "詩経訓読み",
+      "question": "我心【席】に匪ず、卷く可からず。",
+      "answer": "むしろ",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 24番",
+      "mastery": "starting"
+    },
+    {
+      "id": "b276bd4d-c5ff-546a-ab94-9d53bed69926",
+      "category": "詩経訓読み",
+      "question": "【閔】ひに覯ふこと既に多く、侮を受くるも少からず。",
+      "answer": "うれ",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 25番",
+      "mastery": "starting"
+    },
+    {
+      "id": "5be1e40e-1f34-587f-85a5-05be5b74a76f",
+      "category": "詩経訓読み",
+      "question": "靜に言（ここ）に之を思へば、【寤】めて辟（むねう）ちて摽（へう）たることあり。",
+      "answer": "さ",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 26番",
+      "mastery": "starting"
+    },
+    {
+      "id": "c18e4db2-daa7-502f-bb91-d70db0885a34",
+      "category": "詩経訓読み",
+      "question": "日居（ひや）月諸（つきや）、【胡】ぞ迭ひにして徵（あ）くる。",
+      "answer": "なん",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 27番",
+      "mastery": "starting"
+    },
+    {
+      "id": "4845fa0c-b352-5fab-9487-a3426d25a3e1",
+      "category": "詩経訓読み",
+      "question": "日居月諸、胡ぞ【迭】ひにして徵くる。",
+      "answer": "たが",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 28番",
+      "mastery": "starting"
+    },
+    {
+      "id": "b4b5e13c-745c-58e7-ac13-36b7c5288af1",
+      "category": "詩経訓読み",
+      "question": "心の憂あり、【澣】はざる衣の如し。",
+      "answer": "あら",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 29番",
+      "mastery": "starting"
+    },
+    {
+      "id": "e3bb3e20-df58-51d2-8e85-68cbdf25302f",
+      "category": "詩経訓読み",
+      "question": "心の憂あり、【曷】か維れ其れ已まん。",
+      "answer": "いつ",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 30番",
+      "mastery": "starting"
+    },
+    {
+      "id": "307969ee-fac8-55c2-b68b-e0dd217bc630",
+      "category": "詩経訓読み",
+      "question": "終に溫にして且つ惠に、【淑】く其身を愼む。",
+      "answer": "よ",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 31番",
+      "mastery": "starting"
+    },
+    {
+      "id": "9af2c7c3-b86e-5333-a7af-0aac02ca2896",
+      "category": "詩経訓読み",
+      "question": "先君の思、以て寡人を【勗】めしむ。",
+      "answer": "つと",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 32番",
+      "mastery": "starting"
+    },
+    {
+      "id": "e6e134e7-8eb7-5db4-9a81-fc7785b029f1",
+      "category": "詩経訓読み",
+      "question": "日居月諸、下土是れ【冒】ふ。",
+      "answer": "おお",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 33番",
+      "mastery": "starting"
+    },
+    {
+      "id": "0547e287-982a-5176-86ee-a162abda59d1",
+      "category": "詩経訓読み",
+      "question": "父や母や、我を【畜】ふこと卒へず、…",
+      "answer": "やしな",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 34番",
+      "mastery": "starting"
+    },
+    {
+      "id": "d462e974-e3a2-5221-9f4f-65a61c97663c",
+      "category": "詩経訓読み",
+      "question": "父や母や、我を畜ふこと【卒】へず、…",
+      "answer": "お",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 35番",
+      "mastery": "starting"
+    },
+    {
+      "id": "d4132653-46d0-5591-a2ff-4217fdedf881",
+      "category": "詩経訓読み",
+      "question": "終風且つ【霾】る、恵然として肯へて來る。",
+      "answer": "つちふ",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 36番",
+      "mastery": "starting"
+    },
+    {
+      "id": "c276b5ee-d9d9-5644-b947-2aa6a8645868",
+      "category": "詩経訓読み",
+      "question": "寤めて言に寐られず、願うて言に則ち【嚏】る。",
+      "answer": "はなひ",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 37番",
+      "mastery": "starting"
+    },
+    {
+      "id": "0083cd22-72c3-5905-ba48-b236104db426",
+      "category": "詩経訓読み",
+      "question": "【爰】に寒泉あり、浚の下に在り。",
+      "answer": "ここ",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 38番",
+      "mastery": "starting"
+    },
+    {
+      "id": "b66188a3-a5fc-558b-a7f8-4828a95027c7",
+      "category": "詩経訓読み",
+      "question": "我の懷へる、自ら伊（こ）の阻を【詒】す。",
+      "answer": "のこ",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 39番",
+      "mastery": "starting"
+    },
+    {
+      "id": "18ab530d-a525-531c-b647-193eb80fafa0",
+      "category": "詩経訓読み",
+      "question": "彼の日月を【瞻】れば、悠悠たる我思あり。",
+      "answer": "み",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 40番",
+      "mastery": "starting"
+    },
+    {
+      "id": "1d9754d0-d37f-5905-b787-bf1449d08401",
+      "category": "詩経訓読み",
+      "question": "濟盈ちて軌を【濡】さず、雉鳴いて其牡を求む。",
+      "answer": "うるお",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 41番",
+      "mastery": "starting"
+    },
+    {
+      "id": "9da3efcc-bb6b-52ec-b0d6-80936e6de44d",
+      "category": "詩経訓読み",
+      "question": "雝雝（いういう）たる鳴鴈、旭日始めて【旦】なり。",
+      "answer": "あした",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 42番",
+      "mastery": "starting"
+    },
+    {
+      "id": "2efd6699-eba3-5dbf-8fef-25e021f29e5f",
+      "category": "詩経訓読み",
+      "question": "人は涉るも卬（われ）は否（しから）ず、卬は我友を【須】つ。",
+      "answer": "ま",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 43番",
+      "mastery": "starting"
+    },
+    {
+      "id": "541b830f-4dac-52ad-82d4-1501756fde2d",
+      "category": "詩経訓読み",
+      "question": "爾の新昏を【宴】しみ、我を屑しとし以（とも）にせず。",
+      "answer": "たの",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 44番",
+      "mastery": "starting"
+    },
+    {
+      "id": "27752a41-1871-57b9-98ca-162eca2d7ec8",
+      "category": "詩経訓読み",
+      "question": "爾の新昏を宴しみ、我を【屑】しとし以にせず。",
+      "answer": "いさぎよ",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 45番",
+      "mastery": "starting"
+    },
+    {
+      "id": "23cb6149-bf12-5127-bbeb-6d32a70928c5",
+      "category": "詩経訓読み",
+      "question": "我【躬】すら閲（いれ）られず、我後を恤ふるに遑あらんや。",
+      "answer": "み",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 46番",
+      "mastery": "starting"
+    },
+    {
+      "id": "253fc041-4c76-58de-95fe-6c4e7a52c4f4",
+      "category": "詩経訓読み",
+      "question": "我躬すら閲られず、我後を【恤】ふるに遑あらんや。",
+      "answer": "うれ",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 47番",
+      "mastery": "starting"
+    },
+    {
+      "id": "575615eb-24c0-5ca1-a4e0-363b2222618e",
+      "category": "詩経訓読み",
+      "question": "其淺きに就きて、之を泳（みづくぐ）り之を【游】ぐ。",
+      "answer": "およ",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 48番",
+      "mastery": "starting"
+    },
+    {
+      "id": "9e3ce30a-3fed-586b-88f4-3e209c9de76c",
+      "category": "詩経訓読み",
+      "question": "既に我德を阻す、賈用つて【售】られず。",
+      "answer": "う",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 49番",
+      "mastery": "starting"
+    },
+    {
+      "id": "cfb87e99-75a0-5d0f-a6a1-e38ba9b1e517",
+      "category": "詩経訓読み",
+      "question": "載（すなわ）ち脂さし載ち舝（くさび）さし、車を還（めぐ）らして言（ここ）に【邁】く。",
+      "answer": "ゆ",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 50番",
+      "mastery": "starting"
+    },
+    {
+      "id": "d10a75dd-152d-5847-bc35-cebc946d7387",
+      "category": "詩経訓読み",
+      "question": "遄（すみやか）に衞に【臻】らん、瑕（なん）ぞ害あらざらん。",
+      "answer": "いた",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 51番",
+      "mastery": "starting"
+    },
+    {
+      "id": "27837480-c609-5e2a-8c33-4b7c4f0486c3",
+      "category": "詩経訓読み",
+      "question": "其れ虛に其れ邪にせんや、既に【亟】やかなり。",
+      "answer": "すみ",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 52番",
+      "mastery": "starting"
+    },
+    {
+      "id": "2b0f983a-7055-5782-b28c-cb83b98ad36f",
+      "category": "詩経訓読み",
+      "question": "靜女其れ孌（れん）たり、我に彤管（とうくわん）を【貽】る。",
+      "answer": "おく",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 53番",
+      "mastery": "starting"
+    },
+    {
+      "id": "7676cab4-fd5b-54b5-8d6c-532c40c89794",
+      "category": "詩経訓読み",
+      "question": "牧より荑（てい）を歸る、【洵】に美にして且つ異なり。",
+      "answer": "まこと",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 54番",
+      "mastery": "starting"
+    },
+    {
+      "id": "1691deb7-992b-5b54-9240-77befd4bc04b",
+      "category": "詩経訓読み",
+      "question": "魚網の設あり、鴻則ち之に【離】れり。",
+      "answer": "かか",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 55番",
+      "mastery": "starting"
+    },
+    {
+      "id": "acf442c7-1e06-549a-b67e-c2e944b1b08e",
+      "category": "詩経訓読み",
+      "question": "死に之るまで矢（ちか）うて【慝】靡（な）し。",
+      "answer": "よこしま",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 56番",
+      "mastery": "starting"
+    },
+    {
+      "id": "f118b182-c31b-5d4a-aac2-0544b8426313",
+      "category": "詩経訓読み",
+      "question": "【牆】に茨（ひし）あり、襄ふ可からず。",
+      "answer": "かき",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 57番",
+      "mastery": "starting"
+    },
+    {
+      "id": "fb48a68b-8723-539c-9210-d399a7b425ea",
+      "category": "詩経訓読み",
+      "question": "牆に茨あり、【襄】ふ可からず。",
+      "answer": "はら",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 58番",
+      "mastery": "starting"
+    },
+    {
+      "id": "c3612d57-6129-5683-a284-d5ab4ee10d8c",
+      "category": "詩経訓読み",
+      "question": "君子と【偕】に老いて、副笄六珈あり。",
+      "answer": "とも",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 59番",
+      "mastery": "starting"
+    },
+    {
+      "id": "098be0af-8998-5d5f-8e4a-cd82568c47ad",
+      "category": "詩経訓読み",
+      "question": "鬒髪（しんはつ）雲の如く、【髢】を屑とせず。",
+      "answer": "かもじ",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 60番",
+      "mastery": "starting"
+    },
+    {
+      "id": "82dbdd34-0479-50b0-9d53-c79148665e3d",
+      "category": "詩経訓読み",
+      "question": "之を【揆】るに日を以てして、楚室を作る。",
+      "answer": "はか",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 61番",
+      "mastery": "starting"
+    },
+    {
+      "id": "cdae5465-7a06-53c6-a8f0-3f05e672aeb1",
+      "category": "詩経訓読み",
+      "question": "直（ただ）に人に匪ず、心を【秉】ること塞淵、騋牝（らいひん）三千あり。",
+      "answer": "と",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 62番",
+      "mastery": "starting"
+    },
+    {
+      "id": "82dc7bb5-166f-5050-aa7e-5ba643ba0ebe",
+      "category": "詩経訓読み",
+      "question": "彼の姝（しゆ）たる者は子、何を以て之に【予】へん。",
+      "answer": "あた",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 63番",
+      "mastery": "starting"
+    },
+    {
+      "id": "4fda0b5d-a331-52f4-bb6f-45e30b9473a3",
+      "category": "詩経訓読み",
+      "question": "既に我を嘉せず、旋り【濟】ること能はず。",
+      "answer": "わた",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 64番",
+      "mastery": "starting"
+    },
+    {
+      "id": "e010fdf2-6303-5ac0-b620-d4f350d3ee0c",
+      "category": "詩経訓読み",
+      "question": "大邦に【控】ぐ、誰にか因り誰にか極（いた）らん、…",
+      "answer": "つ",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 65番",
+      "mastery": "starting"
+    },
+    {
+      "id": "6dc37a10-1dac-54b7-87b2-34b75e7d8832",
+      "category": "詩経訓読み",
+      "question": "彼の淇（き）の奥を瞻れば、綠竹【簀】の如し。",
+      "answer": "すのこ\nす",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 66番",
+      "mastery": "starting"
+    },
+    {
+      "id": "825db2dd-d59c-5d98-a43b-4723e3c489d7",
+      "category": "詩経訓読み",
+      "question": "邢侯（けいこう）の【姨】、譚公は維れ私なり。",
+      "answer": "おば",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 67番",
+      "mastery": "starting"
+    },
+    {
+      "id": "5a2a1e8a-e62a-59ba-bb24-d49c63763947",
+      "category": "詩経訓読み",
+      "question": "我期を【愆】つに匪ず、子良媒なし、…",
+      "answer": "あやま",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 68番",
+      "mastery": "starting"
+    },
+    {
+      "id": "36661401-74ba-5b58-8e60-013c6e7dc8ef",
+      "category": "詩経訓読み",
+      "question": "我、爾に【徂】きしより、三歳食貧しかりき。",
+      "answer": "ゆ",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 69番",
+      "mastery": "starting"
+    },
+    {
+      "id": "02ecc94d-62e5-542e-a3d4-749923d5db9b",
+      "category": "詩経訓読み",
+      "question": "女や【爽】はず、士（おとこ）、其行を貳つにす。",
+      "answer": "たが",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 70番",
+      "mastery": "starting"
+    },
+    {
+      "id": "9f5b3dc0-a1f1-57aa-86c8-b3aa982d3920",
+      "category": "詩経訓読み",
+      "question": "誰か宋を遠しと謂ふ、【跂】てば予之を望まん。",
+      "answer": "つまだ",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 71番",
+      "mastery": "starting"
+    },
+    {
+      "id": "2607b30b-3105-5f74-a84f-26d784670b14",
+      "category": "詩経訓読み",
+      "question": "誰か宋を遠しと謂ふ、曾て朝を【崇】へず。",
+      "answer": "お",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 72番",
+      "mastery": "starting"
+    },
+    {
+      "id": "73587ca8-2f45-585f-bd41-c613d61c4b66",
+      "category": "詩経訓読み",
+      "question": "行き邁くこと靡靡として、中心【噎】ぶが如し。",
+      "answer": "むせ",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 73番",
+      "mastery": "starting"
+    },
+    {
+      "id": "4750f0fa-5a17-5fd6-96e4-02ea130c86e4",
+      "category": "詩経訓読み",
+      "question": "中谷に蓷（たい）あり、暵（かん）として其れ【脩】し。",
+      "answer": "なが",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 74番",
+      "mastery": "starting"
+    },
+    {
+      "id": "75804ba3-bb04-5488-8448-1761fab44f28",
+      "category": "詩経訓読み",
+      "question": "中谷に蓷（たい）あり、暵（かん）として其れ【濕】ふ。",
+      "answer": "うるお",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 75番",
+      "mastery": "starting"
+    },
+    {
+      "id": "6000fbd9-c8f1-588a-9be8-9badcafa4582",
+      "category": "詩経訓読み",
+      "question": "啜として其れ泣く、何ぞ【嗟】くとも及ばん。",
+      "answer": "なげ",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 76番",
+      "mastery": "starting"
+    },
+    {
+      "id": "ef35d243-c960-5888-beea-531d8f469c12",
+      "category": "詩経訓読み",
+      "question": "我生の初めは、尚ほ【庸】ふること無かりき。",
+      "answer": "もち",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 77番",
+      "mastery": "starting"
+    },
+    {
+      "id": "5a2fe5e6-a6a7-5c45-88e1-4bdc25ba99a4",
+      "category": "詩経訓読み",
+      "question": "緜緜（めんめん）たる葛藟（かつるゐ）、河の【滸】に在り。",
+      "answer": "ほとり\nみぎわ",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 78番",
+      "mastery": "starting"
+    },
+    {
+      "id": "6d50ca3a-152c-5610-92fc-74b3e5fbf1d8",
+      "category": "詩経訓読み",
+      "question": "叔、【田】りに于く、巷に居人無し。",
+      "answer": "か",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 79番",
+      "mastery": "starting"
+    },
+    {
+      "id": "70af5a69-f3db-57cc-aeb0-3c8971db6021",
+      "category": "詩経訓読み",
+      "question": "將（こ）ふ叔よ【狃】ふこと無かれ、其の女を傷はんことを戒む。",
+      "answer": "なら",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 80番",
+      "mastery": "starting"
+    },
+    {
+      "id": "fa0ed07c-2c7a-5fcb-acd1-ae16b34085e0",
+      "category": "詩経訓読み",
+      "question": "彼其之子、命を舍きて【渝】わらず。",
+      "answer": "か",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 81番",
+      "mastery": "starting"
+    },
+    {
+      "id": "aa962238-e7dc-550b-b37d-7e4adf2e803c",
+      "category": "詩経訓読み",
+      "question": "羔裘豹の飾あり、【孔】だ武にして力あり。",
+      "answer": "はなは",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 82番",
+      "mastery": "starting"
+    },
+    {
+      "id": "1d11ef79-0c14-59ec-9d20-068eeaef4864",
+      "category": "詩経訓読み",
+      "question": "縞衣茹藘（ぢよりよ）、聊か與（とも）に【娯】しむ可し。",
+      "answer": "たの",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 83番",
+      "mastery": "starting"
+    },
+    {
+      "id": "eb58634a-9123-5dbc-ab99-5268bb08fcd7",
+      "category": "詩経訓読み",
+      "question": "邂逅相遇うて、我願に【適】ふ。",
+      "answer": "かな",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 84番",
+      "mastery": "starting"
+    },
+    {
+      "id": "98aa64ac-e7a7-5011-941e-eb0e30a74c93",
+      "category": "詩経訓読み",
+      "question": "葛屨（かつく）五兩あり、冠緌（くわんずゐ）【雙】べり。",
+      "answer": "なら",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 85番",
+      "mastery": "starting"
+    },
+    {
+      "id": "e0cb808d-83cd-5e67-9a23-4bdef9075032",
+      "category": "詩経訓読み",
+      "question": "麻を【藝】うること之を如何ん、其畝を衡從にす。",
+      "answer": "う",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 86番",
+      "mastery": "starting"
+    },
+    {
+      "id": "6266a1b5-9576-5a54-846f-3ad4dffd6026",
+      "category": "詩経訓読み",
+      "question": "甫田を田つくること無かれ、維れ【莠】桀桀たり。",
+      "answer": "はぐさ",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 87番",
+      "mastery": "starting"
+    },
+    {
+      "id": "d1878d93-de0a-5f73-8c54-08bd8a374e1d",
+      "category": "詩経訓読み",
+      "question": "敝笱（へいこう）【梁】に在り、其魚は魴鰥。",
+      "answer": "やな",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 88番",
+      "mastery": "starting"
+    },
+    {
+      "id": "d03cf670-da32-54b0-a0af-dc3451f527ff",
+      "category": "詩経訓読み",
+      "question": "猗嗟（ああ）【昌】んなり、頎（き）として長く、抑ふれども揚がるが若し。",
+      "answer": "さか",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 89番",
+      "mastery": "starting"
+    },
+    {
+      "id": "634d0059-7a6a-51cd-b1ad-0280ec869ff1",
+      "category": "詩経訓読み",
+      "question": "四矢反す、以て亂を【禦】がん。",
+      "answer": "ふせ",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 90番",
+      "mastery": "starting"
+    },
+    {
+      "id": "57ed0405-4b30-58ff-8122-790e2bace4be",
+      "category": "詩経訓読み",
+      "question": "維れ是の褊心、是を以て【刺】りを爲す。",
+      "answer": "そし",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 91番",
+      "mastery": "starting"
+    },
+    {
+      "id": "96b171c3-339a-5e1a-aa31-18687b27c538",
+      "category": "詩経訓読み",
+      "question": "樂郊樂郊、誰にか之れ永く【號】ばん。",
+      "answer": "さけ",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 92番",
+      "mastery": "starting"
+    },
+    {
+      "id": "7ec5254b-49f8-52da-be70-cd6d70bb87ac",
+      "category": "詩経訓読み",
+      "question": "宛として其れ死せば、他人是れ【愉】しまん。",
+      "answer": "たの",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 93番",
+      "mastery": "starting"
+    },
+    {
+      "id": "ba77cb7f-7e72-5f7d-b055-dfd8003881a3",
+      "category": "詩経訓読み",
+      "question": "王事盬（もろ）きこと靡（な）し、稷黍を蓺（う）うること能はず、父母何をか【怙】まん。",
+      "answer": "たの",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 94番",
+      "mastery": "starting"
+    },
+    {
+      "id": "91ba48b5-57d6-58d5-9638-de9cb7bb5a84",
+      "category": "詩経訓読み",
+      "question": "豈に衣六つなしと曰はんや、子の衣の、安うして且つ【燠】かなるに如かず。",
+      "answer": "あたた",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 95番",
+      "mastery": "starting"
+    },
+    {
+      "id": "1f2741f2-906c-5ea0-ba84-9ef424cbb56f",
+      "category": "詩経訓読み",
+      "question": "苓を采り苓を采る、首陽の【巓】に。",
+      "answer": "いただき",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 96番",
+      "mastery": "starting"
+    },
+    {
+      "id": "d73bd2fc-eb95-51be-9cd8-cdb3002bed5b",
+      "category": "詩経訓読み",
+      "question": "北園に遊びて、四馬既に【閑】はず。",
+      "answer": "なら",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 97番",
+      "mastery": "starting"
+    },
+    {
+      "id": "842432a7-5e15-5002-b894-95144e1ca14d",
+      "category": "詩経訓読み",
+      "question": "遡洄（そくわい）して之に從はんとすれば、道【阻】てて且つ躋る。",
+      "answer": "へだ",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 98番",
+      "mastery": "starting"
+    },
+    {
+      "id": "8a64f277-bd22-5dd4-a698-a09727fbbddf",
+      "category": "詩経訓読み",
+      "question": "遡洄して之に從はんとすれば、道阻てて且つ【躋】る。",
+      "answer": "のぼ",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 99番",
+      "mastery": "starting"
+    },
+    {
+      "id": "9ac05dcb-0d12-59e9-b5e4-3d423cd235a2",
+      "category": "詩経訓読み",
+      "question": "彼蒼たる者は天、我良人を【殲】くす。",
+      "answer": "つ",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 100番",
+      "mastery": "starting"
+    },
+    {
+      "id": "e0834525-5003-50ba-8e1f-56719b634749",
+      "category": "詩経訓読み",
+      "question": "如し【贖】ふ可くんば、人、其身を百せん。",
+      "answer": "あがな",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 101番",
+      "mastery": "starting"
+    },
+    {
+      "id": "239bfd8d-509a-5dd5-b62d-a71f4cf1bfdd",
+      "category": "詩経訓読み",
+      "question": "坎として其れ【缶】を擊つ、宛丘の道に。",
+      "answer": "ほとぎ",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 102番",
+      "mastery": "starting"
+    },
+    {
+      "id": "5f1aade1-346e-5b15-812c-9a3c1df7d970",
+      "category": "詩経訓読み",
+      "question": "墓門に梅あり、鴞（けう）あり【萃】まれり。",
+      "answer": "あつ",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 103番",
+      "mastery": "starting"
+    },
+    {
+      "id": "26bf3d78-7dad-5959-9cb6-10ee3f56d704",
+      "category": "詩経訓読み",
+      "question": "誰か予が美を侜（たぶら）かす、心【焉】に忉忉（たうたう）たり。",
+      "answer": "ここ",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 104番",
+      "mastery": "starting"
+    },
+    {
+      "id": "453fc87c-d818-5811-8ac5-d0d2f866e6fe",
+      "category": "詩経訓読み",
+      "question": "窈糾を【舒】べんとして、勞心悄たり。",
+      "answer": "の",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 105番",
+      "mastery": "starting"
+    },
+    {
+      "id": "e4840634-f955-56ea-8267-95bffac8fbca",
+      "category": "詩経訓読み",
+      "question": "我乘駒に乘つて、朝に株（ちゆ）に【食】む。",
+      "answer": "は",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 106番",
+      "mastery": "starting"
+    },
+    {
+      "id": "ea15360c-36ef-5011-9115-b6f15f8854a5",
+      "category": "詩経訓読み",
+      "question": "彼澤の【陂】に、蒲と荷と有り。",
+      "answer": "つつみ",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 107番",
+      "mastery": "starting"
+    },
+    {
+      "id": "3fc7fb1a-a5f8-59ec-9a05-0805310aca27",
+      "category": "詩経訓読み",
+      "question": "【庶】はくは素衣を見ん、我心傷悲す。",
+      "answer": "こいねが",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 108番",
+      "mastery": "starting"
+    },
+    {
+      "id": "9e9e15c7-9156-5e94-a57e-3fd2fef16241",
+      "category": "詩経訓読み",
+      "question": "誰か能く魚を【亨】ん、之が釜鬵（ふじん）を漑がん。",
+      "answer": "に",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 109番",
+      "mastery": "starting"
+    },
+    {
+      "id": "02ae04bb-2954-5991-aeaa-630ba64992e9",
+      "category": "詩経訓読み",
+      "question": "彼其之子、其服に【稱】はず。",
+      "answer": "かな",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 110番",
+      "mastery": "starting"
+    },
+    {
+      "id": "0ac3fbc7-322d-5f40-8787-24a2f724e41c",
+      "category": "詩経訓読み",
+      "question": "鳲鳩（しきう）桑に在り、其子【榛】に在り。",
+      "answer": "はしばみ\nはり",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 111番",
+      "mastery": "starting"
+    },
+    {
+      "id": "b10faa8d-ddbb-5de2-854b-768f5677957c",
+      "category": "詩経訓読み",
+      "question": "三の日于いて【耜】とり、四の日趾を擧ぐ。",
+      "answer": "すき",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 112番",
+      "mastery": "starting"
+    },
+    {
+      "id": "f82e38b8-6f68-5349-806f-e02da91b5498",
+      "category": "詩経訓読み",
+      "question": "三の日于いて耜とり、四の日【趾】を擧ぐ。",
+      "answer": "あし",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 113番",
+      "mastery": "starting"
+    },
+    {
+      "id": "383c69f4-1efd-505e-9498-d1d4513486d9",
+      "category": "詩経訓読み",
+      "question": "二の日其れ同じうして、載（すなは）ち武功を【纘】ぐ。",
+      "answer": "つ",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 114番",
+      "mastery": "starting"
+    },
+    {
+      "id": "74872b9a-224a-5aa5-b3a9-7152fb1351c9",
+      "category": "詩経訓読み",
+      "question": "穹窒して鼠を【熏】べ、向を塞ぎ戸を墐（ぬ）る。",
+      "answer": "くす\nふす",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 115番",
+      "mastery": "starting"
+    },
+    {
+      "id": "4ecddc15-bc42-5b7c-9a06-d11109267177",
+      "category": "詩経訓読み",
+      "question": "此の春酒を爲つて、以て眉壽を【介】く。",
+      "answer": "たす",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 116番",
+      "mastery": "starting"
+    },
+    {
+      "id": "f589b041-cdb5-5216-9fb8-c04a3e5681dc",
+      "category": "詩経訓読み",
+      "question": "畫は爾于いて茅かれ、宵は爾【綯】を索（な）へ。",
+      "answer": "なわ",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 117番",
+      "mastery": "starting"
+    },
+    {
+      "id": "4d6b8b12-e9e7-5b32-8143-ff6fd80744d5",
+      "category": "詩経訓読み",
+      "question": "二の日冰を【鑿】つこと冲冲（ちうちう）、三の日凌陰に納る。",
+      "answer": "うが",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 118番",
+      "mastery": "starting"
+    },
+    {
+      "id": "f6f64f20-67f4-57c3-9398-9abaccb748ec",
+      "category": "詩経訓読み",
+      "question": "彼の兕觥（じくわう）を【稱】ぐ、萬壽疆なし。",
+      "answer": "あ",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 119番",
+      "mastery": "starting"
+    },
+    {
+      "id": "649288d4-f70f-5cbf-a3da-703cba882aa6",
+      "category": "詩経訓読み",
+      "question": "鴟鴞（しけう）鴟鴞、既に我子を取る、我室を【毀】ること無かれ。",
+      "answer": "やぶ",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 120番",
+      "mastery": "starting"
+    },
+    {
+      "id": "c364c008-d2ee-55e7-8bc9-d0d1e0ce39ac",
+      "category": "詩経訓読み",
+      "question": "斯を恩し斯を勤して、子を鬻（やしな）うて之れ斯を【閔】れめ。",
+      "answer": "あわ",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 121番",
+      "mastery": "starting"
+    },
+    {
+      "id": "8abba398-d05a-5925-ba08-a7107c135d18",
+      "category": "詩経訓読み",
+      "question": "我が人を哀む、亦孔だ【休】し。",
+      "answer": "よ",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 122番",
+      "mastery": "starting"
+    },
+    {
+      "id": "c392d069-1b82-54e1-b275-1850aedf78d3",
+      "category": "詩経訓読み",
+      "question": "妻を取（めと）ること如何、【媒】に匪ざれば得ず。",
+      "answer": "なかだち",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 123番",
+      "mastery": "starting"
+    },
+    {
+      "id": "e7d5ea0c-c97f-5d85-9e74-cdbc89f2f300",
+      "category": "詩経訓読み",
+      "question": "我、之子に【遘】ふ、籩豆（へんとう）踐たるあり。",
+      "answer": "あ",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 124番",
+      "mastery": "starting"
+    },
+    {
+      "id": "29f59db6-81e2-5c72-8de7-8a5b633b709f",
+      "category": "詩経訓読み",
+      "question": "民に視（しめ）すこと恌（うす）からず、君子是れ則り是れ【傚】ふ。",
+      "answer": "なら",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 125番",
+      "mastery": "starting"
+    },
+    {
+      "id": "7d1e9d55-7af1-5c0c-ad77-3a4c3feab6b0",
+      "category": "詩経訓読み",
+      "question": "我に旨酒あり、嘉賓以て燕し以て【敖】ばん。",
+      "answer": "あそ",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 126番",
+      "mastery": "starting"
+    },
+    {
+      "id": "63609797-455f-5334-878a-b57bdf433fc7",
+      "category": "詩経訓読み",
+      "question": "駪駪（しんしん）たる征夫、【每】に懷うて及ぶこと靡（な）し。",
+      "answer": "つね",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 127番",
+      "mastery": "starting"
+    },
+    {
+      "id": "b075dc26-6443-5bf4-af3d-b9835afe201b",
+      "category": "詩経訓読み",
+      "question": "載（すなわ）ち馳せ載ち驅（は）せて、【周】く爰に咨諏す。",
+      "answer": "あまね",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 128番",
+      "mastery": "starting"
+    },
+    {
+      "id": "bc9f32b7-8ed7-5de8-b5fc-d177dbbf7de2",
+      "category": "詩経訓読み",
+      "question": "我馬維れ駰（いん）、既に六轡に【均】へり。",
+      "answer": "ととの",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 129番",
+      "mastery": "starting"
+    },
+    {
+      "id": "7c9ad2d4-44cb-56e0-9d93-39a7b4fc27d5",
+      "category": "詩経訓読み",
+      "question": "爾の籩豆（へんとう）を儐（つら）ね、酒を飮みて之れ【飫】く。",
+      "answer": "あ",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 130番",
+      "mastery": "starting"
+    },
+    {
+      "id": "82851661-2d4d-5e01-81d3-c86276f21fce",
+      "category": "詩経訓読み",
+      "question": "兄弟既に【具】はり、和樂して且つ孺す。",
+      "answer": "そな",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 131番",
+      "mastery": "starting"
+    },
+    {
+      "id": "e6ed8d84-a61f-516e-a458-eab995b4ceda",
+      "category": "詩経訓読み",
+      "question": "是れ究め是れ圖り、【亶】に其れ然る乎。",
+      "answer": "まこと",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 132番",
+      "mastery": "starting"
+    },
+    {
+      "id": "a8d34320-3477-5d2f-8f91-2d678e8e8feb",
+      "category": "詩経訓読み",
+      "question": "爾をして多く益さしめて、以て【庶】からざること莫けん。",
+      "answer": "おお",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 133番",
+      "mastery": "starting"
+    },
+    {
+      "id": "15482db1-dbbc-5b4a-9997-2eebf0eb726a",
+      "category": "詩経訓読み",
+      "question": "神の弔（いた）る、爾に多福を【詒】る。",
+      "answer": "おく",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 134番",
+      "mastery": "starting"
+    },
+    {
+      "id": "92a9d6a3-5ab2-5b4d-9215-8b2646b242bf",
+      "category": "詩経訓読み",
+      "question": "南山の壽の如く、【騫】けず崩れず、…",
+      "answer": "か",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 135番",
+      "mastery": "starting"
+    },
+    {
+      "id": "5422552b-44a6-5326-b032-e45265d9e39e",
+      "category": "詩経訓読み",
+      "question": "我戍未だ定まらず、歸り【聘】はしむること靡（な）し。",
+      "answer": "と",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 136番",
+      "mastery": "starting"
+    },
+    {
+      "id": "5308a814-f32e-5028-90fe-d561f5d46623",
+      "category": "詩経訓読み",
+      "question": "憂心孔だ【疚】めり、我行かば來らじ。",
+      "answer": "や\nなや",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 137番",
+      "mastery": "starting"
+    },
+    {
+      "id": "5f952295-b4ff-55b7-b945-a9834e312357",
+      "category": "詩経訓読み",
+      "question": "豈に敢へて定り居らんや、一月三たび【捷】たん。",
+      "answer": "か",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 138番",
+      "mastery": "starting"
+    },
+    {
+      "id": "5e106bc0-a427-5cb2-a08d-06d1239aeb04",
+      "category": "詩経訓読み",
+      "question": "蓼たる彼の【蕭】、零露湑（しよ）たり。",
+      "answer": "よもぎ",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 139番",
+      "mastery": "starting"
+    },
+    {
+      "id": "c8b219bd-9f74-5604-aa6b-6d7c3620a285",
+      "category": "詩経訓読み",
+      "question": "六月棲棲として、戎車既に【飭】ふ。",
+      "answer": "ととの",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 140番",
+      "mastery": "starting"
+    },
+    {
+      "id": "563d7b62-3efa-5cff-be51-1f302fa2c23e",
+      "category": "詩経訓読み",
+      "question": "玁狁（けんゐん）孔だ【熾】んなり、我是（ここ）を用つて急なり。",
+      "answer": "さか",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 141番",
+      "mastery": "starting"
+    },
+    {
+      "id": "a1470ab1-d069-5e5f-b307-af62232f72ad",
+      "category": "詩経訓読み",
+      "question": "王于に出征せしめ、以て王國を【匡】しうせしむ。",
+      "answer": "ただ",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 142番",
+      "mastery": "starting"
+    },
+    {
+      "id": "e6a32b04-31a9-552d-9b63-2229fb9f8d5f",
+      "category": "詩経訓読み",
+      "question": "王于に出征せしめ、以て天子を【佐】けしむ。",
+      "answer": "たす",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 143番",
+      "mastery": "starting"
+    },
+    {
+      "id": "e74f32e8-4d86-5b68-9662-8fbcab840a65",
+      "category": "詩経訓読み",
+      "question": "吉甫燕喜し、既に多く【祉】ひを受く。",
+      "answer": "さいわ",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 144番",
+      "mastery": "starting"
+    },
+    {
+      "id": "ea03cf60-edb6-5964-9b2b-333b5268d97a",
+      "category": "詩経訓読み",
+      "question": "飮みて諸友に御（すす）め、鼈を炰（や）き鯉を【膾】にす。",
+      "answer": "なます",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 145番",
+      "mastery": "starting"
+    },
+    {
+      "id": "c2925ecb-d41f-512a-a976-7adeb0a8ab64",
+      "category": "詩経訓読み",
+      "question": "方叔率ゐ、鉦人鼓を伐ち、師を【陳】ね旅に鞠（つ）ぐ。",
+      "answer": "つら",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 146番",
+      "mastery": "starting"
+    },
+    {
+      "id": "beb4f636-cd8a-5683-8706-2f5ec25808c3",
+      "category": "詩経訓読み",
+      "question": "之子于に【苗】りす、徒を選（かぞ）へて囂囂たり。",
+      "answer": "か",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 147番",
+      "mastery": "starting"
+    },
+    {
+      "id": "0e6e8e21-9c3a-59f8-be9f-f1d6b3389bd3",
+      "category": "詩経訓読み",
+      "question": "旐（てう）を建て旄を設け、獸を敖に【搏】つ。",
+      "answer": "う",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 148番",
+      "mastery": "starting"
+    },
+    {
+      "id": "57544f7d-83c9-55ad-8e70-adc4eb0bd87c",
+      "category": "詩経訓読み",
+      "question": "彼の中原を瞻れば、其れ【祁】いに孔だ有り。",
+      "answer": "おお",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 149番",
+      "mastery": "starting"
+    },
+    {
+      "id": "920060ea-18ad-587a-8606-a0f44ac9e8fc",
+      "category": "詩経訓読み",
+      "question": "既に我矢を挾み、波の小豝（せうは）に【發】ちて、…",
+      "answer": "はな",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 150番",
+      "mastery": "starting"
+    },
+    {
+      "id": "000deef4-285f-5fc7-9844-2616ab7a1a96",
+      "category": "詩経訓読み",
+      "question": "夜何如ん。夜未だ【央】ばならず。",
+      "answer": "なか",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 151番",
+      "mastery": "starting"
+    },
+    {
+      "id": "c6fe8b5a-86c6-5859-8222-5cab4ea2f177",
+      "category": "詩経訓読み",
+      "question": "夜何如ん。夜【晨】に鄕（むか）ふ。",
+      "answer": "あした",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 152番",
+      "mastery": "starting"
+    },
+    {
+      "id": "5f973b9e-1ca2-5a93-b5e1-7dc45ecde5a9",
+      "category": "詩経訓読み",
+      "question": "他山の石、以て玉を【攻】む可し。",
+      "answer": "おさ",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 153番",
+      "mastery": "starting"
+    },
+    {
+      "id": "8a95c004-ebc0-58d1-b33b-928b46120a0f",
+      "category": "詩経訓読み",
+      "question": "胡ぞ予を恤に轉じて、母をして饔（よう）を【尸】ること有らしむる。",
+      "answer": "つかさど",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 154番",
+      "mastery": "starting"
+    },
+    {
+      "id": "0d95d821-ec27-5870-b592-97fb98e8d969",
+      "category": "詩経訓読み",
+      "question": "之を繋ぎ之を【維】ぎ、以て今朝を永うせん。",
+      "answer": "つな",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 155番",
+      "mastery": "starting"
+    },
+    {
+      "id": "896cdea8-a328-5f1a-ac83-573fffefa6e7",
+      "category": "詩経訓読み",
+      "question": "黃鳥黃鳥、桑に集まること無かれ、我【粱】を啄むこと無かれ。",
+      "answer": "あわ",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 156番",
+      "mastery": "starting"
+    },
+    {
+      "id": "23b91c37-dca1-51b3-8e24-9d549de07fe2",
+      "category": "詩経訓読み",
+      "question": "唯酒食是れ【議】り、父母に罹（うれひ）を貽すこと無かれ。",
+      "answer": "はか",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 157番",
+      "mastery": "starting"
+    },
+    {
+      "id": "ce2f18b3-cd73-579c-a824-2caa0f0957a7",
+      "category": "詩経訓読み",
+      "question": "之を【麾】くに肱を以てし、畢く來り既（ことごと）く升る。",
+      "answer": "さしまね",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 158番",
+      "mastery": "starting"
+    },
+    {
+      "id": "a0f07d15-894d-5536-af80-2883ca127e1a",
+      "category": "詩経訓読み",
+      "question": "國既に【卒】に斬（た）えんとす、何を用つて監ざる。",
+      "answer": "つい",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 159番",
+      "mastery": "starting"
+    },
+    {
+      "id": "f5bff0a0-00e1-58ad-945c-0362c4327390",
+      "category": "詩経訓読み",
+      "question": "國既に卒に斬えんとす、何を用つて【監】ざる。",
+      "answer": "かんがみ\nみ",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 160番",
+      "mastery": "starting"
+    },
+    {
+      "id": "676d8e91-d856-5c8e-9c2d-272b85f5c09d",
+      "category": "詩経訓読み",
+      "question": "天方に【薦】りに瘥（や）み、喪亂弘（おほい）に多し。",
+      "answer": "しき",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 161番",
+      "mastery": "starting"
+    },
+    {
+      "id": "47c6429f-e898-5e0a-a242-32531e714def",
+      "category": "詩経訓読み",
+      "question": "天子是れ【毗】け、民をして迷はざらしむ。",
+      "answer": "たす",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 162番",
+      "mastery": "starting"
+    },
+    {
+      "id": "12695337-5fbc-513d-8e30-4a07103c6452",
+      "category": "詩経訓読み",
+      "question": "我、四方を瞻るに、蹙蹙として【騁】する所靡（な）し。",
+      "answer": "は",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 163番",
+      "mastery": "starting"
+    },
+    {
+      "id": "cf6141e8-21c8-5a00-828b-9387203b12bc",
+      "category": "詩経訓読み",
+      "question": "哀しいかな我小心、癙憂（そいう）以て【痒】めり。",
+      "answer": "や",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 164番",
+      "mastery": "starting"
+    },
+    {
+      "id": "18b668b6-2061-5570-bb22-bef88d5dac4a",
+      "category": "詩経訓読み",
+      "question": "民の【辜】なきも、幷せて其れ臣僕とす。",
+      "answer": "つみ",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 165番",
+      "mastery": "starting"
+    },
+    {
+      "id": "976cd47f-ad19-5580-9f26-d8e394e87776",
+      "category": "詩経訓読み",
+      "question": "民の辜なきも、【幷】せて其れ臣僕とす。",
+      "answer": "あわ",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 166番",
+      "mastery": "starting"
+    },
+    {
+      "id": "ee282e66-fbf4-5ba9-9322-2166fb2cf5f0",
+      "category": "詩経訓読み",
+      "question": "山を蓋し【卑】しと謂ふ、岡たり陵たり。",
+      "answer": "ひく",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 167番",
+      "mastery": "starting"
+    },
+    {
+      "id": "486d027c-7a1d-526f-979e-d730c5597051",
+      "category": "詩経訓読み",
+      "question": "彼の故老を召し、之を占夢に【訊】ふ。",
+      "answer": "と",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 168番",
+      "mastery": "starting"
+    },
+    {
+      "id": "65842fc8-c7a8-5360-88aa-f2d1d24d1156",
+      "category": "詩経訓読み",
+      "question": "地を蓋し厚しと謂ふ、敢へて【蹐】せずんばあらず。",
+      "answer": "ぬきあし\nさしあし",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 169番",
+      "mastery": "starting"
+    },
+    {
+      "id": "f2c5a5c4-71b4-5215-b67d-3240b40ed34d",
+      "category": "詩経訓読み",
+      "question": "我を執へて仇仇とし、亦我を【力】めしめず。",
+      "answer": "つと",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 170番",
+      "mastery": "starting"
+    },
+    {
+      "id": "52ddb26e-f362-5586-a4c1-ed6663ab447b",
+      "category": "詩経訓読み",
+      "question": "終に其れ永く懷ふ、又陰雨に【窘】しめられん。",
+      "answer": "くる",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 171番",
+      "mastery": "starting"
+    },
+    {
+      "id": "070771ce-85fa-551e-b1f4-5c1048e49648",
+      "category": "詩経訓読み",
+      "question": "民今の祿なき、天【夭】ひし是れ椓（そこな）ふ。",
+      "answer": "わざわ",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 172番",
+      "mastery": "starting"
+    },
+    {
+      "id": "405c2959-5dee-5a2e-a088-49006e0c38fc",
+      "category": "詩経訓読み",
+      "question": "爗爗（えふえふ）たる震電、【寧】からず令からず。",
+      "answer": "やす",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 173番",
+      "mastery": "starting"
+    },
+    {
+      "id": "985eb5a7-9e46-541a-8b67-827f00568516",
+      "category": "詩経訓読み",
+      "question": "爗爗たる震電、寧からず【令】からず。",
+      "answer": "よ",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 174番",
+      "mastery": "starting"
+    },
+    {
+      "id": "0f9f019f-b503-5bcf-a2f8-73edbb13786b",
+      "category": "詩経訓読み",
+      "question": "下民の【孼】ひ、天より降るに匪ず。",
+      "answer": "わざわ",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 175番",
+      "mastery": "starting"
+    },
+    {
+      "id": "53bba198-069d-5d9d-a761-f999d597d613",
+      "category": "詩経訓読み",
+      "question": "四方【羨】りありて、我獨り憂に居る。",
+      "answer": "あま",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 176番",
+      "mastery": "starting"
+    },
+    {
+      "id": "c498a3bd-9728-5aa8-99d4-a0d589412b3d",
+      "category": "詩経訓読み",
+      "question": "彼の行き邁きて、則ち【臻】る所靡（な）きが如し。",
+      "answer": "いた",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 177番",
+      "mastery": "starting"
+    },
+    {
+      "id": "8c40ea61-f06d-5d17-a03d-1db755ffdd6f",
+      "category": "詩経訓読み",
+      "question": "夙に興き夜に寐ね、爾の所生を【忝】むること無かれ。",
+      "answer": "はずかし",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 178番",
+      "mastery": "starting"
+    },
+    {
+      "id": "18dcb47d-89d7-50b1-a94d-d998a170f945",
+      "category": "詩経訓読み",
+      "question": "粟を握つて出で【卜】ふ、何に自（よつ）て能く穀（よ）からん。",
+      "answer": "うらな",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 179番",
+      "mastery": "starting"
+    },
+    {
+      "id": "c73cc83e-7798-5cbf-ac87-28d92e234217",
+      "category": "詩経訓読み",
+      "question": "我心憂へ傷み、惄焉（できえん）として【擣】つが如し。",
+      "answer": "う",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 180番",
+      "mastery": "starting"
+    },
+    {
+      "id": "d7482394-baed-526d-a41b-3b7f529e9f6a",
+      "category": "詩経訓読み",
+      "question": "毛に屬（つら）ならざらんや、裏に【離】かざらんや。",
+      "answer": "つ",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 181番",
+      "mastery": "starting"
+    },
+    {
+      "id": "d6e33ee6-45e8-5794-b833-4b84f19bca89",
+      "category": "詩経訓読み",
+      "question": "天の我を生ずる、我【辰】安にか在る。",
+      "answer": "とき\nひ",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 182番",
+      "mastery": "starting"
+    },
+    {
+      "id": "4e00b633-1bec-5f6f-91fc-0190417e5f1e",
+      "category": "詩経訓読み",
+      "question": "彼の舟の流るるに【譬】ふ。",
+      "answer": "たと",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 183番",
+      "mastery": "starting"
+    },
+    {
+      "id": "298c333d-351a-5958-aa05-40d145d316d9",
+      "category": "詩経訓読み",
+      "question": "心の憂あり、【涕】既に之に隕つ。",
+      "answer": "なみだ",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 184番",
+      "mastery": "starting"
+    },
+    {
+      "id": "399b0763-c450-5cbe-b909-86f3a0cddc31",
+      "category": "詩経訓読み",
+      "question": "心の憂あり、涕既に之に【隕】つ。",
+      "answer": "お",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 185番",
+      "mastery": "starting"
+    },
+    {
+      "id": "81d9a615-a57b-5399-b8e2-c847daecd2fb",
+      "category": "詩経訓読み",
+      "question": "【浚】しとして泉に匪ざるは莫し。",
+      "answer": "ふか",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 186番",
+      "mastery": "starting"
+    },
+    {
+      "id": "574e0181-5073-5ce3-87d4-f16bd76c4a59",
+      "category": "詩経訓読み",
+      "question": "昊天【已】だ威あり、予愼（まこと）に罪なし。",
+      "answer": "はなは",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 187番",
+      "mastery": "starting"
+    },
+    {
+      "id": "bc14060a-75af-5822-8f7b-96a464b0f7b8",
+      "category": "詩経訓読み",
+      "question": "亂の初めて生ずる、僭始めて既（はや）く【涵】る。",
+      "answer": "い",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 188番",
+      "mastery": "starting"
+    },
+    {
+      "id": "ffc3766d-30a5-5b3b-90b3-cb7dc06038f8",
+      "category": "詩経訓読み",
+      "question": "君子屢【盟】ふ、亂是（ここ）を用つて長ず。",
+      "answer": "ちか",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 189番",
+      "mastery": "starting"
+    },
+    {
+      "id": "02aaf8e0-77c6-5ff9-b513-5927f3bc1dd4",
+      "category": "詩経訓読み",
+      "question": "盜言孔だ甘し、亂是を用つて【餤】む。",
+      "answer": "すす",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 190番",
+      "mastery": "starting"
+    },
+    {
+      "id": "d2567d28-4849-5271-b305-f6fd404cd52f",
+      "category": "詩経訓読み",
+      "question": "荏染たる柔木は、君子之を【樹】う。",
+      "answer": "う",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 191番",
+      "mastery": "starting"
+    },
+    {
+      "id": "f82472c9-ed3f-5155-bb3d-dfa679f64e95",
+      "category": "詩経訓読み",
+      "question": "彼れ何人ぞ、其心孔だ【艱】めり。",
+      "answer": "なや",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 192番",
+      "mastery": "starting"
+    },
+    {
+      "id": "1a315a10-5f92-5c14-96db-572117f07d82",
+      "category": "詩経訓読み",
+      "question": "人に【愧】ぢざらんや。天を畏れざらんや。",
+      "answer": "は",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 193番",
+      "mastery": "starting"
+    },
+    {
+      "id": "4b11ddf0-c0be-5d72-91a6-b9bb2972e399",
+      "category": "詩経訓読み",
+      "question": "胡ぞ我梁に逝きて、祗（まさ）に我心を【攪】る。",
+      "answer": "みだ",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 194番",
+      "mastery": "starting"
+    },
+    {
+      "id": "cc06aee5-cfa6-5720-a8c0-95e6adddddfd",
+      "category": "詩経訓読み",
+      "question": "此三物を出して、以て爾に【詛】はん。",
+      "answer": "ちか",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 195番",
+      "mastery": "starting"
+    },
+    {
+      "id": "c95a189d-316f-53fe-a088-4d016816db6b",
+      "category": "詩経訓読み",
+      "question": "蒼天蒼天、彼の驕人を視て、此の勞人を【矜】れめ。",
+      "answer": "あわ",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 196番",
+      "mastery": "starting"
+    },
+    {
+      "id": "e7f17305-99ff-5947-b63c-c0f207d17f24",
+      "category": "詩経訓読み",
+      "question": "予を棄てて【遺】るるが如し。",
+      "answer": "わす",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 197番",
+      "mastery": "starting"
+    },
+    {
+      "id": "b685bf8c-00b9-53f2-81e2-5bed9c0fce0f",
+      "category": "詩経訓読み",
+      "question": "草として死せざる無く、木として【萎】まざる無し。",
+      "answer": "しぼ",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 198番",
+      "mastery": "starting"
+    },
+    {
+      "id": "e42ab453-006a-5fec-a9fd-67ced56e16da",
+      "category": "詩経訓読み",
+      "question": "出でては則ち恤を【銜】み、入りては則ち至ること靡（な）し。",
+      "answer": "ふく",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 199番",
+      "mastery": "starting"
+    },
+    {
+      "id": "30041fb6-f1e6-589d-88de-4e421eeb1e8f",
+      "category": "詩経訓読み",
+      "question": "父や我を生み、母や我を【鞠】ふ。",
+      "answer": "やしな",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 200番",
+      "mastery": "starting"
+    },
+    {
+      "id": "c1aba365-49c3-5c65-97bb-7cc1f76551fd",
+      "category": "詩経訓読み",
+      "question": "我を【拊】で我を畜ひ、我を長となし我を育み、…",
+      "answer": "な",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 201番",
+      "mastery": "starting"
+    },
+    {
+      "id": "3565d54b-d7a5-523f-a438-57d86199280c",
+      "category": "詩経訓読み",
+      "question": "舟人の子、熊羆是れ【裘】にす。",
+      "answer": "かわごろも",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 202番",
+      "mastery": "starting"
+    },
+    {
+      "id": "cfefade1-5d2c-5c8c-a6ef-780f8194d91d",
+      "category": "詩経訓読み",
+      "question": "曷ぞ云（ここ）に其れ還らん。政事愈々【蹙】れり。",
+      "answer": "せま",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 203番",
+      "mastery": "starting"
+    },
+    {
+      "id": "e615f71e-162f-5fed-a05e-31721b6d620c",
+      "category": "詩経訓読み",
+      "question": "歳聿（つひ）に云（ここ）に【莫】れぬ、蕭を采り菽を穫る。",
+      "answer": "く",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 204番",
+      "mastery": "starting"
+    },
+    {
+      "id": "fbc8c78a-44a5-5bd3-b2b8-7313a0eb213f",
+      "category": "詩経訓読み",
+      "question": "歳聿に云に莫れぬ、蕭を采り【菽】を穫る。",
+      "answer": "まめ",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 205番",
+      "mastery": "starting"
+    },
+    {
+      "id": "955a92ba-0940-5672-bb98-5fc7f7e95d68",
+      "category": "詩経訓読み",
+      "question": "心の憂あり、自ら伊（こ）の【戚】みを詒す。",
+      "answer": "いた",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 206番",
+      "mastery": "starting"
+    },
+    {
+      "id": "d78d6b0d-91e8-595a-9605-55e781983c64",
+      "category": "詩経訓読み",
+      "question": "嗟爾君子、安處を【恆】とする無かれ。",
+      "answer": "つね",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 207番",
+      "mastery": "starting"
+    },
+    {
+      "id": "ac04d65d-a05e-597e-932a-aadc181d13b8",
+      "category": "詩経訓読み",
+      "question": "楚楚たる者は茨、言（ここ）に其棘を【抽】く。",
+      "answer": "ぬ",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 208番",
+      "mastery": "starting"
+    },
+    {
+      "id": "5d43cd20-3dfc-51d4-8803-2b3e65c56396",
+      "category": "詩経訓読み",
+      "question": "以て酒食を爲り、以て饗し以て【祀】り、…",
+      "answer": "まつ",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 209番",
+      "mastery": "starting"
+    },
+    {
+      "id": "8e389396-57d7-51d4-9165-85f0a99a0646",
+      "category": "詩経訓読み",
+      "question": "以て【妥】んじ以て侑め、以て景福を介（おほい）にす。",
+      "answer": "やす",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 210番",
+      "mastery": "starting"
+    },
+    {
+      "id": "c86e5fed-5320-5111-ad90-e42796b53b49",
+      "category": "詩経訓読み",
+      "question": "以て妥んじ以て【侑】め、以て景福を介にす。",
+      "answer": "すす",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 211番",
+      "mastery": "starting"
+    },
+    {
+      "id": "114ba746-0e88-58c6-b18d-4ff276322459",
+      "category": "詩経訓読み",
+      "question": "或は【肆】ね或は將（すす）め、祝して祊（はう）に祭る。",
+      "answer": "つら",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 212番",
+      "mastery": "starting"
+    },
+    {
+      "id": "86b98268-f75b-5d2e-91a1-a1488bfd4e01",
+      "category": "詩経訓読み",
+      "question": "神保是れ【饗】け、孝孫慶あり、…",
+      "answer": "う",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 213番",
+      "mastery": "starting"
+    },
+    {
+      "id": "c9e3a911-b418-585c-a83f-03f0f2b13e1d",
+      "category": "詩経訓読み",
+      "question": "或は【燔】き或は炙り、君婦莫莫として豆を爲ること孔だ庶し。",
+      "answer": "や",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 214番",
+      "mastery": "starting"
+    },
+    {
+      "id": "0c5af559-6176-5726-bd25-937a51f4409b",
+      "category": "詩経訓読み",
+      "question": "笑語卒（ことごと）く獲、神保是れ【格】る。",
+      "answer": "いた",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 215番",
+      "mastery": "starting"
+    },
+    {
+      "id": "36d6f099-db61-552c-9563-756be6d7cf3e",
+      "category": "詩経訓読み",
+      "question": "工祝告を致し、徂いて孝孫に【賚】ふ。",
+      "answer": "たま",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 216番",
+      "mastery": "starting"
+    },
+    {
+      "id": "4ec97c02-7d69-50d6-a3b6-a79debb19e8c",
+      "category": "詩経訓読み",
+      "question": "既に【齊】へ既に稷（と）く、既に匡しく既に敕（いまし）む。",
+      "answer": "ととの",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 217番",
+      "mastery": "starting"
+    },
+    {
+      "id": "30e81afc-3237-5d0d-8d7a-377ff2cfb2cd",
+      "category": "詩経訓読み",
+      "question": "既に齊へ既に稷く、既に【匡】しく既に敕む。",
+      "answer": "ただ",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 218番",
+      "mastery": "starting"
+    },
+    {
+      "id": "f060367b-ee3a-519d-888a-4f44bc4d5394",
+      "category": "詩経訓読み",
+      "question": "信なるかな彼の南山、維れ禹之を【甸】む。",
+      "answer": "おさ",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 219番",
+      "mastery": "starting"
+    },
+    {
+      "id": "d2415613-d957-53c7-a6a5-c1aa08d3e11f",
+      "category": "詩経訓読み",
+      "question": "既に【優】かに既に渥く、既に霑ひ既に足り、我が百穀を生ず。",
+      "answer": "ゆた",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 220番",
+      "mastery": "starting"
+    },
+    {
+      "id": "678d4cc9-5575-5040-a8aa-58ed050818b6",
+      "category": "詩経訓読み",
+      "question": "既に優かに既に【渥】く、既に霑ひ既に足り、我が百穀を生ず。",
+      "answer": "あつ",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 221番",
+      "mastery": "starting"
+    },
+    {
+      "id": "b938990d-e13c-55f2-8d26-d2c3f9ea7155",
+      "category": "詩経訓読み",
+      "question": "既に優かに既に渥く、既に【霑】ひ既に足り、我が百穀を生ず。",
+      "answer": "うるお",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 222番",
+      "mastery": "starting"
+    },
+    {
+      "id": "a2e8e3b2-30df-5a6c-be00-054629c2bd27",
+      "category": "詩経訓読み",
+      "question": "介なる攸（ところ）止まる攸、我髦士を【烝】む。",
+      "answer": "すす",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 223番",
+      "mastery": "starting"
+    },
+    {
+      "id": "94b32581-85b2-58b6-83df-7d38eb185430",
+      "category": "詩経訓読み",
+      "question": "其左右を攘（と）りて、其旨否を【嘗】む。",
+      "answer": "こころ",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 224番",
+      "mastery": "starting"
+    },
+    {
+      "id": "100b568f-af93-5042-9c63-a59e0ccca713",
+      "category": "詩経訓読み",
+      "question": "俶めて南畝に載あり、【厥】の百穀を播す。",
+      "answer": "そ",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 225番",
+      "mastery": "starting"
+    },
+    {
+      "id": "3438f286-ee5e-5a57-9cff-2fd617b98768",
+      "category": "詩経訓読み",
+      "question": "其螟螣（めいとく）と、其蟊賊（ぼうぞく）とを去り、我田穉（でんち）を【害】なふこと無かれ。",
+      "answer": "そこ",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 226番",
+      "mastery": "starting"
+    },
+    {
+      "id": "543cbd50-9d26-5928-ab22-434156d61f0f",
+      "category": "詩経訓読み",
+      "question": "之れ屛之れ翰、百辟【憲】と爲す。",
+      "answer": "のり",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 227番",
+      "mastery": "starting"
+    },
+    {
+      "id": "f8883bd3-b772-5b26-ae39-2ab449f4e02d",
+      "category": "詩経訓読み",
+      "question": "彼の交【敖】るに匪ず、萬福來り求む。",
+      "answer": "おご",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 228番",
+      "mastery": "starting"
+    },
+    {
+      "id": "78b5e006-af83-5c6a-9110-4c740731dd7e",
+      "category": "詩経訓読み",
+      "question": "彼の雨雪の如き、先づ集（ふ）るは維れ【霰】。",
+      "answer": "あられ",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 229番",
+      "mastery": "starting"
+    },
+    {
+      "id": "1e52e728-c5cd-5457-a9dd-763428094c99",
+      "category": "詩経訓読み",
+      "question": "鮮に我、爾を【覯】ば、我心寫さん。",
+      "answer": "み",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 230番",
+      "mastery": "starting"
+    },
+    {
+      "id": "e5a9eb3d-bdc3-5ceb-9309-517c6c69eb09",
+      "category": "詩経訓読み",
+      "question": "彼の有的に發ちて、以て爾の【爵】を祈（もと）む。",
+      "answer": "さかずき",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 231番",
+      "mastery": "starting"
+    },
+    {
+      "id": "d158fbf4-b995-5f93-a980-4b5053dbf4db",
+      "category": "詩経訓読み",
+      "question": "彼の康爵を酌んで、以て爾の時を【奏】む。",
+      "answer": "すす",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 232番",
+      "mastery": "starting"
+    },
+    {
+      "id": "6d30e9b3-ad95-5cf1-a7e0-3322f55292de",
+      "category": "詩経訓読み",
+      "question": "賓既に醉ふ、載（すなわ）ち號び載ち【呶】し。",
+      "answer": "かまびす",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 233番",
+      "mastery": "starting"
+    },
+    {
+      "id": "9847e0ea-78f1-5406-a592-ab172a3fc186",
+      "category": "詩経訓読み",
+      "question": "式（も）つて從つて謂ふこと勿かれ、【太】だ怠らしむること無かれ。",
+      "answer": "はなは",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 234番",
+      "mastery": "starting"
+    },
+    {
+      "id": "a64f65eb-aed8-5586-95d4-0d23daca9b41",
+      "category": "詩経訓読み",
+      "question": "菽を采り菽を采る、之を【筐】にし之を筥にす。",
+      "answer": "かたみ\nかご\nはこ",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 235番",
+      "mastery": "starting"
+    },
+    {
+      "id": "85b07d73-45a1-5159-9a3d-46762ee261ea",
+      "category": "詩経訓読み",
+      "question": "菽を采り菽を采る、之を筐にし之を【筥】にす。",
+      "answer": "はこ",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 236番",
+      "mastery": "starting"
+    },
+    {
+      "id": "1a987233-46d8-55bc-8dd4-ff9825cd132d",
+      "category": "詩経訓読み",
+      "question": "藥しき君子は、福祿之を【申】ぬ。",
+      "answer": "かさ",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 237番",
+      "mastery": "starting"
+    },
+    {
+      "id": "bef30d23-a507-5aee-b216-5b35e7568459",
+      "category": "詩経訓読み",
+      "question": "肯へて下し【遺】つること莫く、式つて居て婁々（しばしば）驕らしむ。",
+      "answer": "す",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 238番",
+      "mastery": "starting"
+    },
+    {
+      "id": "fd44f845-5fc7-50c6-b89a-c5a824e2f88a",
+      "category": "詩経訓読み",
+      "question": "菀（うつ）たる者柳あり、【愒】ふことを尚ばざらんや。",
+      "answer": "いこ",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 239番",
+      "mastery": "starting"
+    },
+    {
+      "id": "05e35bbe-41ba-5035-a775-9a380f2db9f3",
+      "category": "詩経訓読み",
+      "question": "予をして之を靖んぜしめば、後には予に【邁】ごさん。",
+      "answer": "す",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 240番",
+      "mastery": "starting"
+    },
+    {
+      "id": "1fb1ff5b-0d38-5aed-a43c-1fbd0affbd42",
+      "category": "詩経訓読み",
+      "question": "彼の君子の女、卷髪【蠆】の如し。",
+      "answer": "さそり",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 241番",
+      "mastery": "starting"
+    },
+    {
+      "id": "5a2e8015-06b0-58ff-bc80-b3e9c36fa807",
+      "category": "詩経訓読み",
+      "question": "之子于に釣せば、言（ここ）に之に繩（つな）を【綸】めん。",
+      "answer": "おさ",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 242番",
+      "mastery": "starting"
+    },
+    {
+      "id": "714cf965-b0c3-597e-83db-1c060441642e",
+      "category": "詩経訓読み",
+      "question": "芃芃（ほうほう）たる黍苗、陰雨之を【膏】す。",
+      "answer": "うるお",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 243番",
+      "mastery": "starting"
+    },
+    {
+      "id": "55048f7a-6828-5ad6-bb1f-08836e199944",
+      "category": "詩経訓読み",
+      "question": "悠悠たる南行、召伯之を【勞】ふ。",
+      "answer": "ねぎら",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 244番",
+      "mastery": "starting"
+    },
+    {
+      "id": "6d6fdc6e-d112-58a0-b6db-eadad35755d3",
+      "category": "詩経訓読み",
+      "question": "既に君子を見る、德音孔だ【膠】し。",
+      "answer": "かた",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 245番",
+      "mastery": "starting"
+    },
+    {
+      "id": "dc087f81-5088-5b65-b172-388315aa0c80",
+      "category": "詩経訓読み",
+      "question": "彼の桑薪を【樵】りて、卭（われ）、煁（かまど）に烘（た）く。",
+      "answer": "きこ\nこ",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 246番",
+      "mastery": "starting"
+    },
+    {
+      "id": "61bf02d3-28fb-5bdb-891b-8fc16e42c4a2",
+      "category": "詩経訓読み",
+      "question": "豈敢へて行を【憚】らんや。",
+      "answer": "はばか",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 247番",
+      "mastery": "starting"
+    },
+    {
+      "id": "4e47802d-4833-5df8-ad87-751371ab042f",
+      "category": "詩経訓読み",
+      "question": "何れの草か玄からざらん、何れの人か【矜】ならざらん。",
+      "answer": "やもお",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 248番",
+      "mastery": "starting"
+    },
+    {
+      "id": "da4c9a4a-255c-5e3f-ab69-3a763b6879b3",
+      "category": "詩経訓読み",
+      "question": "命の易からざる、爾の躬に【遏】つこと無かれ。",
+      "answer": "た",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 249番",
+      "mastery": "starting"
+    },
+    {
+      "id": "4d6bbd3a-fb53-559a-a034-8b64b97dcd67",
+      "category": "詩経訓読み",
+      "question": "文王に儀刑せば、萬邦【孚】を作さん。",
+      "answer": "まこと",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 250番",
+      "mastery": "starting"
+    },
+    {
+      "id": "17cbbda9-061b-5139-9589-a7c4fc2a95dc",
+      "category": "詩経訓読み",
+      "question": "天は【忱】とし難し、易からざるは維れ王なり。",
+      "answer": "まこと",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 251番",
+      "mastery": "starting"
+    },
+    {
+      "id": "03111eb4-9c5e-59a8-8ca2-aad9cdb80046",
+      "category": "詩経訓読み",
+      "question": "殷商の旅、其【會】まること林の如し。",
+      "answer": "あつ",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 252番",
+      "mastery": "starting"
+    },
+    {
+      "id": "0e6d2d9b-b4a7-5a3a-8628-a510e926b4bb",
+      "category": "詩経訓読み",
+      "question": "【迺】ち疆し迺ち理め、迺ち宣（し）き迺ち畝にす。",
+      "answer": "すなわ",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 253番",
+      "mastery": "starting"
+    },
+    {
+      "id": "06b001b0-fdf4-58e9-876a-5ae0ee584afe",
+      "category": "詩経訓読み",
+      "question": "迺ち【疆】し迺ち理め、迺ち宣き迺ち畝にす。",
+      "answer": "さかい",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 254番",
+      "mastery": "starting"
+    },
+    {
+      "id": "0e27d8aa-d9d1-5cc4-9d69-f5a5a47ff569",
+      "category": "詩経訓読み",
+      "question": "迺ち疆し迺ち【理】め、迺ち宣き迺ち畝にす。",
+      "answer": "おさ",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 255番",
+      "mastery": "starting"
+    },
+    {
+      "id": "c711405b-ffae-5a70-ae98-f2363f1b1e2d",
+      "category": "詩経訓読み",
+      "question": "肆（つひ）に厥慍（いきどほり）を【殄】たず、亦厥問（ほまれ）を隕さず。",
+      "answer": "た",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 256番",
+      "mastery": "starting"
+    },
+    {
+      "id": "4788ae8e-7fa9-5d00-ba7a-f0f78c4998f7",
+      "category": "詩経訓読み",
+      "question": "虞芮（ぐぜい）、厥成を【質】し、文士厥生を蹶（うごか）す。",
+      "answer": "ただ",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 257番",
+      "mastery": "starting"
+    },
+    {
+      "id": "ede1277d-3148-5a35-8e77-2b4a3540ac3c",
+      "category": "詩経訓読み",
+      "question": "豈弟の君子、祿を【干】めて豈弟たり。",
+      "answer": "もと",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 258番",
+      "mastery": "starting"
+    },
+    {
+      "id": "24d684c9-fd5f-5ccb-aa0b-877a6e8fd0a4",
+      "category": "詩経訓読み",
+      "question": "神、時（こ）れ怨むこと罔く、神、時れ【恫】むこと罔し。",
+      "answer": "いた",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 259番",
+      "mastery": "starting"
+    },
+    {
+      "id": "6b5c5e54-8685-52a4-b56f-2c5129de84b0",
+      "category": "詩経訓読み",
+      "question": "寡妻に刑（のっと）り、兄弟に至り、以て家邦を【御】む。",
+      "answer": "おさ",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 260番",
+      "mastery": "starting"
+    },
+    {
+      "id": "f476e0e9-ede6-5269-bbfc-9de2d7cc0692",
+      "category": "詩経訓読み",
+      "question": "聞かざるも亦【式】り、諫めざるも亦入る。",
+      "answer": "のっと",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 261番",
+      "mastery": "starting"
+    },
+    {
+      "id": "c9c60ffe-89bf-5a6a-8539-2b7b57a11cd9",
+      "category": "詩経訓読み",
+      "question": "之を【攘】ひ之を剔る、其檿（えん）其柘。",
+      "answer": "はら",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 262番",
+      "mastery": "starting"
+    },
+    {
+      "id": "40465ad9-c73f-5e07-a123-0f8cd78c6343",
+      "category": "詩経訓読み",
+      "question": "維れ此の王季、帝、其心を【度】らしめ、…",
+      "answer": "はか",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 263番",
+      "mastery": "starting"
+    },
+    {
+      "id": "ca23cefd-61d0-5d9e-81db-0ca706d4419d",
+      "category": "詩経訓読み",
+      "question": "帝、文王に謂ふ、爾の仇方を【詢】ひ、…",
+      "answer": "と",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 264番",
+      "mastery": "starting"
+    },
+    {
+      "id": "c72e87da-2b01-593c-b8ff-2d8a85d9c9de",
+      "category": "詩経訓読み",
+      "question": "王、靈囿に【在】す、麀鹿（いうろく）の伏す攸。",
+      "answer": "いま\nましま",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 265番",
+      "mastery": "starting"
+    },
+    {
+      "id": "73b99a98-4e51-5cd6-9e83-2a05f26edfa3",
+      "category": "詩経訓読み",
+      "question": "豐水東に注ぐ、維れ禹の【績】。",
+      "answer": "いさお\nいさおし",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 266番",
+      "mastery": "starting"
+    },
+    {
+      "id": "6380d819-93ab-5efd-8e6b-2754141699fa",
+      "category": "詩経訓読み",
+      "question": "鳥乃ち去る。后稷【呱】く。",
+      "answer": "な",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 267番",
+      "mastery": "starting"
+    },
+    {
+      "id": "18e33258-a667-59f1-bdae-b0e6a9a11a3f",
+      "category": "詩経訓読み",
+      "question": "厥の豐草を茀（おさ）めて、之に黃茂を【種】う。",
+      "answer": "う",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 268番",
+      "mastery": "starting"
+    },
+    {
+      "id": "be5523de-d7f9-577d-bdd1-ab1e1e349471",
+      "category": "詩経訓読み",
+      "question": "是に任（にな）ひ是に負ひ、以て歸り【肇】めて祀る。",
+      "answer": "はじ",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 269番",
+      "mastery": "starting"
+    },
+    {
+      "id": "968c3a45-c5d7-552b-b0ca-d4260e0cd7f3",
+      "category": "詩経訓読み",
+      "question": "或は【舂】き或は揄し、或は簸（ふる）ひ或は蹂む。",
+      "answer": "うすづ\nつ",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 270番",
+      "mastery": "starting"
+    },
+    {
+      "id": "06b6fd3e-fe60-55eb-86d9-0f9e7cc54e86",
+      "category": "詩経訓読み",
+      "question": "或は舂き或は揄し、或は簸ひ或は【蹂】む。",
+      "answer": "ふ",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 271番",
+      "mastery": "starting"
+    },
+    {
+      "id": "ff5602e0-d994-5f3b-8981-a53dd22897ab",
+      "category": "詩経訓読み",
+      "question": "之を釋くこと叟叟たり、之を【烝】すこと浮浮たり。",
+      "answer": "む",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 272番",
+      "mastery": "starting"
+    },
+    {
+      "id": "a0085792-0c4c-532e-8727-118744e3af9a",
+      "category": "詩経訓読み",
+      "question": "載（すなわ）ち謀り載ち【惟】ひ、蕭を取り脂を祭り、羝を取りて以て軷（ばつ）す。",
+      "answer": "おも",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 273番",
+      "mastery": "starting"
+    },
+    {
+      "id": "a90cf6b1-b639-5ccd-b2a6-a81e3a1c99de",
+      "category": "詩経訓読み",
+      "question": "載ち謀り載ち惟ひ、蕭を取り脂を祭り、【羝】を取りて以て軷す。",
+      "answer": "おひつじ",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 274番",
+      "mastery": "starting"
+    },
+    {
+      "id": "e733558c-ac67-517a-bad1-73aa895c008a",
+      "category": "詩経訓読み",
+      "question": "庶はくは罪悔なからんと、以て今に【迄】る。",
+      "answer": "いた",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 275番",
+      "mastery": "starting"
+    },
+    {
+      "id": "dbc6755a-d31b-5a77-ba1c-7a06d3bc1a84",
+      "category": "詩経訓読み",
+      "question": "或は之に【筵】を肆ね、或は之に几（おしまづき）を授けん。",
+      "answer": "むしろ",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 276番",
+      "mastery": "starting"
+    },
+    {
+      "id": "ca864c9b-94ac-5f84-8a28-f323455339dc",
+      "category": "詩経訓読み",
+      "question": "或は之に筵を【肆】ね、或は之に几を授けん。",
+      "answer": "つら",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 277番",
+      "mastery": "starting"
+    },
+    {
+      "id": "e7309768-1911-5283-950a-ea42f34bc695",
+      "category": "詩経訓読み",
+      "question": "四鍭（しこう）【樹】てるが如く、賓を序づるに侮らざるを以てす。",
+      "answer": "た",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 278番",
+      "mastery": "starting"
+    },
+    {
+      "id": "ce6de9aa-54fd-5e68-9fbf-04e7fb094ca8",
+      "category": "詩経訓読み",
+      "question": "四鍭樹てるが如く、賓を【序】づるに侮らざるを以てす。",
+      "answer": "つい",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 279番",
+      "mastery": "starting"
+    },
+    {
+      "id": "1ef369f2-99bf-5d29-8a65-29ebad6326bc",
+      "category": "詩経訓読み",
+      "question": "黃耇（くわうこう）台背にして、以て引（みちび）き以て【翼】く。",
+      "answer": "たす",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 280番",
+      "mastery": "starting"
+    },
+    {
+      "id": "80fdc4f6-2653-5ffd-9309-9b3ebf7416b5",
+      "category": "詩経訓読み",
+      "question": "孝子【匱】しからず、永く爾に類を錫（たま）ふ。",
+      "answer": "とぼ",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 281番",
+      "mastery": "starting"
+    },
+    {
+      "id": "981cec23-35b8-57db-b0d2-356b3c150a40",
+      "category": "詩経訓読み",
+      "question": "迺ち餱糧（こうりやう）を【裹】む、橐（たく）に嚢に。",
+      "answer": "つつ",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 282番",
+      "mastery": "starting"
+    },
+    {
+      "id": "14718b8e-8d69-5349-93f5-8e5780589b47",
+      "category": "詩経訓読み",
+      "question": "【輯】らげて用つて光（あきらか）にせんことを思ひ、弓矢斯に張り、…",
+      "answer": "やわ",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 283番",
+      "mastery": "starting"
+    },
+    {
+      "id": "2bf005d3-2430-5b1c-8842-00c58e8b6dc8",
+      "category": "詩経訓読み",
+      "question": "干戈戚揚、爰に方（はじ）めて【行】を啓く。",
+      "answer": "みち",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 284番",
+      "mastery": "starting"
+    },
+    {
+      "id": "c9b9cb3c-ed05-530b-a0da-b60d3df070a0",
+      "category": "詩経訓読み",
+      "question": "既に登り乃に依り、乃ち其曹に【造】る。",
+      "answer": "いた",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 285番",
+      "mastery": "starting"
+    },
+    {
+      "id": "a5a11222-9001-5976-a71e-dc8cddf217b4",
+      "category": "詩経訓読み",
+      "question": "之を酌むに【匏】を用ひ、之に食ましめ之に飮ましめ、…",
+      "answer": "ひさご\nふくべ",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 286番",
+      "mastery": "starting"
+    },
+    {
+      "id": "6c37a817-3387-58cd-b4e2-53c2647e953c",
+      "category": "詩経訓読み",
+      "question": "其皇澗を【夾】み、其過澗に遡る。",
+      "answer": "さしはさ\nはさ",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 287番",
+      "mastery": "starting"
+    },
+    {
+      "id": "f22a1ea0-9d57-5be9-a6de-b0f60106f28b",
+      "category": "詩経訓読み",
+      "question": "式（も）つて寇虐して、憯（かつ）て明を畏れざるを【遏】めよ。",
+      "answer": "とど\nと",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 288番",
+      "mastery": "starting"
+    },
+    {
+      "id": "43f5f82f-d669-57d0-b066-75856219892d",
+      "category": "詩経訓読み",
+      "question": "此の中國を惠み、民の憂をして【泄】らさ俾（し）めよ。",
+      "answer": "も",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 289番",
+      "mastery": "starting"
+    },
+    {
+      "id": "e286c758-1ef9-523c-bd06-73ffee259fbe",
+      "category": "詩経訓読み",
+      "question": "此の中國を惠み、國、【殘】なはるゝこと有ること無かれ。",
+      "answer": "そこ",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 290番",
+      "mastery": "starting"
+    },
+    {
+      "id": "5f4a1308-354e-55cc-acbe-e8cec4eecbc8",
+      "category": "詩経訓読み",
+      "question": "辭之れ【懌】ばば、民之れ莫（さだ）まらん。",
+      "answer": "よろこ",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 291番",
+      "mastery": "starting"
+    },
+    {
+      "id": "91994145-bceb-5d16-8ea0-bfa0ee213eda",
+      "category": "詩経訓読み",
+      "question": "先民言へることあり、芻蕘に【詢】ると。",
+      "answer": "はか",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 292番",
+      "mastery": "starting"
+    },
+    {
+      "id": "40b9e391-144f-526b-a714-8c3d1c8880c0",
+      "category": "詩経訓読み",
+      "question": "蕩蕩たる上帝、下民の【辟】たる。",
+      "answer": "きみ",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 293番",
+      "mastery": "starting"
+    },
+    {
+      "id": "236153b0-f0a7-571e-9acf-d9de74bf2876",
+      "category": "詩経訓読み",
+      "question": "女、中國に炰烋（はうかう）し、怨を【斂】めて以て德と爲す。",
+      "answer": "おさ",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 294番",
+      "mastery": "starting"
+    },
+    {
+      "id": "caa3191c-b1c0-555d-a8c5-0638545d619f",
+      "category": "詩経訓読み",
+      "question": "蜩の如く螗の如く、沸くが如く【羹】の如し。",
+      "answer": "あつもの",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 295番",
+      "mastery": "starting"
+    },
+    {
+      "id": "6d5b9fd9-9f13-5602-a73b-a7ffbc992d33",
+      "category": "詩経訓読み",
+      "question": "小大【喪】ぶるに近く、人尚ほ由り行ふ。",
+      "answer": "ほろ",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 296番",
+      "mastery": "starting"
+    },
+    {
+      "id": "b1f3202d-7cd3-5d28-8454-8b6ba6e36e3a",
+      "category": "詩経訓読み",
+      "question": "内、中國に奰（いか）り、【覃】いて鬼方に及ぶ。",
+      "answer": "ひ",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 297番",
+      "mastery": "starting"
+    },
+    {
+      "id": "b1f869d0-9775-59e3-a4ca-f577e2fa1b95",
+      "category": "詩経訓読み",
+      "question": "言として【讎】いざることなく、…",
+      "answer": "むく",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 298番",
+      "mastery": "starting"
+    },
+    {
+      "id": "4c6de20d-a7d4-51cf-b4ab-c2038f8d1bd3",
+      "category": "詩経訓読み",
+      "question": "亂生（おこ）りて夷がず、國として【泯】びざるは靡（な）し。",
+      "answer": "ほろ",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 299番",
+      "mastery": "starting"
+    },
+    {
+      "id": "5e4c338c-df17-5292-a032-24bd3e700e9c",
+      "category": "詩経訓読み",
+      "question": "彼の風に【遡】かふが如く、亦孔だ之れ僾（むせ）ぶ。",
+      "answer": "む",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 300番",
+      "mastery": "starting"
+    },
+    {
+      "id": "dd717047-c748-5de3-8710-037c199a9c40",
+      "category": "詩経訓読み",
+      "question": "民に肅心あるも【逮】ばずと云は荓（し）む。",
+      "answer": "およ",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 301番",
+      "mastery": "starting"
+    },
+    {
+      "id": "5c0f62cd-fc41-5931-ae50-2fb87b0c1d19",
+      "category": "詩経訓読み",
+      "question": "人も亦言へることあり、進退維れ【谷】まると。",
+      "answer": "きわ",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 302番",
+      "mastery": "starting"
+    },
+    {
+      "id": "0650dc81-34a7-5887-a727-c24dc1959ae5",
+      "category": "詩経訓読み",
+      "question": "維れ此の良人、求めず【迪】めず。",
+      "answer": "すす",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 303番",
+      "mastery": "starting"
+    },
+    {
+      "id": "4657bd2a-dc97-59af-88aa-20e93eabe4eb",
+      "category": "詩経訓読み",
+      "question": "其良を用ふるに匪ず、覆（かへ）りて我をして【悖】らしむ。",
+      "answer": "もと",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 304番",
+      "mastery": "starting"
+    },
+    {
+      "id": "53c112f6-77fa-5fb0-a164-6e2e72aec6f3",
+      "category": "詩経訓読み",
+      "question": "凉（まこと）に不可と曰へども、覆りて背いて善く【詈】る。",
+      "answer": "ののし",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 305番",
+      "mastery": "starting"
+    },
+    {
+      "id": "2c39ee16-7d1a-5c28-9909-653e2aa86125",
+      "category": "詩経訓読み",
+      "question": "神として擧げざるは靡（な）く、斯牲を【愛】しむこと靡し。",
+      "answer": "お",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 306番",
+      "mastery": "starting"
+    },
+    {
+      "id": "02a64f03-8231-5cf3-9c02-0263ce567fc8",
+      "category": "詩経訓読み",
+      "question": "【旱】既に大甚（はなはだ）し、蘊隆にして蟲蟲たり。",
+      "answer": "ひでり",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 307番",
+      "mastery": "starting"
+    },
+    {
+      "id": "234097b6-1003-51f3-84ee-a9f1c31e83df",
+      "category": "詩経訓読み",
+      "question": "下土を耗斁（かうと）し、寧ぞ我躬に【丁】たる。",
+      "answer": "あ",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 308番",
+      "mastery": "starting"
+    },
+    {
+      "id": "2f5e7d13-26f3-5b20-9f62-abd02e9a9efa",
+      "category": "詩経訓読み",
+      "question": "昊天上帝、寧ぞ我をして【遯】れしめん。",
+      "answer": "のが",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 309番",
+      "mastery": "starting"
+    },
+    {
+      "id": "a0d0a0cf-60f5-5b77-82cb-f1129781c392",
+      "category": "詩経訓読み",
+      "question": "【鞫】まれる哉庶正、疚しき哉冢宰。",
+      "answer": "きわ",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 310番",
+      "mastery": "starting"
+    },
+    {
+      "id": "14cff16d-c5ae-5f60-a60b-05f6f4e8380d",
+      "category": "詩経訓読み",
+      "question": "大夫君子、昭に假（いた）りて【贏】すことなし。",
+      "answer": "あま",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 311番",
+      "mastery": "starting"
+    },
+    {
+      "id": "63d5132e-a4e5-56c2-b0a0-8e26f9fb130b",
+      "category": "詩経訓読み",
+      "question": "其城を【俶】むることあり、寢廟既に成る。",
+      "answer": "はじ",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 312番",
+      "mastery": "starting"
+    },
+    {
+      "id": "09315752-d803-5f66-8b59-1a6660de896f",
+      "category": "詩経訓読み",
+      "question": "申伯【信】に邁く、王、郿（び）に餞す。",
+      "answer": "まこと",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 313番",
+      "mastery": "starting"
+    },
+    {
+      "id": "522a0cad-7cbb-55c5-a24b-1d2eec7ebb8e",
+      "category": "詩経訓読み",
+      "question": "申伯信に邁く、王、郿に【餞】す。",
+      "answer": "はなむけ",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 314番",
+      "mastery": "starting"
+    },
+    {
+      "id": "29a3ac94-40db-5acf-b23f-b9bc0bb057a9",
+      "category": "詩経訓読み",
+      "question": "以て其粻（ちやう）を【峙】へ、式（も）つて、其行を遄（すみやか）にす。",
+      "answer": "たくわ",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 315番",
+      "mastery": "starting"
+    },
+    {
+      "id": "8240ece8-427c-5f2c-908a-b03fcea67be5",
+      "category": "詩経訓読み",
+      "question": "徒御嘽嘽（たんたん）たり、周邦【咸】く喜ぶ。",
+      "answer": "ことごと",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 316番",
+      "mastery": "starting"
+    },
+    {
+      "id": "5477f225-d160-5b3e-b65b-9022b6fa7cbf",
+      "category": "詩経訓読み",
+      "question": "王の元舅、文武是れ【憲】る。",
+      "answer": "のっと",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 317番",
+      "mastery": "starting"
+    },
+    {
+      "id": "48d79c9a-6bee-58a8-af5d-1dd46f5e14d6",
+      "category": "詩経訓読み",
+      "question": "袞職【闕】くること有れば、維れ仲山甫之を補ふ。",
+      "answer": "か",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 318番",
+      "mastery": "starting"
+    },
+    {
+      "id": "aaae3671-2c04-5016-a29d-4a9a50c28e1b",
+      "category": "詩経訓読み",
+      "question": "【虔】んで爾の位に共し、朕（わ）が命易（あらた）めざれ。",
+      "answer": "つつし",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 319番",
+      "mastery": "starting"
+    },
+    {
+      "id": "c0b86cc7-87b6-5bfd-8ade-7d5447e10684",
+      "category": "詩経訓読み",
+      "question": "韓侯入りて【覲】ゆるに、其介圭を以てす。",
+      "answer": "まみ",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 320番",
+      "mastery": "starting"
+    },
+    {
+      "id": "71dfa604-4adf-54f4-bb91-b6476d8aa6ac",
+      "category": "詩経訓読み",
+      "question": "安んずるに匪ず、【舒】やかなるに匪ず、…",
+      "answer": "ゆる",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 321番",
+      "mastery": "starting"
+    },
+    {
+      "id": "bb506eda-d568-5b78-aced-83b4a55f5874",
+      "category": "詩経訓読み",
+      "question": "江漢の滸、王、召虎に命じ、式（も）つて四方を【辟】き、我が疆土を徹（さだ）めしむ。",
+      "answer": "ひら",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 322番",
+      "mastery": "starting"
+    },
+    {
+      "id": "27064891-06f0-5a49-9fd4-7a11ff2f1dda",
+      "category": "詩経訓読み",
+      "question": "爾の圭瓚（けいさん）と、秬鬯一卣（いちいう）とを【釐】ふ。",
+      "answer": "たま",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 323番",
+      "mastery": "starting"
+    },
+    {
+      "id": "b01b155b-6e54-576f-8a4c-21b50c69fff3",
+      "category": "詩経訓読み",
+      "question": "其文德を矢（なら）べて、此四國に【洽】からん。",
+      "answer": "あまね",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 324番",
+      "mastery": "starting"
+    },
+    {
+      "id": "9cf2290a-f3f9-5b4b-b243-58779424de79",
+      "category": "詩経訓読み",
+      "question": "王猶允に【塞】ち、徐方既に來る。",
+      "answer": "み",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 325番",
+      "mastery": "starting"
+    },
+    {
+      "id": "2e5dd18b-c609-5e8c-8442-8405bbb900ad",
+      "category": "詩経訓読み",
+      "question": "天の【罔】を降す、維れ其れ優なり。",
+      "answer": "あみ",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 326番",
+      "mastery": "starting"
+    },
+    {
+      "id": "04020e86-2caf-5c03-ac55-48b9e8083bac",
+      "category": "詩経訓読み",
+      "question": "藐藐たる昊天、克く【鞏】からざること無し。",
+      "answer": "かた",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 327番",
+      "mastery": "starting"
+    },
+    {
+      "id": "b967c2f5-6b2f-5bb0-af04-a8ab2572f9d3",
+      "category": "詩経訓読み",
+      "question": "天罪罟を降し、蟊賊（ぼうぞく）内に【訌】る。",
+      "answer": "みだ",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 328番",
+      "mastery": "starting"
+    },
+    {
+      "id": "5f1a0a28-0ac6-598d-a115-c2b806036258",
+      "category": "詩経訓読み",
+      "question": "我に惠むこと【疆】りなく、子孫之を保つ。",
+      "answer": "かぎ",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 329番",
+      "mastery": "starting"
+    },
+    {
+      "id": "75750ed0-feed-5781-bf7c-2d6951c0328a",
+      "category": "詩経訓読み",
+      "question": "爾の邦に封靡すること無くば、維れ王其れ之を【崇】ばん。",
+      "answer": "とうと\nたっと",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 330番",
+      "mastery": "starting"
+    },
+    {
+      "id": "c3a57cca-69c9-5f41-8bc4-e3a6e64ede72",
+      "category": "詩経訓読み",
+      "question": "競（つよ）き無からんや維れ人、四方其れ之を【訓】ふ。",
+      "answer": "おし",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 331番",
+      "mastery": "starting"
+    },
+    {
+      "id": "9cc55001-87f8-5f5c-8f15-5f491f53573f",
+      "category": "詩経訓読み",
+      "question": "允なるかな王の維れ【后】たること、…",
+      "answer": "きみ",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 332番",
+      "mastery": "starting"
+    },
+    {
+      "id": "a3470014-f2b6-5c70-b432-70fe716f1443",
+      "category": "詩経訓読み",
+      "question": "酒を爲り【醴】を爲り、祖妣に烝め畁（あた）へ、以て百禮に洽（そな）へん。",
+      "answer": "あまざけ",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 333番",
+      "mastery": "starting"
+    },
+    {
+      "id": "21210b20-344e-527a-97aa-8a6b31380be3",
+      "category": "詩経訓読み",
+      "question": "庭に上下し、厥家に陟降するを【紹】がん。",
+      "answer": "つ",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 334番",
+      "mastery": "starting"
+    },
+    {
+      "id": "d7a23979-1829-55de-9481-f894b3183481",
+      "category": "詩経訓読み",
+      "question": "日に【就】り月に將（すす）まば、學、光明を緝熙することあらん。",
+      "answer": "な",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 335番",
+      "mastery": "starting"
+    },
+    {
+      "id": "82d6a10c-f1d7-5f69-941c-59118f0ea6ae",
+      "category": "詩経訓読み",
+      "question": "千耦其れ【耘】り、隰に徂き畛に徂く。",
+      "answer": "くさぎ",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 336番",
+      "mastery": "starting"
+    },
+    {
+      "id": "dd2fcf75-e7cd-556e-9cdf-345256f27953",
+      "category": "詩経訓読み",
+      "question": "其崇きこと墉（かき）の如く、其【比】ぶこと櫛の如く、…",
+      "answer": "なら",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 337番",
+      "mastery": "starting"
+    },
+    {
+      "id": "e99afa37-f268-5aec-acd2-963dc8394e11",
+      "category": "詩経訓読み",
+      "question": "時純（おほい）に【熙】れり、是を用つて大に介す。",
+      "answer": "ひか",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 338番",
+      "mastery": "starting"
+    },
+    {
+      "id": "bd4d3bd8-5422-5e63-b9d3-b01e04868583",
+      "category": "詩経訓読み",
+      "question": "時（こ）れ周の命なり、於（ああ）【繹】ね思へや。",
+      "answer": "たず",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 339番",
+      "mastery": "starting"
+    },
+    {
+      "id": "4a2829a9-0db5-58a9-9c11-4a1fa5fb9b4c",
+      "category": "詩経訓読み",
+      "question": "下土を奄有して、禹の【緒】を纘ぐ。",
+      "answer": "いとぐち",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 340番",
+      "mastery": "starting"
+    },
+    {
+      "id": "fc3e1e25-da1f-5861-b2b6-17e3d178a79d",
+      "category": "詩経訓読み",
+      "question": "【虧】けず崩れず、震（うご）かず騰らず。",
+      "answer": "か",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 341番",
+      "mastery": "starting"
+    },
+    {
+      "id": "0c78358c-0059-5bbe-93df-7d0709d7a160",
+      "category": "詩経訓読み",
+      "question": "戎狄是れ【膺】ち、荊舒是れ懲らす、…",
+      "answer": "う",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 342番",
+      "mastery": "starting"
+    },
+    {
+      "id": "a4c69493-f5d6-5f56-b3fa-e5806613bd78",
+      "category": "詩経訓読み",
+      "question": "朝夕に溫恭にし、事を執りて【恪】むことあり。",
+      "answer": "つつし",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 343番",
+      "mastery": "starting"
+    },
+    {
+      "id": "eeb2421e-5359-5c4b-842e-a661b89c94f2",
+      "category": "詩経訓読み",
+      "question": "商の先后、命を受くること【殆】ふからずして、武丁の孫子に在り。",
+      "answer": "あや",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 344番",
+      "mastery": "starting"
+    },
+    {
+      "id": "8f9b689a-d73b-5141-b096-feee885a749a",
+      "category": "詩経訓読み",
+      "question": "殷、命を受くること【咸】宜しくして、百祿是れ何（にな）へり。",
+      "answer": "みな",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 345番",
+      "mastery": "starting"
+    },
+    {
+      "id": "b2d61367-1075-56ce-811d-65b12abb1f4c",
+      "category": "詩経訓読み",
+      "question": "帝命【違】らず、湯に至りて齊（な）る。",
+      "answer": "さ",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 346番",
+      "mastery": "starting"
+    },
+    {
+      "id": "0761acd3-f459-5774-99c1-be4ccf7aecd7",
+      "category": "詩経訓読み",
+      "question": "上帝是れ【祗】み、帝命じて九圍に式らしむ。",
+      "answer": "つつし",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 347番",
+      "mastery": "starting"
+    },
+    {
+      "id": "ac2d7ed8-9716-54f5-aedd-2d3a2cacc806",
+      "category": "詩経訓読み",
+      "question": "震はず動かず、戁（お）ぢず【竦】れず、百祿是れ總ぶ。",
+      "answer": "おそ",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 348番",
+      "mastery": "starting"
+    },
+    {
+      "id": "4392c13d-a412-58e4-b63d-867323370522",
+      "category": "詩経訓読み",
+      "question": "武王【旆】を載せ、虔むこと有りて鉞を秉る。",
+      "answer": "はた",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 349番",
+      "mastery": "starting"
+    },
+    {
+      "id": "5e823142-ca8a-58a0-921c-4e2e0f7e4a76",
+      "category": "詩経訓読み",
+      "question": "武王旆を載せ、虔むこと有りて【鉞】を秉る。",
+      "answer": "まさかり",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 350番",
+      "mastery": "starting"
+    },
+    {
+      "id": "860d896a-dbe9-5c1b-a770-902f5f1e45c5",
+      "category": "詩経訓読み",
+      "question": "僭（たが）はず【濫】れず、敢へて怠り遑あらず。",
+      "answer": "みだ",
+      "meaning": "",
+      "notes": "倉庫さん 詩経訓読み問題 351番",
+      "mastery": "starting"
+    }
+  ]
+}

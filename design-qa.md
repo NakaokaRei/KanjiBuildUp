@@ -132,3 +132,43 @@ Apple公式のTabBarMinimizeBehavior、toolbarMinimizationBehavior、glassEffect
 ## 追加・開始ボタンの背景を統一
 
 ユーザー指定により＋にも開始ボタンと同じ淡い緑のregular Liquid Glassを適用。Menuのラベルに効果を適用する構成は維持し、両ボタンが同じlibraryGlassを共有するように統一。Xcodeビルド成功。
+
+
+## お気に入りと問題文字の再評価（2026-10-11）
+
+対象はユーザー提供の IMG_9528.jpg と IMG_9527.PNG。今回は元の構図の複製ではなく、一覧の切り替え操作と問題文の読みやすさを改善した。XCTestでiPhone 17・通常文字とAccessibility M・明朝体を撮影し、保存画像を確認した。実機の参照とは画面幅と進捗、ランダムなキャラクターが異なるため、ピクセル単位の一致は評価していない。
+
+### 反復
+
+1. 初回: お気に入りをカテゴリー横から独立した「すべての問題／お気に入り」の行へ移動。各項目は左右12 pt・上下10 pt、最低44 pt。選択中は白背景。問題文を44→36 ptへ縮小。撮影後、本文が左右端に近い点と、拡大文字で「前の問題」が折り返される点を指摘。
+2. 再修正: 16文字以上の問題を32 ptへ変更し、左右12 pt・行間6 ptを追加。前の問題は横方向に縮めず、幅不足時には既存の別段レイアウトへ移るよう修正。再撮影では通常の問題文が2行で収まり、拡大文字の前の問題も1行で表示された。
+
+### ステップ別の最終評価
+
+1. 一覧・すべての問題: 良好。カテゴリーと表示範囲を分離し、選択項目と周囲の余白が明確。独立行の追加で一覧表示領域は少し減る。
+2. お気に入りに切り替え: 良好。白背景・塗り星・一覧の星が対応し、対象問題で学習を開始できる。
+3. 問題表示: 良好。明朝体の19文字の問題が通常サイズで2行となり、左右の余白を確保。答えを見るボタンは重ならず操作できる。
+4. 拡大文字: 対象操作は良好。範囲切り替えは縦並びになり、省略されない。既存の一覧の習熟度バッジは2行に折り返されるため、一覧全体のアクセシビリティ改善には余地がある。
+
+「…」は保存された問題文の一部で、論語訓読み135問のうち22問に含まれる。表示時の省略ではない。今回は問題データを変更していない。
+
+検証: testFavoritesPersistenceAndStudy、testFavoriteScopeAndLongQuestionDesign成功。再修正後に後者を再実行して成功。最低44 ptの操作領域をテストした。VoiceOverの実読み上げ、最大Dynamic Type、全端末サイズは未検証。
+
+初回画像: output/verification/favorites-design/first/
+最終画像: output/verification/favorites-design/final/
+
+![1. 一覧・すべての問題](output/verification/favorites-design/final/scope-all.png)
+
+![2. お気に入り選択](output/verification/favorites-design/final/scope-favorites.png)
+
+![3. 問題・通常文字](output/verification/favorites-design/final/question-normal.png)
+
+![4. 一覧・拡大文字](output/verification/favorites-design/final/scope-favorites-large.png)
+
+![4. 問題・拡大文字](output/verification/favorites-design/final/question-large.png)
+
+### 右上ボタンへの再調整（ユーザーの希望を反映）
+
+独立した2択の切り替え行を廃止し、カテゴリー右側の「お気に入り」トグルに戻した。左右16 pt・上下10 ptの内部余白、カテゴリーとの12 ptの間隔、検索欄まで12 ptの外側余白を確保。通常は白背景と細い枠、選択中は緑背景・白い塗り星で区別。拡大文字ではカテゴリーの下へ右寄せする。問題文の縮小・行間・左右余白は維持。
+
+通常文字とAccessibility Mの保存画像で、ボタンの文字と外形の余白、検索欄との隙間を確認。testFavoriteScopeAndLongQuestionDesignとtestFavoritesPersistenceAndStudyが成功。最新画像は output/verification/favorites-design/right-button/。上の独立行の画像は比較履歴。

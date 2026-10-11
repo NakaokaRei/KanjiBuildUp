@@ -485,6 +485,36 @@ import Foundation
         precondition(rongoRestart.errorMessage == nil && rongoRestart.items.count == 8357)
         precondition(rongoRestart.item(rongo.items[0].id)?.mastery == .learning)
         precondition(rongoRestart.item(rongo.items[1].id) == nil)
+        let shikyo = try JSONDecoder().decode(DefaultStudyData.self, from: Data(contentsOf:
+            URL(fileURLWithPath: "KanjiBuildUp/Resources/ShikyoKunyomiStudyData.json")))
+        precondition(shikyo.items.count == 351 && Set(shikyo.items.map(\.id)).count == 351)
+        precondition(shikyo.items.allSatisfy { $0.category == "詩経訓読み" && $0.mastery == .starting && !$0.isFavorite })
+        precondition(shikyo.items[0].question == "黃鳥【于】き飛びて、灌木に集まり、其鳴くこと喈喈（かいかい）たり。")
+        precondition(shikyo.items[0].answer == "ゆ")
+        precondition(shikyo.items[234].answer == "かたみ\nかご\nはこ")
+        precondition(shikyo.items[329].answer == "とうと\nたっと")
+        precondition(shikyo.items[350].answer == "みだ")
+        for (index, item) in shikyo.items.enumerated() {
+            precondition(item.notes == "倉庫さん 詩経訓読み問題 \(index + 1)番")
+            precondition(item.question.filter { $0 == "【" }.count == 1)
+            precondition(item.question.filter { $0 == "】" }.count == 1)
+            precondition(!item.question.contains("(cid:"))
+        }
+        let shikyoStore = LearningStore(fileURL: headingsStoreURL, defaults: defaults,
+            additionalDefaults: [omidashi, omidashi2, onkun, rongo, shikyo])
+        precondition(shikyoStore.errorMessage == nil && shikyoStore.items.count == 8708)
+        precondition(shikyoStore.item(editedOnkun.id) == editedOnkun)
+        precondition(shikyoStore.item(rongo.items[0].id)?.mastery == .learning)
+        precondition(shikyoStore.item(rongo.items[1].id) == nil)
+        precondition(shikyoStore.toggleFavorite(for: shikyo.items[0].id))
+        precondition(shikyoStore.setMastery(.mastered, for: shikyo.items[0].id))
+        precondition(shikyoStore.delete(shikyo.items[1].id))
+        let shikyoRestart = LearningStore(fileURL: headingsStoreURL, defaults: defaults,
+            additionalDefaults: [omidashi, omidashi2, onkun, rongo, shikyo])
+        precondition(shikyoRestart.errorMessage == nil && shikyoRestart.items.count == 8707)
+        precondition(shikyoRestart.item(shikyo.items[0].id)?.isFavorite == true)
+        precondition(shikyoRestart.item(shikyo.items[0].id)?.mastery == .mastered)
+        precondition(shikyoRestart.item(shikyo.items[1].id) == nil)
         let legacyURL = directory.appendingPathComponent("legacy.json")
         var existing = first
         existing.id = UUID(); existing.notes = "自分のメモ"; existing.mastery = .learning

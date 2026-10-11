@@ -4,8 +4,9 @@ struct StudyQuestionText: View {
     let question: String
     let studyFont: StudyFont
     var category: String = ""
-    @ScaledMetric(relativeTo: .largeTitle) private var questionSize: CGFloat = 44
-    @ScaledMetric(relativeTo: .largeTitle) private var shortQuestionSize: CGFloat = 112
+    @ScaledMetric(relativeTo: .largeTitle) private var questionSize: CGFloat = 36
+    @ScaledMetric(relativeTo: .largeTitle) private var longQuestionSize: CGFloat = 32
+    @ScaledMetric(relativeTo: .largeTitle) private var shortQuestionSize: CGFloat = 88
     @ScaledMetric(relativeTo: .body) private var explanationSize: CGFloat = 24
     @ScaledMetric(relativeTo: .body) private var pairSpacing: CGFloat = 24
 
@@ -21,7 +22,7 @@ struct StudyQuestionText: View {
                 }
             } else {
                 Text(parts.main)
-                    .font(studyFont.font(size: question.count <= 2 ? shortQuestionSize : questionSize))
+                    .font(studyFont.font(size: parts.main.count <= 2 ? shortQuestionSize : parts.main.count >= 16 ? longQuestionSize : questionSize))
                 if let explanation = parts.explanation {
                     Text(explanation)
                         .font(studyFont.font(size: explanationSize))
@@ -29,6 +30,9 @@ struct StudyQuestionText: View {
                 }
             }
         }
+        .padding(.horizontal, 12)
+        .lineSpacing(6)
+        .lineLimit(nil)
         .multilineTextAlignment(.center)
         .fixedSize(horizontal: false, vertical: true)
     }
