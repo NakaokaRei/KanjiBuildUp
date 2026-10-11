@@ -1,0 +1,1220 @@
+{
+  "version": "kurako-rongo-kunyomi-2026-10-11-v1",
+  "items": [
+    {
+      "id": "b9cd2486-9210-5b9d-bd5f-8e59acb32d57",
+      "category": "論語訓読み",
+      "question": "子曰く、學びて時に之を習ふ、亦【説】ばしからずや。",
+      "answer": "よろこ",
+      "meaning": "",
+      "notes": "倉庫さん 論語訓読み問題 1番",
+      "mastery": "starting"
+    },
+    {
+      "id": "a622c4c1-a9d9-56eb-9a2d-333fe645d5b1",
+      "category": "論語訓読み",
+      "question": "人知らずして【慍】まず、亦君子ならずや。",
+      "answer": "うら",
+      "meaning": "",
+      "notes": "倉庫さん 論語訓読み問題 2番",
+      "mastery": "starting"
+    },
+    {
+      "id": "7f091a02-70e7-560b-b122-1c9c85b67a20",
+      "category": "論語訓読み",
+      "question": "其の人と爲りや孝弟にして、上を犯すことを好む者は【鮮】し。",
+      "answer": "すくな",
+      "meaning": "",
+      "notes": "倉庫さん 論語訓読み問題 3番",
+      "mastery": "starting"
+    },
+    {
+      "id": "d0055936-7bfe-5b6e-a993-1a4d17a52ca7",
+      "category": "論語訓読み",
+      "question": "【汎】く衆を愛して仁に親（ちかづ）き、行ひて餘力あれば、則ち以て文を學ぶ。",
+      "answer": "ひろ",
+      "meaning": "",
+      "notes": "倉庫さん 論語訓読み問題 4番",
+      "mastery": "starting"
+    },
+    {
+      "id": "7902948f-20f1-51ad-ad80-e9c6b3aea173",
+      "category": "論語訓読み",
+      "question": "父母に事へて能く其の力を【竭】くし、…",
+      "answer": "つ",
+      "meaning": "",
+      "notes": "倉庫さん 論語訓読み問題 5番",
+      "mastery": "starting"
+    },
+    {
+      "id": "6611662d-28f5-5bb5-b1f0-27a4e64690d2",
+      "category": "論語訓読み",
+      "question": "事に【敏】くして言に愼み、有道に就いて正す、…",
+      "answer": "と",
+      "meaning": "",
+      "notes": "倉庫さん 論語訓読み問題 6番",
+      "mastery": "starting"
+    },
+    {
+      "id": "d0a58958-7716-5446-af6a-5e535168ea41",
+      "category": "論語訓読み",
+      "question": "貧しうして【諂】ふことなく、富みて驕ることなきは、如何。",
+      "answer": "へつら",
+      "meaning": "",
+      "notes": "倉庫さん 論語訓読み問題 7番",
+      "mastery": "starting"
+    },
+    {
+      "id": "b774e8ce-1c44-5e53-9c0b-f5b271b4792b",
+      "category": "論語訓読み",
+      "question": "詩三百、一言以て之を【蔽】む、曰く、思ひ邪なし。",
+      "answer": "さだ",
+      "meaning": "",
+      "notes": "倉庫さん 論語訓読み問題 8番",
+      "mastery": "starting"
+    },
+    {
+      "id": "eeb7c7b8-92f9-5336-88bf-aa5489d604dd",
+      "category": "論語訓読み",
+      "question": "之を道（みちび）くに德を以てし、之を齊しうするに禮を以てすれば、恥ありて且つ【格】す。",
+      "answer": "ただ",
+      "meaning": "",
+      "notes": "倉庫さん 論語訓読み問題 9番",
+      "mastery": "starting"
+    },
+    {
+      "id": "0ad1e969-801b-58f3-bc90-2ad546a45f5a",
+      "category": "論語訓読み",
+      "question": "學んで思はざれば則ち【罔】し、…",
+      "answer": "くら",
+      "meaning": "",
+      "notes": "倉庫さん 論語訓読み問題 10番",
+      "mastery": "starting"
+    },
+    {
+      "id": "eacb5aad-a5c4-524f-922b-a676dc31a8d4",
+      "category": "論語訓読み",
+      "question": "思うて學ばざれば則ち【殆】ふし。",
+      "answer": "あや",
+      "meaning": "",
+      "notes": "倉庫さん 論語訓読み問題 11番",
+      "mastery": "starting"
+    },
+    {
+      "id": "e91fbd9f-ff42-5e87-99c1-7bd3892b1d7e",
+      "category": "論語訓読み",
+      "question": "子曰く、由、【女】に之を知ることを誨へんか。之を知るを之を知ると爲し、知らざるを知らずとせよ、是知れるなり。",
+      "answer": "なんじ",
+      "meaning": "",
+      "notes": "倉庫さん 論語訓読み問題 12番",
+      "mastery": "starting"
+    },
+    {
+      "id": "6d5f80af-e620-51b6-a161-f6c76048aa9c",
+      "category": "論語訓読み",
+      "question": "子張、祿を【干】むることを學ぶ。",
+      "answer": "もと",
+      "meaning": "",
+      "notes": "倉庫さん 論語訓読み問題 13番",
+      "mastery": "starting"
+    },
+    {
+      "id": "20ca6ad0-395e-51bb-8186-0d81a9632120",
+      "category": "論語訓読み",
+      "question": "多く聞きて疑はしきを【闕】き、愼みて其の餘りを言へば、則ち尤め寡し。",
+      "answer": "か\nのぞ",
+      "meaning": "",
+      "notes": "倉庫さん 論語訓読み問題 14番",
+      "mastery": "starting"
+    },
+    {
+      "id": "f04473ff-cd0b-55eb-a568-dce3a52cbbfd",
+      "category": "論語訓読み",
+      "question": "直きを擧げて諸（これ）を枉がれるに【錯】けば、則ち民服す。",
+      "answer": "お",
+      "meaning": "",
+      "notes": "倉庫さん 論語訓読み問題 15番",
+      "mastery": "starting"
+    },
+    {
+      "id": "2250ca85-bda9-5246-bc82-1a37dc8c8ef6",
+      "category": "論語訓読み",
+      "question": "或るひと孔子に謂つて曰く、子【奚】ぞ政を爲さざると。",
+      "answer": "なん",
+      "meaning": "",
+      "notes": "倉庫さん 論語訓読み問題 16番",
+      "mastery": "starting"
+    },
+    {
+      "id": "0db6b5cf-9404-5f43-a51f-f80908b3902c",
+      "category": "論語訓読み",
+      "question": "子曰く、書に云ふ、孝か【惟】孝、兄弟に友に、有政に施すと。",
+      "answer": "これ",
+      "meaning": "",
+      "notes": "倉庫さん 論語訓読み問題 17番",
+      "mastery": "starting"
+    },
+    {
+      "id": "dcd2a094-8984-5c49-93e9-0659ddbf3faf",
+      "category": "論語訓読み",
+      "question": "八佾（はついつ）庭に舞す、是をも忍ぶべくば、【孰】れか忍ぶべからざらん。",
+      "answer": "いず",
+      "meaning": "",
+      "notes": "倉庫さん 論語訓読み問題 18番",
+      "mastery": "starting"
+    },
+    {
+      "id": "6a29b240-f6d8-5d43-924d-78e826162fbe",
+      "category": "論語訓読み",
+      "question": "【相】くるは維辟公、天子穆穆たり、奚ぞ三家の堂に取らん。",
+      "answer": "たす",
+      "meaning": "",
+      "notes": "倉庫さん 論語訓読み問題 19番",
+      "mastery": "starting"
+    },
+    {
+      "id": "1ceafb1f-0127-5f8f-8d81-23eaa8b1411e",
+      "category": "論語訓読み",
+      "question": "喪は其の易（をさま）らんよりは寧ろ【戚】めよ。",
+      "answer": "いた",
+      "meaning": "",
+      "notes": "倉庫さん 論語訓読み問題 20番",
+      "mastery": "starting"
+    },
+    {
+      "id": "2fed595c-1222-56e7-95eb-acca73019d78",
+      "category": "論語訓読み",
+      "question": "巧笑倩たり、美目盼（へん）たり、素以て【絢】を爲すとは、何の謂ぞや。",
+      "answer": "あや",
+      "meaning": "",
+      "notes": "倉庫さん 論語訓読み問題 21番",
+      "mastery": "starting"
+    },
+    {
+      "id": "02dcb58e-1746-59c9-832e-7635cebd0207",
+      "category": "論語訓読み",
+      "question": "吾祭りに【與】らざれば祭らざるが如し。",
+      "answer": "あずか",
+      "meaning": "",
+      "notes": "倉庫さん 論語訓読み問題 22番",
+      "mastery": "starting"
+    },
+    {
+      "id": "4cde50c2-9069-5c57-b38e-080b3d7dcb6a",
+      "category": "論語訓読み",
+      "question": "射は主皮せず、力【科】を同じうせざるが爲なり、古の道なり。",
+      "answer": "しな",
+      "meaning": "",
+      "notes": "倉庫さん 論語訓読み問題 23番",
+      "mastery": "starting"
+    },
+    {
+      "id": "34d0e6b0-9008-5295-9c76-afc6f430c486",
+      "category": "論語訓読み",
+      "question": "子貢告朔の餼羊（きやう）を去らむと欲す。子曰く、賜や、爾は其の羊を【愛】しむ、我は其の禮を愛しむと。",
+      "answer": "お",
+      "meaning": "",
+      "notes": "倉庫さん 論語訓読み問題 24番",
+      "mastery": "starting"
+    },
+    {
+      "id": "42e90265-2f3a-5c50-8b97-37b922cc75fb",
+      "category": "論語訓読み",
+      "question": "曰く、管氏三歸あり、官の事【攝】ねず、焉んぞ儉なるを得むと、…",
+      "answer": "か",
+      "meaning": "",
+      "notes": "倉庫さん 論語訓読み問題 25番",
+      "mastery": "starting"
+    },
+    {
+      "id": "97936485-f91d-5211-9526-f4f036d7bf47",
+      "category": "論語訓読み",
+      "question": "仁を好む者は、以て之に【尚】ふること無し。",
+      "answer": "くわ",
+      "meaning": "",
+      "notes": "倉庫さん 論語訓読み問題 26番",
+      "mastery": "starting"
+    },
+    {
+      "id": "c02eba7d-db6c-57de-a348-9ffe95189320",
+      "category": "論語訓読み",
+      "question": "君子德を【懷】へば、小人土を懷ふ、君子刑を懷へば、小人惠を懷ふ。",
+      "answer": "おも",
+      "meaning": "",
+      "notes": "倉庫さん 論語訓読み問題 27番",
+      "mastery": "starting"
+    },
+    {
+      "id": "b64d4a9c-17b3-5f41-928e-dc4e4a830849",
+      "category": "論語訓読み",
+      "question": "父母の年は知らざるべからざるなり、一は則ち以て喜び、一は則ち以て【懼】る。",
+      "answer": "おそ",
+      "meaning": "",
+      "notes": "倉庫さん 論語訓読み問題 28番",
+      "mastery": "starting"
+    },
+    {
+      "id": "7c7d105a-14d4-508a-b06b-221b13398e2e",
+      "category": "論語訓読み",
+      "question": "古は言を出ださざるは、躬の【逮】ばざることを恥ぢてなり。",
+      "answer": "およ",
+      "meaning": "",
+      "notes": "倉庫さん 論語訓読み問題 29番",
+      "mastery": "starting"
+    },
+    {
+      "id": "0a64f9fd-2b60-554d-a904-da766aee21f1",
+      "category": "論語訓読み",
+      "question": "子、公冶長を謂ふ、【妻】はす可きなり、…",
+      "answer": "めあ",
+      "meaning": "",
+      "notes": "倉庫さん 論語訓読み問題 30番",
+      "mastery": "starting"
+    },
+    {
+      "id": "d8a7998e-6c1b-5197-8826-11da3bc3bd97",
+      "category": "論語訓読み",
+      "question": "人を【禦】ぐに口給を以てし、屢々すれば人に憎まる。",
+      "answer": "ふせ",
+      "meaning": "",
+      "notes": "倉庫さん 論語訓読み問題 31番",
+      "mastery": "starting"
+    },
+    {
+      "id": "79980df0-5a62-5402-ae03-75bef5733034",
+      "category": "論語訓読み",
+      "question": "道行はれず、【桴】に乗つて海に浮ばむ。",
+      "answer": "いかだ",
+      "meaning": "",
+      "notes": "倉庫さん 論語訓読み問題 32番",
+      "mastery": "starting"
+    },
+    {
+      "id": "539a29ca-1fc9-54f0-9bd3-2095e9eeacff",
+      "category": "論語訓読み",
+      "question": "朽木は雕すべからず、糞土の牆は杇（を）すべからず。予に於てか何ぞ【誅】めむ。",
+      "answer": "せ",
+      "meaning": "",
+      "notes": "倉庫さん 論語訓読み問題 33番",
+      "mastery": "starting"
+    },
+    {
+      "id": "d90a186c-3400-5f11-9bb0-63eb98f79e9f",
+      "category": "論語訓読み",
+      "question": "陳文子馬十乘有り棄てて之を【違】る。",
+      "answer": "さ",
+      "meaning": "",
+      "notes": "倉庫さん 論語訓読み問題 34番",
+      "mastery": "starting"
+    },
+    {
+      "id": "f1ca664a-9fd6-5506-bf66-f165e635b8d8",
+      "category": "論語訓読み",
+      "question": "或るひと【醯】を乞ふ。",
+      "answer": "す",
+      "meaning": "",
+      "notes": "倉庫さん 論語訓読み問題 35番",
+      "mastery": "starting"
+    },
+    {
+      "id": "2787a9c2-4b97-5ad8-9360-2ed175354a48",
+      "category": "論語訓読み",
+      "question": "怨を【匿】して其の人を友とするは、左丘明之を恥づ、丘も亦之を恥づ。",
+      "answer": "かく",
+      "meaning": "",
+      "notes": "倉庫さん 論語訓読み問題 36番",
+      "mastery": "starting"
+    },
+    {
+      "id": "d590f273-2b7b-5c6c-939e-956b51aff0d8",
+      "category": "論語訓読み",
+      "question": "願はくは車馬衣輕裘、朋友と共にし、之を【敝】りて憾むこと無からむ。",
+      "answer": "やぶ",
+      "meaning": "",
+      "notes": "倉庫さん 論語訓読み問題 37番",
+      "mastery": "starting"
+    },
+    {
+      "id": "d85bff18-bb84-596a-bbf5-fa6419e406a7",
+      "category": "論語訓読み",
+      "question": "願はくは善に【伐】ることなく、…",
+      "answer": "ほこ",
+      "meaning": "",
+      "notes": "倉庫さん 論語訓読み問題 38番",
+      "mastery": "starting"
+    },
+    {
+      "id": "6032c4cd-967c-5a10-8a7f-de77adf6591c",
+      "category": "論語訓読み",
+      "question": "赤の齊に【適】くや、肥馬に乘り、輕裘を衣たり。",
+      "answer": "ゆ",
+      "meaning": "",
+      "notes": "倉庫さん 論語訓読み問題 39番",
+      "mastery": "starting"
+    },
+    {
+      "id": "81aefa8c-8604-543c-b50b-33e902478855",
+      "category": "論語訓読み",
+      "question": "犁牛の子、騂（あか）うして且つ角あらば、用ゐること勿らんと欲すと雖も、山川其れ諸（これ）を【舍】かむや。",
+      "answer": "お",
+      "meaning": "",
+      "notes": "倉庫さん 論語訓読み問題 40番",
+      "mastery": "starting"
+    },
+    {
+      "id": "aac20785-6bf0-528f-bd2a-80e3d243691f",
+      "category": "論語訓読み",
+      "question": "伯牛疾有り。子之を問ひ、【牖】より其の手を執る。",
+      "answer": "まど",
+      "meaning": "",
+      "notes": "倉庫さん 論語訓読み問題 41番",
+      "mastery": "starting"
+    },
+    {
+      "id": "d6577abf-0c1a-5a1a-85da-2774f846db06",
+      "category": "論語訓読み",
+      "question": "子曰く、力足らざる者ものは、中道にして廢す、今女は【畫】れりと。",
+      "answer": "かぎ",
+      "meaning": "",
+      "notes": "倉庫さん 論語訓読み問題 42番",
+      "mastery": "starting"
+    },
+    {
+      "id": "fd5c7ff0-3d09-580f-9ede-84aed1e5d6a2",
+      "category": "論語訓読み",
+      "question": "欺く可きなり、【罔】ふ可からざるなり。",
+      "answer": "し",
+      "meaning": "",
+      "notes": "倉庫さん 論語訓読み問題 43番",
+      "mastery": "starting"
+    },
+    {
+      "id": "50f6def8-53c4-547a-81d2-cf78b397700f",
+      "category": "論語訓読み",
+      "question": "君子博く文を學んで、之を約するに禮を以てせば、亦以て【畔】かざる可きかな。",
+      "answer": "そむ",
+      "meaning": "",
+      "notes": "倉庫さん 論語訓読み問題 44番",
+      "mastery": "starting"
+    },
+    {
+      "id": "1a3c2fb9-6f70-5c3b-a51b-9c2bb6c6cddb",
+      "category": "論語訓読み",
+      "question": "夫子之に矢（ちか）うて曰く、【予】に否なる所の者は、天之を厭（あつ）せん、天之を厭せん。",
+      "answer": "われ",
+      "meaning": "",
+      "notes": "倉庫さん 論語訓読み問題 45番",
+      "mastery": "starting"
+    },
+    {
+      "id": "814400fa-8a8c-5f2d-9386-14edb634455b",
+      "category": "論語訓読み",
+      "question": "德の【脩】まらざる、學の講ぜざる、…",
+      "answer": "おさ",
+      "meaning": "",
+      "notes": "倉庫さん 論語訓読み問題 46番",
+      "mastery": "starting"
+    },
+    {
+      "id": "9e475af7-0c50-5bb4-9ca1-c83db5a549fc",
+      "category": "論語訓読み",
+      "question": "義を聞いて【徙】ること能はざる、不善をば改むること能はざる、…",
+      "answer": "うつ",
+      "meaning": "",
+      "notes": "倉庫さん 論語訓読み問題 47番",
+      "mastery": "starting"
+    },
+    {
+      "id": "14958f8e-08be-5225-93f7-463a33286d2c",
+      "category": "論語訓読み",
+      "question": "道に志し、德に據り、仁に依り、藝に【游】ぶ。",
+      "answer": "あそ",
+      "meaning": "",
+      "notes": "倉庫さん 論語訓読み問題 48番",
+      "mastery": "starting"
+    },
+    {
+      "id": "82e9172a-82ea-5d69-97e0-8a080d27f925",
+      "category": "論語訓読み",
+      "question": "暴虎馮河、死して悔いなき者は、吾【與】せざるなり、…",
+      "answer": "くみ",
+      "meaning": "",
+      "notes": "倉庫さん 論語訓読み問題 49番",
+      "mastery": "starting"
+    },
+    {
+      "id": "e78be5a6-f1eb-5faa-ae0a-11d1b77b8c32",
+      "category": "論語訓読み",
+      "question": "君子親に篤ければ、則ち民仁に與（おこ）る、故舊遺れざれば、則ち民【偸】からず。",
+      "answer": "うす",
+      "meaning": "",
+      "notes": "倉庫さん 論語訓読み問題 50番",
+      "mastery": "starting"
+    },
+    {
+      "id": "1bb30ace-c1ad-5632-a97d-cad82c6b717d",
+      "category": "論語訓読み",
+      "question": "勇を好みて貧しきを【疾】めば亂る、…",
+      "answer": "にく",
+      "meaning": "",
+      "notes": "倉庫さん 論語訓読み問題 51番",
+      "mastery": "starting"
+    },
+    {
+      "id": "08fb8778-cf80-53ed-8fd4-c1470291d778",
+      "category": "論語訓読み",
+      "question": "如し周公の才の美有りとも、驕り且つ【吝】かならしめば、其の餘は觀るに足らざるのみ。",
+      "answer": "やぶさ",
+      "meaning": "",
+      "notes": "倉庫さん 論語訓読み問題 52番",
+      "mastery": "starting"
+    },
+    {
+      "id": "c25a7aac-96d0-5810-9ce9-4b62870b471d",
+      "category": "論語訓読み",
+      "question": "師摯の始、關雎の亂、洋洋乎として耳に【盈】てるかな。",
+      "answer": "み",
+      "meaning": "",
+      "notes": "倉庫さん 論語訓読み問題 53番",
+      "mastery": "starting"
+    },
+    {
+      "id": "48811d0f-52d3-55e3-b788-2eab30ddf7f5",
+      "category": "論語訓読み",
+      "question": "飮食を【菲】くして、孝を鬼神に致し、…",
+      "answer": "うす",
+      "meaning": "",
+      "notes": "倉庫さん 論語訓読み問題 54番",
+      "mastery": "starting"
+    },
+    {
+      "id": "5aaf2000-efa9-5519-a0f3-81438f963bdf",
+      "category": "論語訓読み",
+      "question": "子【罕】に利を言ふ、命と與（とも）にし、仁と與にす。",
+      "answer": "まれ",
+      "meaning": "",
+      "notes": "倉庫さん 論語訓読み問題 55番",
+      "mastery": "starting"
+    },
+    {
+      "id": "1f07377a-1990-57c0-b077-c1c9c401fd37",
+      "category": "論語訓読み",
+      "question": "天の將に斯の文を【喪】ぼさむとするや、後に死する者斯の文に與ることを得ざらむ。",
+      "answer": "ほろ",
+      "meaning": "",
+      "notes": "倉庫さん 論語訓読み問題 56番",
+      "mastery": "starting"
+    },
+    {
+      "id": "d6aff540-f27c-5e98-a827-841680b4007f",
+      "category": "論語訓読み",
+      "question": "【固】より天之に將聖を縱す、又多能なりと。",
+      "answer": "もと",
+      "meaning": "",
+      "notes": "倉庫さん 論語訓読み問題 57番",
+      "mastery": "starting"
+    },
+    {
+      "id": "c9f083ab-eedb-5b86-b7f9-210d8b53ff0c",
+      "category": "論語訓読み",
+      "question": "固より天之に將聖を【縱】す、又多能なりと。",
+      "answer": "ゆる",
+      "meaning": "",
+      "notes": "倉庫さん 論語訓読み問題 58番",
+      "mastery": "starting"
+    },
+    {
+      "id": "03e305fd-6926-565e-b1fc-78c801d1fc9a",
+      "category": "論語訓読み",
+      "question": "之を過ぐれば必ず【趨】る。",
+      "answer": "はし",
+      "meaning": "",
+      "notes": "倉庫さん 論語訓読み問題 59番",
+      "mastery": "starting"
+    },
+    {
+      "id": "7f047b19-5468-594c-9dbc-58836f9d6741",
+      "category": "論語訓読み",
+      "question": "之を仰（あふ）げば彌々高く、之を【鑽】れば彌々堅し、…",
+      "answer": "き",
+      "meaning": "",
+      "notes": "倉庫さん 論語訓読み問題 60番",
+      "mastery": "starting"
+    },
+    {
+      "id": "90081f50-82a8-5cbc-be30-8864768a93ef",
+      "category": "論語訓読み",
+      "question": "之を【瞻】れば前に在り、忽焉として後（しりへ）に在り。",
+      "answer": "み",
+      "meaning": "",
+      "notes": "倉庫さん 論語訓読み問題 61番",
+      "mastery": "starting"
+    },
+    {
+      "id": "e12f0987-0aac-5b45-abf4-c98a4179dd91",
+      "category": "論語訓読み",
+      "question": "斯に美玉あらむに、匵（とく）に【韞】めて諸（これ）を藏さむか、…",
+      "answer": "おさ",
+      "meaning": "",
+      "notes": "倉庫さん 論語訓読み問題 62番",
+      "mastery": "starting"
+    },
+    {
+      "id": "760f7fdd-340b-5752-a6ea-b9d7605a9f39",
+      "category": "論語訓読み",
+      "question": "之を【沽】らむや、之を沽らむや、我は賈を待つ者なり。",
+      "answer": "う",
+      "meaning": "",
+      "notes": "倉庫さん 論語訓読み問題 63番",
+      "mastery": "starting"
+    },
+    {
+      "id": "087310c1-a02b-58c8-9b5a-504f5ec52701",
+      "category": "論語訓読み",
+      "question": "君子之に居る。何の【陋】しきことか之れ有らむ。",
+      "answer": "いや",
+      "meaning": "",
+      "notes": "倉庫さん 論語訓読み問題 64番",
+      "mastery": "starting"
+    },
+    {
+      "id": "49854132-c80d-524e-8854-4b1911b35ed6",
+      "category": "論語訓読み",
+      "question": "子川の【上】に在りて曰く、逝く者は斯の如きか。晝夜を舍かず。",
+      "answer": "ほとり",
+      "meaning": "",
+      "notes": "倉庫さん 論語訓読み問題 65番",
+      "mastery": "starting"
+    },
+    {
+      "id": "f08fa908-7553-55aa-bbb3-790d84c69349",
+      "category": "論語訓読み",
+      "question": "譬へば山を【爲】るが如し。未だ成らざること一簣なるに、止むは吾が止むなり。",
+      "answer": "つく",
+      "meaning": "",
+      "notes": "倉庫さん 論語訓読み問題 66番",
+      "mastery": "starting"
+    },
+    {
+      "id": "f0937f90-7cbe-5589-87e3-cbb4f1bb2e35",
+      "category": "論語訓読み",
+      "question": "之に【語】げて惰らざる者は、其れ回なるか。",
+      "answer": "つ",
+      "meaning": "",
+      "notes": "倉庫さん 論語訓読み問題 67番",
+      "mastery": "starting"
+    },
+    {
+      "id": "556cd9b1-c443-5f8a-b600-17e04dfd85e3",
+      "category": "論語訓読み",
+      "question": "巽與の言、能く説ぶこと無からむや、【繹】ぬるを貴しと爲す。",
+      "answer": "たず",
+      "meaning": "",
+      "notes": "倉庫さん 論語訓読み問題 68番",
+      "mastery": "starting"
+    },
+    {
+      "id": "a8545be8-4d84-5edd-b764-44f14e043b7c",
+      "category": "論語訓読み",
+      "question": "忮（そこな）はず求（むさぼ）らず、何を用つてか【臧】からざらむ。",
+      "answer": "よ",
+      "meaning": "",
+      "notes": "倉庫さん 論語訓読み問題 69番",
+      "mastery": "starting"
+    },
+    {
+      "id": "873bb25e-afff-57be-9fc9-0af293aaf854",
+      "category": "論語訓読み",
+      "question": "與（とも）に立つ可し、未だ與に【權】る可からず。",
+      "answer": "はか",
+      "meaning": "",
+      "notes": "倉庫さん 論語訓読み問題 70番",
+      "mastery": "starting"
+    },
+    {
+      "id": "daf5f309-808c-56e6-96b6-37ec39d37e71",
+      "category": "論語訓読み",
+      "question": "立つに門に中せず、行くに【閾】を履まず。",
+      "answer": "しきい",
+      "meaning": "",
+      "notes": "倉庫さん 論語訓読み問題 71番",
+      "mastery": "starting"
+    },
+    {
+      "id": "979f254f-f391-56a4-966b-2e659ba4fce8",
+      "category": "論語訓読み",
+      "question": "齊（し）を攝（かか）げて堂に【升】れば、鞠躬如たり、…",
+      "answer": "のぼ",
+      "meaning": "",
+      "notes": "倉庫さん 論語訓読み問題 72番",
+      "mastery": "starting"
+    },
+    {
+      "id": "0f7385fe-25da-58d0-a8d5-08f0c320f662",
+      "category": "論語訓読み",
+      "question": "喪を【去】いては佩びざる所なし。",
+      "answer": "のぞ",
+      "meaning": "",
+      "notes": "倉庫さん 論語訓読み問題 73番",
+      "mastery": "starting"
+    },
+    {
+      "id": "c62434e6-fe2c-5f61-9a88-4ebe45b04f6e",
+      "category": "論語訓読み",
+      "question": "子朝より退きて曰く、人を【傷】なへりや不（いなや）と。",
+      "answer": "そこ",
+      "meaning": "",
+      "notes": "倉庫さん 論語訓読み問題 74番",
+      "mastery": "starting"
+    },
+    {
+      "id": "a6885c48-bb03-5722-8cc6-b2d1520e21f5",
+      "category": "論語訓読み",
+      "question": "君命じて召せば、駕を【俟】たずして行く。",
+      "answer": "ま",
+      "meaning": "",
+      "notes": "倉庫さん 論語訓読み問題 75番",
+      "mastery": "starting"
+    },
+    {
+      "id": "d9b6d056-5b68-5d3e-8873-d823d9baa71e",
+      "category": "論語訓読み",
+      "question": "朋友の【饋】は、車馬と雖も、祭肉に非ざれば拜せず。",
+      "answer": "おくりもの",
+      "meaning": "",
+      "notes": "倉庫さん 論語訓読み問題 76番",
+      "mastery": "starting"
+    },
+    {
+      "id": "66bca851-62aa-5891-824f-18dc3823ecff",
+      "category": "論語訓読み",
+      "question": "齊衰（しさい）の者を見れば、【狎】れたりと雖も必ず變ず、…",
+      "answer": "な",
+      "meaning": "",
+      "notes": "倉庫さん 論語訓読み問題 77番",
+      "mastery": "starting"
+    },
+    {
+      "id": "b73865ab-be3e-5098-a4e2-b9e97aa95687",
+      "category": "論語訓読み",
+      "question": "車中には内顧せず、疾言せず、【親】ら指（ゆびさ）さず。",
+      "answer": "みずか",
+      "meaning": "",
+      "notes": "倉庫さん 論語訓読み問題 78番",
+      "mastery": "starting"
+    },
+    {
+      "id": "42587a31-8e3f-5409-879b-fe8cfadf5ddd",
+      "category": "論語訓読み",
+      "question": "色みて斯れ擧り、【翔】りて後に集る。",
+      "answer": "かけ",
+      "meaning": "",
+      "notes": "倉庫さん 論語訓読み問題 79番",
+      "mastery": "starting"
+    },
+    {
+      "id": "e6e6b7b1-3a68-5e69-9a6f-fd580ac31109",
+      "category": "論語訓読み",
+      "question": "舊貫に【仍】らば之を如何。",
+      "answer": "よ",
+      "meaning": "",
+      "notes": "倉庫さん 論語訓読み問題 80番",
+      "mastery": "starting"
+    },
+    {
+      "id": "310d1747-5a28-5738-b704-a8a73abe72e0",
+      "category": "論語訓読み",
+      "question": "子貢問ふ、師と商とは孰れか【賢】れる。",
+      "answer": "まさ",
+      "meaning": "",
+      "notes": "倉庫さん 論語訓読み問題 81番",
+      "mastery": "starting"
+    },
+    {
+      "id": "227f9f1a-6db6-5e36-99bc-15a82ddfb780",
+      "category": "論語訓読み",
+      "question": "子曰く、夫（か）の人の子を【賊】なはむ。",
+      "answer": "そこ",
+      "meaning": "",
+      "notes": "倉庫さん 論語訓読み問題 82番",
+      "mastery": "starting"
+    },
+    {
+      "id": "e2f20c9a-5fe0-5205-8c98-fb3fc6be22b9",
+      "category": "論語訓読み",
+      "question": "夫子之を【哂】ふ。",
+      "answer": "わら\nあざわら",
+      "meaning": "",
+      "notes": "倉庫さん 論語訓読み問題 83番",
+      "mastery": "starting"
+    },
+    {
+      "id": "35c7d79e-b85a-581e-ac3d-cf2202d153eb",
+      "category": "論語訓読み",
+      "question": "内に省りみて【疚】しからずんば、夫れ何をか憂へ、何をか懼れむ。",
+      "answer": "やま",
+      "meaning": "",
+      "notes": "倉庫さん 論語訓読み問題 84番",
+      "mastery": "starting"
+    },
+    {
+      "id": "108c9249-8310-545e-bcf0-1ad24e72c5dc",
+      "category": "論語訓読み",
+      "question": "年【饑】ゑて用足らず、之を如何にせむ。",
+      "answer": "う",
+      "meaning": "",
+      "notes": "倉庫さん 論語訓読み問題 85番",
+      "mastery": "starting"
+    },
+    {
+      "id": "60cb5a5d-e596-5d5f-ad79-4a20a69a137f",
+      "category": "論語訓読み",
+      "question": "有若對へて曰く、【盍】ぞ徹せざるや。",
+      "answer": "なん",
+      "meaning": "",
+      "notes": "倉庫さん 論語訓読み問題 86番",
+      "mastery": "starting"
+    },
+    {
+      "id": "ede334cf-5e84-5dde-b584-15a0c315434e",
+      "category": "論語訓読み",
+      "question": "子張德を【崇】くし惑を辨ぜむことを問ふ。",
+      "answer": "たか",
+      "meaning": "",
+      "notes": "倉庫さん 論語訓読み問題 87番",
+      "mastery": "starting"
+    },
+    {
+      "id": "3affd99e-c2a8-569b-837a-bd949feb54c5",
+      "category": "論語訓読み",
+      "question": "片言以て獄を【折】む可き者は、其れ由か。",
+      "answer": "さだ",
+      "meaning": "",
+      "notes": "倉庫さん 論語訓読み問題 88番",
+      "mastery": "starting"
+    },
+    {
+      "id": "651e4a22-8c0a-5748-a924-afff24c734c8",
+      "category": "論語訓読み",
+      "question": "子【帥】ゐるに正を以てせば、孰か敢へて正しからざらむ。",
+      "answer": "ひき",
+      "meaning": "",
+      "notes": "倉庫さん 論語訓読み問題 89番",
+      "mastery": "starting"
+    },
+    {
+      "id": "9dfe541a-109b-5715-a427-4e15bc369581",
+      "category": "論語訓読み",
+      "question": "君子の德は風、小人の德は【艸】なり、…",
+      "answer": "くさ",
+      "meaning": "",
+      "notes": "倉庫さん 論語訓読み問題 90番",
+      "mastery": "starting"
+    },
+    {
+      "id": "0c573272-c9d5-5194-abb3-1a2c69de0bb1",
+      "category": "論語訓読み",
+      "question": "艸之に風を上（くは）ふれば必ず【偃】す。",
+      "answer": "ふ",
+      "meaning": "",
+      "notes": "倉庫さん 論語訓読み問題 91番",
+      "mastery": "starting"
+    },
+    {
+      "id": "9fc85fae-0601-5d17-a6f1-3534af4d6481",
+      "category": "論語訓読み",
+      "question": "四方に使して、專對すること能はずば、多しと雖も亦奚を以て【爲】む。",
+      "answer": "せ",
+      "meaning": "",
+      "notes": "倉庫さん 論語訓読み問題 92番",
+      "mastery": "starting"
+    },
+    {
+      "id": "93b73733-b053-5499-a220-920b0a137dac",
+      "category": "論語訓読み",
+      "question": "始めて有るに、曰く、【苟】に合（あつま）れり、…",
+      "answer": "まこと",
+      "meaning": "",
+      "notes": "倉庫さん 論語訓読み問題 93番",
+      "mastery": "starting"
+    },
+    {
+      "id": "2deae646-c12d-5668-8939-9cfd0daf93a2",
+      "category": "論語訓読み",
+      "question": "既に【庶】し、又何をか加へむ。",
+      "answer": "おお",
+      "meaning": "",
+      "notes": "倉庫さん 論語訓読み問題 94番",
+      "mastery": "starting"
+    },
+    {
+      "id": "22227413-b98f-5516-91a3-2028e4d00f7d",
+      "category": "論語訓読み",
+      "question": "子曰く、何ぞ【晏】きや。",
+      "answer": "おそ",
+      "meaning": "",
+      "notes": "倉庫さん 論語訓読み問題 95番",
+      "mastery": "starting"
+    },
+    {
+      "id": "36e4f1f8-8c55-56e8-b98f-f3da8e25ce49",
+      "category": "論語訓読み",
+      "question": "吾が黨に直躬といふ者あり、其の父羊を【攘】み、而して子之を證す。",
+      "answer": "ぬす",
+      "meaning": "",
+      "notes": "倉庫さん 論語訓読み問題 96番",
+      "mastery": "starting"
+    },
+    {
+      "id": "4342563e-5367-5c6e-afda-1e8cb4c00340",
+      "category": "論語訓読み",
+      "question": "善人民を敎ふること七年、亦以て戎に【卽】かしむ可し。",
+      "answer": "つ",
+      "meaning": "",
+      "notes": "倉庫さん 論語訓読み問題 97番",
+      "mastery": "starting"
+    },
+    {
+      "id": "3e3d2d32-75c2-59fc-8123-f88302fafac1",
+      "category": "論語訓読み",
+      "question": "羿（げい）、善く射、奡（がう）、舟を【盪】かす、俱に其の死を得ず。",
+      "answer": "うご",
+      "meaning": "",
+      "notes": "倉庫さん 論語訓読み問題 98番",
+      "mastery": "starting"
+    },
+    {
+      "id": "1edeb5df-065e-5200-8322-30d2c7f3e9d1",
+      "category": "論語訓読み",
+      "question": "君子なるかな若（かくのごと）き人、德を【尚】ぶかな若き人。",
+      "answer": "たっと\nとうと",
+      "meaning": "",
+      "notes": "倉庫さん 論語訓読み問題 99番",
+      "mastery": "starting"
+    },
+    {
+      "id": "c586085f-94c0-5f70-8419-71552ad2c9dd",
+      "category": "論語訓読み",
+      "question": "忠ならば能く【誨】ふること勿らむか。",
+      "answer": "おし",
+      "meaning": "",
+      "notes": "倉庫さん 論語訓読み問題 100番",
+      "mastery": "starting"
+    },
+    {
+      "id": "0f767daf-60a4-52c8-b11c-e53ff6078fd1",
+      "category": "論語訓読み",
+      "question": "晉の文公は【譎】つて正しからず、…",
+      "answer": "いつわ",
+      "meaning": "",
+      "notes": "倉庫さん 論語訓読み問題 101番",
+      "mastery": "starting"
+    },
+    {
+      "id": "769455be-935e-5ed1-b6f2-4f540f33ddc7",
+      "category": "論語訓読み",
+      "question": "【逆】め詐とせず、億（おもんばか）りて信あらずとせず、…",
+      "answer": "あらかじ",
+      "meaning": "",
+      "notes": "倉庫さん 論語訓読み問題 102番",
+      "mastery": "starting"
+    },
+    {
+      "id": "15a1dd95-117d-5bca-b1c8-3eecadc7e015",
+      "category": "論語訓読み",
+      "question": "公伯寮子路を季孫に【愬】ふ。",
+      "answer": "うった",
+      "meaning": "",
+      "notes": "倉庫さん 論語訓読み問題 103番",
+      "mastery": "starting"
+    },
+    {
+      "id": "04547580-1230-5097-983a-57ee8a936d4e",
+      "category": "論語訓読み",
+      "question": "賢者は世を【辟】く、其の次は地を辟く、其の次は色を辟く、其の次は言を辟く。",
+      "answer": "さ",
+      "meaning": "",
+      "notes": "倉庫さん 論語訓読み問題 104番",
+      "mastery": "starting"
+    },
+    {
+      "id": "cc19d92e-b1ad-5c02-8379-d8f44bdf4bfa",
+      "category": "論語訓読み",
+      "question": "君薨ずれば、百官己を【總】べて以て冢宰に聽くこと三年。",
+      "answer": "す",
+      "meaning": "",
+      "notes": "倉庫さん 論語訓読み問題 105番",
+      "mastery": "starting"
+    },
+    {
+      "id": "5a0f7683-f12f-565c-80e8-07352fffde83",
+      "category": "論語訓読み",
+      "question": "耕すや【餒】ゑ其の中（うち）に在り、學ぶや祿其の中に在り。",
+      "answer": "う",
+      "meaning": "",
+      "notes": "倉庫さん 論語訓読み問題 106番",
+      "mastery": "starting"
+    },
+    {
+      "id": "22304b08-2d1d-5e41-9ce7-0cb203a3bc7a",
+      "category": "論語訓読み",
+      "question": "水火は吾【蹈】んで死する者を見る、未だ仁を蹈んで死する者を見ざるなり。",
+      "answer": "ふ",
+      "meaning": "",
+      "notes": "倉庫さん 論語訓読み問題 107番",
+      "mastery": "starting"
+    },
+    {
+      "id": "2d60eb44-6c2a-556d-89ec-2ca77eb07005",
+      "category": "論語訓読み",
+      "question": "子曰く、【辭】は達するのみ。",
+      "answer": "ことば",
+      "meaning": "",
+      "notes": "倉庫さん 論語訓読み問題 108番",
+      "mastery": "starting"
+    },
+    {
+      "id": "5a2cb7cb-b79a-5758-ba1a-a806ec24a229",
+      "category": "論語訓読み",
+      "question": "虎兕（こじ）柙（かふ）より出で、龜玉櫝中（とくちう）に【毀】るるときは、是れ誰の過ぞや。",
+      "answer": "やぶ",
+      "meaning": "",
+      "notes": "倉庫さん 論語訓読み問題 109番",
+      "mastery": "starting"
+    },
+    {
+      "id": "57ce2b90-d4b3-5603-bf9d-76eac283aa46",
+      "category": "論語訓読み",
+      "question": "【困】しんで學ばず、民斯を下と爲す。",
+      "answer": "くる",
+      "meaning": "",
+      "notes": "倉庫さん 論語訓読み問題 110番",
+      "mastery": "starting"
+    },
+    {
+      "id": "88da22bb-f76d-5a19-b8ef-ac02502233ff",
+      "category": "論語訓読み",
+      "question": "【忿】りは難を思ひ、得るを見ては義を思ふ。",
+      "answer": "いか",
+      "meaning": "",
+      "notes": "倉庫さん 論語訓読み問題 111番",
+      "mastery": "starting"
+    },
+    {
+      "id": "12fbfc68-5b1d-5eca-90eb-e3d034b4842a",
+      "category": "論語訓読み",
+      "question": "孔子其の亡きを時として、往きて之を拜す。諸（これ）に【塗】に遇へり。",
+      "answer": "みち",
+      "meaning": "",
+      "notes": "倉庫さん 論語訓読み問題 112番",
+      "mastery": "starting"
+    },
+    {
+      "id": "79b337f1-c2a5-5d72-9e6a-768cf7546084",
+      "category": "論語訓読み",
+      "question": "之を【邇】くしては父に事へ、…",
+      "answer": "ちか",
+      "meaning": "",
+      "notes": "倉庫さん 論語訓読み問題 113番",
+      "mastery": "starting"
+    },
+    {
+      "id": "585e315b-1862-5486-a3f4-8c2230cd888d",
+      "category": "論語訓読み",
+      "question": "色厲にして内【荏】らかなるは、諸（これ）を小人に譬ふれば、其れ猶ほ穿窬（せんゆ）の盜のごときか。",
+      "answer": "やわ",
+      "meaning": "",
+      "notes": "倉庫さん 論語訓読み問題 114番",
+      "mastery": "starting"
+    },
+    {
+      "id": "55fc989b-e4b6-57d4-8174-2948d47a7a06",
+      "category": "論語訓読み",
+      "question": "【訐】いて以て直しと爲す者を惡む。",
+      "answer": "あば",
+      "meaning": "",
+      "notes": "倉庫さん 論語訓読み問題 115番",
+      "mastery": "starting"
+    },
+    {
+      "id": "e10bc723-86be-5e9e-ac0c-90281e3d53e6",
+      "category": "論語訓読み",
+      "question": "柳下惠士師と爲り、三たび【黜】けらる。",
+      "answer": "しりぞ",
+      "meaning": "",
+      "notes": "倉庫さん 論語訓読み問題 116番",
+      "mastery": "starting"
+    },
+    {
+      "id": "31667e70-10a0-56d8-898b-7832ee87a1ae",
+      "category": "論語訓読み",
+      "question": "齊人女樂を【歸】れり。",
+      "answer": "おく",
+      "meaning": "",
+      "notes": "倉庫さん 論語訓読み問題 117番",
+      "mastery": "starting"
+    },
+    {
+      "id": "39c7846a-4c91-5d97-83a6-4efbf8bdbded",
+      "category": "論語訓読み",
+      "question": "耰（いう）して【輟】まず。",
+      "answer": "や",
+      "meaning": "",
+      "notes": "倉庫さん 論語訓読み問題 118番",
+      "mastery": "starting"
+    },
+    {
+      "id": "c3f01534-e32b-56ff-bed0-ea5247f3be86",
+      "category": "論語訓読み",
+      "question": "其の杖を【植】てて芸る。",
+      "answer": "た",
+      "meaning": "",
+      "notes": "倉庫さん 論語訓読み問題 119番",
+      "mastery": "starting"
+    },
+    {
+      "id": "d7fe25f3-ca3c-5f35-847d-255809199f15",
+      "category": "論語訓読み",
+      "question": "其の杖を植てて【芸】る。",
+      "answer": "くさぎ",
+      "meaning": "",
+      "notes": "倉庫さん 論語訓読み問題 120番",
+      "mastery": "starting"
+    },
+    {
+      "id": "d1d0410c-5c63-5036-9c3f-47bf50712ed2",
+      "category": "論語訓読み",
+      "question": "隱居して言を【放】にするも、身は淸に中り、廢すること權に中れり。",
+      "answer": "ほしいまま",
+      "meaning": "",
+      "notes": "倉庫さん 論語訓読み問題 121番",
+      "mastery": "starting"
+    },
+    {
+      "id": "ff1e507f-2f1b-5134-892a-df493ad6d375",
+      "category": "論語訓読み",
+      "question": "君子は賢を尊んで衆を容れ、善を嘉して不能を【矜】れむ。",
+      "answer": "あわ",
+      "meaning": "",
+      "notes": "倉庫さん 論語訓読み問題 122番",
+      "mastery": "starting"
+    },
+    {
+      "id": "e04f3ac6-9e05-5195-81c4-deff6896244a",
+      "category": "論語訓読み",
+      "question": "遠きを致すときは恐らく【泥】まむ、是（ここ）を以て君子は爲さざるなり。",
+      "answer": "なず",
+      "meaning": "",
+      "notes": "倉庫さん 論語訓読み問題 123番",
+      "mastery": "starting"
+    },
+    {
+      "id": "52bf812f-b3d3-5893-93cf-dc02a0af54c2",
+      "category": "論語訓読み",
+      "question": "小人の過や必ず【文】る。",
+      "answer": "かざ",
+      "meaning": "",
+      "notes": "倉庫さん 論語訓読み問題 124番",
+      "mastery": "starting"
+    },
+    {
+      "id": "ef87e9c0-dcb7-592c-a8a5-a897442e58f0",
+      "category": "論語訓読み",
+      "question": "之を望めば儼然たり、之に卽くや溫なり、其の言を聽くや【厲】し。",
+      "answer": "はげ",
+      "meaning": "",
+      "notes": "倉庫さん 論語訓読み問題 125番",
+      "mastery": "starting"
+    },
+    {
+      "id": "fb220305-27df-5b16-bbcd-b7efa0a868f2",
+      "category": "論語訓読み",
+      "question": "君子は信ぜられて後に其の民を勞す。未だ信ぜられざれば、則ち以て己を【厲】ましむと爲す。",
+      "answer": "や",
+      "meaning": "",
+      "notes": "倉庫さん 論語訓読み問題 126番",
+      "mastery": "starting"
+    },
+    {
+      "id": "333e3ace-1961-598e-880f-a2934a98223b",
+      "category": "論語訓読み",
+      "question": "大德は閑（のり）を【踰】えざれば、小德は出入すとも可かなり。",
+      "answer": "こ",
+      "meaning": "",
+      "notes": "倉庫さん 論語訓読み問題 127番",
+      "mastery": "starting"
+    },
+    {
+      "id": "b0972c0d-aea3-5cdd-9f8c-1740a4cdc3cf",
+      "category": "論語訓読み",
+      "question": "君子の道、焉んぞ【誣】ふ可けむや。",
+      "answer": "し",
+      "meaning": "",
+      "notes": "倉庫さん 論語訓読み問題 128番",
+      "mastery": "starting"
+    },
+    {
+      "id": "fc90476d-6a0d-5a47-99ec-ed5ff8f0c2a3",
+      "category": "論語訓読み",
+      "question": "賢者は其の大なる者を【識】し、不賢者は其の小なる者を識す、…",
+      "answer": "しる",
+      "meaning": "",
+      "notes": "倉庫さん 論語訓読み問題 129番",
+      "mastery": "starting"
+    },
+    {
+      "id": "174e8169-0537-5593-a933-40346b29cec4",
+      "category": "論語訓読み",
+      "question": "夫子の云へること、亦【宜】ならずや。",
+      "answer": "むべ\nうべ",
+      "meaning": "",
+      "notes": "倉庫さん 論語訓読み問題 130番",
+      "mastery": "starting"
+    },
+    {
+      "id": "2839c542-4576-5eea-9df9-1b22a8641e2e",
+      "category": "論語訓読み",
+      "question": "之を【綏】んずれば斯に來り、之を動かせば斯に和ぎ、…",
+      "answer": "やす",
+      "meaning": "",
+      "notes": "倉庫さん 論語訓読み問題 131番",
+      "mastery": "starting"
+    },
+    {
+      "id": "2189454f-e013-5f30-9cae-46ac1e114ddc",
+      "category": "論語訓読み",
+      "question": "【咨】、爾舜、天の曆數爾の躬に在り。",
+      "answer": "ああ",
+      "meaning": "",
+      "notes": "倉庫さん 論語訓読み問題 132番",
+      "mastery": "starting"
+    },
+    {
+      "id": "1d081bf4-f8de-5e1b-b705-ef450956aa1e",
+      "category": "論語訓読み",
+      "question": "【允】に其の中を執れ。",
+      "answer": "まこと",
+      "meaning": "",
+      "notes": "倉庫さん 論語訓読み問題 133番",
+      "mastery": "starting"
+    },
+    {
+      "id": "8fdd1c54-26f1-52fd-8a5f-595d803ac110",
+      "category": "論語訓読み",
+      "question": "罪有るを敢て赦さず、帝臣蔽（かく）さず、【簡】ぶこと帝の心に在り。",
+      "answer": "えら",
+      "meaning": "",
+      "notes": "倉庫さん 論語訓読み問題 134番",
+      "mastery": "starting"
+    },
+    {
+      "id": "16ca6770-5d48-5207-8e7f-962378907a46",
+      "category": "論語訓読み",
+      "question": "五美を尊び、四惡を【屛】けば、斯に以て政に從ふ可し。",
+      "answer": "しりぞ",
+      "meaning": "",
+      "notes": "倉庫さん 論語訓読み問題 135番",
+      "mastery": "starting"
+    }
+  ]
+}

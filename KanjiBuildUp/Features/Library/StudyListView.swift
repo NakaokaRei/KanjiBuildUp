@@ -10,6 +10,7 @@ struct StudyListView: View {
     @FocusState private var searchFocused: Bool
     @State private var category: String?
     @State private var mastery: Mastery?
+    @State private var favoritesOnly = false
     @State private var showImport = false
     @State private var showManualEntry = false
     @State private var showFontSettings = false
@@ -23,7 +24,7 @@ struct StudyListView: View {
     private var filtered: [StudyItem] { searchResults.items }
 
     private func refreshSearchResults() {
-        searchResults = store.searchResults(category: category, mastery: mastery, search: search)
+        searchResults = store.searchResults(category: category, mastery: mastery, search: search, favoritesOnly: favoritesOnly)
     }
 
     var body: some View {
@@ -60,12 +61,11 @@ struct StudyListView: View {
                             }
                             .allowsHitTesting(false)
                     }
-                    Picker("カテゴリー", selection: $category) {
-                        Text("すべてのカテゴリー").tag(String?.none)
-                        ForEach(store.categories, id: \.self) { value in Text(value).tag(Optional(value)) }
+                    if dynamicTypeSize.isAccessibilitySize {
+                        VStack(spacing: 0) { categoryPicker; favoriteFilter }
+                    } else {
+                        HStack(spacing: 8) { categoryPicker; favoriteFilter }
                     }
-                    .pickerStyle(.menu).accessibilityIdentifier("categoryFilter")
-                    .frame(maxWidth: .infinity, minHeight: 44)
                 }
                 searchField.padding(.bottom, 8)
                 masteryFilters.padding(.bottom, 4)
@@ -86,7 +86,14 @@ struct StudyListView: View {
                             HStack(spacing: 12) {
                                 VStack(alignment: .leading, spacing: 5) {
                                     AdaptiveQuestionText(question: item.displayedQuestion, baseSize: 20, maximumSize: 24, progress: 1)
-                                    Text(item.category).font(.caption).foregroundStyle(Palette.secondary)
+                                    HStack(spacing: 6) {
+                                        Text(item.category)
+                                        if item.isFavorite {
+                                            Image(systemName: "star.fill")
+                                                .foregroundStyle(Palette.green)
+                                                .accessibilityLabel("お気に入り")
+                                        }
+                                    }.font(.caption).foregroundStyle(Palette.secondary)
                                     if searchResults.answerOnlyIDs.contains(item.id) {
                                         Text("答えに一致").font(.caption).foregroundStyle(Palette.secondary)
                                     }
@@ -101,7 +108,7 @@ struct StudyListView: View {
                         .modifier(LibraryScrollHeaderModifier(collapse: $headerCollapse, actionsCollapsed: $actionsCollapsed, searchFocused: searchFocused, bottomContentMargin: studyActionHeight + 24))
                         .overlay {
                             if filtered.isEmpty {
-                                ContentUnavailableView("該当する問題はありません", systemImage: "line.3.horizontal.decrease", description: Text("検索語・カテゴリー・覚え具合を変更してください。"))
+                                ContentUnavailableView("該当する問題はありません", systemImage: "line.3.horizontal.decrease", description: Text(favoritesOnly ? "⭐で問題を登録するか、お気に入りの絞り込み・検索条件を変更してください。" : "検索語・カテゴリー・覚え具合を変更してください。"))
                             }
                         }
                         .listRowSpacing(4)
@@ -136,25 +143,51 @@ struct StudyListView: View {
         .onChange(of: search) { refreshSearchResults() }
         .onChange(of: category) { refreshSearchResults() }
         .onChange(of: mastery) { refreshSearchResults() }
+        .onChange(of: favoritesOnly) { refreshSearchResults() }
         .onChange(of: store.items) { refreshSearchResults() }
         .sheet(isPresented: $showImport) {
             CSVImportView(store: store) { count in
-                category = nil; mastery = nil
+                category = nil; mastery = nil; favoritesOnly = false
                 notice = "\(count)件を取り込みました。"
             }
         }
         .sheet(isPresented: $showManualEntry) {
             ManualEntryView(store: store) {
-                category = nil; mastery = nil
+                category = nil; mastery = nil; favoritesOnly = false
                 notice = "1件を追加しました。"
             }
         }
         .sheet(isPresented: $showFontSettings) {
             StudyFontSettingsView()
         }
-        .alert("データを保存できません", isPresented: Binding(get: { store.errorMessage != nil }, set: { if !$0 { store.errorMessage = nil } })) {
+        .alert("データの読み込み・保存について", isPresented: Binding(get: { store.errorMessage != nil }, set: { if !$0 { store.errorMessage = nil } })) {
             Button("閉じる", role: .cancel) { store.errorMessage = nil }
         } message: { Text(store.errorMessage ?? "") }
+    }
+
+    private var categoryPicker: some View {
+        Picker("カテゴリー", selection: $category) {
+            Text("すべてのカテゴリー").tag(String?.none)
+            ForEach(store.categories, id: \.self) { value in Text(value).tag(Optional(value)) }
+        }
+        .pickerStyle(.menu).accessibilityIdentifier("categoryFilter")
+        .frame(maxWidth: .infinity, minHeight: 44)
+    }
+
+    private var favoriteFilter: some View {
+        Button { favoritesOnly.toggle() } label: {
+            Label("お気に入り", systemImage: favoritesOnly ? "star.fill" : "star")
+                .font(.subheadline)
+                .fixedSize(horizontal: true, vertical: false)
+                .padding(.vertical, 4)
+        }
+        .appGlassButton(prominent: favoritesOnly)
+        .buttonBorderShape(.capsule)
+        .tint(Palette.green)
+        .frame(minHeight: 44)
+        .accessibilityValue(favoritesOnly ? "オン" : "オフ")
+        .accessibilityAddTraits(favoritesOnly ? .isSelected : [])
+        .accessibilityIdentifier("favoriteFilter")
     }
 
     private var searchField: some View {

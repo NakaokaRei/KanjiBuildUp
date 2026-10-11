@@ -96,7 +96,18 @@ struct StudyView: View {
     #endif
     .toolbar {
       if let item, !session.complete {
-        ToolbarItem(placement: .primaryAction) {
+        ToolbarItemGroup(placement: .primaryAction) {
+          Button {
+            if !store.toggleFavorite(for: item.id) {
+              errorMessage = store.errorMessage
+              store.errorMessage = nil
+            }
+          } label: {
+            Image(systemName: item.isFavorite ? "star.fill" : "star")
+          }
+          .accessibilityLabel(item.isFavorite ? "お気に入りを解除" : "お気に入りに登録")
+          .accessibilityIdentifier("toggleFavorite")
+
           Menu {
             Button("フォント設定", systemImage: "textformat") { showFontSettings = true }
               .accessibilityIdentifier("fontSettings")
@@ -131,7 +142,7 @@ struct StudyView: View {
       Text("削除すると元に戻せません。削除後は一覧に戻ります。")
     }
     .alert(
-      "削除できませんでした",
+      "変更を保存できませんでした",
       isPresented: Binding(get: { errorMessage != nil }, set: { if !$0 { errorMessage = nil } })
     ) {
       Button("閉じる", role: .cancel) { errorMessage = nil }

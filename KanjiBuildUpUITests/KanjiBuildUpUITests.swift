@@ -1,6 +1,49 @@
 import XCTest
 
 final class KanjiBuildUpUITests: XCTestCase {
+    @MainActor func testFavoritesPersistenceAndStudy() throws {
+        continueAfterFailure = false
+        let app = XCUIApplication()
+        app.launchEnvironment["KANJI_TEST_STORE"] = UUID().uuidString
+        app.launchEnvironment["KANJI_TEST_CSV"] = "カテゴリー,問題,答え,意味\n読み,桜,さくら,春の木\n読み,椿,つばき,冬の木"
+        app.launch()
+        XCTAssertTrue(app.buttons["addItem"].waitForExistence(timeout: 10))
+        app.buttons["addItem"].tap()
+        app.buttons["importCSV"].tap()
+        app.buttons["2件を取り込む"].tap()
+        app.buttons["favoriteFilter"].tap()
+        XCTAssertTrue(app.staticTexts["該当する問題はありません"].waitForExistence(timeout: 5))
+        XCTAssertFalse(app.buttons["startStudy"].isEnabled)
+        app.buttons["favoriteFilter"].tap()
+        app.staticTexts["桜"].tap()
+        let favorite = app.buttons["toggleFavorite"]
+        XCTAssertTrue(favorite.waitForExistence(timeout: 5))
+        XCTAssertEqual(favorite.label, "お気に入りに登録")
+        favorite.tap()
+        XCTAssertEqual(favorite.label, "お気に入りを解除")
+        app.buttons["かんぺき"].tap()
+        app.buttons["一覧に戻る"].tap()
+        app.terminate()
+        app.launch()
+        XCTAssertTrue(app.buttons["favoriteFilter"].waitForExistence(timeout: 10))
+        app.buttons["favoriteFilter"].tap()
+        XCTAssertTrue(app.staticTexts["桜"].exists)
+        XCTAssertFalse(app.staticTexts["椿"].exists)
+        capture("favorites-list", app)
+        app.buttons["startStudy"].tap()
+        XCTAssertTrue(favorite.waitForExistence(timeout: 5))
+        XCTAssertEqual(favorite.label, "お気に入りを解除")
+        favorite.tap()
+        XCTAssertEqual(favorite.label, "お気に入りに登録")
+        app.buttons["revealAnswer"].tap()
+        XCTAssertEqual(app.textViews["studyAnswer"].value as? String, "さくら")
+        capture("favorite-study", app)
+        app.buttons["学習を終える"].tap()
+        app.buttons["一覧に戻る"].tap()
+        XCTAssertTrue(app.staticTexts["該当する問題はありません"].waitForExistence(timeout: 5))
+        XCTAssertFalse(app.buttons["startStudy"].isEnabled)
+    }
+
     @MainActor func testOnkunPairLayout() throws {
         continueAfterFailure = false
         for (question, answer, expected) in [
@@ -295,8 +338,8 @@ final class KanjiBuildUpUITests: XCTestCase {
         app.launchEnvironment["KANJI_TEST_STORE"] = UUID().uuidString
         app.launchEnvironment["KANJI_TEST_DEFAULTS"] = "1"
         app.launch()
-        XCTAssertTrue(app.buttons["すべて、16420件"].waitForExistence(timeout: 10))
-        XCTAssertTrue(app.buttons["がんばるぞ、9131件"].exists)
+        XCTAssertTrue(app.buttons["すべて、16555件"].waitForExistence(timeout: 10))
+        XCTAssertTrue(app.buttons["がんばるぞ、9266件"].exists)
         XCTAssertTrue(app.buttons["あとすこし、3435件"].exists)
         XCTAssertTrue(app.buttons["かんぺき、3854件"].exists)
         capture("default-library", app)
@@ -308,8 +351,14 @@ final class KanjiBuildUpUITests: XCTestCase {
         XCTAssertTrue(app.buttons["revealAnswer"].waitForExistence(timeout: 5))
         app.buttons["revealAnswer"].tap()
         capture("default-answer", app)
+        app.buttons["toggleFavorite"].tap()
+        XCTAssertEqual(app.buttons["toggleFavorite"].label, "お気に入りを解除")
         app.terminate(); app.launch()
-        XCTAssertTrue(app.buttons["すべて、16420件"].waitForExistence(timeout: 10))
+        XCTAssertTrue(app.buttons["すべて、16555件"].waitForExistence(timeout: 10))
+        XCTAssertFalse(app.alerts.firstMatch.exists)
+        app.buttons["favoriteFilter"].tap()
+        XCTAssertTrue(app.buttons["すべて、1件"].waitForExistence(timeout: 5))
+        app.buttons["favoriteFilter"].tap()
         app.buttons["categoryFilter"].tap()
         app.buttons["四字熟語"].firstMatch.tap()
         XCTAssertTrue(app.buttons["すべて、1605件"].waitForExistence(timeout: 5))

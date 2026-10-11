@@ -96,6 +96,32 @@ import Foundation
         precondition(searchStore.searchResults(category: nil, mastery: nil, search: "すいさん").answerOnlyIDs == [searchItem.id])
         precondition(searchStore.searchResults(category: nil, mastery: nil, search: "さくら").answerOnlyIDs.isEmpty)
         precondition(searchStore.searchResults(category: nil, mastery: nil, search: " ").answerOnlyIDs.isEmpty)
+        let favoritesURL = directory.appendingPathComponent("favorites.json")
+        let favorites = LearningStore(fileURL: favoritesURL)
+        precondition(favorites.add([searchItem, fillInItem, overlappingItem]))
+        precondition(favorites.toggleFavorite(for: searchItem.id))
+        precondition(favorites.toggleFavorite(for: fillInItem.id))
+        precondition(favorites.setMastery(.mastered, for: searchItem.id))
+        precondition(favorites.item(searchItem.id)?.isFavorite == true)
+        let favoriteResults = favorites.searchResults(category: "音読み", mastery: .mastered, search: "すいさん", favoritesOnly: true)
+        precondition(favoriteResults.items.map(\.id) == [searchItem.id])
+        precondition(favoriteResults.total == 1 && favoriteResults.counts[.mastered] == 1)
+        precondition(favoriteResults.answerOnlyIDs == [searchItem.id])
+        precondition(favorites.searchResults(category: "音読み", mastery: .starting, search: "", favoritesOnly: true).items.isEmpty)
+        precondition(favorites.filtered(category: nil, mastery: nil, search: "さくら", favoritesOnly: true).isEmpty)
+        var favoriteEdit = favorites.item(searchItem.id)!
+        favoriteEdit.notes = "お気に入りを保持"
+        precondition(favorites.update(favoriteEdit))
+        let favoriteReload = LearningStore(fileURL: favoritesURL)
+        precondition(favoriteReload.item(searchItem.id) == favoriteEdit)
+        var favoriteSession = StudySession(items: favoriteReload.filtered(category: nil, mastery: nil, favoritesOnly: true))
+        let favoriteIDs = favoriteSession.itemIDs
+        precondition(Set(favoriteIDs) == [searchItem.id, fillInItem.id])
+        precondition(favoriteReload.toggleFavorite(for: favoriteSession.currentID!))
+        favoriteSession.advance()
+        precondition(favoriteSession.itemIDs == favoriteIDs && !favoriteSession.complete)
+        precondition(LearningStore(fileURL: favoritesURL).filtered(category: nil, mastery: nil, favoritesOnly: true).count == 1)
+        precondition(!favoriteReload.toggleFavorite(for: UUID()))
         var session = StudySession(items: parsed)
         let firstCompanion = session.companionName
         precondition(StudySession.companionNames.contains(firstCompanion))
@@ -130,9 +156,12 @@ import Foundation
         // Migration from records without a notes key.
         let encoded = try JSONEncoder().encode(parsed)
         var legacy = try JSONSerialization.jsonObject(with: encoded) as! [[String: Any]]
-        for index in legacy.indices { legacy[index].removeValue(forKey: "notes") }
+        for index in legacy.indices {
+            legacy[index].removeValue(forKey: "notes")
+            legacy[index].removeValue(forKey: "isFavorite")
+        }
         let migrated = try JSONDecoder().decode([StudyItem].self, from: JSONSerialization.data(withJSONObject: legacy))
-        precondition(migrated.allSatisfy { $0.notes.isEmpty })
+        precondition(migrated.allSatisfy { $0.notes.isEmpty && !$0.isFavorite })
         var edited = reloaded.items[0]
         edited.category = "訓読み"; edited.question = "梅"; edited.answer = "うめ"
         edited.meaning = "春の花"; edited.notes = "覚え方\n補足"
@@ -142,6 +171,21 @@ import Foundation
         precondition(editedStore.delete(edited.id))
         precondition(LearningStore(fileURL: url).item(edited.id) == nil)
         precondition(!editedStore.update(edited))
+        // Missing app resources must not lock a valid user store or lose learning data.
+        let missingBundleURL = directory.appendingPathComponent("missing-bundle.json")
+        let bundleSeed = LearningStore(fileURL: missingBundleURL)
+        precondition(bundleSeed.add([edited]))
+        let missingBundleStore = LearningStore(fileURL: missingBundleURL, bundledDefaultsLoader: {
+            throw LearningError(message: "MissingFixture.json")
+        })
+        precondition(missingBundleStore.items == [edited])
+        precondition(missingBundleStore.errorMessage?.contains("MissingFixture.json") == true)
+        precondition(missingBundleStore.toggleFavorite(for: edited.id))
+        precondition(missingBundleStore.setMastery(.mastered, for: edited.id))
+        let recoveredBundleStore = LearningStore(fileURL: missingBundleURL)
+        precondition(recoveredBundleStore.item(edited.id)?.isFavorite == !edited.isFavorite)
+        precondition(recoveredBundleStore.item(edited.id)?.mastery == .mastered)
+        precondition(recoveredBundleStore.item(edited.id)?.notes == edited.notes)
         let invalidURL = directory.appendingPathComponent("not-a-directory")
         try Data("block".utf8).write(to: invalidURL)
         let failedStore = LearningStore(fileURL: invalidURL.appendingPathComponent("items.json"))
@@ -151,6 +195,8 @@ import Foundation
         precondition(writeFailureStore.add([edited]))
         try FileManager.default.removeItem(at: failureURL)
         try FileManager.default.createDirectory(at: failureURL, withIntermediateDirectories: false)
+        precondition(!writeFailureStore.toggleFavorite(for: edited.id))
+        precondition(writeFailureStore.item(edited.id) == edited)
         var unsaved = edited
         unsaved.notes = "保存されない変更"
         precondition(!writeFailureStore.update(unsaved))
@@ -416,6 +462,29 @@ import Foundation
         precondition(onkunRestart.errorMessage == nil && onkunRestart.items.count == 8223)
         precondition(onkunRestart.item(onkun.items[0].id) == nil)
         precondition(onkunRestart.item(editedOnkun.id) == editedOnkun)
+        let rongoURL = URL(fileURLWithPath: "KanjiBuildUp/Resources/RongoKunyomiStudyData.json")
+        let rongo = try JSONDecoder().decode(DefaultStudyData.self, from: Data(contentsOf: rongoURL))
+        precondition(rongo.items.count == 135 && Set(rongo.items.map(\.id)).count == 135)
+        precondition(rongo.items.allSatisfy { $0.category == "論語訓読み" && $0.mastery == .starting })
+        precondition(rongo.items[0].question == "子曰く、學びて時に之を習ふ、亦【説】ばしからずや。")
+        precondition(rongo.items[0].answer == "よろこ")
+        precondition(rongo.items[13].answer == "か\nのぞ")
+        precondition(rongo.items[82].answer == "わら\nあざわら")
+        precondition(rongo.items[98].answer == "たっと\nとうと")
+        precondition(rongo.items[102].answer == "うった")
+        precondition(rongo.items[129].answer == "むべ\nうべ")
+        precondition(rongo.items[134].question == "五美を尊び、四惡を【屛】けば、斯に以て政に從ふ可し。")
+        let rongoStore = LearningStore(fileURL: headingsStoreURL, defaults: defaults, additionalDefaults: [omidashi, omidashi2, onkun, rongo])
+        precondition(rongoStore.errorMessage == nil && rongoStore.items.count == 8358)
+        precondition(rongoStore.items.filter { $0.category == "論語訓読み" } == rongo.items)
+        precondition(rongoStore.item(editedOnkun.id) == editedOnkun)
+        precondition(rongoStore.item(onkun.items[0].id) == nil)
+        precondition(rongoStore.setMastery(.learning, for: rongo.items[0].id))
+        precondition(rongoStore.delete(rongo.items[1].id))
+        let rongoRestart = LearningStore(fileURL: headingsStoreURL, defaults: defaults, additionalDefaults: [omidashi, omidashi2, onkun, rongo])
+        precondition(rongoRestart.errorMessage == nil && rongoRestart.items.count == 8357)
+        precondition(rongoRestart.item(rongo.items[0].id)?.mastery == .learning)
+        precondition(rongoRestart.item(rongo.items[1].id) == nil)
         let legacyURL = directory.appendingPathComponent("legacy.json")
         var existing = first
         existing.id = UUID(); existing.notes = "自分のメモ"; existing.mastery = .learning

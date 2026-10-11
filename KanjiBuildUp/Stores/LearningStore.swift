@@ -11,7 +11,8 @@ final class LearningStore {
     private var canSave = true
     private var appliedDefaults: Set<String> = []
 
-    init(fileURL: URL? = nil, defaults: DefaultStudyData? = nil, additionalDefaults: [DefaultStudyData] = []) {
+    init(fileURL: URL? = nil, defaults: DefaultStudyData? = nil, additionalDefaults: [DefaultStudyData] = [],
+         bundledDefaultsLoader: (() throws -> [DefaultStudyData])? = nil) {
         var testURL: URL?
         var testDefaults = false
         #if DEBUG
@@ -36,10 +37,19 @@ final class LearningStore {
                     appliedDefaults = saved.appliedDefaults
                 }
             }
+        } catch {
+            canSave = false
+            errorMessage = "保存したデータを読み込めませんでした。データの上書きを防ぐため、保存を停止しています。\n\(error.localizedDescription)"
+            return
+        }
+        // A bundled-resource failure must not disable a successfully loaded user store.
+        do {
             // Explicit stores and UI-test stores stay isolated from bundled defaults.
             let initialDataSets: [DefaultStudyData]
             if let defaults {
                 initialDataSets = [defaults] + additionalDefaults
+            } else if let bundledDefaultsLoader {
+                initialDataSets = try bundledDefaultsLoader() + additionalDefaults
             } else if fileURL == nil && (testURL == nil || testDefaults) {
                 initialDataSets = try DefaultStudyData.loadAll() + additionalDefaults
             } else {
@@ -67,11 +77,10 @@ final class LearningStore {
                 }
                 if !commit(items + additions, versions: appliedDefaults.union([initialData.version])) { break }
             }
-            publishWidget()
         } catch {
-            canSave = false
-            errorMessage = "保存したデータを読み込めませんでした。データの上書きを防ぐため、保存を停止しています。\n\(error.localizedDescription)"
+            errorMessage = "初期問題を追加できませんでした。登録済みの問題の学習・保存は引き続き利用できます。\n\(error.localizedDescription)"
         }
+        publishWidget()
     }
 
     var categories: [String] { Array(Set(items.map(\.category))).sorted() }
@@ -82,10 +91,11 @@ final class LearningStore {
         var answerOnlyIDs: Set<UUID> = []
     }
 
-    func searchResults(category: String?, mastery: Mastery?, search: String) -> SearchResults {
+    func searchResults(category: String?, mastery: Mastery?, search: String, favoritesOnly: Bool = false) -> SearchResults {
         let query = search.trimmingCharacters(in: .whitespacesAndNewlines)
         var result = SearchResults()
         for item in items {
+            guard !favoritesOnly || item.isFavorite else { continue }
             guard category == nil || item.category == category else { continue }
             let questionMatches = query.isEmpty || item.question.contains(query)
             guard questionMatches || item.answer.contains(query) else { continue }
@@ -99,10 +109,11 @@ final class LearningStore {
         return result
     }
 
-    func filtered(category: String?, mastery: Mastery?, search: String = "") -> [StudyItem] {
+    func filtered(category: String?, mastery: Mastery?, search: String = "", favoritesOnly: Bool = false) -> [StudyItem] {
         let query = search.trimmingCharacters(in: .whitespacesAndNewlines)
         return items.filter {
-            (category == nil || $0.category == category)
+            (!favoritesOnly || $0.isFavorite)
+                && (category == nil || $0.category == category)
                 && (mastery == nil || $0.mastery == mastery)
                 && (query.isEmpty || $0.question.contains(query) || $0.answer.contains(query))
         }
@@ -113,6 +124,12 @@ final class LearningStore {
         var updated = items
         guard let index = updated.firstIndex(where: { $0.id == id }) else { return false }
         updated[index].mastery = mastery
+        return commit(updated)
+    }
+    @discardableResult func toggleFavorite(for id: UUID) -> Bool {
+        var updated = items
+        guard let index = updated.firstIndex(where: { $0.id == id }) else { return false }
+        updated[index].isFavorite.toggle()
         return commit(updated)
     }
     @discardableResult func update(_ item: StudyItem) -> Bool {
