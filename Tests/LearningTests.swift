@@ -515,6 +515,70 @@ import Foundation
         precondition(shikyoRestart.item(shikyo.items[0].id)?.isFavorite == true)
         precondition(shikyoRestart.item(shikyo.items[0].id)?.mastery == .mastered)
         precondition(shikyoRestart.item(shikyo.items[1].id) == nil)
+        let sentenceSpecs = [("TajigoStudyData", "多字語書き取り", 250),
+                             ("SentenceNibanStudyData", "文章題訓読み二版", 536),
+                             ("SentenceKunyomiStudyData", "文章題訓読み", 240)]
+        let sentenceSets = try sentenceSpecs.map { name, category, count in
+            let data = try JSONDecoder().decode(DefaultStudyData.self, from: Data(contentsOf:
+                URL(fileURLWithPath: "KanjiBuildUp/Resources/\(name).json")))
+            precondition(data.items.count == count && Set(data.items.map(\.id)).count == count)
+            precondition(data.items.allSatisfy { $0.category == category && $0.mastery == .starting && !$0.isFavorite
+                && !$0.question.isEmpty && !$0.answer.isEmpty && !$0.notes.isEmpty
+                && !$0.question.contains("(cid:") && !$0.answer.contains("(cid:") })
+            return data
+        }
+        precondition(sentenceSets[0].items[0].answer == "旗旒信号")
+        precondition(sentenceSets[0].items[0].question == "船舶から【キリュウシンゴウ】を送る。")
+        let tajigo = sentenceSets[0]
+        let oldTajigo = DefaultStudyData(version: tajigo.replacesVersion!, items: tajigo.previousItems!)
+        precondition(zip(oldTajigo.items, tajigo.items).allSatisfy { old, new in
+            old.id == new.id && old.answer == new.answer && new.question.filter { $0 == "【" }.count == 1
+                && new.question.filter { $0 == "】" }.count == 1
+                && new.question.replacingOccurrences(of: "【", with: "").replacingOccurrences(of: "】", with: "") == old.question
+        })
+        let tajigoURL = directory.appendingPathComponent("tajigo-migration.json")
+        let oldTajigoStore = LearningStore(fileURL: tajigoURL, defaults: oldTajigo)
+        precondition(oldTajigoStore.toggleFavorite(for: tajigo.items[0].id))
+        precondition(oldTajigoStore.setMastery(.mastered, for: tajigo.items[0].id))
+        var editedTajigo = oldTajigoStore.items[1]
+        editedTajigo.question = "自分で編集した問題"
+        editedTajigo.notes = "自分のメモ"
+        precondition(oldTajigoStore.update(editedTajigo))
+        precondition(oldTajigoStore.delete(tajigo.items[2].id))
+        for _ in 0..<2 {
+            let migrated = LearningStore(fileURL: tajigoURL, defaults: tajigo)
+            precondition(migrated.errorMessage == nil && migrated.items.count == 249)
+            precondition(migrated.item(tajigo.items[0].id)?.question == tajigo.items[0].question)
+            precondition(migrated.item(tajigo.items[0].id)?.mastery == .mastered)
+            precondition(migrated.item(tajigo.items[0].id)?.isFavorite == true)
+            precondition(migrated.item(editedTajigo.id) == editedTajigo)
+            precondition(migrated.item(tajigo.items[2].id) == nil)
+        }
+        precondition(sentenceSets[1].items[5].answer == "Ⓐうるお\nⒷた")
+        precondition(sentenceSets[1].items[65].answer == "Ⓐつか\nⒷたの\nⒸゆる")
+        precondition(sentenceSets[1].items[236].answer == "さだ")
+        precondition(sentenceSets[1].items[436].answer == "ふち")
+        precondition(sentenceSets[1].items[436].notes.contains("木下尚江「火の柱」"))
+        precondition(sentenceSets[2].items[8].answer == "つまび\n[あき]")
+        precondition(sentenceSets[2].items[140].answer == "そら")
+        let allAdditions = [omidashi, omidashi2, onkun, rongo, shikyo] + sentenceSets
+        let sentenceStore = LearningStore(fileURL: headingsStoreURL, defaults: defaults, additionalDefaults: allAdditions)
+        precondition(sentenceStore.errorMessage == nil && sentenceStore.items.count == 9733)
+        precondition(sentenceStore.item(editedOnkun.id) == editedOnkun)
+        precondition(sentenceStore.item(shikyo.items[0].id)?.isFavorite == true)
+        precondition(sentenceStore.item(shikyo.items[1].id) == nil)
+        for data in sentenceSets {
+            precondition(sentenceStore.toggleFavorite(for: data.items[0].id))
+            precondition(sentenceStore.setMastery(.learning, for: data.items[0].id))
+            precondition(sentenceStore.delete(data.items[1].id))
+        }
+        let sentenceRestart = LearningStore(fileURL: headingsStoreURL, defaults: defaults, additionalDefaults: allAdditions)
+        precondition(sentenceRestart.errorMessage == nil && sentenceRestart.items.count == 9730)
+        for data in sentenceSets {
+            precondition(sentenceRestart.item(data.items[0].id)?.isFavorite == true)
+            precondition(sentenceRestart.item(data.items[0].id)?.mastery == .learning)
+            precondition(sentenceRestart.item(data.items[1].id) == nil)
+        }
         let legacyURL = directory.appendingPathComponent("legacy.json")
         var existing = first
         existing.id = UUID(); existing.notes = "自分のメモ"; existing.mastery = .learning

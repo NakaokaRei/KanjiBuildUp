@@ -1,0 +1,4508 @@
+{
+  "version": "kurako-TajigoStudyData-2026-10-12-v2",
+  "items": [
+    {
+      "id": "9d3933dd-a502-5af1-b188-1e8cde08e869",
+      "category": "多字語書き取り",
+      "question": "船舶から【キリュウシンゴウ】を送る。",
+      "answer": "旗旒信号",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 1番",
+      "mastery": "starting"
+    },
+    {
+      "id": "bbe36b61-cc6b-5127-aec5-6485f399fd6b",
+      "category": "多字語書き取り",
+      "question": "橋が【キョウシキコウゾウ】で造られる。",
+      "answer": "拱式構造",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 2番",
+      "mastery": "starting"
+    },
+    {
+      "id": "d5814bdf-198a-5338-82b6-0319f8982308",
+      "category": "多字語書き取り",
+      "question": "踵を挙げて【ヒフクキン】を鍛える。",
+      "answer": "腓腹筋",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 3番",
+      "mastery": "starting"
+    },
+    {
+      "id": "5201372b-c031-5b64-9b35-d1f70874ebae",
+      "category": "多字語書き取り",
+      "question": "真夏の強い【キンガイセン】を浴びる。",
+      "answer": "菫外線",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 4番",
+      "mastery": "starting"
+    },
+    {
+      "id": "cd2407c1-1af8-5fce-a77f-760196d70b10",
+      "category": "多字語書き取り",
+      "question": "【ヘイタンビョウイン】に運ばれる。",
+      "answer": "兵站病院",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 5番",
+      "mastery": "starting"
+    },
+    {
+      "id": "a6bcef87-4309-5d68-86e8-8f011032493f",
+      "category": "多字語書き取り",
+      "question": "【ハシビロコウ】は動かない。",
+      "answer": "嘴広鸛",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 6番",
+      "mastery": "starting"
+    },
+    {
+      "id": "72cbe878-32de-5d07-b30e-7969e590d69e",
+      "category": "多字語書き取り",
+      "question": "【シンチュウロウ】で金属を繋げる。",
+      "answer": "真鍮鑞",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 7番",
+      "mastery": "starting"
+    },
+    {
+      "id": "fe89f724-18a9-5b7c-b36a-d69678f7def0",
+      "category": "多字語書き取り",
+      "question": "【エンラニン】に責められる。",
+      "answer": "閻羅人",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 8番",
+      "mastery": "starting"
+    },
+    {
+      "id": "6ba8c06e-80af-5a33-806e-ec883e27c2db",
+      "category": "多字語書き取り",
+      "question": "繰り返し【セッパハバキ】する。",
+      "answer": "切羽鎺",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 9番",
+      "mastery": "starting"
+    },
+    {
+      "id": "684a79ae-da4e-5a20-a08d-4ec43433c7e1",
+      "category": "多字語書き取り",
+      "question": "【ハコベジオ】で歯を磨く。",
+      "answer": "繁縷塩",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 10番",
+      "mastery": "starting"
+    },
+    {
+      "id": "ca9941fd-d3de-58c2-844e-e56d8a6b4787",
+      "category": "多字語書き取り",
+      "question": "耐食性のある【フシュウコウ】を用いる。",
+      "answer": "不銹鋼",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 11番",
+      "mastery": "starting"
+    },
+    {
+      "id": "d278e6ae-6e2b-5dbd-b212-14e6aae187ad",
+      "category": "多字語書き取り",
+      "question": "出挙【クガイトウ】十万束を配分する。",
+      "answer": "公廨稲",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 12番",
+      "mastery": "starting"
+    },
+    {
+      "id": "45ea6dcd-dda8-52d8-bc3e-67684a80269c",
+      "category": "多字語書き取り",
+      "question": "【イコントウ】の往生を説く。",
+      "answer": "已今当",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 13番",
+      "mastery": "starting"
+    },
+    {
+      "id": "ae1e6a03-c9c3-500b-a1ab-3194e68b99e4",
+      "category": "多字語書き取り",
+      "question": "【サラリン】の歌を習う。",
+      "answer": "娑羅林",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 14番",
+      "mastery": "starting"
+    },
+    {
+      "id": "c3391e73-c5d1-5d6f-ae76-20a3b43d2198",
+      "category": "多字語書き取り",
+      "question": "【コシャクモノ】に腹を立てる。",
+      "answer": "小癪者",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 15番",
+      "mastery": "starting"
+    },
+    {
+      "id": "64c22cb3-f0fc-5f58-9b3f-ab17df05d938",
+      "category": "多字語書き取り",
+      "question": "【ケサダスキモン】銅鐸が出土する。",
+      "answer": "袈裟襷文",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 16番",
+      "mastery": "starting"
+    },
+    {
+      "id": "9b9da94e-ec7f-53c6-9969-f078530b9a9b",
+      "category": "多字語書き取り",
+      "question": "いろは歌と【セッセンゲ】の対応を見る。",
+      "answer": "雪山偈",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 17番",
+      "mastery": "starting"
+    },
+    {
+      "id": "ddf36eb8-70d9-56e0-a136-174547837eaf",
+      "category": "多字語書き取り",
+      "question": "【アカイ】から水を汲む。",
+      "answer": "閼伽井",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 18番",
+      "mastery": "starting"
+    },
+    {
+      "id": "e1886587-a36e-559d-995d-b0e8e3962c55",
+      "category": "多字語書き取り",
+      "question": "鮭の頭を【ヒズナマス】にする。",
+      "answer": "氷頭膾\n氷頭鱠",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 19番",
+      "mastery": "starting"
+    },
+    {
+      "id": "ca61ef7f-830c-5cc7-8c73-7e90a2a090e8",
+      "category": "多字語書き取り",
+      "question": "独り悟って【ビャクシブツ】となる。",
+      "answer": "辟支仏",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 20番",
+      "mastery": "starting"
+    },
+    {
+      "id": "21e5b89b-ecba-560b-a88a-2f73f3e489ad",
+      "category": "多字語書き取り",
+      "question": "【コンテンギ】で星の位置を観測する。",
+      "answer": "渾天儀",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 21番",
+      "mastery": "starting"
+    },
+    {
+      "id": "842b13ce-e249-5f9a-a471-9a492b911ce3",
+      "category": "多字語書き取り",
+      "question": "【シュウチンバン】を印刷する。",
+      "answer": "聚珍版",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 22番",
+      "mastery": "starting"
+    },
+    {
+      "id": "b02de6c1-a2f1-5ba4-867b-09bd10c60f84",
+      "category": "多字語書き取り",
+      "question": "【ゼンバヤシ】と共に幕が開く。",
+      "answer": "禅囃子",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 23番",
+      "mastery": "starting"
+    },
+    {
+      "id": "0a2a497d-ed2a-54db-916b-155d58966ea6",
+      "category": "多字語書き取り",
+      "question": "【ケンヨウスイ】が赤く腫れる。",
+      "answer": "懸壅垂",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 24番",
+      "mastery": "starting"
+    },
+    {
+      "id": "b4321a84-6993-5fc8-b649-28b56a59eb43",
+      "category": "多字語書き取り",
+      "question": "裏地を【ヨウジュス】で仕立てる。",
+      "answer": "洋繻子",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 25番",
+      "mastery": "starting"
+    },
+    {
+      "id": "d1beba62-c3f0-5b20-b611-5f6fc8e914d3",
+      "category": "多字語書き取り",
+      "question": "【イナセイチョウ】の若者が集う。",
+      "answer": "鯔背銀杏",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 26番",
+      "mastery": "starting"
+    },
+    {
+      "id": "00237db3-52b5-5ae9-ae41-ac576022f8c8",
+      "category": "多字語書き取り",
+      "question": "彼は口だけの【アンゴウムシャ】である。",
+      "answer": "鮟鱇武者",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 27番",
+      "mastery": "starting"
+    },
+    {
+      "id": "d69ab687-023b-5c4d-b5ff-9c1331ce28ce",
+      "category": "多字語書き取り",
+      "question": "【カワホリオウギ】を手に持つ。",
+      "answer": "蝙蝠扇",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 28番",
+      "mastery": "starting"
+    },
+    {
+      "id": "8f45eaa3-70c7-5ddc-bcee-84c29dfacc7f",
+      "category": "多字語書き取り",
+      "question": "怒って紙を【シワクチャ】にした。",
+      "answer": "皺苦茶",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 29番",
+      "mastery": "starting"
+    },
+    {
+      "id": "3a8507a3-5a7f-5546-9d0e-95637b8a0245",
+      "category": "多字語書き取り",
+      "question": "【マカツキュウ】は山羊座に対応する。",
+      "answer": "磨羯宮",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 30番",
+      "mastery": "starting"
+    },
+    {
+      "id": "c92ad2ea-b7bf-5c02-8fef-96507ac15374",
+      "category": "多字語書き取り",
+      "question": "【ヨロケジマ】の着物を誂える。",
+      "answer": "蹌踉縞\n蹣跚縞",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 31番",
+      "mastery": "starting"
+    },
+    {
+      "id": "3a92c503-f967-5aa9-a7bf-470bd4ec78ed",
+      "category": "多字語書き取り",
+      "question": "【ビロウヒサシ】の車に乗る。",
+      "answer": "檳榔庇",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 32番",
+      "mastery": "starting"
+    },
+    {
+      "id": "8b2c9897-355c-530e-af1b-282f230633d4",
+      "category": "多字語書き取り",
+      "question": "釈迦の【ニュウネハン】を描く。",
+      "answer": "入涅槃",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 33番",
+      "mastery": "starting"
+    },
+    {
+      "id": "59cbb8f9-6195-5bc4-86e6-fb11898eee7d",
+      "category": "多字語書き取り",
+      "question": "小判の【ゴザメ】を指でなぞる。",
+      "answer": "茣蓙目",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 34番",
+      "mastery": "starting"
+    },
+    {
+      "id": "fca5dffc-a75a-5e55-b5f0-4913226cc2cd",
+      "category": "多字語書き取り",
+      "question": "【ロクロガンナ】で木を挽く。",
+      "answer": "轆轤鉋",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 35番",
+      "mastery": "starting"
+    },
+    {
+      "id": "22909c0b-a5cc-5c32-93f5-a7502da29cc0",
+      "category": "多字語書き取り",
+      "question": "脚に【ヒダコ】ができる。",
+      "answer": "火胼胝\n火斑",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 36番",
+      "mastery": "starting"
+    },
+    {
+      "id": "4f377c0a-7c27-525e-926c-fd2f62168c23",
+      "category": "多字語書き取り",
+      "question": "彼は【カッチュウシ】を本業とする。",
+      "answer": "甲冑師",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 37番",
+      "mastery": "starting"
+    },
+    {
+      "id": "6f5fac68-9cb6-5935-bf22-1a196bdc87f7",
+      "category": "多字語書き取り",
+      "question": "口先の【ソラネンジュ】に過ぎない。",
+      "answer": "空念誦",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 38番",
+      "mastery": "starting"
+    },
+    {
+      "id": "7324910b-c026-5905-9f48-9d118b2e107b",
+      "category": "多字語書き取り",
+      "question": "【ヒョウキンダマ】の男の物語である。",
+      "answer": "剽軽玉",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 39番",
+      "mastery": "starting"
+    },
+    {
+      "id": "071c5c49-f405-56b5-a707-e1b9c4e040f2",
+      "category": "多字語書き取り",
+      "question": "【ハネズイロ】の衣を纏う。",
+      "answer": "唐棣花色\n棠棣色\n朱華色\n唐棣色",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 40番",
+      "mastery": "starting"
+    },
+    {
+      "id": "fcb7b3a8-55fa-51c7-b6c6-69897d87d4d1",
+      "category": "多字語書き取り",
+      "question": "子供が【オニヤンマ】を捕まえる。",
+      "answer": "⿁蜻蜓\n馬大頭",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 41番",
+      "mastery": "starting"
+    },
+    {
+      "id": "dfd49849-a866-5ee2-85cd-e57d2551d107",
+      "category": "多字語書き取り",
+      "question": "【アンシャショク】の器を手に取る。",
+      "answer": "暗赭色",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 42番",
+      "mastery": "starting"
+    },
+    {
+      "id": "f5ad9eab-4ca5-53ab-971e-f3e103ba2d50",
+      "category": "多字語書き取り",
+      "question": "【ヘントウエン】の症状が見られる。",
+      "answer": "扁桃炎",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 43番",
+      "mastery": "starting"
+    },
+    {
+      "id": "399a15b4-ee23-59f5-af16-af9abb1d711c",
+      "category": "多字語書き取り",
+      "question": "【カンドクリ】から酒を注ぐ。",
+      "answer": "燗徳利",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 44番",
+      "mastery": "starting"
+    },
+    {
+      "id": "07023645-d3f4-5b11-bbb3-63d325879d2d",
+      "category": "多字語書き取り",
+      "question": "舌に【ガマシュ】ができる。",
+      "answer": "蝦蟇腫",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 45番",
+      "mastery": "starting"
+    },
+    {
+      "id": "6b78bcc3-30bb-5ca7-b9a7-c03494d62891",
+      "category": "多字語書き取り",
+      "question": "【シッポクダイ】に料理を並べる。",
+      "answer": "卓袱台",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 46番",
+      "mastery": "starting"
+    },
+    {
+      "id": "d2efa35e-9053-57b3-a8a1-4f3bee0f2526",
+      "category": "多字語書き取り",
+      "question": "肩の【カンセツカ】に異常がある。",
+      "answer": "関節窩",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 47番",
+      "mastery": "starting"
+    },
+    {
+      "id": "d18fa6c3-92c0-54ee-b793-1197dfd3412e",
+      "category": "多字語書き取り",
+      "question": "【センキスジ】の孫にも遺産を遺す。",
+      "answer": "疝気筋",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 48番",
+      "mastery": "starting"
+    },
+    {
+      "id": "600a32cc-30be-5fa3-bfd9-343485770320",
+      "category": "多字語書き取り",
+      "question": "【ケドンス】を卓上に掛ける。",
+      "answer": "毛緞子",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 49番",
+      "mastery": "starting"
+    },
+    {
+      "id": "b6479852-20fb-5564-8f4f-a8763757048d",
+      "category": "多字語書き取り",
+      "question": "【キリュウザイク】の職人となる。",
+      "answer": "杞柳細工",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 50番",
+      "mastery": "starting"
+    },
+    {
+      "id": "7ef09b16-005b-5557-81ea-ff434ae046f7",
+      "category": "多字語書き取り",
+      "question": "【オウバクシュウ】の寺に参る。",
+      "answer": "黄檗宗",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 51番",
+      "mastery": "starting"
+    },
+    {
+      "id": "e251b03b-cdcb-57be-8136-1ba62d3c4eae",
+      "category": "多字語書き取り",
+      "question": "【シシイデン】で儀式を行う。",
+      "answer": "紫宸殿",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 52番",
+      "mastery": "starting"
+    },
+    {
+      "id": "840f2ea3-30f6-5a72-9fb4-900755266847",
+      "category": "多字語書き取り",
+      "question": "能く【クキョウホッシン】を得る。",
+      "answer": "究竟法身",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 53番",
+      "mastery": "starting"
+    },
+    {
+      "id": "025d8d31-c519-5869-957f-907741bb877e",
+      "category": "多字語書き取り",
+      "question": "米の【モチウルチセイ】を調べる。",
+      "answer": "糯粳性",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 54番",
+      "mastery": "starting"
+    },
+    {
+      "id": "61f74a1d-689a-5131-90c4-180994d5508d",
+      "category": "多字語書き取り",
+      "question": "歯の【ホウロウシツ】を害する。",
+      "answer": "琺琅質",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 55番",
+      "mastery": "starting"
+    },
+    {
+      "id": "c06f0be5-16c5-50bc-8d9d-84248f5f9a79",
+      "category": "多字語書き取り",
+      "question": "【ケンダツバジョウ】の幻に過ぎない。",
+      "answer": "乾闥婆城",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 56番",
+      "mastery": "starting"
+    },
+    {
+      "id": "7fb9deca-f1a1-585e-a59c-219449080e2f",
+      "category": "多字語書き取り",
+      "question": "【オトギボウコ】を魔除けとする。",
+      "answer": "御伽這子\n御伽婢子",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 57番",
+      "mastery": "starting"
+    },
+    {
+      "id": "a8ba2e90-37a4-5039-8843-74e46cd006c5",
+      "category": "多字語書き取り",
+      "question": "【カチュウカイ】で名がある。",
+      "answer": "華胄界",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 58番",
+      "mastery": "starting"
+    },
+    {
+      "id": "c3e048e7-0d88-5e19-bc33-d4e223b7bbdc",
+      "category": "多字語書き取り",
+      "question": "一人【ソラリンキ】に悩む。",
+      "answer": "空悋気",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 59番",
+      "mastery": "starting"
+    },
+    {
+      "id": "f4f442ed-64ae-5a5f-b70b-36173ff16510",
+      "category": "多字語書き取り",
+      "question": "足裏に【センプクリンソウ】が見られる。",
+      "answer": "千輻輪相",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 60番",
+      "mastery": "starting"
+    },
+    {
+      "id": "71edfde0-c0ab-56e0-98d5-e9bb4b748c74",
+      "category": "多字語書き取り",
+      "question": "禅僧が【ソモサン】と問う。",
+      "answer": "作麼生\n怎麼生\n什麼生",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 61番",
+      "mastery": "starting"
+    },
+    {
+      "id": "b18837c2-8202-5f1f-9e13-bbc48941fe24",
+      "category": "多字語書き取り",
+      "question": "瓶入りの【カイショウヒン】が並ぶ。",
+      "answer": "醢醤品",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 62番",
+      "mastery": "starting"
+    },
+    {
+      "id": "bb46b2ff-8282-545c-9501-d96fae24e93f",
+      "category": "多字語書き取り",
+      "question": "寺の【シドウキン】が盗まれる。",
+      "answer": "祠堂金",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 63番",
+      "mastery": "starting"
+    },
+    {
+      "id": "3f6dc41f-9ad0-5c67-bb86-65257cfb8828",
+      "category": "多字語書き取り",
+      "question": "家族で【ムギトロ】を食べる。",
+      "answer": "麦薯蕷",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 64番",
+      "mastery": "starting"
+    },
+    {
+      "id": "43ca743c-6c2c-5185-8f98-d6aaedb04cb0",
+      "category": "多字語書き取り",
+      "question": "大陸沿いに【カサイレットウ】が連なる。",
+      "answer": "花綵列島",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 65番",
+      "mastery": "starting"
+    },
+    {
+      "id": "3db50703-7c81-5262-8485-aff48d321503",
+      "category": "多字語書き取り",
+      "question": "幕府直轄の【ショウヘイコウ】で学んだ。",
+      "answer": "昌平黌",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 66番",
+      "mastery": "starting"
+    },
+    {
+      "id": "2b7ebadc-8a87-5c98-a690-f5686616fc97",
+      "category": "多字語書き取り",
+      "question": "【ネンコウブン】を読み上げる。",
+      "answer": "拈香文",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 67番",
+      "mastery": "starting"
+    },
+    {
+      "id": "d53608b0-0f82-5e6f-9e6c-f2e6dd2aa564",
+      "category": "多字語書き取り",
+      "question": "式場に【セキレイダイ】が飾られる。",
+      "answer": "鶺鴒台",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 68番",
+      "mastery": "starting"
+    },
+    {
+      "id": "33ada850-bb37-519b-9d37-856a0cb9f4a7",
+      "category": "多字語書き取り",
+      "question": "凝灰【カクレキガン】の層が見られる。",
+      "answer": "角礫岩",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 69番",
+      "mastery": "starting"
+    },
+    {
+      "id": "cfaa5bf9-5b65-595c-8484-3878753a789a",
+      "category": "多字語書き取り",
+      "question": "【ドブクリョウ】が治療に使われた。",
+      "answer": "土茯苓",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 70番",
+      "mastery": "starting"
+    },
+    {
+      "id": "c9eff92b-5643-5a5c-8988-d4ffb6ac34d2",
+      "category": "多字語書き取り",
+      "question": "多くの【ヒョウキヘイ】を率いる。",
+      "answer": "驃騎兵",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 71番",
+      "mastery": "starting"
+    },
+    {
+      "id": "1751f5cf-a5c5-5637-9b01-23e4db8ee4df",
+      "category": "多字語書き取り",
+      "question": "目の中に【サンリュウシュ】ができる。",
+      "answer": "霰粒腫",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 72番",
+      "mastery": "starting"
+    },
+    {
+      "id": "1ec739bb-53fe-5565-94de-ca7a96f23fc1",
+      "category": "多字語書き取り",
+      "question": "【ウエキモン】を通って内裏を出る。",
+      "answer": "右掖門",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 73番",
+      "mastery": "starting"
+    },
+    {
+      "id": "8ca18fb6-449a-5b3e-bd53-a2e3eaea695a",
+      "category": "多字語書き取り",
+      "question": "春に【ニシンクキ】が見られる。",
+      "answer": "鰊群来",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 74番",
+      "mastery": "starting"
+    },
+    {
+      "id": "99dbe0fc-a466-5173-820b-ccbc0bfaf8d7",
+      "category": "多字語書き取り",
+      "question": "【タクヒレ】の白浜浪の縁る時も無き。",
+      "answer": "栲領巾",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 75番",
+      "mastery": "starting"
+    },
+    {
+      "id": "882a85de-0191-5583-8efb-bab44e70ac75",
+      "category": "多字語書き取り",
+      "question": "同僚を【ボロカス】に言う。",
+      "answer": "襤褸滓",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 76番",
+      "mastery": "starting"
+    },
+    {
+      "id": "1a793e9e-acff-5736-8e1e-f96b062c12a6",
+      "category": "多字語書き取り",
+      "question": "【ジュゾウトウバン】を陣頭に立てる。",
+      "answer": "鷲像纛幡\n[鷲像纛旛]",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 77番",
+      "mastery": "starting"
+    },
+    {
+      "id": "df116b67-6745-567e-afa8-cacdfa19aae3",
+      "category": "多字語書き取り",
+      "question": "天宮より【センブシュウ】に還る。",
+      "answer": "贍部洲\n瞻部洲",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 78番",
+      "mastery": "starting"
+    },
+    {
+      "id": "1e81ee87-684f-5c48-b7f2-0f8bd03bf3d5",
+      "category": "多字語書き取り",
+      "question": "残念【ビンシケン】。",
+      "answer": "閔子騫",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 79番",
+      "mastery": "starting"
+    },
+    {
+      "id": "6017d50a-faaa-5aea-b73d-4d3d31ae1861",
+      "category": "多字語書き取り",
+      "question": "門に【ササラサンパチ】と書いて貼る。",
+      "answer": "簓三八",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 80番",
+      "mastery": "starting"
+    },
+    {
+      "id": "7304dc3c-ffa3-5ee4-bb68-60d7c923ed15",
+      "category": "多字語書き取り",
+      "question": "公主に【コウソヒ】の俤を見る。",
+      "answer": "皇祖妣",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 81番",
+      "mastery": "starting"
+    },
+    {
+      "id": "93953d51-61ae-5ac7-b6ba-34bc00141510",
+      "category": "多字語書き取り",
+      "question": "【セットウスイタイ】の形の台座がある。",
+      "answer": "截頭錐体",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 82番",
+      "mastery": "starting"
+    },
+    {
+      "id": "e4c24de9-11fa-5682-9949-54ae203acbb6",
+      "category": "多字語書き取り",
+      "question": "大臣が【ヒョウジョウセンゲ】を蒙る。",
+      "answer": "兵仗宣下",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 83番",
+      "mastery": "starting"
+    },
+    {
+      "id": "f2da74d0-1349-5006-8f76-f38fe8bde41f",
+      "category": "多字語書き取り",
+      "question": "【コンエンキュウ】上普く行き渡る。",
+      "answer": "渾円球",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 84番",
+      "mastery": "starting"
+    },
+    {
+      "id": "ae376648-a432-525b-bc41-7dc1d0433671",
+      "category": "多字語書き取り",
+      "question": "港町に【チャブヤ】が立ち並ぶ。",
+      "answer": "卓袱屋",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 85番",
+      "mastery": "starting"
+    },
+    {
+      "id": "b5d81b18-79bd-51ad-b670-ad971ef734c1",
+      "category": "多字語書き取り",
+      "question": "鞘に【マッキンル】が施されている。",
+      "answer": "末金鏤",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 86番",
+      "mastery": "starting"
+    },
+    {
+      "id": "91ed73ab-3857-55a1-918e-368da439e647",
+      "category": "多字語書き取り",
+      "question": "米を【ゲヨウビツ】に入れる。",
+      "answer": "下用櫃",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 87番",
+      "mastery": "starting"
+    },
+    {
+      "id": "52bd1c46-f6a6-5baf-97e4-eb64d312c299",
+      "category": "多字語書き取り",
+      "question": "行者が【サンゲサンゲ】と唱える。",
+      "answer": "懺悔懺悔",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 88番",
+      "mastery": "starting"
+    },
+    {
+      "id": "13fc6269-1bbb-5ae3-9ae9-e23faa1a7b3d",
+      "category": "多字語書き取り",
+      "question": "【ヘンエンケイ】の鏡餅を積み上げる。",
+      "answer": "扁円形",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 89番",
+      "mastery": "starting"
+    },
+    {
+      "id": "a00f7b39-bc04-5248-9c68-a26d066fbb33",
+      "category": "多字語書き取り",
+      "question": "春に【ネハンニシ】が吹く。",
+      "answer": "涅槃西風",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 90番",
+      "mastery": "starting"
+    },
+    {
+      "id": "4115f05c-f4a5-53c0-8bbb-4392c856b7cc",
+      "category": "多字語書き取り",
+      "question": "持ってきた【チョウズダライ】を使う。",
+      "answer": "手水盥",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 91番",
+      "mastery": "starting"
+    },
+    {
+      "id": "be43fc27-4ebb-54b6-8e45-4fa4acdff44f",
+      "category": "多字語書き取り",
+      "question": "桃太郎の【ホウソウエ】を飾る。",
+      "answer": "疱瘡絵",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 92番",
+      "mastery": "starting"
+    },
+    {
+      "id": "345b6a08-9037-53b0-9bfc-3219cfa8fc2f",
+      "category": "多字語書き取り",
+      "question": "呉服店で【ムリョウ】を購う。",
+      "answer": "六糸緞",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 93番",
+      "mastery": "starting"
+    },
+    {
+      "id": "36ef6652-87c7-502d-bab2-603856498a88",
+      "category": "多字語書き取り",
+      "question": "【キワダイロ】に染め上げる。",
+      "answer": "黄檗色",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 94番",
+      "mastery": "starting"
+    },
+    {
+      "id": "fe26cc29-c76e-5b03-b39a-aad807b4d88f",
+      "category": "多字語書き取り",
+      "question": "【ジョウキラ】切って年中遊ぶ。",
+      "answer": "常綺羅",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 95番",
+      "mastery": "starting"
+    },
+    {
+      "id": "5622ff8d-d136-5c8c-94ae-a46aea188acf",
+      "category": "多字語書き取り",
+      "question": "【シラシゲドウ】の弓を構える。",
+      "answer": "白重籐",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 96番",
+      "mastery": "starting"
+    },
+    {
+      "id": "db2138cd-9565-591b-8946-981a0a970dc2",
+      "category": "多字語書き取り",
+      "question": "【アキツハ】の薄衣を纏う。",
+      "answer": "蜻蛉羽\n[秋津羽]",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 97番",
+      "mastery": "starting"
+    },
+    {
+      "id": "d6bebabb-5da8-5b13-b544-f13922190a6b",
+      "category": "多字語書き取り",
+      "question": "【チゴマゲ】の少女と出会う。",
+      "answer": "稚児髷",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 98番",
+      "mastery": "starting"
+    },
+    {
+      "id": "30dfa0a8-5d28-5013-afff-e9dd481e5856",
+      "category": "多字語書き取り",
+      "question": "蔦の【ハンエンケイ】が伸びる。",
+      "answer": "攀縁茎\n攀援茎",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 99番",
+      "mastery": "starting"
+    },
+    {
+      "id": "11b25ae4-2114-50dd-9b7a-f1e3795d93fb",
+      "category": "多字語書き取り",
+      "question": "葬儀場から【レイキュウシャ】が出る。",
+      "answer": "霊柩車",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 100番",
+      "mastery": "starting"
+    },
+    {
+      "id": "07ade03a-f06a-51ca-a351-499e5b689183",
+      "category": "多字語書き取り",
+      "question": "【マカエン】の義を明らかにする。",
+      "answer": "摩訶衍",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 101番",
+      "mastery": "starting"
+    },
+    {
+      "id": "52d25242-748d-51f2-b5da-ce0b5efb540b",
+      "category": "多字語書き取り",
+      "question": "受容体【キッコウヤク】を投与する。",
+      "answer": "拮抗薬",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 102番",
+      "mastery": "starting"
+    },
+    {
+      "id": "1d940156-053d-580f-8ba6-55b1f6a3070c",
+      "category": "多字語書き取り",
+      "question": "【ボロボロ】が多く集まる。",
+      "answer": "梵論梵論\n暮露暮露",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 103番",
+      "mastery": "starting"
+    },
+    {
+      "id": "f26ab81c-6949-5e19-80e7-1ff233b3673a",
+      "category": "多字語書き取り",
+      "question": "脳の【ベンチタイ】の働きを見る。",
+      "answer": "胼胝体",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 104番",
+      "mastery": "starting"
+    },
+    {
+      "id": "d3867d3f-dec7-5e25-8b97-0f0fd2741b80",
+      "category": "多字語書き取り",
+      "question": "器に【ユウリコウ】の文様を施す。",
+      "answer": "釉裏紅",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 105番",
+      "mastery": "starting"
+    },
+    {
+      "id": "9673f2b4-c55d-5693-824e-d94a9bda83d0",
+      "category": "多字語書き取り",
+      "question": "【サヤインゲン】を茹でる。",
+      "answer": "莢隠元",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 106番",
+      "mastery": "starting"
+    },
+    {
+      "id": "7c192198-59ae-5b6e-8fcc-137d0a7cc0c6",
+      "category": "多字語書き取り",
+      "question": "動物園で【キンシコウ】を見る。",
+      "answer": "金糸猴",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 107番",
+      "mastery": "starting"
+    },
+    {
+      "id": "77db576a-de70-54af-bb66-c41c38d03f54",
+      "category": "多字語書き取り",
+      "question": "奴は狡辛い【シワタロウ】に過ぎぬ。",
+      "answer": "吝太郎",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 108番",
+      "mastery": "starting"
+    },
+    {
+      "id": "3dc8eea8-66c6-52af-9449-5e3b693b8c59",
+      "category": "多字語書き取り",
+      "question": "蝶や蛾は【リンシルイ】の昆虫である。",
+      "answer": "鱗翅類",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 109番",
+      "mastery": "starting"
+    },
+    {
+      "id": "8f00e322-e6f9-5cc0-b8b6-4d4ffd0ce78a",
+      "category": "多字語書き取り",
+      "question": "【カンランユ】と大蒜の風味が美味しい。",
+      "answer": "橄欖油",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 110番",
+      "mastery": "starting"
+    },
+    {
+      "id": "b02a7ffa-72d2-55c6-8f5b-73da64d2c7b9",
+      "category": "多字語書き取り",
+      "question": "舶来の【ショウビスイ】を購う。",
+      "answer": "薔薇水",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 111番",
+      "mastery": "starting"
+    },
+    {
+      "id": "d990ca56-6d6b-525c-9d3e-796c6d8ba737",
+      "category": "多字語書き取り",
+      "question": "道端で【タンカバイ】に引き留められる。",
+      "answer": "啖呵売",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 112番",
+      "mastery": "starting"
+    },
+    {
+      "id": "dbe3d7c0-379c-5ef3-afd8-6dbe6e400d45",
+      "category": "多字語書き取り",
+      "question": "陛下が【ゴイシ】にお座りになる。",
+      "answer": "御倚子\n御椅子",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 113番",
+      "mastery": "starting"
+    },
+    {
+      "id": "6bae05ad-7efe-5605-8f17-1b48331fa639",
+      "category": "多字語書き取り",
+      "question": "【ビシュカツマ】の如き名工と賞さる。",
+      "answer": "毘首羯磨",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 114番",
+      "mastery": "starting"
+    },
+    {
+      "id": "1a8b5e0f-416b-54ee-b80c-e1d504584d1a",
+      "category": "多字語書き取り",
+      "question": "罰として【エイチッキョ】を科す。",
+      "answer": "永蟄居",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 115番",
+      "mastery": "starting"
+    },
+    {
+      "id": "44f8a582-73ac-5119-bafb-f27ef22c1494",
+      "category": "多字語書き取り",
+      "question": "【オオショウジョウ】の如く容易に壊す。",
+      "answer": "大猩猩",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 116番",
+      "mastery": "starting"
+    },
+    {
+      "id": "98316a92-ee9b-5b85-82dc-5c823165c764",
+      "category": "多字語書き取り",
+      "question": "大人用の【カミオムツ】を買う。",
+      "answer": "紙御襁褓",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 117番",
+      "mastery": "starting"
+    },
+    {
+      "id": "75b1e6af-bb80-5b43-96ef-d5f5f4d28cf3",
+      "category": "多字語書き取り",
+      "question": "【サンカメイチュウ】が稲に害を及ぼす。",
+      "answer": "三化螟虫",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 118番",
+      "mastery": "starting"
+    },
+    {
+      "id": "903aa016-5bc5-57e4-86f8-83e52c01999c",
+      "category": "多字語書き取り",
+      "question": "上書きに【ワラビノシ】が描かれる。",
+      "answer": "蕨熨斗",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 119番",
+      "mastery": "starting"
+    },
+    {
+      "id": "aded370b-990e-5052-890f-4a5f3e56b80d",
+      "category": "多字語書き取り",
+      "question": "【ケイトウリュウヒョウ】を岩礁に置く。",
+      "answer": "挂灯立標",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 120番",
+      "mastery": "starting"
+    },
+    {
+      "id": "bbcab7b1-39ce-5e7e-81b0-3c2d323b84e1",
+      "category": "多字語書き取り",
+      "question": "【ヒキュウカンセツ】を大きく動かす。",
+      "answer": "髀臼関節",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 121番",
+      "mastery": "starting"
+    },
+    {
+      "id": "4aaded12-85af-5415-9de6-8742dcb8a9cc",
+      "category": "多字語書き取り",
+      "question": "【リョウガキョウ】の教えを重んじる。",
+      "answer": "楞伽経",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 122番",
+      "mastery": "starting"
+    },
+    {
+      "id": "c5a3c19a-2500-5491-a450-e88a3bd1a5b6",
+      "category": "多字語書き取り",
+      "question": "【トソサン】を服用する。",
+      "answer": "屠蘇散",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 123番",
+      "mastery": "starting"
+    },
+    {
+      "id": "6e768fb4-024e-5789-9c1c-f9081268be9d",
+      "category": "多字語書き取り",
+      "question": "写経に【キハダシ】を使う。",
+      "answer": "黄檗紙",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 124番",
+      "mastery": "starting"
+    },
+    {
+      "id": "641e25a4-6d5f-5418-9ecc-1b0f0ea4e9db",
+      "category": "多字語書き取り",
+      "question": "松かげに【ニツツジ】あまた花さく。",
+      "answer": "丹躑躅",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 125番",
+      "mastery": "starting"
+    },
+    {
+      "id": "8d3caf5f-00f1-5eba-a228-c566ce87307e",
+      "category": "多字語書き取り",
+      "question": "【ヤタガラス】の如き良き嚮導者有り。",
+      "answer": "八咫烏",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 126番",
+      "mastery": "starting"
+    },
+    {
+      "id": "ff8d1153-30f2-5903-9bf2-33398ec8c6a9",
+      "category": "多字語書き取り",
+      "question": "【レテグ】で重さを量る。",
+      "answer": "釐等具",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 127番",
+      "mastery": "starting"
+    },
+    {
+      "id": "3b84e60f-7f48-53c9-a507-4e91e2b512b3",
+      "category": "多字語書き取り",
+      "question": "塔の【ヒエンダルキ】を見上げる。",
+      "answer": "飛檐垂木",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 128番",
+      "mastery": "starting"
+    },
+    {
+      "id": "6a6be3e0-c6ef-5941-8cc3-bd498fe0d771",
+      "category": "多字語書き取り",
+      "question": "熊斐は【ナンピンハ】の画家である。",
+      "answer": "南蘋派",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 129番",
+      "mastery": "starting"
+    },
+    {
+      "id": "0de6e713-8fca-5f6c-b536-1a5508702cb8",
+      "category": "多字語書き取り",
+      "question": "【アヤメカズラ】を髪に挿す。",
+      "answer": "菖蒲鬘",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 130番",
+      "mastery": "starting"
+    },
+    {
+      "id": "99a5c08f-122d-5a59-b5ca-2f3eefa8b20e",
+      "category": "多字語書き取り",
+      "question": "子どもの【ワルフザケ】を𠮟る。",
+      "answer": "悪巫山戯",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 131番",
+      "mastery": "starting"
+    },
+    {
+      "id": "e406d002-3cf5-5b2e-86b1-5d9df7ed787a",
+      "category": "多字語書き取り",
+      "question": "【シグレカン】を家族で分け合う。",
+      "answer": "時雨羹",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 132番",
+      "mastery": "starting"
+    },
+    {
+      "id": "73d4b4d5-7a03-5d4f-a8fe-42756631baea",
+      "category": "多字語書き取り",
+      "question": "【ミヤマオロシ】に花が散る。",
+      "answer": "深山颪",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 133番",
+      "mastery": "starting"
+    },
+    {
+      "id": "cf55b0c0-0391-5c08-9f32-87e1f7f2b3f5",
+      "category": "多字語書き取り",
+      "question": "家で【オカメインコ】を飼う。",
+      "answer": "阿亀鸚哥",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 134番",
+      "mastery": "starting"
+    },
+    {
+      "id": "723b4206-71f0-5f67-aabd-b3dece8e7ce4",
+      "category": "多字語書き取り",
+      "question": "【コウゲンシツ】を豊富に含む。",
+      "answer": "膠原質",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 135番",
+      "mastery": "starting"
+    },
+    {
+      "id": "0070091d-347e-5e13-88be-ac7a931b1292",
+      "category": "多字語書き取り",
+      "question": "高僧が【ノウゲサ】を着る。",
+      "answer": "衲袈裟",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 136番",
+      "mastery": "starting"
+    },
+    {
+      "id": "9b35be3c-0cf4-582c-b690-1828c7805e77",
+      "category": "多字語書き取り",
+      "question": "【ハンレイガン】を切り出して使う。",
+      "answer": "斑糲岩",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 137番",
+      "mastery": "starting"
+    },
+    {
+      "id": "121fa557-f792-57ec-b1bf-a1cb03d7d646",
+      "category": "多字語書き取り",
+      "question": "垂れ布を【ヘイショウグ】として使う。",
+      "answer": "屛障具",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 138番",
+      "mastery": "starting"
+    },
+    {
+      "id": "2f6ab680-473b-53e9-bd88-5608de410194",
+      "category": "多字語書き取り",
+      "question": "御家人救済のため【キエンレイ】を出す。",
+      "answer": "棄捐令",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 139番",
+      "mastery": "starting"
+    },
+    {
+      "id": "57dc6ab1-2d2d-5182-b70c-44786081f0c5",
+      "category": "多字語書き取り",
+      "question": "【バレキジン】を祀る社がある。",
+      "answer": "馬櫪神",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 140番",
+      "mastery": "starting"
+    },
+    {
+      "id": "7c938e63-252a-5bb2-a21a-237de8304fd7",
+      "category": "多字語書き取り",
+      "question": "業者が【カツダイカモツ】を輸送する。",
+      "answer": "闊大貨物",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 141番",
+      "mastery": "starting"
+    },
+    {
+      "id": "be142dca-8b47-5052-88d7-eb2373bf11e1",
+      "category": "多字語書き取り",
+      "question": "【シュユセツ】に菊花酒を飲む。",
+      "answer": "茱萸節",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 142番",
+      "mastery": "starting"
+    },
+    {
+      "id": "afb61d81-f412-581b-bcac-24a9aaf8fa79",
+      "category": "多字語書き取り",
+      "question": "浸した糯米を【ドンガメザル】にあげる。",
+      "answer": "団亀笊",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 143番",
+      "mastery": "starting"
+    },
+    {
+      "id": "d10fe7eb-581b-53fc-bf49-a1cd62ef9dc8",
+      "category": "多字語書き取り",
+      "question": "薬を【ヒコウシン】の出た皮膚に塗る。",
+      "answer": "秕糠疹",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 144番",
+      "mastery": "starting"
+    },
+    {
+      "id": "11e8bb0a-6459-5e7a-bef4-60c2c5bd10e6",
+      "category": "多字語書き取り",
+      "question": "広大な【レキサバク】が広がる。",
+      "answer": "礫砂漠",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 145番",
+      "mastery": "starting"
+    },
+    {
+      "id": "0e99996f-fde6-564b-841a-02671583d7d7",
+      "category": "多字語書き取り",
+      "question": "一人の【バチビンヤッコ】と出会う。",
+      "answer": "撥鬢奴",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 146番",
+      "mastery": "starting"
+    },
+    {
+      "id": "2bf8a3a8-b13a-5ff1-b092-a5737e457245",
+      "category": "多字語書き取り",
+      "question": "茶室の【オサランマ】を見上げる。",
+      "answer": "筬欄間",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 147番",
+      "mastery": "starting"
+    },
+    {
+      "id": "5a7c8ec2-9a97-5b08-86c1-e4ec6a0e0915",
+      "category": "多字語書き取り",
+      "question": "弥勒菩薩【ハンカシイ】像を鑑賞する。",
+      "answer": "半跏思惟",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 148番",
+      "mastery": "starting"
+    },
+    {
+      "id": "a0f15db6-6416-5945-80c1-34864a028864",
+      "category": "多字語書き取り",
+      "question": "石絨を以て【カカンプ】を織る。",
+      "answer": "火浣布",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 149番",
+      "mastery": "starting"
+    },
+    {
+      "id": "18b15d5b-93b5-5b74-8076-af1633c368a3",
+      "category": "多字語書き取り",
+      "question": "池に棲息する【ユウキンルイ】を調べる。",
+      "answer": "游禽類",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 150番",
+      "mastery": "starting"
+    },
+    {
+      "id": "65bcf755-b982-5da7-b659-858dc68fb349",
+      "category": "多字語書き取り",
+      "question": "【ビンナガマグロ】の刺身を食べる。",
+      "answer": "鬢⾧鮪",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 151番",
+      "mastery": "starting"
+    },
+    {
+      "id": "a3f65ba1-73d7-59a9-8f23-61f5990fb41b",
+      "category": "多字語書き取り",
+      "question": "老舗の【ゴショカン】を手土産にする。",
+      "answer": "御所羹",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 152番",
+      "mastery": "starting"
+    },
+    {
+      "id": "fefdff00-a77d-5aa6-894d-6998f6c66ca2",
+      "category": "多字語書き取り",
+      "question": "【カンゼブ】を味噌汁に入れる。",
+      "answer": "観世麩",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 153番",
+      "mastery": "starting"
+    },
+    {
+      "id": "afce538f-222b-5533-9f07-39ed1d4cb0f6",
+      "category": "多字語書き取り",
+      "question": "【カライルイ】の野菜を食べる。",
+      "answer": "花蕾類",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 154番",
+      "mastery": "starting"
+    },
+    {
+      "id": "d05b56b1-c954-58da-96ca-dd97751a9d9b",
+      "category": "多字語書き取り",
+      "question": "肛門【チョクチョウロウ】を手術で治す。",
+      "answer": "直腸瘻",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 155番",
+      "mastery": "starting"
+    },
+    {
+      "id": "62b0886f-f672-5aaf-a2d6-7d8265516d08",
+      "category": "多字語書き取り",
+      "question": "【アカカンジョウ】の儀式を行う。",
+      "answer": "閼伽灌頂",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 156番",
+      "mastery": "starting"
+    },
+    {
+      "id": "8f895258-5bfc-57b1-9539-f7447ed8df55",
+      "category": "多字語書き取り",
+      "question": "紫宸殿の庭に【ドウウドウ】を立てる。",
+      "answer": "銅烏幢",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 157番",
+      "mastery": "starting"
+    },
+    {
+      "id": "21fe165c-43af-54c4-ba1c-3c9c471be2e9",
+      "category": "多字語書き取り",
+      "question": "事に依ると皆【ボンテンコク】になる。",
+      "answer": "梵天国",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 158番",
+      "mastery": "starting"
+    },
+    {
+      "id": "94056f51-7066-5b67-9bf1-55fe80de3c55",
+      "category": "多字語書き取り",
+      "question": "物体の【センダンキョウド】を調べる。",
+      "answer": "剪断強度",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 159番",
+      "mastery": "starting"
+    },
+    {
+      "id": "d96d2fd8-8a9a-53b4-849c-08a788e36a36",
+      "category": "多字語書き取り",
+      "question": "【タモトドケイ】の竜頭を巻く。",
+      "answer": "袂時計",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 160番",
+      "mastery": "starting"
+    },
+    {
+      "id": "88326a8f-1116-5bab-8788-3ab2ea4bfcfd",
+      "category": "多字語書き取り",
+      "question": "【ヤサカニ】の勾玉を奉る。",
+      "answer": "八尺瓊",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 161番",
+      "mastery": "starting"
+    },
+    {
+      "id": "30a3b214-000f-57a5-b0dc-2a0b0a92a583",
+      "category": "多字語書き取り",
+      "question": "少人数で【ダビソウ】が執り行われる。",
+      "answer": "荼毘葬",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 162番",
+      "mastery": "starting"
+    },
+    {
+      "id": "35abd190-0157-5990-a443-685cef285b6a",
+      "category": "多字語書き取り",
+      "question": "【サンコウキ】で穴を開ける。",
+      "answer": "鑽孔機\n鑽孔器",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 163番",
+      "mastery": "starting"
+    },
+    {
+      "id": "c875158a-b2c3-56f1-bfd2-7e7c3d913b84",
+      "category": "多字語書き取り",
+      "question": "【タンソキン】が兵器として使われる。",
+      "answer": "炭疽菌",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 164番",
+      "mastery": "starting"
+    },
+    {
+      "id": "85d25c5a-20e8-5988-bb91-5a6aee590828",
+      "category": "多字語書き取り",
+      "question": "栄養不足による【イシショウ】に悩む。",
+      "answer": "異嗜症",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 165番",
+      "mastery": "starting"
+    },
+    {
+      "id": "4f3f3ef2-4aed-586f-af97-c5fc7e082ad7",
+      "category": "多字語書き取り",
+      "question": "話を【シラキチョウメン】に受け取る。",
+      "answer": "白几帳面",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 166番",
+      "mastery": "starting"
+    },
+    {
+      "id": "ce5f38ee-2fec-5b98-a942-0d035c03b9d6",
+      "category": "多字語書き取り",
+      "question": "青銅器に【トウテツモン】が見られる。",
+      "answer": "饕餮文",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 167番",
+      "mastery": "starting"
+    },
+    {
+      "id": "7cb46d2f-15c6-57a8-adc2-d87b1916da4b",
+      "category": "多字語書き取り",
+      "question": "【ウシツニシャ】の相が見られる。",
+      "answer": "烏瑟膩沙",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 168番",
+      "mastery": "starting"
+    },
+    {
+      "id": "8ea37951-5360-5928-930f-86b08fb0a5af",
+      "category": "多字語書き取り",
+      "question": "【ザクログチ】を屈み入る。",
+      "answer": "石榴口\n柘榴口",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 169番",
+      "mastery": "starting"
+    },
+    {
+      "id": "53f7bee9-3114-5859-b32d-56f85a06df63",
+      "category": "多字語書き取り",
+      "question": "【ハンダゴテ】で接合する。",
+      "answer": "半田鏝\n[盤陀鏝]",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 170番",
+      "mastery": "starting"
+    },
+    {
+      "id": "a3e6480e-b872-50ae-9a82-c07f85424a2c",
+      "category": "多字語書き取り",
+      "question": "怪盗が高価な【ビョウセイセキ】を狙う。",
+      "answer": "猫睛石",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 171番",
+      "mastery": "starting"
+    },
+    {
+      "id": "e6af006d-4b79-58f1-bd58-d51a0424cc3c",
+      "category": "多字語書き取り",
+      "question": "隣家から【ヨウランカ】が聞こえる。",
+      "answer": "揺籃歌",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 172番",
+      "mastery": "starting"
+    },
+    {
+      "id": "4a912db4-2a6d-5683-8e8f-f54b8bca7731",
+      "category": "多字語書き取り",
+      "question": "【ショトクタイ】で手紙を書く。",
+      "answer": "書牘体",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 173番",
+      "mastery": "starting"
+    },
+    {
+      "id": "e52b0a32-7de8-584f-9a0e-b6cac64cab49",
+      "category": "多字語書き取り",
+      "question": "左綯いの【ゴボウジメ】を掛ける。",
+      "answer": "牛蒡注連",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 174番",
+      "mastery": "starting"
+    },
+    {
+      "id": "cef122c3-2881-5a53-9488-7cdbe8b63ab9",
+      "category": "多字語書き取り",
+      "question": "荘園と【コクガリョウ】に分かれる。",
+      "answer": "国衙領",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 175番",
+      "mastery": "starting"
+    },
+    {
+      "id": "21516ff5-7500-5b3e-955e-d12d7ffd2a41",
+      "category": "多字語書き取り",
+      "question": "武家屋敷の【ササラコベイ】を見る。",
+      "answer": "簓子塀",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 176番",
+      "mastery": "starting"
+    },
+    {
+      "id": "356101bc-a31c-5652-8fb8-727cbb7c9ebc",
+      "category": "多字語書き取り",
+      "question": "羂索を執り【シツシツザ】上に結跏す。",
+      "answer": "瑟瑟座",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 177番",
+      "mastery": "starting"
+    },
+    {
+      "id": "1cc45443-62ae-5c5c-9a35-135520718dff",
+      "category": "多字語書き取り",
+      "question": "力を加えて【カトウセイ】を調べる。",
+      "answer": "可撓性",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 178番",
+      "mastery": "starting"
+    },
+    {
+      "id": "1e212df1-ba04-5d6c-844a-49284ac1b6f7",
+      "category": "多字語書き取り",
+      "question": "太い【ゲジゲジマユ】が目立つ。",
+      "answer": "蚰蜒眉",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 179番",
+      "mastery": "starting"
+    },
+    {
+      "id": "cba9eb20-5cc2-5e23-9b81-da375fbb50f8",
+      "category": "多字語書き取り",
+      "question": "苺の【ホフクシ】が伸びる。",
+      "answer": "匍匐枝",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 180番",
+      "mastery": "starting"
+    },
+    {
+      "id": "47c1ca85-1852-5aed-bc18-31b8ea84a643",
+      "category": "多字語書き取り",
+      "question": "【ミロクジソン】の御許に侍る。",
+      "answer": "弥勒慈尊",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 181番",
+      "mastery": "starting"
+    },
+    {
+      "id": "20ab4c9a-12e5-5618-a950-b7d095c23845",
+      "category": "多字語書き取り",
+      "question": "和算の【テンザンジュツ】を学ぶ。",
+      "answer": "点竄術",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 182番",
+      "mastery": "starting"
+    },
+    {
+      "id": "5a24b3c0-28d4-5413-94de-a667ff67adab",
+      "category": "多字語書き取り",
+      "question": "【チョウメイル】を吊して飾る。",
+      "answer": "⾧命縷",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 183番",
+      "mastery": "starting"
+    },
+    {
+      "id": "efa78019-0a5e-57df-8c72-f262df6dba28",
+      "category": "多字語書き取り",
+      "question": "家族で【ウドンスキ】を食べに行く。",
+      "answer": "饂飩鋤",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 184番",
+      "mastery": "starting"
+    },
+    {
+      "id": "5c7eb50d-1406-551b-8bc4-a94973e72c21",
+      "category": "多字語書き取り",
+      "question": "【ミョウホウゲ】が碑に刻まれている。",
+      "answer": "妙法偈",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 185番",
+      "mastery": "starting"
+    },
+    {
+      "id": "0862a0af-122c-5791-9fab-b849c8d0786c",
+      "category": "多字語書き取り",
+      "question": "【ドウサガミ】を習字に用いる。",
+      "answer": "礬水紙",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 186番",
+      "mastery": "starting"
+    },
+    {
+      "id": "cabb195c-609e-5b64-ae85-33f4107f3f4e",
+      "category": "多字語書き取り",
+      "question": "【ハツゲンガッキ】を演奏する。",
+      "answer": "撥弦楽器",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 187番",
+      "mastery": "starting"
+    },
+    {
+      "id": "d48c85f9-9110-58ab-9f84-2c0d55731cb2",
+      "category": "多字語書き取り",
+      "question": "上体を倒して【ダイデンキン】を伸ばす。",
+      "answer": "大臀筋\n大殿筋",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 188番",
+      "mastery": "starting"
+    },
+    {
+      "id": "198a4edc-5a44-5b8c-8e8d-f48bdfb1a9bc",
+      "category": "多字語書き取り",
+      "question": "鉄道に沿って【キデンセン】が延びる。",
+      "answer": "饋電線",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 189番",
+      "mastery": "starting"
+    },
+    {
+      "id": "70ca2e70-68fd-5e4d-b745-64aa6d51f936",
+      "category": "多字語書き取り",
+      "question": "微笑んで【カネグロ】の歯を見せる。",
+      "answer": "鉄漿黒",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 190番",
+      "mastery": "starting"
+    },
+    {
+      "id": "99463ce1-96ba-5487-b571-285bde11ce9a",
+      "category": "多字語書き取り",
+      "question": "原書を失い【エイショウボン】に拠る。",
+      "answer": "影鈔本",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 191番",
+      "mastery": "starting"
+    },
+    {
+      "id": "7f05311e-bf8a-5b66-aad9-46f46a19a2ab",
+      "category": "多字語書き取り",
+      "question": "茶碗の表面に【チリメンジワ】が現れる。",
+      "answer": "縮緬皺",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 192番",
+      "mastery": "starting"
+    },
+    {
+      "id": "7351b726-86fe-5e36-bdb8-804c1ac571d2",
+      "category": "多字語書き取り",
+      "question": "【コンゴウサン】で研磨する。",
+      "answer": "金剛鑽",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 193番",
+      "mastery": "starting"
+    },
+    {
+      "id": "959380f2-40d6-54ff-bcc8-4e718966ad28",
+      "category": "多字語書き取り",
+      "question": "【ゲンライエコクド】人天。",
+      "answer": "還来穢国土",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 194番",
+      "mastery": "starting"
+    },
+    {
+      "id": "edecca18-00a2-5836-a1d2-63dd17b0b194",
+      "category": "多字語書き取り",
+      "question": "扇の【バサラエ】にも書かんずらん。",
+      "answer": "婆娑羅絵",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 195番",
+      "mastery": "starting"
+    },
+    {
+      "id": "52a3ce73-fc92-5081-9175-ae75836e534b",
+      "category": "多字語書き取り",
+      "question": "導師が【フジュモン】を読む。",
+      "answer": "諷誦文",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 196番",
+      "mastery": "starting"
+    },
+    {
+      "id": "cd328df7-5040-5f57-b538-cc0a77e4dfdf",
+      "category": "多字語書き取り",
+      "question": "【サンショウビョウ】を打ち込む。",
+      "answer": "山椒鋲",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 197番",
+      "mastery": "starting"
+    },
+    {
+      "id": "b872d4f3-844e-5c80-8093-2e4ee5bdad56",
+      "category": "多字語書き取り",
+      "question": "【テキダントウ】を引っ提げ死地を行く。",
+      "answer": "擲弾筒",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 198番",
+      "mastery": "starting"
+    },
+    {
+      "id": "b3a830c1-eba5-5a8f-81f3-5bae9c5b3fc4",
+      "category": "多字語書き取り",
+      "question": "【ヨクイニン】を配合して処方する。",
+      "answer": "薏苡仁",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 199番",
+      "mastery": "starting"
+    },
+    {
+      "id": "ad346517-70d6-59f9-bb5b-d4d0584a5f15",
+      "category": "多字語書き取り",
+      "question": "【イッセンダイ】は救済されない。",
+      "answer": "一闡提",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 200番",
+      "mastery": "starting"
+    },
+    {
+      "id": "3046c25a-dc6e-5a97-8fda-86abc9a955db",
+      "category": "多字語書き取り",
+      "question": "中世は【ヒタタレブスマ】を使っていた。",
+      "answer": "直垂衾",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 201番",
+      "mastery": "starting"
+    },
+    {
+      "id": "822b2091-c3ef-5d9e-a574-78be4959b7b1",
+      "category": "多字語書き取り",
+      "question": "【ヤエス】を仕掛けて魚を捕る。",
+      "answer": "八重簀",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 202番",
+      "mastery": "starting"
+    },
+    {
+      "id": "83d3b2c0-efcc-58c3-bb9f-24e5cf0dd452",
+      "category": "多字語書き取り",
+      "question": "不活脱不自由の【ガマゼン】に過ぎぬ。",
+      "answer": "蝦蟇禅",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 203番",
+      "mastery": "starting"
+    },
+    {
+      "id": "a241dba8-8c7e-5b45-836f-462bf29ea5e6",
+      "category": "多字語書き取り",
+      "question": "漢方薬に【サンソウニン】を配合する。",
+      "answer": "酸棗仁",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 204番",
+      "mastery": "starting"
+    },
+    {
+      "id": "b7bae29e-2bfc-5a64-a176-53ef98ab3b93",
+      "category": "多字語書き取り",
+      "question": "【マイカイユ】を香料として用いる。",
+      "answer": "玫瑰油",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 205番",
+      "mastery": "starting"
+    },
+    {
+      "id": "4b6e3415-0f1e-5248-878f-d9ebaefd3946",
+      "category": "多字語書き取り",
+      "question": "【ジンメンソ】の妖怪を描く。",
+      "answer": "人面疽",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 206番",
+      "mastery": "starting"
+    },
+    {
+      "id": "64f873c6-6843-5afc-96d8-d9613baebe24",
+      "category": "多字語書き取り",
+      "question": "浄土近くの【ケマンガイ】に留まる。",
+      "answer": "懈慢界",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 207番",
+      "mastery": "starting"
+    },
+    {
+      "id": "600fa313-1963-5d0f-bf10-2ede5da24973",
+      "category": "多字語書き取り",
+      "question": "娼妓も、柳陰の【シカシ】も亦人なり。",
+      "answer": "私窩子",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 208番",
+      "mastery": "starting"
+    },
+    {
+      "id": "d39e93a6-f54f-5d0e-b90a-ce15c28e9fc1",
+      "category": "多字語書き取り",
+      "question": "城の【チュウジャクモン】を敲く。",
+      "answer": "鍮石門\n中雀門",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 209番",
+      "mastery": "starting"
+    },
+    {
+      "id": "beacfdb8-0e70-5653-a273-bee883246acb",
+      "category": "多字語書き取り",
+      "question": "槍が【ケラクビ】からぽきりと折れる。",
+      "answer": "螻蛄首\n[螻首]",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 210番",
+      "mastery": "starting"
+    },
+    {
+      "id": "c6b323ef-80b5-506c-b5ca-d4c21702788a",
+      "category": "多字語書き取り",
+      "question": "実験で刺激の【ベンベツイキ】を調べる。",
+      "answer": "弁別閾",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 211番",
+      "mastery": "starting"
+    },
+    {
+      "id": "072f4da5-2772-5b84-8145-e3ce04c39d64",
+      "category": "多字語書き取り",
+      "question": "山形の【ノシウメ】をいただく。",
+      "answer": "熨斗梅\n熨梅",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 212番",
+      "mastery": "starting"
+    },
+    {
+      "id": "3538e746-3c3c-5db0-b0ea-401fb905a167",
+      "category": "多字語書き取り",
+      "question": "陛下は【ハジイロ】の御袍を着けたり。",
+      "answer": "黄櫨色\n櫨色",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 213番",
+      "mastery": "starting"
+    },
+    {
+      "id": "5fe5d9a8-360d-55d5-8cae-a5608b8eb64c",
+      "category": "多字語書き取り",
+      "question": "【カンタンオトコ】の能面を着ける。",
+      "answer": "邯鄲男",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 214番",
+      "mastery": "starting"
+    },
+    {
+      "id": "f1a98372-fd76-5591-95f7-dd5e8acf7feb",
+      "category": "多字語書き取り",
+      "question": "【カンドクブン】の手本を示す。",
+      "answer": "簡牘文\n[竿牘文]",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 215番",
+      "mastery": "starting"
+    },
+    {
+      "id": "8f876648-5b45-5812-85f0-d33224254ea7",
+      "category": "多字語書き取り",
+      "question": "【ガンソウザイ】で風邪を予防する。",
+      "answer": "含嗽剤\n[含漱剤]",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 216番",
+      "mastery": "starting"
+    },
+    {
+      "id": "7c824373-00ca-595d-8cf5-038a0cad7cae",
+      "category": "多字語書き取り",
+      "question": "【ハリキョウ】を用いて像を映す。",
+      "answer": "玻璃鏡",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 217番",
+      "mastery": "starting"
+    },
+    {
+      "id": "7eefb203-9ba6-5130-a244-8127a363f108",
+      "category": "多字語書き取り",
+      "question": "【コウサイタイ】を茹でて食べる。",
+      "answer": "紅菜薹\n紅菜苔",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 218番",
+      "mastery": "starting"
+    },
+    {
+      "id": "5f131843-e0a3-55aa-a5e6-bf2ef8777c01",
+      "category": "多字語書き取り",
+      "question": "【フウカンシ】を丁寧に貼る。",
+      "answer": "封緘紙",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 219番",
+      "mastery": "starting"
+    },
+    {
+      "id": "32f2042e-a7e2-5905-9813-a87fcbeb7680",
+      "category": "多字語書き取り",
+      "question": "【キョウカイシ】として刑務所に入る。",
+      "answer": "教誨師",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 220番",
+      "mastery": "starting"
+    },
+    {
+      "id": "f09b0a70-6afb-5b58-8c44-243151463421",
+      "category": "多字語書き取り",
+      "question": "【ランスウサイ】を投げて抽出する。",
+      "answer": "乱数賽",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 221番",
+      "mastery": "starting"
+    },
+    {
+      "id": "01774aa1-a929-5fec-8701-e8c73321b46b",
+      "category": "多字語書き取り",
+      "question": "契約は法律的【キソクリョク】を有する。",
+      "answer": "羈束力",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 222番",
+      "mastery": "starting"
+    },
+    {
+      "id": "75f7ba84-14d4-5ded-b8b1-da9e5e812028",
+      "category": "多字語書き取り",
+      "question": "蒔絵の【ミソビツ】一よろい有り。",
+      "answer": "御衣櫃",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 223番",
+      "mastery": "starting"
+    },
+    {
+      "id": "dd7a27e9-a74a-58f5-bcff-96ee3a9475a9",
+      "category": "多字語書き取り",
+      "question": "神像及び【スイジャクガ】を所蔵する。",
+      "answer": "垂迹画",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 224番",
+      "mastery": "starting"
+    },
+    {
+      "id": "227ec5a3-8139-5852-827e-c7d4ba626f85",
+      "category": "多字語書き取り",
+      "question": "幾何学的な【ショッコウモン】が美しい。",
+      "answer": "蜀江文",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 225番",
+      "mastery": "starting"
+    },
+    {
+      "id": "324ccab8-3d4c-57cb-a6f6-c53716efbed4",
+      "category": "多字語書き取り",
+      "question": "皇族が【ソウカレン】に乗り込む。",
+      "answer": "葱花輦",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 226番",
+      "mastery": "starting"
+    },
+    {
+      "id": "a286dc8d-86f6-5f36-9d10-f41a5d8d61a5",
+      "category": "多字語書き取り",
+      "question": "【タビハダシ】で飛び出した。",
+      "answer": "足袋跣\n足袋裸足",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 227番",
+      "mastery": "starting"
+    },
+    {
+      "id": "ebfdbde6-c75f-5847-9eb7-969d910f34e7",
+      "category": "多字語書き取り",
+      "question": "【ソメイロ】の頂に三十三天住む。",
+      "answer": "蘇迷盧",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 228番",
+      "mastery": "starting"
+    },
+    {
+      "id": "35c463e8-6c58-52e6-a277-99c5e6c21998",
+      "category": "多字語書き取り",
+      "question": "彼は身上を【ササラサッポウ】にした。",
+      "answer": "簓先穂",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 229番",
+      "mastery": "starting"
+    },
+    {
+      "id": "737062d3-ec15-5183-ac3c-465a6d46018a",
+      "category": "多字語書き取り",
+      "question": "【レイアンポウ】で痛みを取る。",
+      "answer": "冷罨法",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 230番",
+      "mastery": "starting"
+    },
+    {
+      "id": "f8cd288d-a067-5a82-9d56-a7e711339bd4",
+      "category": "多字語書き取り",
+      "question": "【ゲイカンズ】から海底地形を読み取る。",
+      "answer": "鯨瞰図",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 231番",
+      "mastery": "starting"
+    },
+    {
+      "id": "d4c944ac-3bb4-51c4-a181-a3a1ff62e511",
+      "category": "多字語書き取り",
+      "question": "懸垂で【カッパイキン】を鍛える。",
+      "answer": "闊背筋",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 232番",
+      "mastery": "starting"
+    },
+    {
+      "id": "4c4f880b-e2a4-5402-a5d8-d0052e948f94",
+      "category": "多字語書き取り",
+      "question": "仏果の【クキョウイ】を完成せんと誓う。",
+      "answer": "究竟位",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 233番",
+      "mastery": "starting"
+    },
+    {
+      "id": "bbb891e0-de27-5c61-9c23-c4468dfc0aad",
+      "category": "多字語書き取り",
+      "question": "遠くから【シャラゴエ】が聞こえる。",
+      "answer": "洒落声",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 234番",
+      "mastery": "starting"
+    },
+    {
+      "id": "12d76ef0-2536-585e-95f2-80b6621ebcf3",
+      "category": "多字語書き取り",
+      "question": "風呂の目地に【ボウバイザイ】をかける。",
+      "answer": "防黴剤",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 235番",
+      "mastery": "starting"
+    },
+    {
+      "id": "be2fd514-5209-5d30-9288-9a933868d682",
+      "category": "多字語書き取り",
+      "question": "日ごと【ナメカタ】か丁半に興ず。",
+      "answer": "縵面形",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 236番",
+      "mastery": "starting"
+    },
+    {
+      "id": "18d42df8-0dff-5a80-9b80-41a4fdfb14f0",
+      "category": "多字語書き取り",
+      "question": "【コカンシ】が税を厳しく取り立てた。",
+      "answer": "拒捍使\n拒扞使",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 237番",
+      "mastery": "starting"
+    },
+    {
+      "id": "d309024c-4670-5aef-add6-b66bcba0bd3d",
+      "category": "多字語書き取り",
+      "question": "【カラスミズ】を口に含む。",
+      "answer": "鱲子酢",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 238番",
+      "mastery": "starting"
+    },
+    {
+      "id": "78d77fc2-d5c9-507a-9181-56fe49754400",
+      "category": "多字語書き取り",
+      "question": "【ランジャタイ】の香りを分析する。",
+      "answer": "蘭奢待",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 239番",
+      "mastery": "starting"
+    },
+    {
+      "id": "bc858865-b322-5119-a7af-a402361218d3",
+      "category": "多字語書き取り",
+      "question": "自身の【ケラゲイ】を嘲る。",
+      "answer": "螻蛄芸",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 240番",
+      "mastery": "starting"
+    },
+    {
+      "id": "fecade75-9ee9-57e0-9537-2fccadfa7710",
+      "category": "多字語書き取り",
+      "question": "各地から【ドウハンキョウ】が出土する。",
+      "answer": "同笵鏡",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 241番",
+      "mastery": "starting"
+    },
+    {
+      "id": "183ae8c0-11a1-56b3-87c9-e20ae748c080",
+      "category": "多字語書き取り",
+      "question": "【ケンドンウドン】を下々買い喰う。",
+      "answer": "倹飩饂飩",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 242番",
+      "mastery": "starting"
+    },
+    {
+      "id": "cd14b74c-38e1-5e89-bbcd-860682299a45",
+      "category": "多字語書き取り",
+      "question": "細かい【キンルザイク】が見られる。",
+      "answer": "金鏤細工",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 243番",
+      "mastery": "starting"
+    },
+    {
+      "id": "57909fdc-0d08-5e13-82b2-17bc58e337f1",
+      "category": "多字語書き取り",
+      "question": "鬱金を用いて【コガネカン】を作る。",
+      "answer": "黄金羹",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 244番",
+      "mastery": "starting"
+    },
+    {
+      "id": "aabd7ddf-a0b2-5298-891a-f6d8ce2b2ea1",
+      "category": "多字語書き取り",
+      "question": "【ギョウギアラレ】の裃を着る。",
+      "answer": "行儀霰",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 245番",
+      "mastery": "starting"
+    },
+    {
+      "id": "e63873e1-5b6e-56df-9841-0c745f47ee94",
+      "category": "多字語書き取り",
+      "question": "山に本社の【ケンゾクシン】を祀る。",
+      "answer": "眷属神",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 246番",
+      "mastery": "starting"
+    },
+    {
+      "id": "f5f1e328-e476-5935-80b9-180427fe3b8b",
+      "category": "多字語書き取り",
+      "question": "趣のある【センゴウサンスイ】を描く。",
+      "answer": "浅絳山水",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 247番",
+      "mastery": "starting"
+    },
+    {
+      "id": "98db55d5-591f-519e-9d7c-5e7ace0622fe",
+      "category": "多字語書き取り",
+      "question": "【フカンジョウセツ】による脱水に注意。",
+      "answer": "不感蒸泄",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 248番",
+      "mastery": "starting"
+    },
+    {
+      "id": "b6b3846c-6dd1-5553-8530-604d3e38dd55",
+      "category": "多字語書き取り",
+      "question": "陵戸、【クヌヒ】等、五色の賤あり。",
+      "answer": "公奴婢",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 249番",
+      "mastery": "starting"
+    },
+    {
+      "id": "66f6c392-651d-51ae-8956-54bbcff5655c",
+      "category": "多字語書き取り",
+      "question": "【ゲンピンヤキ】の茶碗を用いる。",
+      "answer": "元贇焼",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 250番",
+      "mastery": "starting"
+    }
+  ],
+  "previousItems": [
+    {
+      "id": "9d3933dd-a502-5af1-b188-1e8cde08e869",
+      "category": "多字語書き取り",
+      "question": "船舶からキリュウシンゴウを送る。",
+      "answer": "旗旒信号",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 1番",
+      "mastery": "starting"
+    },
+    {
+      "id": "bbe36b61-cc6b-5127-aec5-6485f399fd6b",
+      "category": "多字語書き取り",
+      "question": "橋がキョウシキコウゾウで造られる。",
+      "answer": "拱式構造",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 2番",
+      "mastery": "starting"
+    },
+    {
+      "id": "d5814bdf-198a-5338-82b6-0319f8982308",
+      "category": "多字語書き取り",
+      "question": "踵を挙げてヒフクキンを鍛える。",
+      "answer": "腓腹筋",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 3番",
+      "mastery": "starting"
+    },
+    {
+      "id": "5201372b-c031-5b64-9b35-d1f70874ebae",
+      "category": "多字語書き取り",
+      "question": "真夏の強いキンガイセンを浴びる。",
+      "answer": "菫外線",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 4番",
+      "mastery": "starting"
+    },
+    {
+      "id": "cd2407c1-1af8-5fce-a77f-760196d70b10",
+      "category": "多字語書き取り",
+      "question": "ヘイタンビョウインに運ばれる。",
+      "answer": "兵站病院",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 5番",
+      "mastery": "starting"
+    },
+    {
+      "id": "a6bcef87-4309-5d68-86e8-8f011032493f",
+      "category": "多字語書き取り",
+      "question": "ハシビロコウは動かない。",
+      "answer": "嘴広鸛",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 6番",
+      "mastery": "starting"
+    },
+    {
+      "id": "72cbe878-32de-5d07-b30e-7969e590d69e",
+      "category": "多字語書き取り",
+      "question": "シンチュウロウで金属を繋げる。",
+      "answer": "真鍮鑞",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 7番",
+      "mastery": "starting"
+    },
+    {
+      "id": "fe89f724-18a9-5b7c-b36a-d69678f7def0",
+      "category": "多字語書き取り",
+      "question": "エンラニンに責められる。",
+      "answer": "閻羅人",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 8番",
+      "mastery": "starting"
+    },
+    {
+      "id": "6ba8c06e-80af-5a33-806e-ec883e27c2db",
+      "category": "多字語書き取り",
+      "question": "繰り返しセッパハバキする。",
+      "answer": "切羽鎺",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 9番",
+      "mastery": "starting"
+    },
+    {
+      "id": "684a79ae-da4e-5a20-a08d-4ec43433c7e1",
+      "category": "多字語書き取り",
+      "question": "ハコベジオで歯を磨く。",
+      "answer": "繁縷塩",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 10番",
+      "mastery": "starting"
+    },
+    {
+      "id": "ca9941fd-d3de-58c2-844e-e56d8a6b4787",
+      "category": "多字語書き取り",
+      "question": "耐食性のあるフシュウコウを用いる。",
+      "answer": "不銹鋼",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 11番",
+      "mastery": "starting"
+    },
+    {
+      "id": "d278e6ae-6e2b-5dbd-b212-14e6aae187ad",
+      "category": "多字語書き取り",
+      "question": "出挙クガイトウ十万束を配分する。",
+      "answer": "公廨稲",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 12番",
+      "mastery": "starting"
+    },
+    {
+      "id": "45ea6dcd-dda8-52d8-bc3e-67684a80269c",
+      "category": "多字語書き取り",
+      "question": "イコントウの往生を説く。",
+      "answer": "已今当",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 13番",
+      "mastery": "starting"
+    },
+    {
+      "id": "ae1e6a03-c9c3-500b-a1ab-3194e68b99e4",
+      "category": "多字語書き取り",
+      "question": "サラリンの歌を習う。",
+      "answer": "娑羅林",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 14番",
+      "mastery": "starting"
+    },
+    {
+      "id": "c3391e73-c5d1-5d6f-ae76-20a3b43d2198",
+      "category": "多字語書き取り",
+      "question": "コシャクモノに腹を立てる。",
+      "answer": "小癪者",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 15番",
+      "mastery": "starting"
+    },
+    {
+      "id": "64c22cb3-f0fc-5f58-9b3f-ab17df05d938",
+      "category": "多字語書き取り",
+      "question": "ケサダスキモン銅鐸が出土する。",
+      "answer": "袈裟襷文",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 16番",
+      "mastery": "starting"
+    },
+    {
+      "id": "9b9da94e-ec7f-53c6-9969-f078530b9a9b",
+      "category": "多字語書き取り",
+      "question": "いろは歌とセッセンゲの対応を見る。",
+      "answer": "雪山偈",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 17番",
+      "mastery": "starting"
+    },
+    {
+      "id": "ddf36eb8-70d9-56e0-a136-174547837eaf",
+      "category": "多字語書き取り",
+      "question": "アカイから水を汲む。",
+      "answer": "閼伽井",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 18番",
+      "mastery": "starting"
+    },
+    {
+      "id": "e1886587-a36e-559d-995d-b0e8e3962c55",
+      "category": "多字語書き取り",
+      "question": "鮭の頭をヒズナマスにする。",
+      "answer": "氷頭膾\n氷頭鱠",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 19番",
+      "mastery": "starting"
+    },
+    {
+      "id": "ca61ef7f-830c-5cc7-8c73-7e90a2a090e8",
+      "category": "多字語書き取り",
+      "question": "独り悟ってビャクシブツとなる。",
+      "answer": "辟支仏",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 20番",
+      "mastery": "starting"
+    },
+    {
+      "id": "21e5b89b-ecba-560b-a88a-2f73f3e489ad",
+      "category": "多字語書き取り",
+      "question": "コンテンギで星の位置を観測する。",
+      "answer": "渾天儀",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 21番",
+      "mastery": "starting"
+    },
+    {
+      "id": "842b13ce-e249-5f9a-a471-9a492b911ce3",
+      "category": "多字語書き取り",
+      "question": "シュウチンバンを印刷する。",
+      "answer": "聚珍版",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 22番",
+      "mastery": "starting"
+    },
+    {
+      "id": "b02de6c1-a2f1-5ba4-867b-09bd10c60f84",
+      "category": "多字語書き取り",
+      "question": "ゼンバヤシと共に幕が開く。",
+      "answer": "禅囃子",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 23番",
+      "mastery": "starting"
+    },
+    {
+      "id": "0a2a497d-ed2a-54db-916b-155d58966ea6",
+      "category": "多字語書き取り",
+      "question": "ケンヨウスイが赤く腫れる。",
+      "answer": "懸壅垂",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 24番",
+      "mastery": "starting"
+    },
+    {
+      "id": "b4321a84-6993-5fc8-b649-28b56a59eb43",
+      "category": "多字語書き取り",
+      "question": "裏地をヨウジュスで仕立てる。",
+      "answer": "洋繻子",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 25番",
+      "mastery": "starting"
+    },
+    {
+      "id": "d1beba62-c3f0-5b20-b611-5f6fc8e914d3",
+      "category": "多字語書き取り",
+      "question": "イナセイチョウの若者が集う。",
+      "answer": "鯔背銀杏",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 26番",
+      "mastery": "starting"
+    },
+    {
+      "id": "00237db3-52b5-5ae9-ae41-ac576022f8c8",
+      "category": "多字語書き取り",
+      "question": "彼は口だけのアンゴウムシャである。",
+      "answer": "鮟鱇武者",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 27番",
+      "mastery": "starting"
+    },
+    {
+      "id": "d69ab687-023b-5c4d-b5ff-9c1331ce28ce",
+      "category": "多字語書き取り",
+      "question": "カワホリオウギを手に持つ。",
+      "answer": "蝙蝠扇",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 28番",
+      "mastery": "starting"
+    },
+    {
+      "id": "8f45eaa3-70c7-5ddc-bcee-84c29dfacc7f",
+      "category": "多字語書き取り",
+      "question": "怒って紙をシワクチャにした。",
+      "answer": "皺苦茶",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 29番",
+      "mastery": "starting"
+    },
+    {
+      "id": "3a8507a3-5a7f-5546-9d0e-95637b8a0245",
+      "category": "多字語書き取り",
+      "question": "マカツキュウは山羊座に対応する。",
+      "answer": "磨羯宮",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 30番",
+      "mastery": "starting"
+    },
+    {
+      "id": "c92ad2ea-b7bf-5c02-8fef-96507ac15374",
+      "category": "多字語書き取り",
+      "question": "ヨロケジマの着物を誂える。",
+      "answer": "蹌踉縞\n蹣跚縞",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 31番",
+      "mastery": "starting"
+    },
+    {
+      "id": "3a92c503-f967-5aa9-a7bf-470bd4ec78ed",
+      "category": "多字語書き取り",
+      "question": "ビロウヒサシの車に乗る。",
+      "answer": "檳榔庇",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 32番",
+      "mastery": "starting"
+    },
+    {
+      "id": "8b2c9897-355c-530e-af1b-282f230633d4",
+      "category": "多字語書き取り",
+      "question": "釈迦のニュウネハンを描く。",
+      "answer": "入涅槃",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 33番",
+      "mastery": "starting"
+    },
+    {
+      "id": "59cbb8f9-6195-5bc4-86e6-fb11898eee7d",
+      "category": "多字語書き取り",
+      "question": "小判のゴザメを指でなぞる。",
+      "answer": "茣蓙目",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 34番",
+      "mastery": "starting"
+    },
+    {
+      "id": "fca5dffc-a75a-5e55-b5f0-4913226cc2cd",
+      "category": "多字語書き取り",
+      "question": "ロクロガンナで木を挽く。",
+      "answer": "轆轤鉋",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 35番",
+      "mastery": "starting"
+    },
+    {
+      "id": "22909c0b-a5cc-5c32-93f5-a7502da29cc0",
+      "category": "多字語書き取り",
+      "question": "脚にヒダコができる。",
+      "answer": "火胼胝\n火斑",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 36番",
+      "mastery": "starting"
+    },
+    {
+      "id": "4f377c0a-7c27-525e-926c-fd2f62168c23",
+      "category": "多字語書き取り",
+      "question": "彼はカッチュウシを本業とする。",
+      "answer": "甲冑師",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 37番",
+      "mastery": "starting"
+    },
+    {
+      "id": "6f5fac68-9cb6-5935-bf22-1a196bdc87f7",
+      "category": "多字語書き取り",
+      "question": "口先のソラネンジュに過ぎない。",
+      "answer": "空念誦",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 38番",
+      "mastery": "starting"
+    },
+    {
+      "id": "7324910b-c026-5905-9f48-9d118b2e107b",
+      "category": "多字語書き取り",
+      "question": "ヒョウキンダマの男の物語である。",
+      "answer": "剽軽玉",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 39番",
+      "mastery": "starting"
+    },
+    {
+      "id": "071c5c49-f405-56b5-a707-e1b9c4e040f2",
+      "category": "多字語書き取り",
+      "question": "ハネズイロの衣を纏う。",
+      "answer": "唐棣花色\n棠棣色\n朱華色\n唐棣色",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 40番",
+      "mastery": "starting"
+    },
+    {
+      "id": "fcb7b3a8-55fa-51c7-b6c6-69897d87d4d1",
+      "category": "多字語書き取り",
+      "question": "子供がオニヤンマを捕まえる。",
+      "answer": "⿁蜻蜓\n馬大頭",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 41番",
+      "mastery": "starting"
+    },
+    {
+      "id": "dfd49849-a866-5ee2-85cd-e57d2551d107",
+      "category": "多字語書き取り",
+      "question": "アンシャショクの器を手に取る。",
+      "answer": "暗赭色",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 42番",
+      "mastery": "starting"
+    },
+    {
+      "id": "f5ad9eab-4ca5-53ab-971e-f3e103ba2d50",
+      "category": "多字語書き取り",
+      "question": "ヘントウエンの症状が見られる。",
+      "answer": "扁桃炎",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 43番",
+      "mastery": "starting"
+    },
+    {
+      "id": "399a15b4-ee23-59f5-af16-af9abb1d711c",
+      "category": "多字語書き取り",
+      "question": "カンドクリから酒を注ぐ。",
+      "answer": "燗徳利",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 44番",
+      "mastery": "starting"
+    },
+    {
+      "id": "07023645-d3f4-5b11-bbb3-63d325879d2d",
+      "category": "多字語書き取り",
+      "question": "舌にガマシュができる。",
+      "answer": "蝦蟇腫",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 45番",
+      "mastery": "starting"
+    },
+    {
+      "id": "6b78bcc3-30bb-5ca7-b9a7-c03494d62891",
+      "category": "多字語書き取り",
+      "question": "シッポクダイに料理を並べる。",
+      "answer": "卓袱台",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 46番",
+      "mastery": "starting"
+    },
+    {
+      "id": "d2efa35e-9053-57b3-a8a1-4f3bee0f2526",
+      "category": "多字語書き取り",
+      "question": "肩のカンセツカに異常がある。",
+      "answer": "関節窩",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 47番",
+      "mastery": "starting"
+    },
+    {
+      "id": "d18fa6c3-92c0-54ee-b793-1197dfd3412e",
+      "category": "多字語書き取り",
+      "question": "センキスジの孫にも遺産を遺す。",
+      "answer": "疝気筋",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 48番",
+      "mastery": "starting"
+    },
+    {
+      "id": "600a32cc-30be-5fa3-bfd9-343485770320",
+      "category": "多字語書き取り",
+      "question": "ケドンスを卓上に掛ける。",
+      "answer": "毛緞子",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 49番",
+      "mastery": "starting"
+    },
+    {
+      "id": "b6479852-20fb-5564-8f4f-a8763757048d",
+      "category": "多字語書き取り",
+      "question": "キリュウザイクの職人となる。",
+      "answer": "杞柳細工",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 50番",
+      "mastery": "starting"
+    },
+    {
+      "id": "7ef09b16-005b-5557-81ea-ff434ae046f7",
+      "category": "多字語書き取り",
+      "question": "オウバクシュウの寺に参る。",
+      "answer": "黄檗宗",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 51番",
+      "mastery": "starting"
+    },
+    {
+      "id": "e251b03b-cdcb-57be-8136-1ba62d3c4eae",
+      "category": "多字語書き取り",
+      "question": "シシイデンで儀式を行う。",
+      "answer": "紫宸殿",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 52番",
+      "mastery": "starting"
+    },
+    {
+      "id": "840f2ea3-30f6-5a72-9fb4-900755266847",
+      "category": "多字語書き取り",
+      "question": "能くクキョウホッシンを得る。",
+      "answer": "究竟法身",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 53番",
+      "mastery": "starting"
+    },
+    {
+      "id": "025d8d31-c519-5869-957f-907741bb877e",
+      "category": "多字語書き取り",
+      "question": "米のモチウルチセイを調べる。",
+      "answer": "糯粳性",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 54番",
+      "mastery": "starting"
+    },
+    {
+      "id": "61f74a1d-689a-5131-90c4-180994d5508d",
+      "category": "多字語書き取り",
+      "question": "歯のホウロウシツを害する。",
+      "answer": "琺琅質",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 55番",
+      "mastery": "starting"
+    },
+    {
+      "id": "c06f0be5-16c5-50bc-8d9d-84248f5f9a79",
+      "category": "多字語書き取り",
+      "question": "ケンダツバジョウの幻に過ぎない。",
+      "answer": "乾闥婆城",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 56番",
+      "mastery": "starting"
+    },
+    {
+      "id": "7fb9deca-f1a1-585e-a59c-219449080e2f",
+      "category": "多字語書き取り",
+      "question": "オトギボウコを魔除けとする。",
+      "answer": "御伽這子\n御伽婢子",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 57番",
+      "mastery": "starting"
+    },
+    {
+      "id": "a8ba2e90-37a4-5039-8843-74e46cd006c5",
+      "category": "多字語書き取り",
+      "question": "カチュウカイで名がある。",
+      "answer": "華胄界",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 58番",
+      "mastery": "starting"
+    },
+    {
+      "id": "c3e048e7-0d88-5e19-bc33-d4e223b7bbdc",
+      "category": "多字語書き取り",
+      "question": "一人ソラリンキに悩む。",
+      "answer": "空悋気",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 59番",
+      "mastery": "starting"
+    },
+    {
+      "id": "f4f442ed-64ae-5a5f-b70b-36173ff16510",
+      "category": "多字語書き取り",
+      "question": "足裏にセンプクリンソウが見られる。",
+      "answer": "千輻輪相",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 60番",
+      "mastery": "starting"
+    },
+    {
+      "id": "71edfde0-c0ab-56e0-98d5-e9bb4b748c74",
+      "category": "多字語書き取り",
+      "question": "禅僧がソモサンと問う。",
+      "answer": "作麼生\n怎麼生\n什麼生",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 61番",
+      "mastery": "starting"
+    },
+    {
+      "id": "b18837c2-8202-5f1f-9e13-bbc48941fe24",
+      "category": "多字語書き取り",
+      "question": "瓶入りのカイショウヒンが並ぶ。",
+      "answer": "醢醤品",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 62番",
+      "mastery": "starting"
+    },
+    {
+      "id": "bb46b2ff-8282-545c-9501-d96fae24e93f",
+      "category": "多字語書き取り",
+      "question": "寺のシドウキンが盗まれる。",
+      "answer": "祠堂金",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 63番",
+      "mastery": "starting"
+    },
+    {
+      "id": "3f6dc41f-9ad0-5c67-bb86-65257cfb8828",
+      "category": "多字語書き取り",
+      "question": "家族でムギトロを食べる。",
+      "answer": "麦薯蕷",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 64番",
+      "mastery": "starting"
+    },
+    {
+      "id": "43ca743c-6c2c-5185-8f98-d6aaedb04cb0",
+      "category": "多字語書き取り",
+      "question": "大陸沿いにカサイレットウが連なる。",
+      "answer": "花綵列島",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 65番",
+      "mastery": "starting"
+    },
+    {
+      "id": "3db50703-7c81-5262-8485-aff48d321503",
+      "category": "多字語書き取り",
+      "question": "幕府直轄のショウヘイコウで学んだ。",
+      "answer": "昌平黌",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 66番",
+      "mastery": "starting"
+    },
+    {
+      "id": "2b7ebadc-8a87-5c98-a690-f5686616fc97",
+      "category": "多字語書き取り",
+      "question": "ネンコウブンを読み上げる。",
+      "answer": "拈香文",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 67番",
+      "mastery": "starting"
+    },
+    {
+      "id": "d53608b0-0f82-5e6f-9e6c-f2e6dd2aa564",
+      "category": "多字語書き取り",
+      "question": "式場にセキレイダイが飾られる。",
+      "answer": "鶺鴒台",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 68番",
+      "mastery": "starting"
+    },
+    {
+      "id": "33ada850-bb37-519b-9d37-856a0cb9f4a7",
+      "category": "多字語書き取り",
+      "question": "凝灰カクレキガンの層が見られる。",
+      "answer": "角礫岩",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 69番",
+      "mastery": "starting"
+    },
+    {
+      "id": "cfaa5bf9-5b65-595c-8484-3878753a789a",
+      "category": "多字語書き取り",
+      "question": "ドブクリョウが治療に使われた。",
+      "answer": "土茯苓",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 70番",
+      "mastery": "starting"
+    },
+    {
+      "id": "c9eff92b-5643-5a5c-8988-d4ffb6ac34d2",
+      "category": "多字語書き取り",
+      "question": "多くのヒョウキヘイを率いる。",
+      "answer": "驃騎兵",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 71番",
+      "mastery": "starting"
+    },
+    {
+      "id": "1751f5cf-a5c5-5637-9b01-23e4db8ee4df",
+      "category": "多字語書き取り",
+      "question": "目の中にサンリュウシュができる。",
+      "answer": "霰粒腫",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 72番",
+      "mastery": "starting"
+    },
+    {
+      "id": "1ec739bb-53fe-5565-94de-ca7a96f23fc1",
+      "category": "多字語書き取り",
+      "question": "ウエキモンを通って内裏を出る。",
+      "answer": "右掖門",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 73番",
+      "mastery": "starting"
+    },
+    {
+      "id": "8ca18fb6-449a-5b3e-bd53-a2e3eaea695a",
+      "category": "多字語書き取り",
+      "question": "春にニシンクキが見られる。",
+      "answer": "鰊群来",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 74番",
+      "mastery": "starting"
+    },
+    {
+      "id": "99dbe0fc-a466-5173-820b-ccbc0bfaf8d7",
+      "category": "多字語書き取り",
+      "question": "タクヒレの白浜浪の縁る時も無き。",
+      "answer": "栲領巾",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 75番",
+      "mastery": "starting"
+    },
+    {
+      "id": "882a85de-0191-5583-8efb-bab44e70ac75",
+      "category": "多字語書き取り",
+      "question": "同僚をボロカスに言う。",
+      "answer": "襤褸滓",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 76番",
+      "mastery": "starting"
+    },
+    {
+      "id": "1a793e9e-acff-5736-8e1e-f96b062c12a6",
+      "category": "多字語書き取り",
+      "question": "ジュゾウトウバンを陣頭に立てる。",
+      "answer": "鷲像纛幡\n[鷲像纛旛]",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 77番",
+      "mastery": "starting"
+    },
+    {
+      "id": "df116b67-6745-567e-afa8-cacdfa19aae3",
+      "category": "多字語書き取り",
+      "question": "天宮よりセンブシュウに還る。",
+      "answer": "贍部洲\n瞻部洲",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 78番",
+      "mastery": "starting"
+    },
+    {
+      "id": "1e81ee87-684f-5c48-b7f2-0f8bd03bf3d5",
+      "category": "多字語書き取り",
+      "question": "残念ビンシケン。",
+      "answer": "閔子騫",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 79番",
+      "mastery": "starting"
+    },
+    {
+      "id": "6017d50a-faaa-5aea-b73d-4d3d31ae1861",
+      "category": "多字語書き取り",
+      "question": "門にササラサンパチと書いて貼る。",
+      "answer": "簓三八",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 80番",
+      "mastery": "starting"
+    },
+    {
+      "id": "7304dc3c-ffa3-5ee4-bb68-60d7c923ed15",
+      "category": "多字語書き取り",
+      "question": "公主にコウソヒの俤を見る。",
+      "answer": "皇祖妣",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 81番",
+      "mastery": "starting"
+    },
+    {
+      "id": "93953d51-61ae-5ac7-b6ba-34bc00141510",
+      "category": "多字語書き取り",
+      "question": "セットウスイタイの形の台座がある。",
+      "answer": "截頭錐体",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 82番",
+      "mastery": "starting"
+    },
+    {
+      "id": "e4c24de9-11fa-5682-9949-54ae203acbb6",
+      "category": "多字語書き取り",
+      "question": "大臣がヒョウジョウセンゲを蒙る。",
+      "answer": "兵仗宣下",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 83番",
+      "mastery": "starting"
+    },
+    {
+      "id": "f2da74d0-1349-5006-8f76-f38fe8bde41f",
+      "category": "多字語書き取り",
+      "question": "コンエンキュウ上普く行き渡る。",
+      "answer": "渾円球",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 84番",
+      "mastery": "starting"
+    },
+    {
+      "id": "ae376648-a432-525b-bc41-7dc1d0433671",
+      "category": "多字語書き取り",
+      "question": "港町にチャブヤが立ち並ぶ。",
+      "answer": "卓袱屋",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 85番",
+      "mastery": "starting"
+    },
+    {
+      "id": "b5d81b18-79bd-51ad-b670-ad971ef734c1",
+      "category": "多字語書き取り",
+      "question": "鞘にマッキンルが施されている。",
+      "answer": "末金鏤",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 86番",
+      "mastery": "starting"
+    },
+    {
+      "id": "91ed73ab-3857-55a1-918e-368da439e647",
+      "category": "多字語書き取り",
+      "question": "米をゲヨウビツに入れる。",
+      "answer": "下用櫃",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 87番",
+      "mastery": "starting"
+    },
+    {
+      "id": "52bd1c46-f6a6-5baf-97e4-eb64d312c299",
+      "category": "多字語書き取り",
+      "question": "行者がサンゲサンゲと唱える。",
+      "answer": "懺悔懺悔",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 88番",
+      "mastery": "starting"
+    },
+    {
+      "id": "13fc6269-1bbb-5ae3-9ae9-e23faa1a7b3d",
+      "category": "多字語書き取り",
+      "question": "ヘンエンケイの鏡餅を積み上げる。",
+      "answer": "扁円形",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 89番",
+      "mastery": "starting"
+    },
+    {
+      "id": "a00f7b39-bc04-5248-9c68-a26d066fbb33",
+      "category": "多字語書き取り",
+      "question": "春にネハンニシが吹く。",
+      "answer": "涅槃西風",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 90番",
+      "mastery": "starting"
+    },
+    {
+      "id": "4115f05c-f4a5-53c0-8bbb-4392c856b7cc",
+      "category": "多字語書き取り",
+      "question": "持ってきたチョウズダライを使う。",
+      "answer": "手水盥",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 91番",
+      "mastery": "starting"
+    },
+    {
+      "id": "be43fc27-4ebb-54b6-8e45-4fa4acdff44f",
+      "category": "多字語書き取り",
+      "question": "桃太郎のホウソウエを飾る。",
+      "answer": "疱瘡絵",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 92番",
+      "mastery": "starting"
+    },
+    {
+      "id": "345b6a08-9037-53b0-9bfc-3219cfa8fc2f",
+      "category": "多字語書き取り",
+      "question": "呉服店でムリョウを購う。",
+      "answer": "六糸緞",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 93番",
+      "mastery": "starting"
+    },
+    {
+      "id": "36ef6652-87c7-502d-bab2-603856498a88",
+      "category": "多字語書き取り",
+      "question": "キワダイロに染め上げる。",
+      "answer": "黄檗色",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 94番",
+      "mastery": "starting"
+    },
+    {
+      "id": "fe26cc29-c76e-5b03-b39a-aad807b4d88f",
+      "category": "多字語書き取り",
+      "question": "ジョウキラ切って年中遊ぶ。",
+      "answer": "常綺羅",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 95番",
+      "mastery": "starting"
+    },
+    {
+      "id": "5622ff8d-d136-5c8c-94ae-a46aea188acf",
+      "category": "多字語書き取り",
+      "question": "シラシゲドウの弓を構える。",
+      "answer": "白重籐",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 96番",
+      "mastery": "starting"
+    },
+    {
+      "id": "db2138cd-9565-591b-8946-981a0a970dc2",
+      "category": "多字語書き取り",
+      "question": "アキツハの薄衣を纏う。",
+      "answer": "蜻蛉羽\n[秋津羽]",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 97番",
+      "mastery": "starting"
+    },
+    {
+      "id": "d6bebabb-5da8-5b13-b544-f13922190a6b",
+      "category": "多字語書き取り",
+      "question": "チゴマゲの少女と出会う。",
+      "answer": "稚児髷",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 98番",
+      "mastery": "starting"
+    },
+    {
+      "id": "30dfa0a8-5d28-5013-afff-e9dd481e5856",
+      "category": "多字語書き取り",
+      "question": "蔦のハンエンケイが伸びる。",
+      "answer": "攀縁茎\n攀援茎",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 99番",
+      "mastery": "starting"
+    },
+    {
+      "id": "11b25ae4-2114-50dd-9b7a-f1e3795d93fb",
+      "category": "多字語書き取り",
+      "question": "葬儀場からレイキュウシャが出る。",
+      "answer": "霊柩車",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 100番",
+      "mastery": "starting"
+    },
+    {
+      "id": "07ade03a-f06a-51ca-a351-499e5b689183",
+      "category": "多字語書き取り",
+      "question": "マカエンの義を明らかにする。",
+      "answer": "摩訶衍",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 101番",
+      "mastery": "starting"
+    },
+    {
+      "id": "52d25242-748d-51f2-b5da-ce0b5efb540b",
+      "category": "多字語書き取り",
+      "question": "受容体キッコウヤクを投与する。",
+      "answer": "拮抗薬",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 102番",
+      "mastery": "starting"
+    },
+    {
+      "id": "1d940156-053d-580f-8ba6-55b1f6a3070c",
+      "category": "多字語書き取り",
+      "question": "ボロボロが多く集まる。",
+      "answer": "梵論梵論\n暮露暮露",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 103番",
+      "mastery": "starting"
+    },
+    {
+      "id": "f26ab81c-6949-5e19-80e7-1ff233b3673a",
+      "category": "多字語書き取り",
+      "question": "脳のベンチタイの働きを見る。",
+      "answer": "胼胝体",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 104番",
+      "mastery": "starting"
+    },
+    {
+      "id": "d3867d3f-dec7-5e25-8b97-0f0fd2741b80",
+      "category": "多字語書き取り",
+      "question": "器にユウリコウの文様を施す。",
+      "answer": "釉裏紅",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 105番",
+      "mastery": "starting"
+    },
+    {
+      "id": "9673f2b4-c55d-5693-824e-d94a9bda83d0",
+      "category": "多字語書き取り",
+      "question": "サヤインゲンを茹でる。",
+      "answer": "莢隠元",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 106番",
+      "mastery": "starting"
+    },
+    {
+      "id": "7c192198-59ae-5b6e-8fcc-137d0a7cc0c6",
+      "category": "多字語書き取り",
+      "question": "動物園でキンシコウを見る。",
+      "answer": "金糸猴",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 107番",
+      "mastery": "starting"
+    },
+    {
+      "id": "77db576a-de70-54af-bb66-c41c38d03f54",
+      "category": "多字語書き取り",
+      "question": "奴は狡辛いシワタロウに過ぎぬ。",
+      "answer": "吝太郎",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 108番",
+      "mastery": "starting"
+    },
+    {
+      "id": "3dc8eea8-66c6-52af-9449-5e3b693b8c59",
+      "category": "多字語書き取り",
+      "question": "蝶や蛾はリンシルイの昆虫である。",
+      "answer": "鱗翅類",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 109番",
+      "mastery": "starting"
+    },
+    {
+      "id": "8f00e322-e6f9-5cc0-b8b6-4d4ffd0ce78a",
+      "category": "多字語書き取り",
+      "question": "カンランユと大蒜の風味が美味しい。",
+      "answer": "橄欖油",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 110番",
+      "mastery": "starting"
+    },
+    {
+      "id": "b02a7ffa-72d2-55c6-8f5b-73da64d2c7b9",
+      "category": "多字語書き取り",
+      "question": "舶来のショウビスイを購う。",
+      "answer": "薔薇水",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 111番",
+      "mastery": "starting"
+    },
+    {
+      "id": "d990ca56-6d6b-525c-9d3e-796c6d8ba737",
+      "category": "多字語書き取り",
+      "question": "道端でタンカバイに引き留められる。",
+      "answer": "啖呵売",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 112番",
+      "mastery": "starting"
+    },
+    {
+      "id": "dbe3d7c0-379c-5ef3-afd8-6dbe6e400d45",
+      "category": "多字語書き取り",
+      "question": "陛下がゴイシにお座りになる。",
+      "answer": "御倚子\n御椅子",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 113番",
+      "mastery": "starting"
+    },
+    {
+      "id": "6bae05ad-7efe-5605-8f17-1b48331fa639",
+      "category": "多字語書き取り",
+      "question": "ビシュカツマの如き名工と賞さる。",
+      "answer": "毘首羯磨",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 114番",
+      "mastery": "starting"
+    },
+    {
+      "id": "1a8b5e0f-416b-54ee-b80c-e1d504584d1a",
+      "category": "多字語書き取り",
+      "question": "罰としてエイチッキョを科す。",
+      "answer": "永蟄居",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 115番",
+      "mastery": "starting"
+    },
+    {
+      "id": "44f8a582-73ac-5119-bafb-f27ef22c1494",
+      "category": "多字語書き取り",
+      "question": "オオショウジョウの如く容易に壊す。",
+      "answer": "大猩猩",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 116番",
+      "mastery": "starting"
+    },
+    {
+      "id": "98316a92-ee9b-5b85-82dc-5c823165c764",
+      "category": "多字語書き取り",
+      "question": "大人用のカミオムツを買う。",
+      "answer": "紙御襁褓",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 117番",
+      "mastery": "starting"
+    },
+    {
+      "id": "75b1e6af-bb80-5b43-96ef-d5f5f4d28cf3",
+      "category": "多字語書き取り",
+      "question": "サンカメイチュウが稲に害を及ぼす。",
+      "answer": "三化螟虫",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 118番",
+      "mastery": "starting"
+    },
+    {
+      "id": "903aa016-5bc5-57e4-86f8-83e52c01999c",
+      "category": "多字語書き取り",
+      "question": "上書きにワラビノシが描かれる。",
+      "answer": "蕨熨斗",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 119番",
+      "mastery": "starting"
+    },
+    {
+      "id": "aded370b-990e-5052-890f-4a5f3e56b80d",
+      "category": "多字語書き取り",
+      "question": "ケイトウリュウヒョウを岩礁に置く。",
+      "answer": "挂灯立標",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 120番",
+      "mastery": "starting"
+    },
+    {
+      "id": "bbcab7b1-39ce-5e7e-81b0-3c2d323b84e1",
+      "category": "多字語書き取り",
+      "question": "ヒキュウカンセツを大きく動かす。",
+      "answer": "髀臼関節",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 121番",
+      "mastery": "starting"
+    },
+    {
+      "id": "4aaded12-85af-5415-9de6-8742dcb8a9cc",
+      "category": "多字語書き取り",
+      "question": "リョウガキョウの教えを重んじる。",
+      "answer": "楞伽経",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 122番",
+      "mastery": "starting"
+    },
+    {
+      "id": "c5a3c19a-2500-5491-a450-e88a3bd1a5b6",
+      "category": "多字語書き取り",
+      "question": "トソサンを服用する。",
+      "answer": "屠蘇散",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 123番",
+      "mastery": "starting"
+    },
+    {
+      "id": "6e768fb4-024e-5789-9c1c-f9081268be9d",
+      "category": "多字語書き取り",
+      "question": "写経にキハダシを使う。",
+      "answer": "黄檗紙",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 124番",
+      "mastery": "starting"
+    },
+    {
+      "id": "641e25a4-6d5f-5418-9ecc-1b0f0ea4e9db",
+      "category": "多字語書き取り",
+      "question": "松かげにニツツジあまた花さく。",
+      "answer": "丹躑躅",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 125番",
+      "mastery": "starting"
+    },
+    {
+      "id": "8d3caf5f-00f1-5eba-a228-c566ce87307e",
+      "category": "多字語書き取り",
+      "question": "ヤタガラスの如き良き嚮導者有り。",
+      "answer": "八咫烏",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 126番",
+      "mastery": "starting"
+    },
+    {
+      "id": "ff8d1153-30f2-5903-9bf2-33398ec8c6a9",
+      "category": "多字語書き取り",
+      "question": "レテグで重さを量る。",
+      "answer": "釐等具",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 127番",
+      "mastery": "starting"
+    },
+    {
+      "id": "3b84e60f-7f48-53c9-a507-4e91e2b512b3",
+      "category": "多字語書き取り",
+      "question": "塔のヒエンダルキを見上げる。",
+      "answer": "飛檐垂木",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 128番",
+      "mastery": "starting"
+    },
+    {
+      "id": "6a6be3e0-c6ef-5941-8cc3-bd498fe0d771",
+      "category": "多字語書き取り",
+      "question": "熊斐はナンピンハの画家である。",
+      "answer": "南蘋派",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 129番",
+      "mastery": "starting"
+    },
+    {
+      "id": "0de6e713-8fca-5f6c-b536-1a5508702cb8",
+      "category": "多字語書き取り",
+      "question": "アヤメカズラを髪に挿す。",
+      "answer": "菖蒲鬘",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 130番",
+      "mastery": "starting"
+    },
+    {
+      "id": "99a5c08f-122d-5a59-b5ca-2f3eefa8b20e",
+      "category": "多字語書き取り",
+      "question": "子どものワルフザケを𠮟る。",
+      "answer": "悪巫山戯",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 131番",
+      "mastery": "starting"
+    },
+    {
+      "id": "e406d002-3cf5-5b2e-86b1-5d9df7ed787a",
+      "category": "多字語書き取り",
+      "question": "シグレカンを家族で分け合う。",
+      "answer": "時雨羹",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 132番",
+      "mastery": "starting"
+    },
+    {
+      "id": "73d4b4d5-7a03-5d4f-a8fe-42756631baea",
+      "category": "多字語書き取り",
+      "question": "ミヤマオロシに花が散る。",
+      "answer": "深山颪",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 133番",
+      "mastery": "starting"
+    },
+    {
+      "id": "cf55b0c0-0391-5c08-9f32-87e1f7f2b3f5",
+      "category": "多字語書き取り",
+      "question": "家でオカメインコを飼う。",
+      "answer": "阿亀鸚哥",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 134番",
+      "mastery": "starting"
+    },
+    {
+      "id": "723b4206-71f0-5f67-aabd-b3dece8e7ce4",
+      "category": "多字語書き取り",
+      "question": "コウゲンシツを豊富に含む。",
+      "answer": "膠原質",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 135番",
+      "mastery": "starting"
+    },
+    {
+      "id": "0070091d-347e-5e13-88be-ac7a931b1292",
+      "category": "多字語書き取り",
+      "question": "高僧がノウゲサを着る。",
+      "answer": "衲袈裟",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 136番",
+      "mastery": "starting"
+    },
+    {
+      "id": "9b35be3c-0cf4-582c-b690-1828c7805e77",
+      "category": "多字語書き取り",
+      "question": "ハンレイガンを切り出して使う。",
+      "answer": "斑糲岩",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 137番",
+      "mastery": "starting"
+    },
+    {
+      "id": "121fa557-f792-57ec-b1bf-a1cb03d7d646",
+      "category": "多字語書き取り",
+      "question": "垂れ布をヘイショウグとして使う。",
+      "answer": "屛障具",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 138番",
+      "mastery": "starting"
+    },
+    {
+      "id": "2f6ab680-473b-53e9-bd88-5608de410194",
+      "category": "多字語書き取り",
+      "question": "御家人救済のためキエンレイを出す。",
+      "answer": "棄捐令",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 139番",
+      "mastery": "starting"
+    },
+    {
+      "id": "57dc6ab1-2d2d-5182-b70c-44786081f0c5",
+      "category": "多字語書き取り",
+      "question": "バレキジンを祀る社がある。",
+      "answer": "馬櫪神",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 140番",
+      "mastery": "starting"
+    },
+    {
+      "id": "7c938e63-252a-5bb2-a21a-237de8304fd7",
+      "category": "多字語書き取り",
+      "question": "業者がカツダイカモツを輸送する。",
+      "answer": "闊大貨物",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 141番",
+      "mastery": "starting"
+    },
+    {
+      "id": "be142dca-8b47-5052-88d7-eb2373bf11e1",
+      "category": "多字語書き取り",
+      "question": "シュユセツに菊花酒を飲む。",
+      "answer": "茱萸節",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 142番",
+      "mastery": "starting"
+    },
+    {
+      "id": "afb61d81-f412-581b-bcac-24a9aaf8fa79",
+      "category": "多字語書き取り",
+      "question": "浸した糯米をドンガメザルにあげる。",
+      "answer": "団亀笊",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 143番",
+      "mastery": "starting"
+    },
+    {
+      "id": "d10fe7eb-581b-53fc-bf49-a1cd62ef9dc8",
+      "category": "多字語書き取り",
+      "question": "薬をヒコウシンの出た皮膚に塗る。",
+      "answer": "秕糠疹",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 144番",
+      "mastery": "starting"
+    },
+    {
+      "id": "11e8bb0a-6459-5e7a-bef4-60c2c5bd10e6",
+      "category": "多字語書き取り",
+      "question": "広大なレキサバクが広がる。",
+      "answer": "礫砂漠",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 145番",
+      "mastery": "starting"
+    },
+    {
+      "id": "0e99996f-fde6-564b-841a-02671583d7d7",
+      "category": "多字語書き取り",
+      "question": "一人のバチビンヤッコと出会う。",
+      "answer": "撥鬢奴",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 146番",
+      "mastery": "starting"
+    },
+    {
+      "id": "2bf8a3a8-b13a-5ff1-b092-a5737e457245",
+      "category": "多字語書き取り",
+      "question": "茶室のオサランマを見上げる。",
+      "answer": "筬欄間",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 147番",
+      "mastery": "starting"
+    },
+    {
+      "id": "5a7c8ec2-9a97-5b08-86c1-e4ec6a0e0915",
+      "category": "多字語書き取り",
+      "question": "弥勒菩薩ハンカシイ像を鑑賞する。",
+      "answer": "半跏思惟",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 148番",
+      "mastery": "starting"
+    },
+    {
+      "id": "a0f15db6-6416-5945-80c1-34864a028864",
+      "category": "多字語書き取り",
+      "question": "石絨を以てカカンプを織る。",
+      "answer": "火浣布",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 149番",
+      "mastery": "starting"
+    },
+    {
+      "id": "18b15d5b-93b5-5b74-8076-af1633c368a3",
+      "category": "多字語書き取り",
+      "question": "池に棲息するユウキンルイを調べる。",
+      "answer": "游禽類",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 150番",
+      "mastery": "starting"
+    },
+    {
+      "id": "65bcf755-b982-5da7-b659-858dc68fb349",
+      "category": "多字語書き取り",
+      "question": "ビンナガマグロの刺身を食べる。",
+      "answer": "鬢⾧鮪",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 151番",
+      "mastery": "starting"
+    },
+    {
+      "id": "a3f65ba1-73d7-59a9-8f23-61f5990fb41b",
+      "category": "多字語書き取り",
+      "question": "老舗のゴショカンを手土産にする。",
+      "answer": "御所羹",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 152番",
+      "mastery": "starting"
+    },
+    {
+      "id": "fefdff00-a77d-5aa6-894d-6998f6c66ca2",
+      "category": "多字語書き取り",
+      "question": "カンゼブを味噌汁に入れる。",
+      "answer": "観世麩",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 153番",
+      "mastery": "starting"
+    },
+    {
+      "id": "afce538f-222b-5533-9f07-39ed1d4cb0f6",
+      "category": "多字語書き取り",
+      "question": "カライルイの野菜を食べる。",
+      "answer": "花蕾類",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 154番",
+      "mastery": "starting"
+    },
+    {
+      "id": "d05b56b1-c954-58da-96ca-dd97751a9d9b",
+      "category": "多字語書き取り",
+      "question": "肛門チョクチョウロウを手術で治す。",
+      "answer": "直腸瘻",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 155番",
+      "mastery": "starting"
+    },
+    {
+      "id": "62b0886f-f672-5aaf-a2d6-7d8265516d08",
+      "category": "多字語書き取り",
+      "question": "アカカンジョウの儀式を行う。",
+      "answer": "閼伽灌頂",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 156番",
+      "mastery": "starting"
+    },
+    {
+      "id": "8f895258-5bfc-57b1-9539-f7447ed8df55",
+      "category": "多字語書き取り",
+      "question": "紫宸殿の庭にドウウドウを立てる。",
+      "answer": "銅烏幢",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 157番",
+      "mastery": "starting"
+    },
+    {
+      "id": "21fe165c-43af-54c4-ba1c-3c9c471be2e9",
+      "category": "多字語書き取り",
+      "question": "事に依ると皆ボンテンコクになる。",
+      "answer": "梵天国",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 158番",
+      "mastery": "starting"
+    },
+    {
+      "id": "94056f51-7066-5b67-9bf1-55fe80de3c55",
+      "category": "多字語書き取り",
+      "question": "物体のセンダンキョウドを調べる。",
+      "answer": "剪断強度",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 159番",
+      "mastery": "starting"
+    },
+    {
+      "id": "d96d2fd8-8a9a-53b4-849c-08a788e36a36",
+      "category": "多字語書き取り",
+      "question": "タモトドケイの竜頭を巻く。",
+      "answer": "袂時計",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 160番",
+      "mastery": "starting"
+    },
+    {
+      "id": "88326a8f-1116-5bab-8788-3ab2ea4bfcfd",
+      "category": "多字語書き取り",
+      "question": "ヤサカニの勾玉を奉る。",
+      "answer": "八尺瓊",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 161番",
+      "mastery": "starting"
+    },
+    {
+      "id": "30a3b214-000f-57a5-b0dc-2a0b0a92a583",
+      "category": "多字語書き取り",
+      "question": "少人数でダビソウが執り行われる。",
+      "answer": "荼毘葬",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 162番",
+      "mastery": "starting"
+    },
+    {
+      "id": "35abd190-0157-5990-a443-685cef285b6a",
+      "category": "多字語書き取り",
+      "question": "サンコウキで穴を開ける。",
+      "answer": "鑽孔機\n鑽孔器",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 163番",
+      "mastery": "starting"
+    },
+    {
+      "id": "c875158a-b2c3-56f1-bfd2-7e7c3d913b84",
+      "category": "多字語書き取り",
+      "question": "タンソキンが兵器として使われる。",
+      "answer": "炭疽菌",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 164番",
+      "mastery": "starting"
+    },
+    {
+      "id": "85d25c5a-20e8-5988-bb91-5a6aee590828",
+      "category": "多字語書き取り",
+      "question": "栄養不足によるイシショウに悩む。",
+      "answer": "異嗜症",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 165番",
+      "mastery": "starting"
+    },
+    {
+      "id": "4f3f3ef2-4aed-586f-af97-c5fc7e082ad7",
+      "category": "多字語書き取り",
+      "question": "話をシラキチョウメンに受け取る。",
+      "answer": "白几帳面",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 166番",
+      "mastery": "starting"
+    },
+    {
+      "id": "ce5f38ee-2fec-5b98-a942-0d035c03b9d6",
+      "category": "多字語書き取り",
+      "question": "青銅器にトウテツモンが見られる。",
+      "answer": "饕餮文",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 167番",
+      "mastery": "starting"
+    },
+    {
+      "id": "7cb46d2f-15c6-57a8-adc2-d87b1916da4b",
+      "category": "多字語書き取り",
+      "question": "ウシツニシャの相が見られる。",
+      "answer": "烏瑟膩沙",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 168番",
+      "mastery": "starting"
+    },
+    {
+      "id": "8ea37951-5360-5928-930f-86b08fb0a5af",
+      "category": "多字語書き取り",
+      "question": "ザクログチを屈み入る。",
+      "answer": "石榴口\n柘榴口",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 169番",
+      "mastery": "starting"
+    },
+    {
+      "id": "53f7bee9-3114-5859-b32d-56f85a06df63",
+      "category": "多字語書き取り",
+      "question": "ハンダゴテで接合する。",
+      "answer": "半田鏝\n[盤陀鏝]",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 170番",
+      "mastery": "starting"
+    },
+    {
+      "id": "a3e6480e-b872-50ae-9a82-c07f85424a2c",
+      "category": "多字語書き取り",
+      "question": "怪盗が高価なビョウセイセキを狙う。",
+      "answer": "猫睛石",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 171番",
+      "mastery": "starting"
+    },
+    {
+      "id": "e6af006d-4b79-58f1-bd58-d51a0424cc3c",
+      "category": "多字語書き取り",
+      "question": "隣家からヨウランカが聞こえる。",
+      "answer": "揺籃歌",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 172番",
+      "mastery": "starting"
+    },
+    {
+      "id": "4a912db4-2a6d-5683-8e8f-f54b8bca7731",
+      "category": "多字語書き取り",
+      "question": "ショトクタイで手紙を書く。",
+      "answer": "書牘体",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 173番",
+      "mastery": "starting"
+    },
+    {
+      "id": "e52b0a32-7de8-584f-9a0e-b6cac64cab49",
+      "category": "多字語書き取り",
+      "question": "左綯いのゴボウジメを掛ける。",
+      "answer": "牛蒡注連",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 174番",
+      "mastery": "starting"
+    },
+    {
+      "id": "cef122c3-2881-5a53-9488-7cdbe8b63ab9",
+      "category": "多字語書き取り",
+      "question": "荘園とコクガリョウに分かれる。",
+      "answer": "国衙領",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 175番",
+      "mastery": "starting"
+    },
+    {
+      "id": "21516ff5-7500-5b3e-955e-d12d7ffd2a41",
+      "category": "多字語書き取り",
+      "question": "武家屋敷のササラコベイを見る。",
+      "answer": "簓子塀",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 176番",
+      "mastery": "starting"
+    },
+    {
+      "id": "356101bc-a31c-5652-8fb8-727cbb7c9ebc",
+      "category": "多字語書き取り",
+      "question": "羂索を執りシツシツザ上に結跏す。",
+      "answer": "瑟瑟座",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 177番",
+      "mastery": "starting"
+    },
+    {
+      "id": "1cc45443-62ae-5c5c-9a35-135520718dff",
+      "category": "多字語書き取り",
+      "question": "力を加えてカトウセイを調べる。",
+      "answer": "可撓性",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 178番",
+      "mastery": "starting"
+    },
+    {
+      "id": "1e212df1-ba04-5d6c-844a-49284ac1b6f7",
+      "category": "多字語書き取り",
+      "question": "太いゲジゲジマユが目立つ。",
+      "answer": "蚰蜒眉",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 179番",
+      "mastery": "starting"
+    },
+    {
+      "id": "cba9eb20-5cc2-5e23-9b81-da375fbb50f8",
+      "category": "多字語書き取り",
+      "question": "苺のホフクシが伸びる。",
+      "answer": "匍匐枝",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 180番",
+      "mastery": "starting"
+    },
+    {
+      "id": "47c1ca85-1852-5aed-bc18-31b8ea84a643",
+      "category": "多字語書き取り",
+      "question": "ミロクジソンの御許に侍る。",
+      "answer": "弥勒慈尊",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 181番",
+      "mastery": "starting"
+    },
+    {
+      "id": "20ab4c9a-12e5-5618-a950-b7d095c23845",
+      "category": "多字語書き取り",
+      "question": "和算のテンザンジュツを学ぶ。",
+      "answer": "点竄術",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 182番",
+      "mastery": "starting"
+    },
+    {
+      "id": "5a24b3c0-28d4-5413-94de-a667ff67adab",
+      "category": "多字語書き取り",
+      "question": "チョウメイルを吊して飾る。",
+      "answer": "⾧命縷",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 183番",
+      "mastery": "starting"
+    },
+    {
+      "id": "efa78019-0a5e-57df-8c72-f262df6dba28",
+      "category": "多字語書き取り",
+      "question": "家族でウドンスキを食べに行く。",
+      "answer": "饂飩鋤",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 184番",
+      "mastery": "starting"
+    },
+    {
+      "id": "5c7eb50d-1406-551b-8bc4-a94973e72c21",
+      "category": "多字語書き取り",
+      "question": "ミョウホウゲが碑に刻まれている。",
+      "answer": "妙法偈",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 185番",
+      "mastery": "starting"
+    },
+    {
+      "id": "0862a0af-122c-5791-9fab-b849c8d0786c",
+      "category": "多字語書き取り",
+      "question": "ドウサガミを習字に用いる。",
+      "answer": "礬水紙",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 186番",
+      "mastery": "starting"
+    },
+    {
+      "id": "cabb195c-609e-5b64-ae85-33f4107f3f4e",
+      "category": "多字語書き取り",
+      "question": "ハツゲンガッキを演奏する。",
+      "answer": "撥弦楽器",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 187番",
+      "mastery": "starting"
+    },
+    {
+      "id": "d48c85f9-9110-58ab-9f84-2c0d55731cb2",
+      "category": "多字語書き取り",
+      "question": "上体を倒してダイデンキンを伸ばす。",
+      "answer": "大臀筋\n大殿筋",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 188番",
+      "mastery": "starting"
+    },
+    {
+      "id": "198a4edc-5a44-5b8c-8e8d-f48bdfb1a9bc",
+      "category": "多字語書き取り",
+      "question": "鉄道に沿ってキデンセンが延びる。",
+      "answer": "饋電線",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 189番",
+      "mastery": "starting"
+    },
+    {
+      "id": "70ca2e70-68fd-5e4d-b745-64aa6d51f936",
+      "category": "多字語書き取り",
+      "question": "微笑んでカネグロの歯を見せる。",
+      "answer": "鉄漿黒",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 190番",
+      "mastery": "starting"
+    },
+    {
+      "id": "99463ce1-96ba-5487-b571-285bde11ce9a",
+      "category": "多字語書き取り",
+      "question": "原書を失いエイショウボンに拠る。",
+      "answer": "影鈔本",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 191番",
+      "mastery": "starting"
+    },
+    {
+      "id": "7f05311e-bf8a-5b66-aad9-46f46a19a2ab",
+      "category": "多字語書き取り",
+      "question": "茶碗の表面にチリメンジワが現れる。",
+      "answer": "縮緬皺",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 192番",
+      "mastery": "starting"
+    },
+    {
+      "id": "7351b726-86fe-5e36-bdb8-804c1ac571d2",
+      "category": "多字語書き取り",
+      "question": "コンゴウサンで研磨する。",
+      "answer": "金剛鑽",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 193番",
+      "mastery": "starting"
+    },
+    {
+      "id": "959380f2-40d6-54ff-bcc8-4e718966ad28",
+      "category": "多字語書き取り",
+      "question": "ゲンライエコクド人天。",
+      "answer": "還来穢国土",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 194番",
+      "mastery": "starting"
+    },
+    {
+      "id": "edecca18-00a2-5836-a1d2-63dd17b0b194",
+      "category": "多字語書き取り",
+      "question": "扇のバサラエにも書かんずらん。",
+      "answer": "婆娑羅絵",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 195番",
+      "mastery": "starting"
+    },
+    {
+      "id": "52a3ce73-fc92-5081-9175-ae75836e534b",
+      "category": "多字語書き取り",
+      "question": "導師がフジュモンを読む。",
+      "answer": "諷誦文",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 196番",
+      "mastery": "starting"
+    },
+    {
+      "id": "cd328df7-5040-5f57-b538-cc0a77e4dfdf",
+      "category": "多字語書き取り",
+      "question": "サンショウビョウを打ち込む。",
+      "answer": "山椒鋲",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 197番",
+      "mastery": "starting"
+    },
+    {
+      "id": "b872d4f3-844e-5c80-8093-2e4ee5bdad56",
+      "category": "多字語書き取り",
+      "question": "テキダントウを引っ提げ死地を行く。",
+      "answer": "擲弾筒",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 198番",
+      "mastery": "starting"
+    },
+    {
+      "id": "b3a830c1-eba5-5a8f-81f3-5bae9c5b3fc4",
+      "category": "多字語書き取り",
+      "question": "ヨクイニンを配合して処方する。",
+      "answer": "薏苡仁",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 199番",
+      "mastery": "starting"
+    },
+    {
+      "id": "ad346517-70d6-59f9-bb5b-d4d0584a5f15",
+      "category": "多字語書き取り",
+      "question": "イッセンダイは救済されない。",
+      "answer": "一闡提",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 200番",
+      "mastery": "starting"
+    },
+    {
+      "id": "3046c25a-dc6e-5a97-8fda-86abc9a955db",
+      "category": "多字語書き取り",
+      "question": "中世はヒタタレブスマを使っていた。",
+      "answer": "直垂衾",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 201番",
+      "mastery": "starting"
+    },
+    {
+      "id": "822b2091-c3ef-5d9e-a574-78be4959b7b1",
+      "category": "多字語書き取り",
+      "question": "ヤエスを仕掛けて魚を捕る。",
+      "answer": "八重簀",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 202番",
+      "mastery": "starting"
+    },
+    {
+      "id": "83d3b2c0-efcc-58c3-bb9f-24e5cf0dd452",
+      "category": "多字語書き取り",
+      "question": "不活脱不自由のガマゼンに過ぎぬ。",
+      "answer": "蝦蟇禅",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 203番",
+      "mastery": "starting"
+    },
+    {
+      "id": "a241dba8-8c7e-5b45-836f-462bf29ea5e6",
+      "category": "多字語書き取り",
+      "question": "漢方薬にサンソウニンを配合する。",
+      "answer": "酸棗仁",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 204番",
+      "mastery": "starting"
+    },
+    {
+      "id": "b7bae29e-2bfc-5a64-a176-53ef98ab3b93",
+      "category": "多字語書き取り",
+      "question": "マイカイユを香料として用いる。",
+      "answer": "玫瑰油",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 205番",
+      "mastery": "starting"
+    },
+    {
+      "id": "4b6e3415-0f1e-5248-878f-d9ebaefd3946",
+      "category": "多字語書き取り",
+      "question": "ジンメンソの妖怪を描く。",
+      "answer": "人面疽",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 206番",
+      "mastery": "starting"
+    },
+    {
+      "id": "64f873c6-6843-5afc-96d8-d9613baebe24",
+      "category": "多字語書き取り",
+      "question": "浄土近くのケマンガイに留まる。",
+      "answer": "懈慢界",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 207番",
+      "mastery": "starting"
+    },
+    {
+      "id": "600fa313-1963-5d0f-bf10-2ede5da24973",
+      "category": "多字語書き取り",
+      "question": "娼妓も、柳陰のシカシも亦人なり。",
+      "answer": "私窩子",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 208番",
+      "mastery": "starting"
+    },
+    {
+      "id": "d39e93a6-f54f-5d0e-b90a-ce15c28e9fc1",
+      "category": "多字語書き取り",
+      "question": "城のチュウジャクモンを敲く。",
+      "answer": "鍮石門\n中雀門",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 209番",
+      "mastery": "starting"
+    },
+    {
+      "id": "beacfdb8-0e70-5653-a273-bee883246acb",
+      "category": "多字語書き取り",
+      "question": "槍がケラクビからぽきりと折れる。",
+      "answer": "螻蛄首\n[螻首]",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 210番",
+      "mastery": "starting"
+    },
+    {
+      "id": "c6b323ef-80b5-506c-b5ca-d4c21702788a",
+      "category": "多字語書き取り",
+      "question": "実験で刺激のベンベツイキを調べる。",
+      "answer": "弁別閾",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 211番",
+      "mastery": "starting"
+    },
+    {
+      "id": "072f4da5-2772-5b84-8145-e3ce04c39d64",
+      "category": "多字語書き取り",
+      "question": "山形のノシウメをいただく。",
+      "answer": "熨斗梅\n熨梅",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 212番",
+      "mastery": "starting"
+    },
+    {
+      "id": "3538e746-3c3c-5db0-b0ea-401fb905a167",
+      "category": "多字語書き取り",
+      "question": "陛下はハジイロの御袍を着けたり。",
+      "answer": "黄櫨色\n櫨色",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 213番",
+      "mastery": "starting"
+    },
+    {
+      "id": "5fe5d9a8-360d-55d5-8cae-a5608b8eb64c",
+      "category": "多字語書き取り",
+      "question": "カンタンオトコの能面を着ける。",
+      "answer": "邯鄲男",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 214番",
+      "mastery": "starting"
+    },
+    {
+      "id": "f1a98372-fd76-5591-95f7-dd5e8acf7feb",
+      "category": "多字語書き取り",
+      "question": "カンドクブンの手本を示す。",
+      "answer": "簡牘文\n[竿牘文]",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 215番",
+      "mastery": "starting"
+    },
+    {
+      "id": "8f876648-5b45-5812-85f0-d33224254ea7",
+      "category": "多字語書き取り",
+      "question": "ガンソウザイで風邪を予防する。",
+      "answer": "含嗽剤\n[含漱剤]",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 216番",
+      "mastery": "starting"
+    },
+    {
+      "id": "7c824373-00ca-595d-8cf5-038a0cad7cae",
+      "category": "多字語書き取り",
+      "question": "ハリキョウを用いて像を映す。",
+      "answer": "玻璃鏡",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 217番",
+      "mastery": "starting"
+    },
+    {
+      "id": "7eefb203-9ba6-5130-a244-8127a363f108",
+      "category": "多字語書き取り",
+      "question": "コウサイタイを茹でて食べる。",
+      "answer": "紅菜薹\n紅菜苔",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 218番",
+      "mastery": "starting"
+    },
+    {
+      "id": "5f131843-e0a3-55aa-a5e6-bf2ef8777c01",
+      "category": "多字語書き取り",
+      "question": "フウカンシを丁寧に貼る。",
+      "answer": "封緘紙",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 219番",
+      "mastery": "starting"
+    },
+    {
+      "id": "32f2042e-a7e2-5905-9813-a87fcbeb7680",
+      "category": "多字語書き取り",
+      "question": "キョウカイシとして刑務所に入る。",
+      "answer": "教誨師",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 220番",
+      "mastery": "starting"
+    },
+    {
+      "id": "f09b0a70-6afb-5b58-8c44-243151463421",
+      "category": "多字語書き取り",
+      "question": "ランスウサイを投げて抽出する。",
+      "answer": "乱数賽",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 221番",
+      "mastery": "starting"
+    },
+    {
+      "id": "01774aa1-a929-5fec-8701-e8c73321b46b",
+      "category": "多字語書き取り",
+      "question": "契約は法律的キソクリョクを有する。",
+      "answer": "羈束力",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 222番",
+      "mastery": "starting"
+    },
+    {
+      "id": "75f7ba84-14d4-5ded-b8b1-da9e5e812028",
+      "category": "多字語書き取り",
+      "question": "蒔絵のミソビツ一よろい有り。",
+      "answer": "御衣櫃",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 223番",
+      "mastery": "starting"
+    },
+    {
+      "id": "dd7a27e9-a74a-58f5-bcff-96ee3a9475a9",
+      "category": "多字語書き取り",
+      "question": "神像及びスイジャクガを所蔵する。",
+      "answer": "垂迹画",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 224番",
+      "mastery": "starting"
+    },
+    {
+      "id": "227ec5a3-8139-5852-827e-c7d4ba626f85",
+      "category": "多字語書き取り",
+      "question": "幾何学的なショッコウモンが美しい。",
+      "answer": "蜀江文",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 225番",
+      "mastery": "starting"
+    },
+    {
+      "id": "324ccab8-3d4c-57cb-a6f6-c53716efbed4",
+      "category": "多字語書き取り",
+      "question": "皇族がソウカレンに乗り込む。",
+      "answer": "葱花輦",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 226番",
+      "mastery": "starting"
+    },
+    {
+      "id": "a286dc8d-86f6-5f36-9d10-f41a5d8d61a5",
+      "category": "多字語書き取り",
+      "question": "タビハダシで飛び出した。",
+      "answer": "足袋跣\n足袋裸足",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 227番",
+      "mastery": "starting"
+    },
+    {
+      "id": "ebfdbde6-c75f-5847-9eb7-969d910f34e7",
+      "category": "多字語書き取り",
+      "question": "ソメイロの頂に三十三天住む。",
+      "answer": "蘇迷盧",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 228番",
+      "mastery": "starting"
+    },
+    {
+      "id": "35c463e8-6c58-52e6-a277-99c5e6c21998",
+      "category": "多字語書き取り",
+      "question": "彼は身上をササラサッポウにした。",
+      "answer": "簓先穂",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 229番",
+      "mastery": "starting"
+    },
+    {
+      "id": "737062d3-ec15-5183-ac3c-465a6d46018a",
+      "category": "多字語書き取り",
+      "question": "レイアンポウで痛みを取る。",
+      "answer": "冷罨法",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 230番",
+      "mastery": "starting"
+    },
+    {
+      "id": "f8cd288d-a067-5a82-9d56-a7e711339bd4",
+      "category": "多字語書き取り",
+      "question": "ゲイカンズから海底地形を読み取る。",
+      "answer": "鯨瞰図",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 231番",
+      "mastery": "starting"
+    },
+    {
+      "id": "d4c944ac-3bb4-51c4-a181-a3a1ff62e511",
+      "category": "多字語書き取り",
+      "question": "懸垂でカッパイキンを鍛える。",
+      "answer": "闊背筋",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 232番",
+      "mastery": "starting"
+    },
+    {
+      "id": "4c4f880b-e2a4-5402-a5d8-d0052e948f94",
+      "category": "多字語書き取り",
+      "question": "仏果のクキョウイを完成せんと誓う。",
+      "answer": "究竟位",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 233番",
+      "mastery": "starting"
+    },
+    {
+      "id": "bbb891e0-de27-5c61-9c23-c4468dfc0aad",
+      "category": "多字語書き取り",
+      "question": "遠くからシャラゴエが聞こえる。",
+      "answer": "洒落声",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 234番",
+      "mastery": "starting"
+    },
+    {
+      "id": "12d76ef0-2536-585e-95f2-80b6621ebcf3",
+      "category": "多字語書き取り",
+      "question": "風呂の目地にボウバイザイをかける。",
+      "answer": "防黴剤",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 235番",
+      "mastery": "starting"
+    },
+    {
+      "id": "be2fd514-5209-5d30-9288-9a933868d682",
+      "category": "多字語書き取り",
+      "question": "日ごとナメカタか丁半に興ず。",
+      "answer": "縵面形",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 236番",
+      "mastery": "starting"
+    },
+    {
+      "id": "18d42df8-0dff-5a80-9b80-41a4fdfb14f0",
+      "category": "多字語書き取り",
+      "question": "コカンシが税を厳しく取り立てた。",
+      "answer": "拒捍使\n拒扞使",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 237番",
+      "mastery": "starting"
+    },
+    {
+      "id": "d309024c-4670-5aef-add6-b66bcba0bd3d",
+      "category": "多字語書き取り",
+      "question": "カラスミズを口に含む。",
+      "answer": "鱲子酢",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 238番",
+      "mastery": "starting"
+    },
+    {
+      "id": "78d77fc2-d5c9-507a-9181-56fe49754400",
+      "category": "多字語書き取り",
+      "question": "ランジャタイの香りを分析する。",
+      "answer": "蘭奢待",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 239番",
+      "mastery": "starting"
+    },
+    {
+      "id": "bc858865-b322-5119-a7af-a402361218d3",
+      "category": "多字語書き取り",
+      "question": "自身のケラゲイを嘲る。",
+      "answer": "螻蛄芸",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 240番",
+      "mastery": "starting"
+    },
+    {
+      "id": "fecade75-9ee9-57e0-9537-2fccadfa7710",
+      "category": "多字語書き取り",
+      "question": "各地からドウハンキョウが出土する。",
+      "answer": "同笵鏡",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 241番",
+      "mastery": "starting"
+    },
+    {
+      "id": "183ae8c0-11a1-56b3-87c9-e20ae748c080",
+      "category": "多字語書き取り",
+      "question": "ケンドンウドンを下々買い喰う。",
+      "answer": "倹飩饂飩",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 242番",
+      "mastery": "starting"
+    },
+    {
+      "id": "cd14b74c-38e1-5e89-bbcd-860682299a45",
+      "category": "多字語書き取り",
+      "question": "細かいキンルザイクが見られる。",
+      "answer": "金鏤細工",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 243番",
+      "mastery": "starting"
+    },
+    {
+      "id": "57909fdc-0d08-5e13-82b2-17bc58e337f1",
+      "category": "多字語書き取り",
+      "question": "鬱金を用いてコガネカンを作る。",
+      "answer": "黄金羹",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 244番",
+      "mastery": "starting"
+    },
+    {
+      "id": "aabd7ddf-a0b2-5298-891a-f6d8ce2b2ea1",
+      "category": "多字語書き取り",
+      "question": "ギョウギアラレの裃を着る。",
+      "answer": "行儀霰",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 245番",
+      "mastery": "starting"
+    },
+    {
+      "id": "e63873e1-5b6e-56df-9841-0c745f47ee94",
+      "category": "多字語書き取り",
+      "question": "山に本社のケンゾクシンを祀る。",
+      "answer": "眷属神",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 246番",
+      "mastery": "starting"
+    },
+    {
+      "id": "f5f1e328-e476-5935-80b9-180427fe3b8b",
+      "category": "多字語書き取り",
+      "question": "趣のあるセンゴウサンスイを描く。",
+      "answer": "浅絳山水",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 247番",
+      "mastery": "starting"
+    },
+    {
+      "id": "98db55d5-591f-519e-9d7c-5e7ace0622fe",
+      "category": "多字語書き取り",
+      "question": "フカンジョウセツによる脱水に注意。",
+      "answer": "不感蒸泄",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 248番",
+      "mastery": "starting"
+    },
+    {
+      "id": "b6b3846c-6dd1-5553-8530-604d3e38dd55",
+      "category": "多字語書き取り",
+      "question": "陵戸、クヌヒ等、五色の賤あり。",
+      "answer": "公奴婢",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 249番",
+      "mastery": "starting"
+    },
+    {
+      "id": "66f6c392-651d-51ae-8956-54bbcff5655c",
+      "category": "多字語書き取り",
+      "question": "ゲンピンヤキの茶碗を用いる。",
+      "answer": "元贇焼",
+      "meaning": "",
+      "notes": "倉庫さん １級多字語書き取り問題（１～１０） 250番",
+      "mastery": "starting"
+    }
+  ],
+  "replacesVersion": "kurako-TajigoStudyData-2026-10-12-v1"
+}
