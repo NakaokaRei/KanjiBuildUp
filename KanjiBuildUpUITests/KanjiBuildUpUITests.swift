@@ -395,20 +395,78 @@ final class KanjiBuildUpUITests: XCTestCase {
         }
     }
 
+    @MainActor func testLongQuestionAnswerVisible() throws {
+        continueAfterFailure = false
+        let app = XCUIApplication()
+        app.launchEnvironment["KANJI_TEST_STORE"] = UUID().uuidString
+        app.launchEnvironment["KANJI_TEST_DEFAULTS"] = "1"
+        app.launch()
+        let search = app.textFields["questionSearch"]
+        XCTAssertTrue(search.waitForExistence(timeout: 15))
+        search.tap()
+        search.typeText("箸持つ手" + "\n")
+        XCTAssertTrue(app.buttons["すべて、1件"].waitForExistence(timeout: 5))
+        app.buttons["startStudy"].tap()
+        app.buttons["revealAnswer"].tap()
+        let answer = app.textViews["studyAnswer"]
+        XCTAssertTrue(answer.waitForExistence(timeout: 5))
+        XCTAssertEqual(answer.value as? String, "く")
+        XCTAssertTrue(answer.isHittable)
+        XCTAssertLessThan(answer.frame.maxY, app.buttons["がんばるぞ"].frame.minY)
+        capture("long-question-answer-visible", app)
+        let question = app.textViews["answerQuestion"]
+        XCTAssertTrue((question.value as? String ?? "").hasSuffix("慣例（ならい）なり。"))
+        app.scrollViews.firstMatch.swipeUp()
+        XCTAssertTrue(question.isHittable)
+        capture("long-question-full-text", app)
+    }
+
+    @MainActor func testReadingTableCategories() throws {
+        continueAfterFailure = false
+        for (category, count, query, answer) in [
+            ("一字訓読み", 1960, "𬵪", "あおさば\n(さば)"),
+            ("一字訓読み", 1960, "𩶗", "いさざ"),
+            ("一字訓読み", 1960, "𫒼", "さかほこ"),
+            ("訓熟語", 532, "醜名", "しこな"),
+            ("訓読み", 2660, "夐か", "はるか")
+        ] {
+            let app = XCUIApplication()
+            app.launchEnvironment["KANJI_TEST_STORE"] = UUID().uuidString
+            app.launchEnvironment["KANJI_TEST_DEFAULTS"] = "1"
+            app.launch()
+            XCTAssertTrue(app.buttons["categoryFilter"].waitForExistence(timeout: 15))
+            XCTAssertFalse(app.alerts.firstMatch.exists)
+            app.buttons["categoryFilter"].tap()
+            app.buttons[category].firstMatch.tap()
+            XCTAssertTrue(app.buttons["がんばるぞ、\(count)件"].waitForExistence(timeout: 5))
+            let search = app.textFields["questionSearch"]
+            search.tap()
+            search.typeText(query + "\n")
+            XCTAssertTrue(app.buttons["すべて、1件"].waitForExistence(timeout: 5))
+            app.buttons["startStudy"].tap()
+            XCTAssertTrue(app.buttons["revealAnswer"].waitForExistence(timeout: 5))
+            capture("reading-table-question-\(query)", app)
+            app.buttons["revealAnswer"].tap()
+            XCTAssertEqual(app.textViews["studyAnswer"].value as? String, answer)
+            capture("reading-table-answer-\(query)", app)
+            app.terminate()
+        }
+    }
+
     @MainActor func testBundledDefaults() throws {
         continueAfterFailure = false
         let app = XCUIApplication()
         app.launchEnvironment["KANJI_TEST_STORE"] = UUID().uuidString
         app.launchEnvironment["KANJI_TEST_DEFAULTS"] = "1"
         app.launch()
-        XCTAssertTrue(app.buttons["すべて、17932件"].waitForExistence(timeout: 10))
-        XCTAssertTrue(app.buttons["がんばるぞ、10643件"].exists)
+        XCTAssertTrue(app.buttons["すべて、24473件"].waitForExistence(timeout: 10))
+        XCTAssertTrue(app.buttons["がんばるぞ、17184件"].exists)
         XCTAssertTrue(app.buttons["あとすこし、3435件"].exists)
         XCTAssertTrue(app.buttons["かんぺき、3854件"].exists)
         capture("default-library", app)
         app.buttons["categoryFilter"].tap()
         app.buttons["訓読み"].firstMatch.tap()
-        XCTAssertTrue(app.buttons["すべて、790件"].waitForExistence(timeout: 5))
+        XCTAssertTrue(app.buttons["すべて、3326件"].waitForExistence(timeout: 5))
         app.buttons["あとすこし、130件"].tap()
         app.buttons["startStudy"].tap()
         XCTAssertTrue(app.buttons["revealAnswer"].waitForExistence(timeout: 5))
@@ -417,7 +475,7 @@ final class KanjiBuildUpUITests: XCTestCase {
         app.buttons["toggleFavorite"].tap()
         XCTAssertEqual(app.buttons["toggleFavorite"].label, "お気に入りを解除")
         app.terminate(); app.launch()
-        XCTAssertTrue(app.buttons["すべて、17932件"].waitForExistence(timeout: 10))
+        XCTAssertTrue(app.buttons["すべて、24473件"].waitForExistence(timeout: 10))
         XCTAssertFalse(app.alerts.firstMatch.exists)
         app.buttons["favoriteFilter"].tap()
         XCTAssertTrue(app.buttons["すべて、1件"].waitForExistence(timeout: 5))
@@ -436,8 +494,8 @@ final class KanjiBuildUpUITests: XCTestCase {
         XCTAssertTrue(app.buttons["かんぺき、136件"].exists)
         app.buttons["categoryFilter"].tap()
         app.buttons["音読み"].firstMatch.tap()
-        XCTAssertTrue(app.buttons["すべて、4199件"].waitForExistence(timeout: 5))
-        XCTAssertTrue(app.buttons["がんばるぞ、2411件"].exists)
+        XCTAssertTrue(app.buttons["すべて、5254件"].waitForExistence(timeout: 5))
+        XCTAssertTrue(app.buttons["がんばるぞ、3466件"].exists)
         XCTAssertTrue(app.buttons["あとすこし、79件"].exists)
         XCTAssertTrue(app.buttons["かんぺき、1709件"].exists)
         app.buttons["categoryFilter"].tap()

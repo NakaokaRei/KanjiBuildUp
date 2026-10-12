@@ -5,9 +5,10 @@ struct DefaultStudyData: Codable {
     let items: [StudyItem]
     var replacesVersion: String? = nil
     var previousItems: [StudyItem]? = nil
+    var deduplicateByQuestion: Bool? = nil
 
     static func loadAll() throws -> [DefaultStudyData] {
-        try ["DefaultStudyData", "YojiKakiStudyData", "KojikotoStudyData", "OnyomiStudyData", "OnyomiContinuationStudyData", "OmidashiStudyData", "Omidashi2StudyData", "OnkunStudyData", "RongoKunyomiStudyData", "ShikyoKunyomiStudyData", "TajigoStudyData", "SentenceNibanStudyData", "SentenceKunyomiStudyData"].map { try load(resource: $0) }
+        try ["DefaultStudyData", "YojiKakiStudyData", "KojikotoStudyData", "OnyomiStudyData", "OnyomiContinuationStudyData", "OmidashiStudyData", "Omidashi2StudyData", "OnkunStudyData", "RongoKunyomiStudyData", "ShikyoKunyomiStudyData", "TajigoStudyData", "SentenceNibanStudyData", "SentenceKunyomiStudyData", "ReadingTablesStudyData"].map { try load(resource: $0) }
     }
 
     static func load(resource: String = "DefaultStudyData") throws -> DefaultStudyData {

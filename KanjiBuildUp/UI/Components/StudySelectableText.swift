@@ -63,9 +63,10 @@ private struct InlineStudyText: UIViewRepresentable {
         paragraph.alignment = centered ? .center : .natural
         paragraph.lineSpacing = lineSpacing
         paragraph.paragraphSpacing = paragraphSpacing
-        let attributed = NSAttributedString(string: text, attributes: [
+        let attributed = NSMutableAttributedString(string: text, attributes: [
             .font: font, .foregroundColor: UIColor(Palette.ink), .paragraphStyle: paragraph
         ])
+        StudyGlyphs.apply(to: attributed, size: size)
         // SwiftUI updates also happen while selecting and resizing the header.
         // Avoid resetting the selection unless the actual content changes.
         if view.text != text {

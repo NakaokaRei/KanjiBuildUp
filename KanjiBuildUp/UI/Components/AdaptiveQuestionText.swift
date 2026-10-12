@@ -19,18 +19,18 @@ struct AdaptiveQuestionText: View {
     var body: some View {
         ViewThatFits(in: .horizontal) {
             if !question.contains(where: \.isNewline) {
-                Text(question)
+                StudyGlyphs.text(question, size: maximumSize)
                     .font(questionFont.font(size: maximumSize))
                     .fixedSize()
                     .hidden()
                     .accessibilityHidden(true)
                     .overlay(alignment: .leading) {
-                        Text(question)
+                        StudyGlyphs.text(question, size: baseSize + (maximumSize - baseSize) * min(1, max(0, progress)))
                             .font(questionFont.font(size: baseSize + (maximumSize - baseSize) * min(1, max(0, progress))))
                             .fixedSize()
                     }
             }
-            Text(question)
+            StudyGlyphs.text(question, size: baseSize)
                 .font(questionFont.font(size: baseSize))
                 .fixedSize(horizontal: false, vertical: true)
         }

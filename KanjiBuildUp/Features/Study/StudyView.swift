@@ -17,6 +17,10 @@ struct StudyView: View {
   @State private var errorMessage: String?
   @Environment(\.dismiss) private var dismiss
   private var item: StudyItem? { session.currentID.flatMap(store.item) }
+  private var questionInBody: Bool {
+    guard let item else { return false }
+    return item.displayedQuestion.count > 40 || item.displayedQuestion.filter { $0.isNewline }.count > 2 || dynamicTypeSize.isAccessibilitySize
+  }
   var body: some View {
     VStack(alignment: .leading, spacing: 0) {
       if session.complete {
@@ -36,7 +40,7 @@ struct StudyView: View {
             ScrollView {
               VStack(alignment: .leading, spacing: session.revealed ? 12 : 22) {
                 if session.revealed {
-                  AnswerContentView(item: item, availableHeight: max(0, geometry.size.height - headerHeight - footerHeight))
+                  AnswerContentView(item: item, showsQuestion: questionInBody, availableHeight: max(0, geometry.size.height - headerHeight - footerHeight))
                 } else {
                   StudyQuestionText(question: item.question, studyFont: questionFont, category: item.category)
                     .frame(maxWidth: .infinity, minHeight: max(180, max(0, geometry.size.height - headerHeight - footerHeight) * 0.70))
@@ -48,7 +52,7 @@ struct StudyView: View {
             }
             .contentMargins(.bottom, footerHeight + 24)
             .ignoresSafeArea(.container, edges: .bottom)
-            .modifier(StudyScrollHeaderModifier(collapse: $headerCollapse, enabled: session.revealed))
+            .modifier(StudyScrollHeaderModifier(collapse: $headerCollapse, enabled: session.revealed && !questionInBody))
             .id("\(session.index)-\(session.revealed)")
             studyHeader(item)
               .onGeometryChange(for: CGFloat.self) { $0.size.height } action: { headerHeight = $0 }
@@ -181,7 +185,11 @@ struct StudyView: View {
           }
         }
         HStack(spacing: 12) {
-          if session.revealed {
+          if session.revealed && questionInBody {
+            Text("答えを確認しましょう")
+              .font(.headline)
+              .frame(maxWidth: .infinity, alignment: .leading)
+          } else if session.revealed {
             VStack(alignment: .leading, spacing: 4) {
               Text("問題").font(.caption).foregroundStyle(Palette.secondary)
               StudySelectableText(text: item.displayedQuestion,

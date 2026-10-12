@@ -21,7 +21,7 @@ struct StudyQuestionText: View {
                     }
                 }
             } else {
-                Text(parts.main)
+                StudyGlyphs.text(parts.main, size: parts.main.count <= 2 ? shortQuestionSize : parts.main.count >= 16 ? longQuestionSize : questionSize)
                     .font(studyFont.font(size: parts.main.count <= 2 ? shortQuestionSize : parts.main.count >= 16 ? longQuestionSize : questionSize))
                 if let explanation = parts.explanation {
                     Text(explanation)

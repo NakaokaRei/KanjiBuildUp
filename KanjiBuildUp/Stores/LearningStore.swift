@@ -72,8 +72,15 @@ final class LearningStore {
                 }
                 let existingIDs = Set(items.map(\.id))
                 let existingContent = Set(items.map { [$0.category, $0.question, $0.answer] })
-                let additions = initialData.items.filter {
-                    !existingIDs.contains($0.id) && !existingContent.contains([$0.category, $0.question, $0.answer])
+                var existingQuestions = initialData.deduplicateByQuestion == true
+                    ? Set(items.map { Self.questionKey($0) }) : Set<[String]>()
+                let additions = initialData.items.filter { item in
+                    guard !existingIDs.contains(item.id),
+                          !existingContent.contains([item.category, item.question, item.answer]) else { return false }
+                    if initialData.deduplicateByQuestion == true {
+                        return existingQuestions.insert(Self.questionKey(item)).inserted
+                    }
+                    return true
                 }
                 if !commit(items + additions, versions: appliedDefaults.union([initialData.version])) { break }
             }
@@ -81,6 +88,14 @@ final class LearningStore {
             errorMessage = "初期問題を追加できませんでした。登録済みの問題の学習・保存は引き続き利用できます。\n\(error.localizedDescription)"
         }
         publishWidget()
+    }
+
+    // This batch ignores answer variants when detecting already-registered questions.
+    private static func questionKey(_ item: StudyItem) -> [String] {
+        let question = item.question.precomposedStringWithCanonicalMapping.filter {
+            !$0.isWhitespace && $0 != "【" && $0 != "】"
+        }
+        return [item.category, question]
     }
 
     var categories: [String] { Array(Set(items.map(\.category))).sorted() }

@@ -579,6 +579,50 @@ import Foundation
             precondition(sentenceRestart.item(data.items[0].id)?.mastery == .learning)
             precondition(sentenceRestart.item(data.items[1].id) == nil)
         }
+        let readingTables = try JSONDecoder().decode(DefaultStudyData.self, from: Data(contentsOf:
+            URL(fileURLWithPath: "KanjiBuildUp/Resources/ReadingTablesStudyData.json")))
+        precondition(readingTables.items.count == 6541 && readingTables.deduplicateByQuestion == true)
+        precondition(Set(readingTables.items.map(\.id)).count == 6541)
+        for (category, count) in [("一字訓読み", 1960), ("訓読み", 2536), ("訓熟語", 532), ("当て字", 458), ("音読み", 1055)] {
+            precondition(readingTables.items.filter { $0.category == category }.count == count)
+        }
+        precondition(readingTables.items.allSatisfy {
+            $0.mastery == .starting && !$0.isFavorite && $0.notes.hasPrefix("出典：")
+                && $0.notes.contains("ページ・") && !$0.answer.isEmpty && !$0.question.isEmpty
+                && !$0.question.contains("(cid:") && !$0.answer.hasPrefix("\n")
+                && !$0.question.unicodeScalars.contains { (0xE000...0xF8FF).contains($0.value) }
+        })
+        for (question, answer) in [("灯", "あかり\nともしび\n(あかし)\n(とぼし)\n(ともし)"),
+                                   ("貴い", "たかい"), ("瞬く", "しばたたく\nまばたく\n(しばたく)"),
+                                   ("偶", "たまたま\n(たぐい)\n(ひとがた)"), ("𩶗", "いさざ")] {
+            precondition(readingTables.items.first { $0.question == question }?.answer == answer)
+        }
+        let tablesURL = directory.appendingPathComponent("reading-tables.json")
+        var registered = readingTables.items[0]
+        registered.id = UUID()
+        registered.question = " 【" + registered.question + "】 "
+        registered.answer = "編集済みの読み"
+        registered.notes = "自分のメモ"
+        registered.mastery = .mastered
+        registered.isFavorite = true
+        var otherCategory = registered
+        otherCategory.id = UUID()
+        otherCategory.category = "別カテゴリー"
+        let userTables = DefaultStudyData(version: "reading-tables-existing", items: [registered, otherCategory])
+        let tablesStore = LearningStore(fileURL: tablesURL, defaults: userTables, additionalDefaults: [readingTables])
+        precondition(tablesStore.errorMessage == nil && tablesStore.items.count == 6542)
+        precondition(tablesStore.item(registered.id) == registered)
+        precondition(tablesStore.item(otherCategory.id) == otherCategory)
+        precondition(tablesStore.item(readingTables.items[0].id) == nil)
+        precondition(tablesStore.toggleFavorite(for: readingTables.items[1].id))
+        precondition(tablesStore.setMastery(.learning, for: readingTables.items[1].id))
+        precondition(tablesStore.delete(readingTables.items[2].id))
+        let tablesRestart = LearningStore(fileURL: tablesURL, defaults: userTables, additionalDefaults: [readingTables])
+        precondition(tablesRestart.errorMessage == nil && tablesRestart.items.count == 6541)
+        precondition(tablesRestart.item(registered.id) == registered)
+        precondition(tablesRestart.item(readingTables.items[1].id)?.isFavorite == true)
+        precondition(tablesRestart.item(readingTables.items[1].id)?.mastery == .learning)
+        precondition(tablesRestart.item(readingTables.items[2].id) == nil)
         let legacyURL = directory.appendingPathComponent("legacy.json")
         var existing = first
         existing.id = UUID(); existing.notes = "自分のメモ"; existing.mastery = .learning

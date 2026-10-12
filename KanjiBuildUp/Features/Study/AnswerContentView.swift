@@ -3,7 +3,9 @@ import SwiftUI
 /// Give the answer a central focus while keeping definitions and notes below it.
 struct AnswerContentView: View {
     let item: StudyItem
+    var showsQuestion = false
     let availableHeight: CGFloat
+    @AppStorage("questionFont") private var questionFont: StudyFont = .gothic
     @AppStorage("answerFont") private var answerFont: StudyFont = .gothic
     @ScaledMetric(relativeTo: .largeTitle) private var answerSize = 56
     @ScaledMetric(relativeTo: .body) private var bodySize = 18
@@ -23,12 +25,23 @@ struct AnswerContentView: View {
                     .accessibilityIdentifier("studyAnswer")
             }
             .frame(maxWidth: .infinity, minHeight: max(140, availableHeight * 0.5))
-            Divider()
-            VStack(alignment: .leading, spacing: 6) {
-                Text("意味").font(.subheadline.weight(.semibold))
-                StudySelectableText(text: item.meaning,
-                                    size: bodySize, lineSpacing: 3)
-                    .accessibilityIdentifier("studyMeaning")
+            if showsQuestion {
+                Divider()
+                VStack(alignment: .leading, spacing: 6) {
+                    Text("問題").font(.subheadline.weight(.semibold))
+                    StudySelectableText(text: item.displayedQuestion, size: bodySize,
+                                        studyFont: questionFont, lineSpacing: 4)
+                        .accessibilityIdentifier("answerQuestion")
+                }
+            }
+            if !item.meaning.isEmpty {
+                Divider()
+                VStack(alignment: .leading, spacing: 6) {
+                    Text("意味").font(.subheadline.weight(.semibold))
+                    StudySelectableText(text: item.meaning,
+                                        size: bodySize, lineSpacing: 3)
+                        .accessibilityIdentifier("studyMeaning")
+                }
             }
             if !item.notes.isEmpty {
                 Divider()
