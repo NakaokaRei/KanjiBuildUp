@@ -1,6 +1,63 @@
 import XCTest
 
 final class KanjiBuildUpUITests: XCTestCase {
+    @MainActor func testHandwritingFlow() throws {
+        continueAfterFailure = false
+        let app = XCUIApplication()
+        app.launchEnvironment["KANJI_TEST_STORE"] = UUID().uuidString
+        app.launchEnvironment["KANJI_TEST_CSV"] = "カテゴリー,問題,答え,意味\n読み,桜,さくら,春に花が咲く木。\n読み,椿,つばき,冬に花が咲く木。"
+        app.launch()
+        XCTAssertTrue(app.buttons["addItem"].waitForExistence(timeout: 10))
+        app.buttons["addItem"].tap()
+        app.buttons["importCSV"].tap()
+        app.buttons["2件を取り込む"].tap()
+        app.buttons["取り込み通知を閉じる"].tap()
+        app.buttons["startStudy"].tap()
+        let canvas = app.descendants(matching: .any)["handwritingCanvas"].firstMatch
+        XCTAssertTrue(canvas.waitForExistence(timeout: 5))
+        capture("handwriting-01-empty", app)
+        func drawStroke() {
+            let start = canvas.coordinate(withNormalizedOffset: CGVector(dx: 0.25, dy: 0.3))
+            start.press(forDuration: 0.05, thenDragTo: canvas.coordinate(withNormalizedOffset: CGVector(dx: 0.65, dy: 0.6)))
+        }
+        drawStroke()
+        XCTAssertTrue(app.buttons["一画戻す"].isEnabled)
+        app.buttons["一画戻す"].tap()
+        XCTAssertFalse(app.buttons["一画戻す"].isEnabled)
+        drawStroke()
+        app.segmentedControls.buttons["消しゴム"].tap()
+        drawStroke()
+        XCTAssertFalse(app.buttons["一画戻す"].isEnabled)
+        app.segmentedControls.buttons["ペン"].tap()
+        drawStroke()
+        capture("handwriting-02-written", app)
+        app.buttons["revealAnswer"].tap()
+        XCTAssertTrue(app.images["handwritingPreview"].waitForExistence(timeout: 5))
+        XCTAssertTrue(app.textViews["studyAnswer"].isHittable)
+        capture("handwriting-03-compare", app)
+        XCUIDevice.shared.orientation = .landscapeLeft
+        Thread.sleep(forTimeInterval: 1)
+        XCTAssertTrue(app.textViews["studyAnswer"].isHittable)
+        XCTAssertLessThan(app.textViews["studyAnswer"].frame.maxY, app.buttons["かんぺき"].frame.minY)
+        capture("handwriting-04-landscape", app)
+        XCUIDevice.shared.orientation = .portrait
+        Thread.sleep(forTimeInterval: 1)
+        app.buttons["次の問題"].tap()
+        XCTAssertFalse(app.buttons["一画戻す"].isEnabled)
+        swipeBack(app)
+        XCTAssertTrue(app.images["handwritingPreview"].waitForExistence(timeout: 5))
+        swipeBack(app)
+        XCTAssertTrue(app.buttons["revealAnswer"].waitForExistence(timeout: 5))
+        XCTAssertTrue(app.buttons["一画戻す"].isEnabled)
+        capture("handwriting-05-restored", app)
+        app.buttons["すべて消す"].tap()
+        app.buttons["手書きを消去"].tap()
+        XCTAssertFalse(app.buttons["一画戻す"].isEnabled)
+        app.buttons["revealAnswer"].tap()
+        XCTAssertFalse(app.images["handwritingPreview"].exists)
+        capture("handwriting-06-empty-answer", app)
+    }
+
     @MainActor func testFavoriteScopeAndLongQuestionDesign() throws {
         continueAfterFailure = false
         let question = "父母に事へて能く其の力を【竭】くし、…"
@@ -818,10 +875,11 @@ final class KanjiBuildUpUITests: XCTestCase {
     }
 
     @MainActor private func capture(_ name: String, _ app: XCUIApplication) {
+        Thread.sleep(forTimeInterval: 0.5)
         let directory = URL.documentsDirectory.appendingPathComponent("Screenshots")
         try? FileManager.default.createDirectory(at: directory, withIntermediateDirectories: true)
-        try? app.screenshot().pngRepresentation.write(to: directory.appendingPathComponent(name + ".png"))
-        let attachment = XCTAttachment(screenshot: app.screenshot())
+        try? XCUIScreen.main.screenshot().pngRepresentation.write(to: directory.appendingPathComponent(name + ".png"))
+        let attachment = XCTAttachment(screenshot: XCUIScreen.main.screenshot())
         attachment.name = name
         attachment.lifetime = .keepAlways
         add(attachment)

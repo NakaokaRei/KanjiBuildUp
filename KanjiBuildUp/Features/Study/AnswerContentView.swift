@@ -1,7 +1,16 @@
 import SwiftUI
+#if os(iOS)
+import PencilKit
+#endif
 
 /// Give the answer a central focus while keeping definitions and notes below it.
 struct AnswerContentView: View {
+    #if os(iOS)
+    var handwriting: PKDrawing? = nil
+    @Environment(\.verticalSizeClass) private var verticalSizeClass
+    @Environment(\.horizontalSizeClass) private var sizeClass
+    #endif
+    @Environment(\.dynamicTypeSize) private var dynamicTypeSize
     let item: StudyItem
     var showsQuestion = false
     let availableHeight: CGFloat
@@ -12,19 +21,43 @@ struct AnswerContentView: View {
     @ScaledMetric(relativeTo: .largeTitle) private var alternativeAnswerSize = 26
     @ScaledMetric(relativeTo: .body) private var pairSpacing = 24
 
+    private var compactHeight: Bool {
+        #if os(iOS)
+        return verticalSizeClass == .compact
+        #else
+        return false
+        #endif
+    }
+
+    private var comparisonLayout: AnyLayout {
+        #if os(iOS)
+        if (sizeClass == .regular || verticalSizeClass == .compact) && !dynamicTypeSize.isAccessibilitySize {
+            return AnyLayout(HStackLayout(alignment: .center, spacing: 20))
+        }
+        #endif
+        return AnyLayout(VStackLayout(spacing: 12))
+    }
+
     var body: some View {
         let pair = OnkunText(item.answer, category: item.category)
         VStack(alignment: .leading, spacing: 12) {
-            VStack(spacing: 8) {
-                Text("答え").font(.caption).foregroundStyle(Palette.secondary)
-                StudySelectableText(text: pair?.text ?? item.answer,
-                                    size: pair?.hasAlternatives == true ? alternativeAnswerSize : answerSize,
-                                    studyFont: answerFont, centered: true,
-                                    paragraphSpacing: pair == nil ? 0 : pairSpacing)
-                    .fixedSize(horizontal: false, vertical: true)
-                    .accessibilityIdentifier("studyAnswer")
+            comparisonLayout {
+                #if os(iOS)
+                if let handwriting, !handwriting.strokes.isEmpty {
+                    HandwritingPreview(drawing: handwriting)
+                }
+                #endif
+                VStack(spacing: 8) {
+                    Text("答え").font(.caption).foregroundStyle(Palette.secondary)
+                    StudySelectableText(text: pair?.text ?? item.answer,
+                                        size: pair?.hasAlternatives == true ? alternativeAnswerSize : answerSize * (compactHeight ? 0.7 : 1),
+                                        studyFont: answerFont, centered: true,
+                                        paragraphSpacing: pair == nil ? 0 : pairSpacing)
+                        .fixedSize(horizontal: false, vertical: true)
+                        .accessibilityIdentifier("studyAnswer")
+                }
+                .frame(maxWidth: .infinity, minHeight: compactHeight ? 70 : max(100, availableHeight * 0.35))
             }
-            .frame(maxWidth: .infinity, minHeight: max(140, availableHeight * 0.5))
             if showsQuestion {
                 Divider()
                 VStack(alignment: .leading, spacing: 6) {

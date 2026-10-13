@@ -1,4 +1,7 @@
 import SwiftUI
+#if os(iOS)
+import PencilKit
+#endif
 
 struct StudyView: View {
   let store: LearningStore
@@ -6,6 +9,9 @@ struct StudyView: View {
   var embedsNavigationStack = true
   @Environment(\.dismiss) private var dismiss
   @State private var path: [StudySession] = []
+  #if os(iOS)
+  @State private var drawings: [UUID: PKDrawing] = [:]
+  #endif
 
   var body: some View {
     Group {
@@ -23,12 +29,35 @@ struct StudyView: View {
   }
 
   private func page(_ value: StudySession) -> some View {
+    #if os(iOS)
+    StudyPage(store: store, session: value, drawings: $drawings,
+              push: { path.append($0) }, close: { dismiss() })
+    #else
     StudyPage(store: store, session: value,
               push: { path.append($0) }, close: { dismiss() })
+    #endif
   }
 }
 
 private struct StudyPage: View {
+  let store: LearningStore
+  let session: StudySession
+  #if os(iOS)
+  @Binding var drawings: [UUID: PKDrawing]
+  #endif
+  let push: (StudySession) -> Void
+  let close: () -> Void
+  #if os(iOS)
+  @Environment(\.verticalSizeClass) private var verticalSizeClass
+  private var compactHeight: Bool { verticalSizeClass == .compact }
+  #else
+  private var compactHeight: Bool { false }
+  #endif
+  private var studyLayout: AnyLayout {
+    compactHeight && !dynamicTypeSize.isAccessibilitySize
+      ? AnyLayout(HStackLayout(alignment: .center, spacing: 16))
+      : AnyLayout(VStackLayout(spacing: 12))
+  }
   @Environment(\.dynamicTypeSize) private var dynamicTypeSize
   @State private var headerCollapse: CGFloat = 1
   @State private var headerHeight: CGFloat = 140
@@ -37,11 +66,6 @@ private struct StudyPage: View {
   @AppStorage("questionFont") private var questionFont: StudyFont = .gothic
   @State private var showFontSettings = false
   private var headerProgress: CGFloat { session.revealed ? 1 - headerCollapse : 0 }
-  let store: LearningStore
-  let session: StudySession
-  let push: (StudySession) -> Void
-  let close: () -> Void
-  @State private var footerHeight: CGFloat = 180
   @State private var editingItem: StudyItem?
   @State private var confirmDelete = false
   @State private var errorMessage: String?
@@ -62,25 +86,35 @@ private struct StudyPage: View {
             .multilineTextAlignment(.center).foregroundStyle(Palette.secondary)
         }.frame(maxWidth: .infinity)
         Spacer()
-        Color.clear.frame(height: footerHeight)
       } else if let item {
         GeometryReader { geometry in
           ZStack(alignment: .top) {
             ScrollView {
-              VStack(alignment: .leading, spacing: session.revealed ? 12 : 22) {
+              VStack(alignment: .leading, spacing: 12) {
                 if session.revealed {
-                  AnswerContentView(item: item, showsQuestion: questionInBody, availableHeight: max(0, geometry.size.height - headerHeight - footerHeight))
+                  #if os(iOS)
+                  AnswerContentView(handwriting: drawings[item.id], item: item, showsQuestion: questionInBody || compactHeight, availableHeight: max(0, geometry.size.height - headerHeight))
+                  #else
+                  AnswerContentView(item: item, showsQuestion: questionInBody || compactHeight, availableHeight: max(0, geometry.size.height - headerHeight))
+                  #endif
                 } else {
-                  StudyQuestionText(question: item.question, studyFont: questionFont, category: item.category)
-                    .frame(maxWidth: .infinity, minHeight: max(180, max(0, geometry.size.height - headerHeight - footerHeight) * 0.70))
-                    .padding(.vertical, 16).accessibilityIdentifier("questionText")
+                  studyLayout {
+                    StudyQuestionText(question: item.question, studyFont: questionFont, category: item.category)
+                      .frame(maxWidth: .infinity, minHeight: 100)
+                      .padding(.vertical, 8).accessibilityIdentifier("questionText")
+                    #if os(iOS)
+                    HandwritingView(drawing: Binding(
+                      get: { drawings[item.id] ?? PKDrawing() },
+                      set: { drawings[item.id] = $0 }
+                    )).id(item.id)
+                    #endif
+                  }
                 }
               }.frame(maxWidth: .infinity, alignment: .leading).padding(
-                .vertical, session.revealed ? 12 : 26)
+                .vertical, compactHeight ? 4 : 12)
                 .padding(.top, headerHeight)
             }
-            .contentMargins(.bottom, footerHeight + 24)
-            .ignoresSafeArea(.container, edges: .bottom)
+            .contentMargins(.bottom, 24)
             .modifier(StudyScrollHeaderModifier(collapse: $headerCollapse, enabled: session.revealed && !questionInBody))
             .id("\(session.index)-\(session.revealed)")
             studyHeader(item)
@@ -89,44 +123,50 @@ private struct StudyPage: View {
         }
 
       }
-    }.padding(.horizontal, 20).padding(.vertical, 12).frame(maxWidth: 640).frame(
+    }.padding(.horizontal, 20).padding(.vertical, compactHeight ? 4 : 12).frame(maxWidth: 900).frame(
       maxWidth: .infinity
     )
     .background(Palette.pageGradient.ignoresSafeArea())
-    .floatingFooter(height: $footerHeight) {
-      if session.complete {
-        PrimaryButton(title: "一覧に戻る") { close() }
-      } else if let item {
-        VStack(spacing: 0) {
-          if session.revealed {
-            VStack(alignment: .leading, spacing: 6) {
-              HStack(spacing: 8) {
-                CompanionImage(name: "CompanionStarfish", size: 44)
-                Text("覚え具合を選ぶ").font(.subheadline)
+    .safeAreaInset(edge: .bottom, spacing: 0) {
+      VStack(spacing: 0) {
+        if session.complete {
+          PrimaryButton(title: "一覧に戻る") { close() }
+        } else if let item {
+          studyLayout {
+            if session.revealed {
+              VStack(alignment: .leading, spacing: 6) {
+                if !compactHeight {
+                  HStack(spacing: 8) {
+                    CompanionImage(name: "CompanionStarfish", size: 44)
+                    Text("覚え具合を選ぶ").font(.subheadline)
+                  }
+                }
+                HStack(spacing: 8) { masteryButtons(item) }
+              }.padding(.top, compactHeight ? 0 : 8).padding(.bottom, compactHeight ? 0 : 12)
+              PrimaryButton(
+                title: session.isReview
+                  ? "一覧に戻る" : session.index + 1 == session.itemIDs.count ? "学習を終える" : "次の問題"
+              ) {
+                if session.isReview { close() } else {
+                  var next = session
+                  next.advance()
+                  push(next)
+                }
               }
-              HStack(spacing: 8) { masteryButtons(item) }
-            }.padding(.top, 8).padding(.bottom, 12)
-            PrimaryButton(
-              title: session.isReview
-                ? "一覧に戻る" : session.index + 1 == session.itemIDs.count ? "学習を終える" : "次の問題"
-            ) {
-              if session.isReview { close() } else {
-                var next = session
-                next.advance()
-                push(next)
-              }
+            } else {
+              MasteryBadge(mastery: item.mastery).frame(maxWidth: .infinity).padding(.bottom, compactHeight ? 0 : 12)
+              PrimaryButton(title: "答えを見る") {
+                var answer = session
+                answer.revealed = true
+                push(answer)
+              }.accessibilityIdentifier(
+                "revealAnswer")
             }
-          } else {
-            MasteryBadge(mastery: item.mastery).frame(maxWidth: .infinity).padding(.bottom, 24)
-            PrimaryButton(title: "答えを見る") {
-              var answer = session
-              answer.revealed = true
-              push(answer)
-            }.accessibilityIdentifier(
-              "revealAnswer")
           }
         }
-      }
+      }.padding(.horizontal, 20).padding(.vertical, compactHeight ? 8 : 12)
+        .frame(maxWidth: compactHeight ? 900 : 640).frame(maxWidth: .infinity)
+        .background(Palette.background)
     }
     .onChange(of: session.currentID) { _, _ in headerCollapse = 1 }
     .onChange(of: session.revealed) { _, _ in headerCollapse = 1 }
@@ -217,40 +257,42 @@ private struct StudyPage: View {
             }
           }
         }
-        HStack(spacing: 12) {
-          if session.revealed && questionInBody {
-            Text("答えを確認しましょう")
+        if !compactHeight {
+          HStack(spacing: 12) {
+            if session.revealed && questionInBody {
+              Text("答えを確認しましょう")
+                .font(.headline)
+                .frame(maxWidth: .infinity, alignment: .leading)
+            } else if session.revealed {
+              VStack(alignment: .leading, spacing: 4) {
+                Text("問題").font(.caption).foregroundStyle(Palette.secondary)
+                StudySelectableText(text: item.displayedQuestion,
+                                    size: collapsedQuestionSize + (expandedQuestionSize - collapsedQuestionSize) * headerProgress,
+                                    studyFont: questionFont,
+                                    paragraphSpacing: item.category == "onkun" ? 12 : 0)
+                  .fixedSize(horizontal: false, vertical: true)
+                  .accessibilityIdentifier("answerQuestion")
+              }.frame(maxWidth: .infinity, alignment: .leading)
+            } else {
+              Text(
+                ["読み", "音読み", "訓読み", "当て字"].contains(item.category) ? "この漢字の読みは？" : "答えを考えてみましょう"
+              )
               .font(.headline)
+              .multilineTextAlignment(.center)
+              .frame(maxWidth: .infinity)
+              .padding(.leading, 16)
+              .padding(.trailing, dynamicTypeSize.isAccessibilitySize ? 16 : 30)
+              .padding(.vertical, 12)
               .frame(maxWidth: .infinity, alignment: .leading)
-          } else if session.revealed {
-            VStack(alignment: .leading, spacing: 4) {
-              Text("問題").font(.caption).foregroundStyle(Palette.secondary)
-              StudySelectableText(text: item.displayedQuestion,
-                                  size: collapsedQuestionSize + (expandedQuestionSize - collapsedQuestionSize) * headerProgress,
-                                  studyFont: questionFont,
-                                  paragraphSpacing: item.category == "onkun" ? 12 : 0)
-                .fixedSize(horizontal: false, vertical: true)
-                .accessibilityIdentifier("answerQuestion")
-            }.frame(maxWidth: .infinity, alignment: .leading)
-          } else {
-            Text(
-              ["読み", "音読み", "訓読み", "当て字"].contains(item.category) ? "この漢字の読みは？" : "答えを考えてみましょう"
-            )
-            .font(.headline)
-            .multilineTextAlignment(.center)
-            .frame(maxWidth: .infinity)
-            .padding(.leading, 16)
-            .padding(.trailing, dynamicTypeSize.isAccessibilitySize ? 16 : 30)
-            .padding(.vertical, 12)
-            .frame(maxWidth: .infinity, alignment: .leading)
-            .background(.white, in: CompanionSpeechBubble(showsTail: !dynamicTypeSize.isAccessibilitySize))
-          }
-          if !dynamicTypeSize.isAccessibilitySize {
-            CompanionImage(name: session.revealed ? "CompanionSeaLion" : session.companionName, size: 72 + 28 * headerProgress)
-              // Resize the artwork together with the question as the user scrolls the body.
-              .frame(width: session.revealed ? 100 : 72, height: 56 + 28 * headerProgress)
-          }
-        }.frame(minHeight: 56 + 28 * headerProgress)
+              .background(.white, in: CompanionSpeechBubble(showsTail: !dynamicTypeSize.isAccessibilitySize))
+            }
+            if !dynamicTypeSize.isAccessibilitySize {
+              CompanionImage(name: session.revealed ? "CompanionSeaLion" : session.companionName, size: 72 + 28 * headerProgress)
+                // Resize the artwork together with the question as the user scrolls the body.
+                .frame(width: session.revealed ? 100 : 72, height: 56 + 28 * headerProgress)
+            }
+          }.frame(minHeight: 56 + 28 * headerProgress)
+        }
       }
     }
   }
@@ -264,7 +306,10 @@ private struct StudyPage: View {
           Image(systemName: item.mastery == value ? "checkmark.circle.fill" : "circle")
             .font(.body)
           Text(value.title).font(.subheadline.weight(.semibold))
-            .lineLimit(1).minimumScaleFactor(0.75)
+            .lineLimit(dynamicTypeSize.isAccessibilitySize ? 2 : 1)
+            .multilineTextAlignment(.center)
+            .fixedSize(horizontal: false, vertical: true)
+            .minimumScaleFactor(0.75)
         }
         .frame(maxWidth: .infinity, minHeight: 46)
         .foregroundStyle(item.mastery == value ? .white : value.tint)

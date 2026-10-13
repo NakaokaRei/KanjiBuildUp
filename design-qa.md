@@ -172,3 +172,55 @@ Apple公式のTabBarMinimizeBehavior、toolbarMinimizationBehavior、glassEffect
 独立した2択の切り替え行を廃止し、カテゴリー右側の「お気に入り」トグルに戻した。左右16 pt・上下10 ptの内部余白、カテゴリーとの12 ptの間隔、検索欄まで12 ptの外側余白を確保。通常は白背景と細い枠、選択中は緑背景・白い塗り星で区別。拡大文字ではカテゴリーの下へ右寄せする。問題文の縮小・行間・左右余白は維持。
 
 通常文字とAccessibility Mの保存画像で、ボタンの文字と外形の余白、検索欄との隙間を確認。testFavoriteScopeAndLongQuestionDesignとtestFavoritesPersistenceAndStudyが成功。最新画像は output/verification/favorites-design/right-button/。上の独立行の画像は比較履歴。
+
+## 2026-10-13 — 手書き解答とiPad対応
+
+対象は問題→手書き入力→答え比較→前後移動→消去。iPhone 17（402×874pt）とiPad Pro 13-inch M5（1032×1376pt）、iOS 26.5 Simulatorで撮影・操作検証した。今回取得した画像は `output/design-audit-handwriting/` に保存。
+
+### 評価と修正
+
+- 初回のiPhone画面ではフローティングフッターのフェードが筆記欄と答えを覆った。学習画面をsafeAreaInsetに変更し、本文と操作の領域を分けた。筆記欄の縦横比とプレビューの高さも調整。
+- iPadは本文の最大幅を900ptに広げ、筆跡と見本を横並びにした。問題・ペン操作・書く領域の順序と既存のセージ色を維持。
+- iPhone横向きでは縦の余裕が少ないため、ヘッダーの装飾を省き、下部操作を横並びに変更。比較画像の高さ・答えの文字サイズ・縦余白を調整し、答えの下端が操作ボタンより上にあることをUIテストでも確認。
+- 拡大文字では習熟度ラベルが省略されたため、2行で表示するように変更。文字を読み切れることを撮り直した画面で確認。本文はスクロール可能。
+- XCTestの横向きキャプチャが一部欠けたため、その画像は採用せず、同じ比較画面の表示中にsimctlから直接取得したiPhone横向き画像を採用。
+
+### フロー別の確認
+
+1. **空欄の問題画面 — 良好。** 書く欄を白い枠で明示。入力は任意で「答えを見る」から進める。長い問題はスクロールする。
+2. **手書き入力・修正 — 良好。** PencilKitへ実際のドラッグを入力し、一画戻すと空欄に戻ること、消しゴムで線を消してペンに戻せることを検証。戻す・全消去ボタンは44ptの領域を持つ。
+3. **答え比較 — 良好。** iPhone縦向きは上下、iPadとiPhone横向きは左右に表示。比較中の筆跡は読み取り専用。自動採点・文字認識はしない。
+4. **回転 — 良好。** 比較画面を縦横で確認。描画は600×280の固定座標を使い、画面幅から表示倍率を計算する。
+5. **次の問題・前の問題 — 良好。** 次の問題は空欄、前へ戻ると元の筆跡が復元されることを検証。
+6. **全消去・未入力で答え表示 — 良好。** 確認ダイアログから消去した後、比較用の筆跡画像が表示されないことを検証。
+
+### 検証画面
+
+問題画面（iPad）：
+
+![iPadの手書き入力欄](output/design-audit-handwriting/ipad/handwriting-01-empty.png)
+
+答え比較（iPad）：
+
+![iPadの左右比較](output/design-audit-handwriting/ipad/handwriting-03-compare.png)
+
+答え比較（iPhone縦）：
+
+![iPhoneの上下比較](output/design-audit-handwriting/iphone/handwriting-03-compare.png)
+
+答え比較（iPhone横、simctlから取得）：
+
+![iPhone横向きの比較](output/design-audit-handwriting/iphone/handwriting-04-landscape.png)
+
+文字サイズ拡大（iPhone）：
+
+![拡大文字の習熟度ラベル](output/design-audit-handwriting/iphone/answer-large-type.png)
+
+### 検証範囲と制約
+
+- `testHandwritingFlow`：入力、一画戻す、消しゴム、答え比較、回転、前後移動、確認付き全消去、未入力での答え表示。
+- `testLongAnswerFloatingFooter`：長い意味の末尾へのスクロールとヘッダー拡縮。
+- `testQuestionTypography`：通常・アクセシビリティの文字サイズ。
+- `Scripts/test-unit.sh`：CSV、学習状態、永続化、セッション等の既存テストは成功。
+- 筆跡は学習画面内だけで保持し、画面を閉じると破棄する。
+- 実機Apple Pencilの筆圧・遅延・手のひらの誤反応、VoiceOverの操作、iPadのマルチウインドウ、旧OSは未検証。PencilKitのApple Pencil入力に対応する実装であり、実機での書き味を保証する検証ではない。
