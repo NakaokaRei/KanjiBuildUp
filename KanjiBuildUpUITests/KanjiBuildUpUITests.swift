@@ -235,17 +235,21 @@ final class KanjiBuildUpUITests: XCTestCase {
         app.buttons["startStudy"].tap()
         XCTAssertTrue(app.staticTexts["1 / 2"].waitForExistence(timeout: 5))
         let firstQuestion = app.staticTexts["questionText"].label
-        XCTAssertFalse(app.buttons["previousQuestion"].isEnabled)
+        XCTAssertFalse(app.buttons["previousQuestion"].exists)
         app.buttons["revealAnswer"].tap()
         app.buttons["かんぺき"].tap()
         app.buttons["次の問題"].tap()
         XCTAssertTrue(app.staticTexts["2 / 2"].waitForExistence(timeout: 5))
         let secondQuestion = app.staticTexts["questionText"].label
         XCTAssertNotEqual(firstQuestion, secondQuestion)
-        app.buttons["previousQuestion"].tap()
-        XCTAssertTrue(app.staticTexts["1 / 2"].waitForExistence(timeout: 5))
+        swipeBack(app)
+        XCTAssertTrue(app.textViews["studyAnswer"].waitForExistence(timeout: 5))
+        XCTAssertTrue(app.staticTexts["1 / 2"].exists)
+        XCTAssertTrue(app.buttons["かんぺき"].isSelected)
+        swipeBack(app)
+        XCTAssertTrue(app.buttons["revealAnswer"].waitForExistence(timeout: 5))
         XCTAssertEqual(app.staticTexts["questionText"].label, firstQuestion)
-        XCTAssertFalse(app.buttons["previousQuestion"].isEnabled)
+        XCTAssertFalse(app.buttons["previousQuestion"].exists)
         app.buttons["revealAnswer"].tap()
         XCTAssertTrue(app.buttons["かんぺき"].isSelected)
         app.buttons["次の問題"].tap()
@@ -253,10 +257,17 @@ final class KanjiBuildUpUITests: XCTestCase {
         XCTAssertEqual(app.staticTexts["questionText"].label, secondQuestion)
         app.buttons["revealAnswer"].tap()
         capture("answer-with-previous", app)
-        app.buttons["previousQuestion"].tap()
+        swipeBack(app)
+        XCTAssertTrue(app.buttons["revealAnswer"].waitForExistence(timeout: 5))
+        XCTAssertTrue(app.staticTexts["2 / 2"].exists)
+        XCTAssertEqual(app.staticTexts["questionText"].label, secondQuestion)
+        // Closing a pushed screen dismisses the entire study presentation.
+        app.buttons["closeStudy"].tap()
+        XCTAssertTrue(app.buttons["startStudy"].waitForExistence(timeout: 5))
+        app.buttons["startStudy"].tap()
         XCTAssertTrue(app.staticTexts["1 / 2"].waitForExistence(timeout: 5))
-        XCTAssertEqual(app.staticTexts["questionText"].label, firstQuestion)
-        XCTAssertTrue(app.buttons["revealAnswer"].exists)
+        app.buttons["closeStudy"].tap()
+        XCTAssertTrue(app.buttons["startStudy"].waitForExistence(timeout: 5))
     }
 
     @MainActor func testManualEntryValidationAndPersistence() throws {
@@ -799,6 +810,11 @@ final class KanjiBuildUpUITests: XCTestCase {
         app.launch()
         XCTAssertFalse(app.buttons["clearQuestionSearch"].exists)
         XCTAssertTrue(app.buttons["すべて、3件"].exists)
+    }
+
+    @MainActor private func swipeBack(_ app: XCUIApplication) {
+        let start = app.coordinate(withNormalizedOffset: CGVector(dx: 0.001, dy: 0.5))
+        start.press(forDuration: 0.05, thenDragTo: app.coordinate(withNormalizedOffset: CGVector(dx: 0.85, dy: 0.5)))
     }
 
     @MainActor private func capture(_ name: String, _ app: XCUIApplication) {

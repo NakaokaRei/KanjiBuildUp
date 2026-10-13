@@ -1,6 +1,34 @@
 import SwiftUI
 
 struct StudyView: View {
+  let store: LearningStore
+  let session: StudySession
+  var embedsNavigationStack = true
+  @Environment(\.dismiss) private var dismiss
+  @State private var path: [StudySession] = []
+
+  var body: some View {
+    Group {
+      if embedsNavigationStack {
+        NavigationStack(path: $path) {
+          page(session)
+            .navigationDestination(for: StudySession.self) { page($0) }
+        }
+      } else {
+        page(session)
+      }
+    }
+    .tint(Palette.green)
+    .foregroundStyle(Palette.ink)
+  }
+
+  private func page(_ value: StudySession) -> some View {
+    StudyPage(store: store, session: value,
+              push: { path.append($0) }, close: { dismiss() })
+  }
+}
+
+private struct StudyPage: View {
   @Environment(\.dynamicTypeSize) private var dynamicTypeSize
   @State private var headerCollapse: CGFloat = 1
   @State private var headerHeight: CGFloat = 140
@@ -10,12 +38,13 @@ struct StudyView: View {
   @State private var showFontSettings = false
   private var headerProgress: CGFloat { session.revealed ? 1 - headerCollapse : 0 }
   let store: LearningStore
-  @State var session: StudySession
+  let session: StudySession
+  let push: (StudySession) -> Void
+  let close: () -> Void
   @State private var footerHeight: CGFloat = 180
   @State private var editingItem: StudyItem?
   @State private var confirmDelete = false
   @State private var errorMessage: String?
-  @Environment(\.dismiss) private var dismiss
   private var item: StudyItem? { session.currentID.flatMap(store.item) }
   private var questionInBody: Bool {
     guard let item else { return false }
@@ -66,7 +95,7 @@ struct StudyView: View {
     .background(Palette.pageGradient.ignoresSafeArea())
     .floatingFooter(height: $footerHeight) {
       if session.complete {
-        PrimaryButton(title: "一覧に戻る") { dismiss() }
+        PrimaryButton(title: "一覧に戻る") { close() }
       } else if let item {
         VStack(spacing: 0) {
           if session.revealed {
@@ -81,11 +110,19 @@ struct StudyView: View {
               title: session.isReview
                 ? "一覧に戻る" : session.index + 1 == session.itemIDs.count ? "学習を終える" : "次の問題"
             ) {
-              if session.isReview { dismiss() } else { session.advance() }
+              if session.isReview { close() } else {
+                var next = session
+                next.advance()
+                push(next)
+              }
             }
           } else {
             MasteryBadge(mastery: item.mastery).frame(maxWidth: .infinity).padding(.bottom, 24)
-            PrimaryButton(title: "答えを見る") { session.revealed = true }.accessibilityIdentifier(
+            PrimaryButton(title: "答えを見る") {
+              var answer = session
+              answer.revealed = true
+              push(answer)
+            }.accessibilityIdentifier(
               "revealAnswer")
           }
         }
@@ -99,6 +136,11 @@ struct StudyView: View {
       .navigationBarTitleDisplayMode(.inline)
     #endif
     .toolbar {
+      ToolbarItem(placement: .cancellationAction) {
+        Button(action: close) { Image(systemName: "xmark") }
+          .accessibilityLabel("学習を閉じる")
+          .accessibilityIdentifier("closeStudy")
+      }
       if let item, !session.complete {
         ToolbarItemGroup(placement: .primaryAction) {
           Button {
@@ -136,7 +178,7 @@ struct StudyView: View {
       Button("削除する", role: .destructive) {
         guard let item else { return }
         if store.delete(item.id) {
-          dismiss()
+          close()
         } else {
           errorMessage = store.errorMessage
           store.errorMessage = nil
@@ -162,13 +204,6 @@ struct StudyView: View {
             Text(item.category).font(.headline)
             Spacer()
             if !session.isReview {
-              Button("前の問題", systemImage: "arrow.left") { session.goBack() }
-                .font(.subheadline)
-                .fixedSize(horizontal: true, vertical: false)
-                .appGlassButton()
-                .tint(Palette.green)
-                .disabled(!session.canGoBack)
-                .accessibilityIdentifier("previousQuestion")
               Text("\(session.index + 1) / \(session.itemIDs.count)").monospacedDigit()
             }
           }
@@ -176,8 +211,6 @@ struct StudyView: View {
             Text(item.category).font(.headline)
             if !session.isReview {
               HStack {
-                Button("前の問題") { session.goBack() }.disabled(!session.canGoBack)
-                  .accessibilityIdentifier("previousQuestion")
                 Spacer()
                 Text("\(session.index + 1) / \(session.itemIDs.count)").monospacedDigit()
               }

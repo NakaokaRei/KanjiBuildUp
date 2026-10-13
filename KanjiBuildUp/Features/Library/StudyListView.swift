@@ -142,13 +142,19 @@ struct StudyListView: View {
                 .toolbar(.hidden, for: .navigationBar)
                 #endif
                 .navigationDestination(for: StudySession.self) { value in
-                    StudyView(store: store, session: value)
-                }
-                .navigationDestination(item: $session) { initial in
-                    StudyView(store: store, session: initial)
+                    StudyView(store: store, session: value, embedsNavigationStack: false)
                 }
         }
         .tint(Palette.green).foregroundStyle(Palette.ink).preferredColorScheme(.light)
+        #if os(iOS)
+        .fullScreenCover(item: $session) { initial in
+            StudyView(store: store, session: initial)
+        }
+        #else
+        .sheet(item: $session) { initial in
+            StudyView(store: store, session: initial)
+        }
+        #endif
         .onAppear { refreshSearchResults() }
         .onChange(of: search) { refreshSearchResults() }
         .onChange(of: category) { refreshSearchResults() }
