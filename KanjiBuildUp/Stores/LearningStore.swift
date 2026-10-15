@@ -59,14 +59,25 @@ final class LearningStore {
                 if let previousVersion = initialData.replacesVersion, appliedDefaults.contains(previousVersion) {
                     let previous = Dictionary(uniqueKeysWithValues: (initialData.previousItems ?? []).map { ($0.id, $0) })
                     let corrected = Dictionary(uniqueKeysWithValues: initialData.items.map { ($0.id, $0) })
-                    let updated = items.map { item in
+                    var updated = items.map { item in
                         guard let old = previous[item.id], let new = corrected[item.id] else { return item }
                         var result = item
                         if item.question == old.question { result.question = new.question }
+                        if item.answer == old.answer { result.answer = new.answer }
                         if item.mastery == old.mastery { result.mastery = new.mastery }
                         if item.meaning == old.meaning { result.meaning = new.meaning }
                         return result
                     }
+                    // Only explicitly new entries may be added during a correction;
+                    // previously deleted questions must stay deleted.
+                    let additionIDs = Set(initialData.replacementAdditionIDs ?? [])
+                    let existingIDs = Set(updated.map(\.id))
+                    var existingQuestions = Set(updated.map { Self.questionKey($0) })
+                    let additions = initialData.items.filter { item in
+                        guard additionIDs.contains(item.id), !existingIDs.contains(item.id) else { return false }
+                        return existingQuestions.insert(Self.questionKey(item)).inserted
+                    }
+                    updated += additions
                     if !commit(updated, versions: appliedDefaults.union([initialData.version])) { break }
                     continue
                 }

@@ -581,9 +581,9 @@ import Foundation
         }
         let readingTables = try JSONDecoder().decode(DefaultStudyData.self, from: Data(contentsOf:
             URL(fileURLWithPath: "KanjiBuildUp/Resources/ReadingTablesStudyData.json")))
-        precondition(readingTables.items.count == 6541 && readingTables.deduplicateByQuestion == true)
-        precondition(Set(readingTables.items.map(\.id)).count == 6541)
-        for (category, count) in [("一字訓読み", 1960), ("訓読み", 2536), ("訓熟語", 532), ("当て字", 458), ("音読み", 1055)] {
+        precondition(readingTables.items.count == 6639 && readingTables.deduplicateByQuestion == true)
+        precondition(Set(readingTables.items.map(\.id)).count == 6639)
+        for (category, count) in [("一字訓読み", 1960), ("訓読み", 2536), ("訓熟語", 630), ("当て字", 458), ("音読み", 1055)] {
             precondition(readingTables.items.filter { $0.category == category }.count == count)
         }
         precondition(readingTables.items.allSatisfy {
@@ -597,6 +597,44 @@ import Foundation
                                    ("偶", "たまたま\n(たぐい)\n(ひとがた)"), ("𩶗", "いさざ")] {
             precondition(readingTables.items.first { $0.question == question }?.answer == answer)
         }
+        // PDF star entries used to be appended to the previous square's answer.
+        for (question, answer) in [("内法", "うちのり"), ("小札", "こざね"),
+                                   ("乾草", "ほしくさ"), ("冠付", "かむりづけ"),
+                                   ("枡形", "ますがた"), ("浮鮴", "うきごり"),
+                                   ("飯櫃", "めしびつ\nいびつ")] {
+            precondition(readingTables.items.first { $0.category == "訓熟語" && $0.question == question }?.answer == answer)
+        }
+        let oldReadings = readingTables.previousItems!
+        let newReadingIDs = Set(readingTables.replacementAdditionIDs!)
+        precondition(oldReadings.count == 97 && newReadingIDs.count == 98)
+        let oldReadingMap = Dictionary(uniqueKeysWithValues: oldReadings.map { ($0.id, $0) })
+        let oldReadingBatch = DefaultStudyData(version: readingTables.replacesVersion!,
+            items: readingTables.items.filter { !newReadingIDs.contains($0.id) }.map { oldReadingMap[$0.id] ?? $0 })
+        let readingMigrationURL = directory.appendingPathComponent("reading-correction.json")
+        let oldReadingStore = LearningStore(fileURL: readingMigrationURL, defaults: oldReadingBatch)
+        let unchangedReading = oldReadings[0]
+        precondition(oldReadingStore.setMastery(.mastered, for: unchangedReading.id))
+        precondition(oldReadingStore.toggleFavorite(for: unchangedReading.id))
+        var customReading = oldReadings[1]
+        customReading.answer = "自分で直した読み"
+        customReading.notes = "自分のメモ"
+        precondition(oldReadingStore.update(customReading))
+        precondition(oldReadingStore.delete(oldReadings[2].id))
+        // A manually registered star question must not be duplicated.
+        var customStar = readingTables.items.first { newReadingIDs.contains($0.id) }!
+        customStar.id = UUID()
+        let customStarBatch = DefaultStudyData(version: "custom-star", items: [customStar])
+        _ = LearningStore(fileURL: readingMigrationURL, defaults: customStarBatch)
+        let migratedReadings = LearningStore(fileURL: readingMigrationURL, defaults: readingTables)
+        precondition(migratedReadings.errorMessage == nil && migratedReadings.items.count == 6638)
+        precondition(migratedReadings.item(unchangedReading.id)?.answer == "うちのり")
+        precondition(migratedReadings.item(unchangedReading.id)?.mastery == .mastered)
+        precondition(migratedReadings.item(unchangedReading.id)?.isFavorite == true)
+        precondition(migratedReadings.item(customReading.id) == customReading)
+        precondition(migratedReadings.item(oldReadings[2].id) == nil)
+        precondition(migratedReadings.item(customStar.id) == customStar)
+        let readingMigrationRestart = LearningStore(fileURL: readingMigrationURL, defaults: readingTables)
+        precondition(readingMigrationRestart.items == migratedReadings.items)
         let tablesURL = directory.appendingPathComponent("reading-tables.json")
         var registered = readingTables.items[0]
         registered.id = UUID()
@@ -610,7 +648,7 @@ import Foundation
         otherCategory.category = "別カテゴリー"
         let userTables = DefaultStudyData(version: "reading-tables-existing", items: [registered, otherCategory])
         let tablesStore = LearningStore(fileURL: tablesURL, defaults: userTables, additionalDefaults: [readingTables])
-        precondition(tablesStore.errorMessage == nil && tablesStore.items.count == 6542)
+        precondition(tablesStore.errorMessage == nil && tablesStore.items.count == 6640)
         precondition(tablesStore.item(registered.id) == registered)
         precondition(tablesStore.item(otherCategory.id) == otherCategory)
         precondition(tablesStore.item(readingTables.items[0].id) == nil)
@@ -618,7 +656,7 @@ import Foundation
         precondition(tablesStore.setMastery(.learning, for: readingTables.items[1].id))
         precondition(tablesStore.delete(readingTables.items[2].id))
         let tablesRestart = LearningStore(fileURL: tablesURL, defaults: userTables, additionalDefaults: [readingTables])
-        precondition(tablesRestart.errorMessage == nil && tablesRestart.items.count == 6541)
+        precondition(tablesRestart.errorMessage == nil && tablesRestart.items.count == 6639)
         precondition(tablesRestart.item(registered.id) == registered)
         precondition(tablesRestart.item(readingTables.items[1].id)?.isFavorite == true)
         precondition(tablesRestart.item(readingTables.items[1].id)?.mastery == .learning)

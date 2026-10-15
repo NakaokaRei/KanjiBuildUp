@@ -5,6 +5,7 @@ struct DefaultStudyData: Codable {
     let items: [StudyItem]
     var replacesVersion: String? = nil
     var previousItems: [StudyItem]? = nil
+    var replacementAdditionIDs: [UUID]? = nil
     var deduplicateByQuestion: Bool? = nil
 
     static func loadAll() throws -> [DefaultStudyData] {

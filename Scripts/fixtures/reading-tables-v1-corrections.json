@@ -1,0 +1,977 @@
+{
+  "previousItems": [
+    {
+      "id": "441228f6-2ab6-5f84-a59f-37770ec0924a",
+      "category": "訓熟語",
+      "question": "内法",
+      "answer": "うちのりほしくさ",
+      "meaning": "",
+      "notes": "出典：訓熟語_表外訓を持つ常用熟語（１～７・橙）印刷済み.pdf\n2ページ・2番",
+      "mastery": "starting"
+    },
+    {
+      "id": "8ac7d1ed-51ab-567d-a7e1-e77a7aa85093",
+      "category": "訓熟語",
+      "question": "一年",
+      "answer": "ひととせついたて",
+      "meaning": "",
+      "notes": "出典：訓熟語_表外訓を持つ常用熟語（１～７・橙）印刷済み.pdf\n2ページ・4番",
+      "mastery": "starting"
+    },
+    {
+      "id": "3155ee5a-accb-51be-9c76-82d69e947575",
+      "category": "訓熟語",
+      "question": "潮汁",
+      "answer": "うしおじるめはじき",
+      "meaning": "",
+      "notes": "出典：訓熟語_表外訓を持つ常用熟語（１～７・橙）印刷済み.pdf\n2ページ・6番",
+      "mastery": "starting"
+    },
+    {
+      "id": "689c4b1a-42c2-5d97-a501-db953c8de618",
+      "category": "訓熟語",
+      "question": "鈍間",
+      "answer": "のろまはぜぐち",
+      "meaning": "",
+      "notes": "出典：訓熟語_表外訓を持つ常用熟語（１～７・橙）印刷済み.pdf\n2ページ・8番",
+      "mastery": "starting"
+    },
+    {
+      "id": "248f8b72-72ab-537a-a81e-50eca7751737",
+      "category": "訓熟語",
+      "question": "虫酸",
+      "answer": "むしずよりしろ",
+      "meaning": "",
+      "notes": "出典：訓熟語_表外訓を持つ常用熟語（１～７・橙）印刷済み.pdf\n2ページ・10番",
+      "mastery": "starting"
+    },
+    {
+      "id": "c6b49905-f00c-5783-abf2-c2cdb3a89c0b",
+      "category": "訓熟語",
+      "question": "鈍鈍",
+      "answer": "のろのろつがいどり",
+      "meaning": "",
+      "notes": "出典：訓熟語_表外訓を持つ常用熟語（１～７・橙）印刷済み.pdf\n2ページ・12番",
+      "mastery": "starting"
+    },
+    {
+      "id": "b1bd18c6-7abb-56e3-87b3-4fe9019aa781",
+      "category": "訓熟語",
+      "question": "曲舞",
+      "answer": "くせまいあいじるし",
+      "meaning": "",
+      "notes": "出典：訓熟語_表外訓を持つ常用熟語（１～７・橙）印刷済み.pdf\n2ページ・14番",
+      "mastery": "starting"
+    },
+    {
+      "id": "14df3367-2028-5c9f-bd66-dd5d94576e85",
+      "category": "訓熟語",
+      "question": "百重",
+      "answer": "ももえかりぎぬ",
+      "meaning": "",
+      "notes": "出典：訓熟語_表外訓を持つ常用熟語（１～７・橙）印刷済み.pdf\n2ページ・16番",
+      "mastery": "starting"
+    },
+    {
+      "id": "d54f7759-5940-5681-9f0d-72b50bc00a20",
+      "category": "訓熟語",
+      "question": "長亀",
+      "answer": "おさがめやりど",
+      "meaning": "",
+      "notes": "出典：訓熟語_表外訓を持つ常用熟語（１～７・橙）印刷済み.pdf\n2ページ・18番",
+      "mastery": "starting"
+    },
+    {
+      "id": "10f42c37-2afb-5ab4-bb8c-654396ff2eca",
+      "category": "訓熟語",
+      "question": "鬼婆",
+      "answer": "おにばばざれうた",
+      "meaning": "",
+      "notes": "出典：訓熟語_表外訓を持つ常用熟語（１～７・橙）印刷済み.pdf\n2ページ・20番",
+      "mastery": "starting"
+    },
+    {
+      "id": "2b66d7e4-2724-5bb7-a2df-313681b26aec",
+      "category": "訓熟語",
+      "question": "直様",
+      "answer": "すぐさまひたたれ",
+      "meaning": "",
+      "notes": "出典：訓熟語_表外訓を持つ常用熟語（１～７・橙）印刷済み.pdf\n2ページ・22番",
+      "mastery": "starting"
+    },
+    {
+      "id": "87e5ad7b-450d-5395-bf64-244720a81b72",
+      "category": "訓熟語",
+      "question": "毛孔",
+      "answer": "けあなてつがい",
+      "meaning": "",
+      "notes": "出典：訓熟語_表外訓を持つ常用熟語（１～７・橙）印刷済み.pdf\n2ページ・24番",
+      "mastery": "starting"
+    },
+    {
+      "id": "94871d64-fc42-5340-b34b-8d76018338bb",
+      "category": "訓熟語",
+      "question": "木匠",
+      "answer": "こだくみてついで",
+      "meaning": "",
+      "notes": "出典：訓熟語_表外訓を持つ常用熟語（１～７・橙）印刷済み.pdf\n2ページ・26番",
+      "mastery": "starting"
+    },
+    {
+      "id": "00f91e87-50df-58cf-b8ce-fb5107b7f798",
+      "category": "訓熟語",
+      "question": "甘煮",
+      "answer": "うまにざれごと",
+      "meaning": "",
+      "notes": "出典：訓熟語_表外訓を持つ常用熟語（１～７・橙）印刷済み.pdf\n2ページ・28番",
+      "mastery": "starting"
+    },
+    {
+      "id": "5d9bc59a-f088-5131-8fd2-52d7e6bddb5f",
+      "category": "訓熟語",
+      "question": "直心",
+      "answer": "ひたごころさしぬき",
+      "meaning": "",
+      "notes": "出典：訓熟語_表外訓を持つ常用熟語（１～７・橙）印刷済み.pdf\n2ページ・30番",
+      "mastery": "starting"
+    },
+    {
+      "id": "0aa16605-acbb-57b9-a589-108bffb05246",
+      "category": "訓熟語",
+      "question": "口疾",
+      "answer": "くちどついがさね",
+      "meaning": "",
+      "notes": "出典：訓熟語_表外訓を持つ常用熟語（１～７・橙）印刷済み.pdf\n2ページ・32番",
+      "mastery": "starting"
+    },
+    {
+      "id": "1479cfd6-b213-5473-8e71-15b114c8c715",
+      "category": "訓熟語",
+      "question": "尿袋",
+      "answer": "いばりぶくろ\nゆばりぶくろほしがき",
+      "meaning": "",
+      "notes": "出典：訓熟語_表外訓を持つ常用熟語（１～７・橙）印刷済み.pdf\n2ページ・34番",
+      "mastery": "starting"
+    },
+    {
+      "id": "b426fe25-05e6-5299-8e1e-ef02e01f5758",
+      "category": "訓熟語",
+      "question": "領髪",
+      "answer": "えりがみふとりじし",
+      "meaning": "",
+      "notes": "出典：訓熟語_表外訓を持つ常用熟語（１～７・橙）印刷済み.pdf\n2ページ・36番",
+      "mastery": "starting"
+    },
+    {
+      "id": "f5f77c90-7b9c-5a59-914d-b67504445adb",
+      "category": "訓熟語",
+      "question": "居曲",
+      "answer": "いぐせあがためし",
+      "meaning": "",
+      "notes": "出典：訓熟語_表外訓を持つ常用熟語（１～７・橙）印刷済み.pdf\n2ページ・38番",
+      "mastery": "starting"
+    },
+    {
+      "id": "bc626ced-ed29-5d8a-be5e-79d09b6f7d09",
+      "category": "訓熟語",
+      "question": "仮標",
+      "answer": "かりしめことばがき",
+      "meaning": "",
+      "notes": "出典：訓熟語_表外訓を持つ常用熟語（１～７・橙）印刷済み.pdf\n2ページ・40番",
+      "mastery": "starting"
+    },
+    {
+      "id": "0d56f4c7-817f-5e1f-8bcf-76090143e93b",
+      "category": "訓熟語",
+      "question": "片膚",
+      "answer": "かたはだのだて",
+      "meaning": "",
+      "notes": "出典：訓熟語_表外訓を持つ常用熟語（１～７・橙）印刷済み.pdf\n2ページ・42番",
+      "mastery": "starting"
+    },
+    {
+      "id": "0532626e-ab36-55eb-96a9-4380f8cd519b",
+      "category": "訓熟語",
+      "question": "舌疾",
+      "answer": "したどみだりごと",
+      "meaning": "",
+      "notes": "出典：訓熟語_表外訓を持つ常用熟語（１～７・橙）印刷済み.pdf\n2ページ・44番",
+      "mastery": "starting"
+    },
+    {
+      "id": "975d5f73-10e7-57e0-80b4-86a3391481e2",
+      "category": "訓熟語",
+      "question": "花片",
+      "answer": "はなびらももだち",
+      "meaning": "",
+      "notes": "出典：訓熟語_表外訓を持つ常用熟語（１～７・橙）印刷済み.pdf\n2ページ・46番",
+      "mastery": "starting"
+    },
+    {
+      "id": "58fca672-8263-5640-ab18-84d076a0f760",
+      "category": "訓熟語",
+      "question": "御中",
+      "answer": "おなかきりぬさ",
+      "meaning": "",
+      "notes": "出典：訓熟語_表外訓を持つ常用熟語（１～７・橙）印刷済み.pdf\n2ページ・48番",
+      "mastery": "starting"
+    },
+    {
+      "id": "649dc7e1-c1c4-5979-b35d-14d2b2eeb325",
+      "category": "訓熟語",
+      "question": "青鈍",
+      "answer": "あおにびひきがね",
+      "meaning": "",
+      "notes": "出典：訓熟語_表外訓を持つ常用熟語（１～７・橙）印刷済み.pdf\n2ページ・50番",
+      "mastery": "starting"
+    },
+    {
+      "id": "c49f8c3d-4189-5142-ad36-ea068beb5e68",
+      "category": "訓熟語",
+      "question": "耳許",
+      "answer": "みみもとこがい",
+      "meaning": "",
+      "notes": "出典：訓熟語_表外訓を持つ常用熟語（１～７・橙）印刷済み.pdf\n2ページ・52番",
+      "mastery": "starting"
+    },
+    {
+      "id": "b41005d7-5826-57b7-ae50-fec66243e6b1",
+      "category": "訓熟語",
+      "question": "然然",
+      "answer": "しかじかあまりべ\nあまるべ",
+      "meaning": "",
+      "notes": "出典：訓熟語_表外訓を持つ常用熟語（１～７・橙）印刷済み.pdf\n2ページ・54番",
+      "mastery": "starting"
+    },
+    {
+      "id": "3e32a913-758c-5fbf-9dc7-1c721a49ed6b",
+      "category": "訓熟語",
+      "question": "木工",
+      "answer": "こだくみいけばな",
+      "meaning": "",
+      "notes": "出典：訓熟語_表外訓を持つ常用熟語（１～７・橙）印刷済み.pdf\n2ページ・56番",
+      "mastery": "starting"
+    },
+    {
+      "id": "aca5f0dd-0a01-5174-b5d2-8cef7cd5db03",
+      "category": "訓熟語",
+      "question": "齢草",
+      "answer": "よわいぐさむかもも",
+      "meaning": "",
+      "notes": "出典：訓熟語_表外訓を持つ常用熟語（１～７・橙）印刷済み.pdf\n2ページ・58番",
+      "mastery": "starting"
+    },
+    {
+      "id": "92208769-8864-5b7d-8e72-a3cdeb6023b0",
+      "category": "訓熟語",
+      "question": "易易",
+      "answer": "やすやすほしいい\nかれいい\nかれい",
+      "meaning": "",
+      "notes": "出典：訓熟語_表外訓を持つ常用熟語（１～７・橙）印刷済み.pdf\n2ページ・60番",
+      "mastery": "starting"
+    },
+    {
+      "id": "90f072e4-2462-5715-9e54-b25d9055f950",
+      "category": "訓熟語",
+      "question": "千入",
+      "answer": "ちしおおつけ",
+      "meaning": "",
+      "notes": "出典：訓熟語_表外訓を持つ常用熟語（１～７・橙）印刷済み.pdf\n2ページ・62番",
+      "mastery": "starting"
+    },
+    {
+      "id": "90b33975-ba4d-58a5-bd6a-ef43f0fd6879",
+      "category": "訓熟語",
+      "question": "藤浪",
+      "answer": "ふじなみすりうす",
+      "meaning": "",
+      "notes": "出典：訓熟語_表外訓を持つ常用熟語（１～７・橙）印刷済み.pdf\n2ページ・64番",
+      "mastery": "starting"
+    },
+    {
+      "id": "c9fa10c9-14f6-5c1f-ad3f-4fe2cb5f71e1",
+      "category": "訓熟語",
+      "question": "足許",
+      "answer": "あしもともろむき",
+      "meaning": "",
+      "notes": "出典：訓熟語_表外訓を持つ常用熟語（１～７・橙）印刷済み.pdf\n2ページ・66番",
+      "mastery": "starting"
+    },
+    {
+      "id": "3ee4ecfa-b51a-52f4-8e3d-0660e74e62e8",
+      "category": "訓熟語",
+      "question": "滑滑",
+      "answer": "ぬめぬめひつぎ",
+      "meaning": "",
+      "notes": "出典：訓熟語_表外訓を持つ常用熟語（１～７・橙）印刷済み.pdf\n2ページ・68番",
+      "mastery": "starting"
+    },
+    {
+      "id": "fbb39b76-7cec-5dd6-bf95-cf2f4ea4bb0f",
+      "category": "訓熟語",
+      "question": "狭霧",
+      "answer": "さぎりほしじし",
+      "meaning": "",
+      "notes": "出典：訓熟語_表外訓を持つ常用熟語（１～７・橙）印刷済み.pdf\n2ページ・70番",
+      "mastery": "starting"
+    },
+    {
+      "id": "1c81d53f-693c-5cc8-838b-53415535a822",
+      "category": "訓熟語",
+      "question": "八面",
+      "answer": "やもとりおどし",
+      "meaning": "",
+      "notes": "出典：訓熟語_表外訓を持つ常用熟語（１～７・橙）印刷済み.pdf\n2ページ・72番",
+      "mastery": "starting"
+    },
+    {
+      "id": "02f938af-f05e-5026-9781-de5924659690",
+      "category": "訓熟語",
+      "question": "望月",
+      "answer": "もちづきはしばみ\nはしばめ",
+      "meaning": "",
+      "notes": "出典：訓熟語_表外訓を持つ常用熟語（１～７・橙）印刷済み.pdf\n2ページ・74番",
+      "mastery": "starting"
+    },
+    {
+      "id": "efac48ef-acce-5b84-b705-d37c18ee69ec",
+      "category": "訓熟語",
+      "question": "春蚕",
+      "answer": "はるごつづらおり",
+      "meaning": "",
+      "notes": "出典：訓熟語_表外訓を持つ常用熟語（１～７・橙）印刷済み.pdf\n2ページ・76番",
+      "mastery": "starting"
+    },
+    {
+      "id": "e638a5a4-9828-5c56-9a40-c7db04a35dc5",
+      "category": "訓熟語",
+      "question": "毛蚕",
+      "answer": "けごよつぎ",
+      "meaning": "",
+      "notes": "出典：訓熟語_表外訓を持つ常用熟語（１～７・橙）印刷済み.pdf\n2ページ・78番",
+      "mastery": "starting"
+    },
+    {
+      "id": "0be326c3-74bf-5156-a05f-144faef2c3c3",
+      "category": "訓熟語",
+      "question": "産衣",
+      "answer": "うぶぎほしいい",
+      "meaning": "",
+      "notes": "出典：訓熟語_表外訓を持つ常用熟語（１～７・橙）印刷済み.pdf\n2ページ・80番",
+      "mastery": "starting"
+    },
+    {
+      "id": "b3f5df1f-0141-57a0-b243-7a45cbda546f",
+      "category": "訓熟語",
+      "question": "一廉",
+      "answer": "ひとかどいつつぎぬ",
+      "meaning": "",
+      "notes": "出典：訓熟語_表外訓を持つ常用熟語（１～７・橙）印刷済み.pdf\n2ページ・82番",
+      "mastery": "starting"
+    },
+    {
+      "id": "74180388-6f1d-5246-bfe6-880d4b800c64",
+      "category": "訓熟語",
+      "question": "雄鳥",
+      "answer": "おんどりももしき",
+      "meaning": "",
+      "notes": "出典：訓熟語_表外訓を持つ常用熟語（１～７・橙）印刷済み.pdf\n2ページ・84番",
+      "mastery": "starting"
+    },
+    {
+      "id": "d1318b4c-4e1f-5024-ad2c-74ce6f7d4480",
+      "category": "訓熟語",
+      "question": "禍神",
+      "answer": "まがかみかけことば",
+      "meaning": "",
+      "notes": "出典：訓熟語_表外訓を持つ常用熟語（１～７・橙）印刷済み.pdf\n2ページ・86番",
+      "mastery": "starting"
+    },
+    {
+      "id": "d33b2eab-fdd4-5f53-a6a6-f620db97a762",
+      "category": "訓熟語",
+      "question": "空木",
+      "answer": "うつぎそらだき",
+      "meaning": "",
+      "notes": "出典：訓熟語_表外訓を持つ常用熟語（１～７・橙）印刷済み.pdf\n2ページ・88番",
+      "mastery": "starting"
+    },
+    {
+      "id": "9233b3d7-b368-5fb1-b484-b8de337e91f8",
+      "category": "訓熟語",
+      "question": "端色",
+      "answer": "はしたいろたちい",
+      "meaning": "",
+      "notes": "出典：訓熟語_表外訓を持つ常用熟語（１～７・橙）印刷済み.pdf\n2ページ・90番",
+      "mastery": "starting"
+    },
+    {
+      "id": "ff127456-5bde-5754-ac65-8d849769e5e0",
+      "category": "訓熟語",
+      "question": "廉廉",
+      "answer": "かどかどかれすすき",
+      "meaning": "",
+      "notes": "出典：訓熟語_表外訓を持つ常用熟語（１～７・橙）印刷済み.pdf\n2ページ・92番",
+      "mastery": "starting"
+    },
+    {
+      "id": "fd09db61-813f-5a1c-96bc-aafb2d5ef3d6",
+      "category": "訓熟語",
+      "question": "逆児",
+      "answer": "さかごいけずみ",
+      "meaning": "",
+      "notes": "出典：訓熟語_表外訓を持つ常用熟語（１～７・橙）印刷済み.pdf\n2ページ・94番",
+      "mastery": "starting"
+    },
+    {
+      "id": "aee64ad3-948d-5fa6-842d-d27bd4029159",
+      "category": "訓熟語",
+      "question": "乾物",
+      "answer": "ひものめばる",
+      "meaning": "",
+      "notes": "出典：訓熟語_表外訓を持つ常用熟語（１～７・橙）印刷済み.pdf\n2ページ・96番",
+      "mastery": "starting"
+    },
+    {
+      "id": "24348cd7-8d6f-5db8-986f-ae84afb3e73b",
+      "category": "訓熟語",
+      "question": "御魂",
+      "answer": "みたままがたま",
+      "meaning": "",
+      "notes": "出典：訓熟語_表外訓を持つ常用熟語（１～７・橙）印刷済み.pdf\n2ページ・98番",
+      "mastery": "starting"
+    },
+    {
+      "id": "cf7094f5-847b-5f3f-a4b7-422804919ee0",
+      "category": "訓熟語",
+      "question": "小札",
+      "answer": "こざねかむりづけ",
+      "meaning": "",
+      "notes": "出典：訓熟語_表外訓を持つ常用熟語（１～７・橙）印刷済み.pdf\n2ページ・100番",
+      "mastery": "starting"
+    },
+    {
+      "id": "8942cbe1-dd69-5dca-bb31-466ba915a4cd",
+      "category": "訓熟語",
+      "question": "稲幹",
+      "answer": "いながらわらいじょう",
+      "meaning": "",
+      "notes": "出典：訓熟語_表外訓を持つ常用熟語（１～７・橙）印刷済み.pdf\n2ページ・101番",
+      "mastery": "starting"
+    },
+    {
+      "id": "00619b10-8b2e-552e-b0be-35e8c190c0a7",
+      "category": "訓熟語",
+      "question": "緒総",
+      "answer": "おぶさももひき",
+      "meaning": "",
+      "notes": "出典：訓熟語_表外訓を持つ常用熟語（１～７・橙）印刷済み.pdf\n2ページ・102番",
+      "mastery": "starting"
+    },
+    {
+      "id": "c206a259-a8f6-5316-959b-93a3b3e1815c",
+      "category": "訓熟語",
+      "question": "大砌",
+      "answer": "おおみぎりあげすど",
+      "meaning": "",
+      "notes": "出典：訓熟語_訓熟語読み問題（１～６・橙）印刷済み.pdf\n2ページ・2番",
+      "mastery": "starting"
+    },
+    {
+      "id": "0b253cf5-d800-5087-a676-eaaf7a93a0f6",
+      "category": "訓熟語",
+      "question": "杣山",
+      "answer": "そまやまふすべがき\nくすべがき",
+      "meaning": "",
+      "notes": "出典：訓熟語_訓熟語読み問題（１～６・橙）印刷済み.pdf\n2ページ・4番",
+      "mastery": "starting"
+    },
+    {
+      "id": "ee689779-f14e-54b0-81fd-3d6f61d9092c",
+      "category": "訓熟語",
+      "question": "空鬮",
+      "answer": "からくじおはらい",
+      "meaning": "",
+      "notes": "出典：訓熟語_訓熟語読み問題（１～６・橙）印刷済み.pdf\n2ページ・6番",
+      "mastery": "starting"
+    },
+    {
+      "id": "def6d02d-2f0b-54d6-a233-c380e20fb107",
+      "category": "訓熟語",
+      "question": "梛筏",
+      "answer": "なぎいかだあらいぐま",
+      "meaning": "",
+      "notes": "出典：訓熟語_訓熟語読み問題（１～６・橙）印刷済み.pdf\n2ページ・8番",
+      "mastery": "starting"
+    },
+    {
+      "id": "ce5643b3-7aa4-51b7-b735-668b2289a978",
+      "category": "訓熟語",
+      "question": "飯櫃",
+      "answer": "めしびつ\nいびつすきげ",
+      "meaning": "",
+      "notes": "出典：訓熟語_訓熟語読み問題（１～６・橙）印刷済み.pdf\n2ページ・10番",
+      "mastery": "starting"
+    },
+    {
+      "id": "8ee83806-c4fd-5062-9c6a-6b3c6c147252",
+      "category": "訓熟語",
+      "question": "鉈豆",
+      "answer": "なたまめいけす",
+      "meaning": "",
+      "notes": "出典：訓熟語_訓熟語読み問題（１～６・橙）印刷済み.pdf\n2ページ・12番",
+      "mastery": "starting"
+    },
+    {
+      "id": "73e6063c-8f93-5c55-bec0-a70809b9c702",
+      "category": "訓熟語",
+      "question": "縹色",
+      "answer": "はなだいろもやいぶね",
+      "meaning": "",
+      "notes": "出典：訓熟語_訓熟語読み問題（１～６・橙）印刷済み.pdf\n2ページ・14番",
+      "mastery": "starting"
+    },
+    {
+      "id": "9e9a2f34-8366-5096-a351-05788c7ec5f5",
+      "category": "訓熟語",
+      "question": "霙酒",
+      "answer": "みぞれざけかちぐり",
+      "meaning": "",
+      "notes": "出典：訓熟語_訓熟語読み問題（１～６・橙）印刷済み.pdf\n2ページ・16番",
+      "mastery": "starting"
+    },
+    {
+      "id": "4e4b150b-7d70-510f-b9c1-d2ff7d317795",
+      "category": "訓熟語",
+      "question": "文筥",
+      "answer": "ふばこ\nふみばこおもの\nおびもの",
+      "meaning": "",
+      "notes": "出典：訓熟語_訓熟語読み問題（１～６・橙）印刷済み.pdf\n2ページ・18番",
+      "mastery": "starting"
+    },
+    {
+      "id": "587caef1-cf86-5b19-9797-b4529cfec7d8",
+      "category": "訓熟語",
+      "question": "疵物",
+      "answer": "きずものおおはらえ\nおおはらい",
+      "meaning": "",
+      "notes": "出典：訓熟語_訓熟語読み問題（１～６・橙）印刷済み.pdf\n2ページ・20番",
+      "mastery": "starting"
+    },
+    {
+      "id": "181661cb-e6ce-51fb-b1eb-92fc504c271f",
+      "category": "訓熟語",
+      "question": "槍衾",
+      "answer": "やりぶすまもじずり",
+      "meaning": "",
+      "notes": "出典：訓熟語_訓熟語読み問題（１～６・橙）印刷済み.pdf\n2ページ・22番",
+      "mastery": "starting"
+    },
+    {
+      "id": "2822f606-3da9-5e8b-b2c1-21227cee6013",
+      "category": "訓熟語",
+      "question": "山苞",
+      "answer": "やまづととびはぜ",
+      "meaning": "",
+      "notes": "出典：訓熟語_訓熟語読み問題（１～６・橙）印刷済み.pdf\n2ページ・24番",
+      "mastery": "starting"
+    },
+    {
+      "id": "be783bd0-f15d-5a57-a932-f602648ddfe8",
+      "category": "訓熟語",
+      "question": "花鑢",
+      "answer": "はなやすりきじやき",
+      "meaning": "",
+      "notes": "出典：訓熟語_訓熟語読み問題（１～６・橙）印刷済み.pdf\n2ページ・26番",
+      "mastery": "starting"
+    },
+    {
+      "id": "bfb75418-ef2c-55a6-9d2a-65d712d032d0",
+      "category": "訓熟語",
+      "question": "葦簀",
+      "answer": "よしずなれずし",
+      "meaning": "",
+      "notes": "出典：訓熟語_訓熟語読み問題（１～６・橙）印刷済み.pdf\n2ページ・28番",
+      "mastery": "starting"
+    },
+    {
+      "id": "ef32429c-cc30-5a95-9628-b746013a15a3",
+      "category": "訓熟語",
+      "question": "川蜷",
+      "answer": "かわになからづけ",
+      "meaning": "",
+      "notes": "出典：訓熟語_訓熟語読み問題（１～６・橙）印刷済み.pdf\n2ページ・30番",
+      "mastery": "starting"
+    },
+    {
+      "id": "78129944-ad94-5b57-9f28-fae73e5f49ee",
+      "category": "訓熟語",
+      "question": "星鰈",
+      "answer": "ほしがれいよりしろ",
+      "meaning": "",
+      "notes": "出典：訓熟語_訓熟語読み問題（１～６・橙）印刷済み.pdf\n2ページ・32番",
+      "mastery": "starting"
+    },
+    {
+      "id": "f2380741-519f-5629-9d89-b58fd57c6985",
+      "category": "訓熟語",
+      "question": "糸巻鱏",
+      "answer": "いとまきえいふすべがわ\nくすべがわ",
+      "meaning": "",
+      "notes": "出典：訓熟語_訓熟語読み問題（１～６・橙）印刷済み.pdf\n2ページ・34番",
+      "mastery": "starting"
+    },
+    {
+      "id": "8468c660-5816-59e7-95f1-f07d53338049",
+      "category": "訓熟語",
+      "question": "帚木",
+      "answer": "ほうきぎいざりうお",
+      "meaning": "",
+      "notes": "出典：訓熟語_訓熟語読み問題（１～６・橙）印刷済み.pdf\n2ページ・36番",
+      "mastery": "starting"
+    },
+    {
+      "id": "a280e2be-f579-5981-93fa-2a34a8d9f42d",
+      "category": "訓熟語",
+      "question": "金屎",
+      "answer": "かなくそさしもぐさ",
+      "meaning": "",
+      "notes": "出典：訓熟語_訓熟語読み問題（１～６・橙）印刷済み.pdf\n2ページ・38番",
+      "mastery": "starting"
+    },
+    {
+      "id": "797b2780-7524-5942-8fe8-7e4af816d720",
+      "category": "訓熟語",
+      "question": "毬栗",
+      "answer": "いがぐりすねあて",
+      "meaning": "",
+      "notes": "出典：訓熟語_訓熟語読み問題（１～６・橙）印刷済み.pdf\n2ページ・40番",
+      "mastery": "starting"
+    },
+    {
+      "id": "f3e5903f-88a9-5bb6-bfa5-82e595f8cc43",
+      "category": "訓熟語",
+      "question": "馬梳",
+      "answer": "まぐし\nうまぐしなれずし",
+      "meaning": "",
+      "notes": "出典：訓熟語_訓熟語読み問題（１～６・橙）印刷済み.pdf\n2ページ・42番",
+      "mastery": "starting"
+    },
+    {
+      "id": "98bbacee-5042-5284-b8a1-fdff4f2cb8d1",
+      "category": "訓熟語",
+      "question": "爰許",
+      "answer": "ここもとなたぼり",
+      "meaning": "",
+      "notes": "出典：訓熟語_訓熟語読み問題（１～６・橙）印刷済み.pdf\n2ページ・44番",
+      "mastery": "starting"
+    },
+    {
+      "id": "6bb9797d-b895-5d19-aa66-9ed06e43601f",
+      "category": "訓熟語",
+      "question": "鶴脛",
+      "answer": "つるはぎかてめし",
+      "meaning": "",
+      "notes": "出典：訓熟語_訓熟語読み問題（１～６・橙）印刷済み.pdf\n2ページ・46番",
+      "mastery": "starting"
+    },
+    {
+      "id": "0d005094-e665-53a2-a738-989c96b321c7",
+      "category": "訓熟語",
+      "question": "枡目",
+      "answer": "ますめくりかた",
+      "meaning": "",
+      "notes": "出典：訓熟語_訓熟語読み問題（１～６・橙）印刷済み.pdf\n2ページ・48番",
+      "mastery": "starting"
+    },
+    {
+      "id": "5d2029c3-2b38-567d-bc5e-5775f4bbf414",
+      "category": "訓熟語",
+      "question": "蜆花",
+      "answer": "しじみばなきじかくし",
+      "meaning": "",
+      "notes": "出典：訓熟語_訓熟語読み問題（１～６・橙）印刷済み.pdf\n2ページ・50番",
+      "mastery": "starting"
+    },
+    {
+      "id": "feba41ab-e927-5d3a-b966-4129434a98d5",
+      "category": "訓熟語",
+      "question": "首枷",
+      "answer": "くびかせ\nくびかしひらぐけ",
+      "meaning": "",
+      "notes": "出典：訓熟語_訓熟語読み問題（１～６・橙）印刷済み.pdf\n2ページ・52番",
+      "mastery": "starting"
+    },
+    {
+      "id": "7930d7b4-4625-5c4e-a9ba-0d5f1aaba905",
+      "category": "訓熟語",
+      "question": "金盥",
+      "answer": "かなだらいかちどき",
+      "meaning": "",
+      "notes": "出典：訓熟語_訓熟語読み問題（１～６・橙）印刷済み.pdf\n2ページ・54番",
+      "mastery": "starting"
+    },
+    {
+      "id": "a01e8b4e-07e9-5785-966c-8edbc5a727b1",
+      "category": "訓熟語",
+      "question": "水甕",
+      "answer": "みずがめかぎとり",
+      "meaning": "",
+      "notes": "出典：訓熟語_訓熟語読み問題（１～６・橙）印刷済み.pdf\n2ページ・56番",
+      "mastery": "starting"
+    },
+    {
+      "id": "23d4eac7-42c8-5204-83d3-435b78ee3743",
+      "category": "訓熟語",
+      "question": "針槐",
+      "answer": "はりえんじゅきざわし",
+      "meaning": "",
+      "notes": "出典：訓熟語_訓熟語読み問題（１～６・橙）印刷済み.pdf\n2ページ・58番",
+      "mastery": "starting"
+    },
+    {
+      "id": "ad261200-096e-531f-9e2a-18c4ca451a39",
+      "category": "訓熟語",
+      "question": "柳鮠",
+      "answer": "やなぎばえすきぐし",
+      "meaning": "",
+      "notes": "出典：訓熟語_訓熟語読み問題（１～６・橙）印刷済み.pdf\n2ページ・60番",
+      "mastery": "starting"
+    },
+    {
+      "id": "0dc9edcc-909a-570e-8149-27b7da1162cc",
+      "category": "訓熟語",
+      "question": "紙鑢",
+      "answer": "かみやすりおばすてやま",
+      "meaning": "",
+      "notes": "出典：訓熟語_訓熟語読み問題（１～６・橙）印刷済み.pdf\n2ページ・62番",
+      "mastery": "starting"
+    },
+    {
+      "id": "87d24ca9-cdca-55bf-a58e-62dcfc5830c4",
+      "category": "訓熟語",
+      "question": "綟網",
+      "answer": "もじあみそりはししぎ",
+      "meaning": "",
+      "notes": "出典：訓熟語_訓熟語読み問題（１～６・橙）印刷済み.pdf\n2ページ・64番",
+      "mastery": "starting"
+    },
+    {
+      "id": "226a1b08-b91c-5c15-96dd-85b8720198fe",
+      "category": "訓熟語",
+      "question": "榑木",
+      "answer": "くれきくりふね",
+      "meaning": "",
+      "notes": "出典：訓熟語_訓熟語読み問題（１～６・橙）印刷済み.pdf\n2ページ・66番",
+      "mastery": "starting"
+    },
+    {
+      "id": "51fe6ff6-2952-571f-9845-f17fd9fee479",
+      "category": "訓熟語",
+      "question": "桜鯎",
+      "answer": "さくらうぐいひきよもぎ",
+      "meaning": "",
+      "notes": "出典：訓熟語_訓熟語読み問題（１～６・橙）印刷済み.pdf\n2ページ・68番",
+      "mastery": "starting"
+    },
+    {
+      "id": "cec6a66d-5fe5-5e96-b536-f62974beb3b3",
+      "category": "訓熟語",
+      "question": "木苺",
+      "answer": "きいちごひきうす",
+      "meaning": "",
+      "notes": "出典：訓熟語_訓熟語読み問題（１～６・橙）印刷済み.pdf\n2ページ・70番",
+      "mastery": "starting"
+    },
+    {
+      "id": "ae382f41-147d-59d8-8c30-22c04157a53e",
+      "category": "訓熟語",
+      "question": "箒星",
+      "answer": "ほうきぼしさわしがき",
+      "meaning": "",
+      "notes": "出典：訓熟語_訓熟語読み問題（１～６・橙）印刷済み.pdf\n2ページ・72番",
+      "mastery": "starting"
+    },
+    {
+      "id": "4806d4c4-2357-5033-a35c-7362dcd7c5e5",
+      "category": "訓熟語",
+      "question": "床框",
+      "answer": "とこがまちえりぐり",
+      "meaning": "",
+      "notes": "出典：訓熟語_訓熟語読み問題（１～６・橙）印刷済み.pdf\n2ページ・74番",
+      "mastery": "starting"
+    },
+    {
+      "id": "23bf4cea-f1e8-53c0-83a5-3f5e5d41d2fc",
+      "category": "訓熟語",
+      "question": "簓桁",
+      "answer": "ささらげたはらえどの",
+      "meaning": "",
+      "notes": "出典：訓熟語_訓熟語読み問題（１～６・橙）印刷済み.pdf\n2ページ・76番",
+      "mastery": "starting"
+    },
+    {
+      "id": "c11d4d9b-4c89-51fe-83f6-0a7d2a6f4a0e",
+      "category": "訓熟語",
+      "question": "高坏",
+      "answer": "たかつき\nたかすきみつがしわ",
+      "meaning": "",
+      "notes": "出典：訓熟語_訓熟語読み問題（１～６・橙）印刷済み.pdf\n2ページ・78番",
+      "mastery": "starting"
+    },
+    {
+      "id": "8d24e4c3-967d-5ff2-ad5f-0c153948c312",
+      "category": "訓熟語",
+      "question": "蝮草",
+      "answer": "まむしぐさへひりむし",
+      "meaning": "",
+      "notes": "出典：訓熟語_訓熟語読み問題（１～６・橙）印刷済み.pdf\n2ページ・80番",
+      "mastery": "starting"
+    },
+    {
+      "id": "62b75e73-c5ef-55fe-8e31-4c1001a3afa3",
+      "category": "訓熟語",
+      "question": "簀巻",
+      "answer": "すまきいぼむしり",
+      "meaning": "",
+      "notes": "出典：訓熟語_訓熟語読み問題（１～６・橙）印刷済み.pdf\n2ページ・82番",
+      "mastery": "starting"
+    },
+    {
+      "id": "e50dbf12-96c0-5b56-96cd-d92180f6622a",
+      "category": "訓熟語",
+      "question": "錏屋根",
+      "answer": "しころやねいとよりだい",
+      "meaning": "",
+      "notes": "出典：訓熟語_訓熟語読み問題（１～６・橙）印刷済み.pdf\n2ページ・84番",
+      "mastery": "starting"
+    },
+    {
+      "id": "ad55c81d-f208-5e39-b105-7215225fdad9",
+      "category": "訓熟語",
+      "question": "手毬唄",
+      "answer": "てまりうたうそかえ",
+      "meaning": "",
+      "notes": "出典：訓熟語_訓熟語読み問題（１～６・橙）印刷済み.pdf\n2ページ・86番",
+      "mastery": "starting"
+    },
+    {
+      "id": "3795bd39-a766-5842-ab92-e3b5b681bd59",
+      "category": "訓熟語",
+      "question": "縦褌",
+      "answer": "たてみついねつきむし",
+      "meaning": "",
+      "notes": "出典：訓熟語_訓熟語読み問題（１～６・橙）印刷済み.pdf\n2ページ・88番",
+      "mastery": "starting"
+    },
+    {
+      "id": "3c35befd-6290-5629-a177-de05e879acab",
+      "category": "訓熟語",
+      "question": "枡形",
+      "answer": "ますがたなめしがわうきごり",
+      "meaning": "",
+      "notes": "出典：訓熟語_訓熟語読み問題（１～６・橙）印刷済み.pdf\n2ページ・90番",
+      "mastery": "starting"
+    }
+  ],
+  "replacementAdditionIDs": [
+    "bf0bd31d-6300-5b3b-8e17-ded456b05844",
+    "8f971e3b-bcfc-5ae4-8e9b-559e41882d86",
+    "8dd28122-fcb9-57e7-9d82-41ffdd0edeb4",
+    "1b19623d-d265-5dc8-8f94-11f00c7c4d18",
+    "cac06422-6cfc-59b2-8352-c95069a96426",
+    "5879e769-439d-56ca-9e8d-fb687cc7598f",
+    "7e1527eb-87c2-56ef-b9b3-da61fd698857",
+    "85d426e2-5780-5864-9dee-ad55eaaa94bf",
+    "6752cf47-c361-5a5b-9461-d9c4907ebf47",
+    "2ce0fc0b-3468-5da7-8e32-c4a116ac88a8",
+    "c7dfcc9f-fd66-5794-a693-68f2ef73d2e4",
+    "80b9dce0-3a8f-5bd1-a7b8-4e3aa97df751",
+    "348c757e-d3c7-579a-b96d-fb943e952c8c",
+    "50d89c39-6b75-53cd-8359-0039b2fe2f44",
+    "3c875eb7-7054-5590-bae0-5bdf984589fb",
+    "b9a1ddc8-cfc4-58e4-b567-c939172026c4",
+    "c0102421-2817-5eef-ab3c-e906f893ca8f",
+    "b0eba863-8de8-50e5-aa8c-2efba9879862",
+    "cdcf453b-a117-5d21-8653-8d98823e1c43",
+    "4284c049-f634-5112-b91a-25140ecf3b38",
+    "59b28020-304c-5d0a-8624-1ad92ae6d20d",
+    "199a97dc-4eaa-5a1c-9fe9-41f294eda0eb",
+    "ed33feda-2380-586a-98c7-146a72c0c108",
+    "665b5804-a2a4-5ab6-a322-3f53c0a7a8d6",
+    "a156d9a2-23fe-5bec-9e18-b00df3312af2",
+    "bbf25884-5650-54fe-ae31-fe3fd45cf00c",
+    "edd8aaca-141d-5c5d-ae61-2b539eac2925",
+    "2dd94f7c-751d-5fe9-8f4d-661016fc4c67",
+    "78ce37d9-7e9d-5ac6-8a3e-53c4bbed6302",
+    "ed41a7fc-cbb9-598e-8dce-a217dfab71c0",
+    "241c132e-c04c-51c9-9f4d-0269a66f5179",
+    "fa68ed11-a027-58f6-b38b-c9e034b54659",
+    "76abda12-dcb4-5334-8764-75e538706295",
+    "a543b226-a9d7-5b1e-a668-f46765a42af5",
+    "21b028ff-f72b-5dba-bfe8-3edb11c8e79f",
+    "397958f9-e459-5bc0-9b23-becc56a9eb23",
+    "fcef71d0-3600-5e7a-a742-fba7f2979b5c",
+    "a84caf6b-9c5e-5960-9c17-30bab3d295a6",
+    "5c4a4668-fb1b-543c-8735-4738e44745e5",
+    "bb1edebe-d7fb-507b-b99b-0a79e0a24cb8",
+    "b6c170bf-e8da-5efb-b023-f68924f45471",
+    "850ae827-2158-5e5d-9809-63c31567d60b",
+    "141f295f-e3e0-5ffe-bb03-05c0966212ac",
+    "fb82d38c-cec6-5417-82de-6b45346b3cd7",
+    "d71a0ea9-534e-58a4-9fa0-fa0321b66d7d",
+    "0d90f46b-1802-52f8-8c68-fcfed87a37de",
+    "c4d170e9-adb5-59b8-a087-af4630618190",
+    "6089cc52-c076-537c-ade3-7616067f8f4d",
+    "6a40684d-04b6-50b7-899f-b1b0730f1417",
+    "52cdfa6c-3bd1-571a-9ad4-1b2a8e7dec03",
+    "5ba99206-902a-5ec1-892f-b9af18c2014e",
+    "8a369519-bff2-53c0-b63b-3860ae08af78",
+    "3aa8fe56-211c-567d-898f-68faf8d319e8",
+    "6fc5715a-6d1d-5967-bd0c-a9ca2d25eb2b",
+    "4212f20a-cae8-5097-bf72-fd08891561ec",
+    "f22c6cda-937e-5888-bacd-ea8e7ed29eaa",
+    "df6ee13c-96c6-5a8e-843b-8243630d3cf2",
+    "bd7abb2f-77bf-578e-9f8d-511e7b1e967d",
+    "1f05934f-1a56-5c8e-98f8-a3cbbf458ad4",
+    "4f448637-e055-513f-98b5-d630e1be93a6",
+    "8a1d5895-1372-54a4-8e8a-b5a2e5fd5bdf",
+    "ac8b402b-eeff-5d55-968b-fc0f73b15178",
+    "5361c29b-23f4-59ea-908a-77b1480f8bdf",
+    "88248e42-04eb-573b-b7d4-e7c96e53f651",
+    "81166874-6c9e-52f1-952c-4cd0c7fbc1a9",
+    "31ea99d3-eb63-5eb0-a8b7-d6186ccf4e48",
+    "25e16f75-5052-596c-ae7a-e3a93bccc312",
+    "b41b92c9-e626-5f2e-aa21-8528f8399dad",
+    "eed760cb-9984-53dc-be93-88b79e6309a4",
+    "24cfa71b-3108-5d90-84a2-06dbe26dca62",
+    "79390ba2-fd20-58c5-b8be-52621014a458",
+    "63619144-198a-5b81-844e-156a86f46d19",
+    "f04d9dc3-1f9f-50b1-9b6f-74ce9e045713",
+    "cc4824a0-3eeb-5740-944d-1b51124f04c8",
+    "52f98ee2-08b4-5d38-bbb2-0337a7b7fdaf",
+    "20481a54-e0a7-5340-815e-a7f451d68fcc",
+    "1a8f471c-b34d-5aa1-b559-1d8876329025",
+    "75948a22-7774-5edb-8cfa-11a8a9ce845d",
+    "f89e6f01-bf32-5bb1-9286-e322760ea41e",
+    "76f86b67-b413-5648-a2fa-c52cce8d02b7",
+    "28e1faef-7e41-5a04-8360-507afd2f3b34",
+    "04861da8-a959-527d-b8b2-e3e995e1795e",
+    "9ac7afe3-c87b-5f70-98f3-ecd8b223ba07",
+    "f8b14924-201f-5e18-8a64-2ddd1cad909c",
+    "924b67b9-fa7e-5ad2-957a-17c5cc704566",
+    "dd30c88a-0c59-5edb-91a8-11e528b75d79",
+    "aaa7b503-a7e1-54dd-a351-4eed545aa1d4",
+    "3354df61-5910-530f-bc04-a4424e6fef90",
+    "e51d9300-29a8-56a5-aad2-5ca643745dd8",
+    "043196d9-e172-514f-b623-3949501522a7",
+    "b5844bfa-db4c-5e78-8578-3be4db62064e",
+    "6e09b478-f186-5008-8f41-adacc33a7fe0",
+    "3aee8502-3a08-5a39-ba75-d284e380dc1e",
+    "128135b5-0451-5f1c-832d-1e366fe45b40",
+    "648bb1c4-87fd-5b4f-a3c3-1e466222cf66",
+    "cf840e12-3747-5236-91bd-59f6de6157b9",
+    "e00674ce-f908-548e-a993-486263eec152",
+    "26b89afb-4b02-5a4f-8161-a1766d3d1670"
+  ]
+}

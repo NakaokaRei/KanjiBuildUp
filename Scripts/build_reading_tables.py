@@ -35,7 +35,7 @@ FILES = [
  '音読み_音読み対策問題（１～４）.pdf',
  '音読み_音読み対策問題（５～１０）.pdf',
 ]
-COUNTS = [516,482,198,139,138,216,149,145,803,310,222,1048,390,1101,465,789,60,190,124]
+COUNTS = [516,482,198,139,138,216,149,145,803,362,268,1048,390,1101,465,789,60,190,124]
 # PUA encodings belong to these specific source PDFs, not Unicode in general.
 PUA = dict(zip(
  [0xe087,0xe077,0xe043,0xe0a9,0xe082,0xe07e,0xe047,0xe05c,0xe083,0xe0a0,0xe0ad,0xe076,0xe08d,0xe0b1,0xe046,0xe057,0xe048,0xe081,0xe04f,0xe064,0xe069,0xe031,0xe080,0xe08c,0xe08e,0xe030,0xe0a6,0xe071,0xe05f,0xe072,0xe070,0xe074,0xe053,0xe051,0xe04a,0xe05a,0xe085,0xe06c,0xe032,0xe060,0xe0b0,0xe092,0xe084,0xe1fd,0xe1ea,0xe2b1,0xe24e,0xe1e9,0xe224,0xe1f4,0xe1e8,0xe23e,0xe1e7,0xe1f1,0xe249,0xe1f8,0xe24b,0xe254,0xe1f3,0xe1ed,0xe1ec,0xe260,0xe252,0xe213,0xe24f,0xe267,0xe210,0xe23f,0xe20f,0xe25f,0xe1fa,0xe248,0xe21d,0xe265],
@@ -102,9 +102,16 @@ def table_entries(page, source, page_number):
     if (source,page_number) in [(0,2),(0,3),(11,6)]:
         return by_position(chars, question_large_only=(source,page_number) in [(0,3),(11,6)])
     groups=[]
+    markers = ('□', '☆') if source in (9, 10) else ('□',)
+    starts=[]
     for c in chars:
-        if c['text']=='□':groups.append([])
+        if c['text'] in markers:
+            groups.append([])
+            starts.append(c['text'])
         elif groups:groups[-1].append(c)
+    # Retain every existing square entry's ordinal/UUID. Append the previously
+    # omitted star entries after the squares, rather than renumbering user data.
+    groups = [g for marker in markers for start,g in zip(starts,groups) if start == marker]
     result=[]
     for g in groups:
         if source<14:
@@ -180,7 +187,14 @@ def build(root,resource_dir):
             continue
         seen.add(key);result.append(i);added[key]=i;counts[i['category']]+=1
     print('Added:',dict(counts),'Skipped:',dict(duplicates))
-    return dict(version='kurako-reading-tables-2026-10-13-v1',deduplicateByQuestion=True,items=result)
+    baseline = json.loads((Path(__file__).parent / 'fixtures/reading-tables-v1-corrections.json').read_text())
+    ids = {item['id'] for item in result}
+    assert all(item['id'] in ids for item in baseline['previousItems'])
+    return dict(version='kurako-reading-tables-2026-10-15-v2',
+                deduplicateByQuestion=True,items=result,
+                replacesVersion='kurako-reading-tables-2026-10-13-v1',
+                previousItems=baseline['previousItems'],
+                replacementAdditionIDs=baseline['replacementAdditionIDs'])
 
 
 if __name__=='__main__':
